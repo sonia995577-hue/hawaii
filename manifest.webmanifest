@@ -1,0 +1,26 @@
+{
+  "name": "大岛 + Oahu · 夏威夷行程伴侣",
+  "short_name": "夏威夷行程",
+  "description": "2026.11.26 – 12.04 大岛 + Oahu 私藏行程、确认号、火山提醒与 3D 地图（支持完全离线使用）",
+  "start_url": "./",
+  "id": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FFFFFF",
+  "icons": [
+    {
+      "src": "./art/pwa/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./art/pwa/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

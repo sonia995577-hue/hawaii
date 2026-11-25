@@ -1,0 +1,2340 @@
+<!doctype html>
+<html lang="zh-Hans" data-style="1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="夏威夷行程">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="manifest" href="manifest.webmanifest?v=r36">
+<link rel="apple-touch-icon" sizes="180x180" href="art/pwa/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="art/pwa/icon-192.png">
+<title>大岛 + Oahu · 行程伴侣</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Hawaii 1A · Warm Matte-Clay Design System Tokens (100% Light Mode, Zero Dark/Neon Cards) */
+  --bg:#FFFFFF; --surface:#FFFFFF; --surface-2:#F7F5F0; --surface-pass:#FBF9F5;
+  --surface-amber:#FFF8EE; --line-amber:#F2DEC3;
+  --ink:#1F1D1A; --ink-2:#57534E; --ink-3:#8F8982;
+  --line:rgba(31,29,26,.08); --line-strong:rgba(31,29,26,.15);
+  --accent:#FF385C; --accent-ink:#FFFFFF; --accent-soft:#FFF1F3;
+  --ok:#15803D; --ok-bg:#ECFDF3;
+  --warn:#B45309; --warn-bg:#FFF7ED;
+  --ocean:#0369A1; --ocean-bg:#F0F9FF;
+  --radius:22px; --radius-sm:14px; --border-w:1px;
+  --shadow:0 6px 22px rgba(31,29,26,.055), 0 1px 2px rgba(31,29,26,.03);
+  --shadow-lg:0 16px 38px rgba(31,29,26,.14);
+  --font:"Inter",-apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans SC",sans-serif;
+  --display:"Inter",-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,monospace;
+  --ease:cubic-bezier(.22,1,.36,1); --dur:260ms;
+}
+[data-style="1"]{--bg:#FFFFFF;--surface:#FFFFFF;--surface-2:#F7F5F0;--ink:#1F1D1A;--ink-2:#57534E;--ink-3:#8F8982;--line:rgba(31,29,26,.08);--accent:#FF385C;--accent-ink:#FFFFFF;--radius:22px;--shadow:0 6px 22px rgba(31,29,26,.055), 0 1px 2px rgba(31,29,26,.03);--ease:cubic-bezier(.22,1,.36,1);--dur:260ms}
+[data-style="2"]{--bg:#F6F2EA;--surface:#FCFBF8;--surface-2:#EFE9DC;--ink:#1E1B18;--ink-2:#5C5349;--ink-3:#8E8275;--line:rgba(30,27,24,.12);--line-strong:rgba(30,27,24,.24);--accent:#E85D2A;--accent-ink:#FFFFFF;--ok:#2E6F40;--ok-bg:#EAF4EC;--radius:10px;--radius-sm:6px;--display:"Instrument Serif",Georgia,"Songti SC",serif;--ease:cubic-bezier(.16,1,.3,1);--dur:380ms}
+[data-style="3"]{--bg:#F7F3EA;--surface:#FFFFFF;--surface-2:#F3EDE0;--ink:#1C1917;--ink-2:#57534E;--ink-3:#8A8279;--accent:#FF7A2F;--accent-ink:#FFFFFF;--radius:24px;--shadow:0 5px 0 #E4DCC8, 0 10px 20px rgba(28,25,23,.08);--ease:cubic-bezier(.34,1.56,.64,1);--dur:360ms}
+[data-style="4"]{--bg:#E6F0F8;--surface:rgba(255,255,255,.76);--surface-2:rgba(255,255,255,.52);--ink:#0F172A;--ink-2:#475569;--ink-3:#64748B;--line:rgba(255,255,255,.75);--line-strong:rgba(15,23,42,.12);--accent:#F59E0B;--accent-ink:#0F172A;--radius:26px;--shadow:0 10px 30px rgba(14,116,144,.08), inset 0 1px 0 rgba(255,255,255,.9);--ease:cubic-bezier(.25,1,.35,1);--dur:340ms}
+[data-style="5"]{--bg:#FFFFFF;--surface:#FFFFFF;--surface-2:#F4F4F5;--ink:#0A0A0A;--ink-2:#3F3F46;--ink-3:#71717A;--line:#0A0A0A;--line-strong:#0A0A0A;--accent:#0047FF;--accent-ink:#FFFFFF;--warn:#FF3D1F;--warn-bg:#FFF0ED;--ok:#00875A;--ok-bg:#E6F7F0;--radius:0px;--radius-sm:0px;--border-w:1.5px;--shadow:4px 4px 0 #0A0A0A;--display:"Space Grotesk","Inter","PingFang SC",sans-serif;--ease:cubic-bezier(.19,1,.22,1);--dur:160ms}
+[data-style="6"]{--bg:#F4F7F3;--surface:#FFFFFF;--surface-2:#EBF1E8;--ink:#1D2A22;--ink-2:#4B5E52;--ink-3:#7A8F82;--line:rgba(29,42,34,.08);--line-strong:rgba(29,42,34,.16);--accent:#2E7D5B;--accent-ink:#FFFFFF;--ok:#1F7A4D;--ok-bg:#E8F6EE;--warn:#D95D39;--warn-bg:#FFF1EC;--radius:28px;--radius-sm:16px;--shadow:0 8px 24px rgba(29,42,34,.05);--ease:cubic-bezier(.28,1,.4,1);--dur:360ms}
+
+[data-style="2"] body{background-image:radial-gradient(rgba(30,27,24,.04) 1px,transparent 0);background-size:16px 16px}
+[data-style="4"] body{background:linear-gradient(168deg,#D5E9F8 0%,#F7EFE4 46%,#E8F1F8 100%);background-attachment:fixed}
+[data-style="4"] .glass{backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.48;color-scheme:light only;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+button,input,textarea,select{font:inherit;color:inherit}
+a{color:inherit;text-decoration:none}
+
+.app{max-width:430px;margin:0 auto;min-height:100dvh;position:relative;padding-top:env(safe-area-inset-top,0px);padding-bottom:calc(124px + env(safe-area-inset-bottom,0px));transition:transform .38s var(--ease),filter .38s var(--ease)}
+body.sheet-open .app{transform:scale(.965);filter:brightness(.97)}
+.pwa-card{background:var(--surface-pass);border:1px solid var(--line);border-radius:var(--radius);padding:14px 15px;margin-bottom:12px;box-shadow:var(--shadow)}
+.pwa-head{display:flex;align-items:center;gap:11px;margin-bottom:10px}
+.pwa-ico{width:46px;height:46px;border-radius:12px;border:1px solid var(--line);background:#FFFFFF;overflow:hidden;flex-shrink:0;box-shadow:0 3px 10px rgba(31,29,26,.08)}
+.pwa-ico img{width:100%;height:100%;object-fit:cover;display:block}
+.pwa-prog{height:6px;background:var(--surface-2);border-radius:999px;overflow:hidden;margin:8px 0 6px}
+.pwa-prog>i{display:block;height:100%;width:0%;background:linear-gradient(90deg,#FF385C,#FB7185);border-radius:999px;transition:width .25s var(--ease)}
+.pwa-steps{margin:8px 0 0;padding:10px 12px;background:#FFFFFF;border:1px solid var(--line);border-radius:12px;font-size:12px;color:var(--ink-2);line-height:1.55}
+.pwa-steps b{color:var(--ink)}
+.offline-banner{display:none;margin:0 0 10px;padding:7px 12px;border-radius:999px;background:#ECFDF3;border:1px solid rgba(21,128,61,.2);color:#15803D;font-size:11.5px;font-weight:700;text-align:center}
+body.is-offline .offline-banner{display:block}
+.view{padding:14px 16px 28px;animation:viewIn var(--dur) var(--ease) both}
+.view[hidden]{display:none!important}
+@keyframes viewIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes cardPop{0%{opacity:0;transform:translateY(16px) scale(.97)}100%{opacity:1;transform:none}}
+@keyframes spineDraw{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes dotPop{0%{transform:scale(0)}70%{transform:scale(1.25)}100%{transform:scale(1)}}
+@keyframes heroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes craterGlow{0%,100%{opacity:.28;transform:scale(.94)}50%{opacity:.62;transform:scale(1.1)}}
+@keyframes swapShake{0%{transform:scale(.96);box-shadow:0 0 0 3px rgba(255,56,92,.35)}55%{transform:scale(1.025);box-shadow:0 12px 28px rgba(255,56,92,.18)}100%{transform:none}}
+@keyframes stopIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* Shared Header & Status Bar */
+.top-row{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:10px}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--ink-3);text-transform:uppercase}
+.h1-main{margin:2px 0 0;font-family:var(--display);font-size:28px;font-weight:800;letter-spacing:-.025em;line-height:1.12}
+[data-style="2"] .h1-main{font-weight:400;font-style:italic;font-size:34px}
+.persona-wrap{display:flex;gap:6px;align-items:center;padding-top:2px}
+.who-btn{width:36px;height:36px;border-radius:50%;border:var(--border-w) solid var(--line);background:var(--surface);box-shadow:var(--shadow);display:grid;place-items:center;cursor:pointer;padding:0;transition:transform .24s var(--ease)}
+[data-style="5"] .who-btn{border-radius:0}
+.who-btn[aria-pressed="true"]{border-color:var(--ink);box-shadow:0 0 0 2px var(--accent)}
+.who-btn:active{transform:scale(.88)}
+
+/* 3-Pill Status Row — FITS IN ONE 390px SCREEN WITHOUT CLIPPING */
+.pill-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-bottom:11px}
+.st-pill{display:flex;align-items:center;justify-content:center;gap:5px;background:var(--surface);border:var(--border-w) solid var(--line);border-radius:999px;padding:6px 6px;font-size:11.5px;font-weight:700;box-shadow:var(--shadow);cursor:pointer;white-space:nowrap;overflow:hidden;transition:transform .16s var(--ease)}
+[data-style="5"] .st-pill{border-radius:0;box-shadow:2px 2px 0 #0A0A0A}
+.st-pill:active{transform:scale(.95)}
+.st-pill .dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;background:var(--ink-3)}
+.st-pill.warn{background:var(--warn-bg);color:var(--warn);border-color:rgba(194,65,12,.25)}
+.st-pill.warn .dot{background:#EA580C;animation:pulse 1.8s infinite}
+.st-pill.ok{background:var(--ok-bg);color:var(--ok);border-color:rgba(21,128,61,.2)}
+.st-pill.ok .dot{background:#16A34A}
+.st-pill.erupt{background:#141416;color:#fff;border-color:#141416}
+.st-pill.erupt .dot{background:#FF5A36;animation:pulse 1.1s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(234,88,12,.55)}60%{box-shadow:0 0 0 5px rgba(234,88,12,0)}}
+
+/* Role Focus Banner (subtle 1-line helper showing why 🐱/🐷 matters) */
+.role-note{font-size:11.5px;color:var(--ink-2);background:var(--surface-2);border-radius:var(--radius-sm);padding:6px 10px;margin-bottom:11px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+[data-style="5"] .role-note{border:1.5px solid #0A0A0A}
+
+/* Drawers (Period / Volcano / Urgent) */
+.drawer-box{background:var(--surface);border:var(--border-w) solid var(--line);border-radius:var(--radius);padding:12px 13px;margin-bottom:12px;box-shadow:var(--shadow);animation:viewIn .24s var(--ease) both}
+.drawer-box[hidden]{display:none!important}
+.pd-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;font-size:13px;font-weight:700}
+.pd-opts{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:8px}
+.pd-btn{border:var(--border-w) solid var(--line);background:var(--surface-2);border-radius:var(--radius-sm);padding:7px 4px;font-size:12px;font-weight:700;cursor:pointer;text-align:center}
+.pd-btn[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.pd-diff{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin:7px 0}
+.pd-cell{background:var(--surface-2);border-radius:var(--radius-sm);padding:6px 7px;font-size:11px;line-height:1.35}
+.pd-cell.bad{background:#FFF1F2;border:1px solid #FDA4AF}
+.pd-cell.good{background:#ECFDF5;border:1px solid #86EFAC}
+.pd-deadlines{font-size:11.5px;color:var(--ink-2);line-height:1.45;margin-top:6px}
+.pd-swap-btn{margin-top:8px;width:100%;border:0;background:var(--accent);color:var(--accent-ink);border-radius:var(--radius-sm);padding:8px 12px;font-size:12px;font-weight:800;cursor:pointer}
+
+.volcano-alert{background:#FFF3F0;color:var(--ink);border:1.5px solid #FDBA9A;border-radius:var(--radius);padding:13px 14px;margin-bottom:12px;box-shadow:var(--shadow);display:flex;align-items:center;gap:10px}
+.volcano-alert[hidden]{display:none!important}
+.volcano-alert img{width:40px;height:40px;object-fit:contain;flex-shrink:0}
+.volcano-alert .va-badge{display:inline-block;background:#FF385C;color:#fff;font-size:10px;font-weight:800;padding:2px 8px;border-radius:999px;margin-bottom:2px}
+.volcano-alert h4{margin:0;font-size:14px;font-weight:800;color:var(--ink)}
+.volcano-alert p{margin:2px 0 0;font-size:11.5px;color:var(--ink-2)}
+.volcano-alert .va-go{margin-left:auto;background:#FF385C;color:#fff;border:0;border-radius:999px;padding:7px 12px;font-size:11.5px;font-weight:800;cursor:pointer;white-space:nowrap}
+
+.sec-label{font-size:11px;font-weight:800;letter-spacing:.09em;color:var(--ink-3);text-transform:uppercase;margin:14px 2px 8px;display:flex;justify-content:space-between;align-items:center}
+.f-pill{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:700;padding:3px 8px;border-radius:999px;white-space:nowrap}
+[data-style="5"] .f-pill{border-radius:0;border:1px solid #0A0A0A}
+.f-pill.accent{background:var(--accent);color:var(--accent-ink)}
+.f-pill.ok{background:var(--ok-bg);color:var(--ok)}
+.f-pill.warn{background:var(--warn-bg);color:var(--warn)}
+.f-pill.neutral{background:var(--surface-2);color:var(--ink-2)}
+
+/* ================= STYLE 1: LARGER INTERACTIVE 1A DIORAMA + VERTICAL TIMELINE CARDS ================= */
+[data-style="1"] .pill-row,[data-style="1"] .role-note,[data-style="1"] .who-btn{display:none!important}
+[data-style="1"] .view{padding-top:16px}
+[data-style="1"] .h1-main{font-size:31px;font-weight:900}
+[data-style="1"] .eyebrow{font-size:11.5px}
+.s1-quiet-btn{display:none;height:38px;padding:0 14px;border-radius:999px;border:1px solid var(--line);background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.06);align-items:center;gap:7px;font-size:13px;font-weight:700;cursor:pointer;transition:transform .2s var(--ease)}
+.s1-quiet-btn:active{transform:scale(.95)}
+[data-style="1"] .s1-quiet-btn{display:inline-flex}
+.s1-quiet-dot{width:8px;height:8px;border-radius:50%;background:#FF385C}
+.s1-quiet-dot.ok{background:#16A34A}
+
+/* Confirmed pure-white borderless balanced plush island hero (from app_topo.html — -5% natural scale, zero floating clouds) */
+.s1-open-art{position:relative;margin:-2px -12px 6px;background:#FFFFFF;user-select:none}
+.s1-art-stage{position:relative;width:97%;margin:0 auto;aspect-ratio:1280/660;background:#FFFFFF}
+.s1-loop-vid{width:100%;height:100%;object-fit:contain;background:#FFFFFF;display:block;pointer-events:none}
+
+.s1-spine{position:relative;padding-left:18px;display:flex;flex-direction:column;gap:11px;margin-top:8px}
+.s1-spine::before{content:"";position:absolute;left:5px;top:22px;bottom:22px;width:2px;background:linear-gradient(180deg,rgba(255,56,92,.45),rgba(34,34,34,.09) 60%,rgba(34,34,34,.05));transform-origin:top;animation:spineDraw .65s var(--ease) both}
+.s1-row{position:relative;background:#fff;border-radius:20px;padding:13px 14px;border:1px solid var(--line);box-shadow:var(--shadow);text-align:left;cursor:pointer;transition:transform .24s cubic-bezier(.34,1.56,.64,1),box-shadow .26s var(--ease),border-color .24s}
+.s1-row:active{transform:scale(.968)}
+.s1-row::before{content:"";position:absolute;left:-17px;top:24px;width:10px;height:10px;border-radius:50%;background:#FFFFFF;border:3px solid #FF385C;box-shadow:0 0 0 3px rgba(255,56,92,.12);transition:transform .28s cubic-bezier(.34,1.56,.64,1),box-shadow .28s;animation:dotPop .42s cubic-bezier(.34,1.56,.64,1) both;animation-delay:var(--dly,0ms)}
+.s1-row.is-focus{border-color:rgba(255,56,92,.24);box-shadow:0 10px 26px rgba(15,23,42,.08),0 2px 6px rgba(255,56,92,.06)}
+.s1-row.is-focus::before{transform:scale(1.22);background:#FF385C;box-shadow:0 0 0 5px rgba(255,56,92,.18)}
+.s1-row.is-focus .s1-ico{transform:translateY(-2px) scale(1.06) rotate(-2deg)}
+.s1-row.swap-flash{animation:swapShake .68s var(--ease) both!important;border-color:#FF385C}
+.s1-top{display:flex;align-items:center;gap:11px}
+.s1-ico{width:48px;height:48px;border-radius:15px;background:linear-gradient(180deg,#FAF9F6,#F1EFEA);border:1px solid rgba(0,0,0,.04);display:grid;place-items:center;flex-shrink:0;transition:transform .32s cubic-bezier(.34,1.56,.64,1)}
+.s1-row:hover .s1-ico{transform:scale(1.12) rotate(-5deg)}
+.s1-ico img{width:38px;height:38px;object-fit:contain;filter:drop-shadow(0 3px 5px rgba(0,0,0,.1))}
+.s1-clean-line{margin-top:8px;font-size:12.5px;color:#4B5563;font-weight:500;line-height:1.42}
+.s1-whisper{margin-top:6px;padding-top:6px;border-top:1px solid rgba(0,0,0,.045);display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:11.5px;color:#71717A}
+
+/* ================= STYLE 2: EDITORIAL RISOGRAPH MAGAZINE ================= */
+.s2-cover{position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--line-strong);margin-bottom:14px;background:#FCFBF8}
+.s2-cover img{width:100%;height:198px;object-fit:cover;display:block}
+.s2-cover-meta{padding:12px 14px;display:flex;justify-content:space-between;align-items:center;border-top:1px dashed var(--line-strong)}
+.s2-cover-meta h2{margin:0;font-family:var(--display);font-style:italic;font-size:24px;font-weight:400}
+.s2-stamp{position:absolute;top:12px;right:12px;background:#FCFBF8;border:1.5px dashed #1E1B18;border-radius:999px;padding:4px 10px;font-size:10px;font-weight:800;letter-spacing:.08em;transform:rotate(5deg)}
+.s2-postcards{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;margin:0 -16px 14px;padding:2px 16px 6px}
+.s2-postcards::-webkit-scrollbar{display:none}
+.s2-pc{flex:0 0 68%;background:#FCFBF8;border:1px solid var(--line-strong);border-radius:10px;padding:12px;text-align:left;cursor:pointer;box-shadow:3px 3px 0 rgba(30,27,24,.08);transition:transform .28s var(--ease)}
+.s2-pc:active{transform:scale(.97) rotate(-1deg)}
+.s2-index{border-top:1px solid var(--line-strong)}
+.s2-idx-row{width:100%;background:transparent;border:0;border-bottom:1px dashed var(--line-strong);padding:11px 2px;display:grid;grid-template-columns:40px 1fr auto;gap:10px;align-items:center;text-align:left;cursor:pointer;transition:background .2s}
+.s2-idx-row:active{background:rgba(232,93,42,.08)}
+.s2-num{font-family:var(--display);font-style:italic;font-size:24px;color:var(--accent);line-height:1}
+
+/* ================= STYLE 3: NOT BORING 3D TACTILE BENTO ================= */
+.s3-widgets{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:12px}
+.s3-w{background:#fff;border:1.5px solid #E4DCC8;border-radius:20px;padding:11px 12px;box-shadow:0 4px 0 #E4DCC8;cursor:pointer;text-align:left;transition:transform .12s var(--ease),box-shadow .12s}
+.s3-w:active{transform:translateY(3px);box-shadow:0 1px 0 #E4DCC8}
+.s3-w .big{font-size:26px;font-weight:900;line-height:1.05;font-variant-numeric:tabular-nums}
+.s3-hero{border-radius:24px;overflow:hidden;border:1.5px solid #E4DCC8;box-shadow:0 5px 0 #E4DCC8;margin-bottom:13px;background:#fff}
+.s3-hero img{width:100%;height:150px;object-fit:cover;display:block}
+.s3-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.s3-tile{background:#fff;border:1.5px solid #E4DCC8;border-radius:22px;padding:12px;box-shadow:0 5px 0 #E4DCC8;text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:6px;transition:transform .14s var(--ease),box-shadow .14s}
+.s3-tile:active{transform:translateY(4px);box-shadow:0 1px 0 #E4DCC8}
+.s3-tile img{width:46px;height:46px;object-fit:contain;transition:transform .3s var(--ease)}
+.s3-tile:hover img{transform:scale(1.12) rotate(-4deg)}
+.s3-tile .t-title{font-size:13.5px;font-weight:800;line-height:1.25}
+.s3-tile .t-sub{font-size:11.5px;color:var(--ink-2);line-height:1.35}
+
+/* ================= STYLE 4: LIQUID GLASS & LUMY SOLAR ================= */
+.s4-solar{position:relative;border-radius:26px;overflow:hidden;border:1px solid rgba(255,255,255,.8);box-shadow:var(--shadow);margin-bottom:12px}
+.s4-solar img{width:100%;height:184px;object-fit:cover;display:block}
+#tideCanvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:auto;cursor:crosshair}
+.s4-arc-bar{position:absolute;left:12px;right:12px;bottom:10px;background:rgba(255,255,255,.78);backdrop-filter:blur(16px);border-radius:16px;padding:9px 12px;display:flex;align-items:center;justify-content:space-between;font-size:12px;pointer-events:none}
+.s4-bento{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:12px}
+.s4-bcard{background:var(--surface);backdrop-filter:blur(16px);border:1px solid var(--line);border-radius:20px;padding:11px 12px;box-shadow:var(--shadow);text-align:left;cursor:pointer}
+.s4-card{background:var(--surface);backdrop-filter:blur(18px);border:1px solid var(--line);border-radius:24px;padding:13px 14px;box-shadow:var(--shadow);text-align:left;cursor:pointer;width:100%;margin-bottom:10px;transition:transform .24s var(--ease)}
+.s4-card:active{transform:scale(.975)}
+
+/* ================= STYLE 5: NEO-BRUTALIST AGENCY ZINE ================= */
+.s5-marquee{background:#0A0A0A;color:#fff;padding:7px 0;margin:0 -16px 12px;overflow:hidden;white-space:nowrap;border-top:1.5px solid #0A0A0A;border-bottom:1.5px solid #0A0A0A;font-family:var(--mono);font-size:11.5px;font-weight:700}
+.s5-track{display:inline-block;animation:marq 18s linear infinite}
+@keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.s5-hero{border:1.5px solid #0A0A0A;box-shadow:4px 4px 0 #0047FF;margin-bottom:14px;background:#fff}
+.s5-hero img{width:100%;height:175px;object-fit:cover;display:block;border-bottom:1.5px solid #0A0A0A}
+.s5-hero-bar{padding:8px 11px;display:flex;justify-content:space-between;font-family:var(--mono);font-size:11.5px;font-weight:700}
+.s5-table{border-top:1.5px solid #0A0A0A;border-left:1.5px solid #0A0A0A;border-right:1.5px solid #0A0A0A;background:#fff}
+.s5-row{width:100%;background:#fff;border:0;border-bottom:1.5px solid #0A0A0A;display:grid;grid-template-columns:56px 1fr;text-align:left;cursor:pointer;padding:0;transition:background .12s}
+.s5-row:active{background:#F4F4F5}
+.s5-num{background:#0A0A0A;color:#fff;display:grid;place-items:center;font-family:var(--display);font-size:22px;font-weight:700;padding:10px 4px}
+.s5-row.urgent .s5-num{background:#FF3D1F}
+.s5-cell{padding:10px 12px}
+
+/* ================= STYLE 6: SOFT BOTANICAL & TWIN GUARDIAN ================= */
+.s6-twin{background:#fff;border-radius:26px;padding:13px 14px;border:1px solid var(--line);box-shadow:var(--shadow);margin-bottom:12px;display:flex;align-items:center;gap:12px}
+.s6-ring{width:54px;height:54px;flex-shrink:0;position:relative;display:grid;place-items:center}
+.s6-ring span{font-size:12px;font-weight:800;color:var(--accent)}
+.s6-hero{border-radius:26px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);margin-bottom:13px;position:relative}
+.s6-hero img{width:100%;height:158px;object-fit:cover;display:block}
+.s6-card{background:#fff;border-radius:26px;padding:13px 15px;border:1px solid var(--line);box-shadow:var(--shadow);text-align:left;cursor:pointer;width:100%;margin-bottom:10px;transition:transform .28s var(--ease)}
+.s6-card:active{transform:scale(.975)}
+
+/* ================= A2 SWISS RAIL DAY DETAIL (GESTALT 4-TIER SPACING + EMBEDDED MOTION) ================= */
+#v-day{padding:16px 24px 96px}
+.dv-nav{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
+.back-btn{border:0;background:transparent;padding:4px 6px 4px 0;font-size:14px;font-weight:650;color:var(--ink);display:inline-flex;align-items:center;gap:3px;cursor:pointer;transition:opacity .15s,transform .16s var(--ease)}
+.back-btn:active{opacity:.6;transform:translateX(-2px)}
+.dv-map-link{border:0;background:#F6F5F1;color:var(--ink);border-radius:999px;padding:6px 12px;font-size:12.5px;font-weight:650;cursor:pointer;white-space:nowrap;flex-shrink:0;display:inline-flex;align-items:center;gap:5px;transition:transform .16s var(--ease),background .16s}
+.dv-map-link:active{transform:scale(.95);background:#ECEAE3}
+
+/* Borderless Underline Date Strip (Tier 4 -> 20px below into Hero) */
+.dv-strip{display:flex;gap:18px;overflow-x:auto;scrollbar-width:none;margin:0 -24px 20px;padding:4px 24px 8px;position:relative}
+.dv-strip::-webkit-scrollbar{display:none}
+.dv-dp{flex:0 0 auto;border:0;background:transparent;padding:4px 0 6px;font-size:13px;font-weight:600;color:#ABA59D;cursor:pointer;position:relative;transition:color .2s var(--ease)}
+.dv-dp[aria-pressed="true"]{color:var(--ink);font-weight:800}
+.dv-strip-ind{position:absolute;left:0;bottom:6px;height:2px;background:var(--ink);border-radius:2px;transition:transform .32s cubic-bezier(.22,1,.36,1),width .32s cubic-bezier(.22,1,.36,1);pointer-events:none}
+
+/* A2 Asymmetric Editorial Hero (Tier 1 internal 2px/6px; Tier 4 -> 28px below into Timeline) */
+.dv-hero-a2{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:28px}
+.dv-hero-left{flex:1;min-width:0}
+.dv-hero-k{font-size:11px;font-weight:700;color:#9C968E;letter-spacing:.07em;text-transform:uppercase}
+.dv-hero-left h2{margin:2px 0 0;font-family:var(--display);font-size:23px;font-weight:850;letter-spacing:-.028em;line-height:1.18;color:var(--ink);text-wrap:balance}
+.dv-hero-meta{margin-top:6px;font-size:12px;color:#7C7770;display:flex;align-items:center;gap:5px;flex-wrap:wrap;font-weight:500}
+.dv-hero-meta .sep{color:#DBD6CE}
+.dv-hero-wb{margin-top:4px;font-size:11.5px;font-weight:700;display:inline-flex;align-items:center;gap:5px}
+.dv-hero-wb.ok{color:var(--ok)}
+.dv-hero-wb.warn{color:#E11D48}
+.dv-hero-wb .wdot{width:5px;height:5px;border-radius:50%;background:currentColor}
+
+/* Interactive Floating 3D Sculpture with Ambient Shadow & Tap Egg */
+.dv-art-btn{position:relative;width:88px;height:84px;flex-shrink:0;border:0;background:transparent;padding:0;cursor:pointer;display:grid;place-items:center;overflow:visible}
+.dv-art-btn img{width:82px;height:76px;object-fit:contain;filter:drop-shadow(0 12px 16px rgba(26,25,24,.12));animation:artFloat 3.8s ease-in-out infinite;transform-origin:center center;transition:transform .28s var(--ease)}
+.dv-art-shadow{position:absolute;bottom:0;width:52px;height:7px;border-radius:50%;background:radial-gradient(ellipse,rgba(26,25,24,.11),transparent 72%);animation:artShadow 3.8s ease-in-out infinite;pointer-events:none}
+@keyframes artFloat{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-5px) rotate(1deg)}}
+@keyframes artShadow{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(.84);opacity:.55}}
+.dv-art-btn.pop-glide img{animation:artGlide .78s cubic-bezier(.22,1,.36,1) both}
+.dv-art-btn.pop-hop img{animation:artHop .62s cubic-bezier(.34,1.56,.64,1) both}
+@keyframes artGlide{0%{transform:translate(0,0) rotate(-2deg)}45%{transform:translate(10px,-13px) rotate(-14deg) scale(1.08)}100%{transform:translate(0,0) rotate(-2deg)}}
+@keyframes artHop{0%{transform:scale(1)}35%{transform:translateY(-11px) scale(1.12) rotate(6deg)}70%{transform:translateY(2px) scale(.96) rotate(-3deg)}100%{transform:none}}
+.art-puff{position:absolute;pointer-events:none;border-radius:50%;animation:puffRise .95s cubic-bezier(.22,1,.36,1) forwards}
+@keyframes puffRise{0%{opacity:0;transform:translate(0,0) scale(.4)}25%{opacity:.85}100%{opacity:0;transform:translate(var(--px,0px),var(--py,-34px)) scale(1.4)}}
+
+/* Strict Single-Axis Swiss Rail (Gestalt 4-Tier Scale: 3px intra -> 8px pass -> 14/14px transit bridge -> 22px sibling -> 28px section) */
+.dv-rail{display:flex;flex-direction:column}
+.dv-step{display:grid;grid-template-columns:30px 1fr;column-gap:16px;position:relative;animation:stepReveal .42s var(--ease) both;animation-delay:var(--sdly,0ms)}
+@keyframes stepReveal{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.dv-axis{display:flex;flex-direction:column;align-items:center}
+.dv-node{width:30px;height:30px;border-radius:50%;background:#F5F4F0;color:var(--ink);display:grid;place-items:center;flex-shrink:0;z-index:1;transition:transform .2s var(--ease)}
+.dv-node.solid{background:var(--ink);color:#fff}
+.dv-node.warn{background:var(--accent);color:#fff}
+.dv-line{width:1.5px;flex:1;background:#EAE7E0;margin:6px 0;min-height:14px;transform-origin:top;animation:axisDraw .5s var(--ease) both;animation-delay:var(--ldly,80ms)}
+.dv-step.has-bridge .dv-line{margin:6px 0 0}
+@keyframes axisDraw{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+.dv-scontent{min-width:0;padding-bottom:22px}
+.dv-step.is-last .dv-scontent{padding-bottom:0}
+.dv-step.has-bridge .dv-scontent{padding-bottom:0}
+
+.dv-stop-hit{width:100%;border:0;background:transparent;padding:0;text-align:left;cursor:pointer;display:block;border-radius:10px;transition:opacity .15s}
+.dv-stop-hit:active{opacity:.65}
+.dv-r1{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.dv-sname{font-size:15.5px;font-weight:760;color:var(--ink);letter-spacing:-.018em;line-height:1.32}
+.dv-stime{font-size:12.5px;font-weight:600;color:#8C867E;font-variant-numeric:tabular-nums;flex-shrink:0}
+.dv-sbrief{margin-top:3px;font-size:13px;color:#7C7770;line-height:1.45}
+
+/* Embedded Boarding-Pass Micro-Bar (Tier 2: 8px below brief — tightly coupled to parent stop, NEVER truncates title!) */
+.dv-pass-mini{margin-top:8px;padding:8px 11px;border-radius:11px;background:#F8F7F4;border:1px solid #ECE8E0;display:flex;align-items:center;justify-content:space-between;gap:8px;cursor:pointer;transition:background .15s}
+.dv-pass-mini.is-warn{background:#FFF7F8;border-color:#FAD2DA}
+.dv-pm-l{display:flex;align-items:center;gap:7px;font-size:12px;color:#5C5750;min-width:0;overflow:hidden}
+.dv-pm-dot{width:6px;height:6px;border-radius:50%;background:var(--ok);flex-shrink:0}
+.dv-pass-mini.is-warn .dv-pm-dot{background:var(--accent)}
+.dv-pm-code{font-family:var(--mono);font-weight:750;color:var(--ink);font-size:12px;white-space:nowrap}
+.dv-pm-txt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dv-pm-copy{border:1px solid #E4E0D8;background:#fff;color:var(--ink);border-radius:999px;padding:2.5px 10px;font-size:11.5px;font-weight:700;cursor:pointer;flex-shrink:0;transition:all .2s var(--ease)}
+.dv-pm-copy.copied{background:var(--ok);border-color:var(--ok);color:#fff}
+
+/* Symmetric Transit Bridge Row (Tier 3: balanced 14px top / 14px bottom between Stop N and Stop N+1!) */
+.dv-bridge{display:grid;grid-template-columns:30px 1fr;column-gap:16px;animation:stepReveal .38s var(--ease) both;animation-delay:var(--sdly,0ms)}
+.dv-bridge-axis{display:flex;flex-direction:column;align-items:center}
+.dv-bridge-line{width:1.5px;flex:1;background:#EAE7E0;margin-bottom:6px}
+.dv-bridge-dot{width:7px;height:7px;border-radius:50%;border:1.5px solid #CFCAC1;background:#fff;margin-top:5px;flex-shrink:0}
+.dv-bridge-body{padding:14px 0;display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:11.5px;font-weight:600;color:#9C968E}
+.dv-bridge.is-origin .dv-bridge-body{padding:0 0 14px}
+.dv-bridge-l{display:inline-flex;align-items:center;gap:6px;min-width:0}
+.dv-bridge-warn{color:#E11D48;font-weight:700;white-space:nowrap}
+
+/* Clean Hairline Footer List (Tier 4: 28px below Timeline!) */
+.dv-foot{margin-top:28px;border-top:1px solid #EFECE6}
+.dv-frow{width:100%;border:0;border-bottom:1px solid #EFECE6;background:transparent;padding:15px 2px;display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:14px;font-weight:650;color:var(--ink);cursor:pointer;text-align:left;transition:opacity .15s}
+.dv-frow:active{opacity:.6}
+.dv-frow-l{display:inline-flex;align-items:center;gap:10px}
+.dv-frow-r{font-size:12.5px;font-weight:600;color:#9C968E;white-space:nowrap}
+
+.btn-black{background:var(--ink);color:#fff;border:0;border-radius:999px;padding:10px 15px;font-size:12.5px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:6px;cursor:pointer}
+[data-style="5"] .btn-black{border-radius:0}
+.btn-white{background:var(--surface);color:var(--ink);border:var(--border-w) solid var(--line-strong);border-radius:999px;padding:9px 13px;font-size:12.5px;font-weight:700;cursor:pointer}
+[data-style="5"] .btn-white{border-radius:0}
+
+/* L3 Stop Detail & Day Info Bottom Sheets (Unified Clean Style — ZERO broken left borders!) */
+.l3-scrim{position:fixed;inset:0;background:rgba(26,25,24,.34);backdrop-filter:blur(3px);z-index:92;opacity:0;pointer-events:none;transition:opacity .22s}
+.l3-scrim.open{opacity:1;pointer-events:auto}
+.l3-sheet{position:fixed;left:0;right:0;bottom:0;margin:0 auto;max-width:430px;max-height:84dvh;overflow-y:auto;background:#fff;border-radius:26px 26px 0 0;z-index:93;padding:12px 24px max(24px,env(safe-area-inset-bottom,24px));transform:translateY(105%);transition:transform .34s var(--ease);box-shadow:0 -14px 40px rgba(26,25,24,.2)}
+.l3-sheet.open{transform:none}
+.l3-grab{width:36px;height:4px;border-radius:99px;background:#E2DED6;margin:0 auto 14px}
+.l3-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:16px}
+.l3-kicker{font-size:11px;font-weight:750;color:#9C968E;letter-spacing:.05em;margin-bottom:2px}
+.l3-head h3{margin:0;font-size:21px;font-weight:850;letter-spacing:-.025em;line-height:1.2}
+.l3-close{width:30px;height:30px;border-radius:50%;border:0;background:#F5F4F0;color:#6B6660;font-size:14px;font-weight:800;display:grid;place-items:center;cursor:pointer;flex-shrink:0}
+.l3-cta{display:grid;grid-template-columns:1.4fr 1fr;gap:10px;margin-bottom:20px}
+.l3-cta.single{grid-template-columns:1fr}
+.l3-btn-pri{border:0;background:var(--ink);color:#fff;border-radius:13px;padding:11px 12px;font-size:13px;font-weight:750;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;text-decoration:none}
+.l3-btn-sec{border:1px solid #E5E1D9;background:#F8F7F4;color:var(--ink);border-radius:13px;padding:11px 12px;font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:5px}
+.l3-sec-lbl{font-size:11px;font-weight:750;color:#9C968E;letter-spacing:.06em;margin:16px 0 8px;text-transform:uppercase}
+.l3-tip-card{background:#F8F7F4;border-radius:13px;padding:12px 14px;font-size:13px;color:#4A4640;line-height:1.58;margin-bottom:8px}
+.l3-tip-card b{color:var(--ink)}
+.l3-tip-card.warn{background:#FFF8EE;border:1px solid #F2DEC3;color:#5C340E}
+.l3-tip-card.warn b{color:#9A4D12}
+
+/* Clean Unified Boarding-Pass Card inside L3 Sheet (NO broken border-left claw!) */
+.pass-card{margin:0 0 16px;border-radius:15px;background:#F8F7F4;border:1px solid #E8E4DC;overflow:hidden}
+.pass-card.is-warn{background:#FFF8F9;border-color:#FAD2DA}
+.pass-head{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 13px;border-bottom:1px dashed #E4DFD5}
+.pass-card.is-warn .pass-head{border-bottom-color:#F7C6CF}
+.pass-badge{font-size:11.5px;font-weight:750;color:var(--ok);display:inline-flex;align-items:center;gap:6px}
+.pass-card.is-warn .pass-badge{color:var(--accent)}
+.pass-code-btn{border:1px solid #E2DDD4;background:#fff;border-radius:999px;padding:3px 10px;display:inline-flex;align-items:center;gap:6px;cursor:pointer;transition:all .18s}
+.pass-code-btn.copied{background:var(--ok);border-color:var(--ok)}
+.pass-code-btn.copied .pass-code-val,.pass-code-btn.copied .pass-code-cp{color:#fff}
+.pass-code-val{font-family:var(--mono);font-size:12px;font-weight:800;color:var(--ink);letter-spacing:.02em}
+.pass-code-cp{font-size:10.5px;font-weight:750;color:var(--accent)}
+.pass-grid{padding:11px 13px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px 12px}
+.pass-cell.wide{grid-column:1 / -1}
+.pass-k{display:block;font-size:10px;font-weight:750;color:#9C968E;letter-spacing:.04em;margin-bottom:2px}
+.pass-v{display:block;font-size:12.5px;font-weight:700;color:var(--ink);line-height:1.4}
+.info-ta{width:100%;min-height:76px;border:1px solid #E2DDD4;border-radius:13px;padding:10px 12px;background:#F8F7F4;font-size:13px;margin-bottom:10px}
+
+/* Wanderlog-Style Move Stop Bottom Sheet */
+.move-scrim{position:fixed;inset:0;background:rgba(31,29,26,.32);backdrop-filter:blur(3px);z-index:94;opacity:0;pointer-events:none;transition:opacity .22s}
+.move-scrim.open{opacity:1;pointer-events:auto}
+.move-sheet{position:fixed;left:0;right:0;bottom:0;margin:0 auto;max-width:430px;background:#fff;border-radius:24px 24px 0 0;z-index:95;padding:14px 16px max(18px,env(safe-area-inset-bottom,18px));transform:translateY(105%);transition:transform .32s var(--ease);box-shadow:0 -12px 36px rgba(31,29,26,.16)}
+.move-sheet.open{transform:none}
+.mv-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:11px}
+.mv-head h3{margin:2px 0 0;font-size:16px;font-weight:800}
+.mv-quick{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:10px}
+.mv-qbtn{border:1px solid var(--line-strong);background:var(--surface-2);border-radius:13px;padding:9px 10px;font-size:12.5px;font-weight:800;color:var(--ink);cursor:pointer;text-align:center}
+.mv-qbtn.primary{background:var(--accent-soft);border-color:rgba(255,56,92,.28);color:var(--accent)}
+.mv-qbtn:disabled{opacity:.4;cursor:not-allowed}
+.mv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-bottom:10px}
+.mv-day{border:1px solid var(--line);background:#fff;border-radius:13px;padding:8px 6px;text-align:left;cursor:pointer;transition:all .15s}
+.mv-day b{display:block;font-size:11.5px;font-weight:800;color:var(--ink)}
+.mv-day span{display:block;font-size:10.5px;color:var(--ink-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:1px}
+.mv-day[aria-current="true"]{background:var(--ink);border-color:var(--ink)}
+.mv-day[aria-current="true"] b,.mv-day[aria-current="true"] span{color:#fff}
+.mv-order{display:flex;gap:7px;padding-top:9px;border-top:1px solid var(--line)}
+.mv-order button{flex:1;border:1px solid var(--line);background:var(--surface-2);border-radius:999px;padding:7px;font-size:12px;font-weight:700;cursor:pointer}
+.mv-order button:disabled{opacity:.38;cursor:not-allowed}
+
+.acc-box{background:var(--surface);border-radius:18px;border:var(--border-w) solid var(--line);margin-bottom:8px;box-shadow:0 3px 10px rgba(31,29,26,.035)}
+.acc-box summary{list-style:none;padding:12px 14px;font-size:13.5px;font-weight:750;cursor:pointer;display:flex;justify-content:space-between}
+.acc-box summary::-webkit-details-marker{display:none}
+.acc-body{padding:0 14px 12px;font-size:13px;color:var(--ink-2);line-height:1.5}
+.acc-body textarea{width:100%;min-height:68px;border:1px solid var(--line-strong);border-radius:12px;padding:9px;background:var(--surface-2);margin-bottom:7px}
+
+.bk-card{background:var(--surface);border-radius:20px;padding:13px 14px;border:var(--border-w) solid var(--line);box-shadow:var(--shadow);margin-bottom:9px}
+.bk-card.swapped{border-color:#15803D;background:#F4FDF7}
+.bk-head{display:flex;align-items:center;gap:9px;justify-content:space-between}
+.bk-left{display:flex;align-items:center;gap:9px;min-width:0}
+.bk-ico{width:38px;height:38px;border-radius:12px;background:var(--surface-2);display:grid;place-items:center;flex-shrink:0}
+.bk-ico img{width:28px;height:28px;object-fit:contain}
+.bk-title{font-size:14px;font-weight:750}
+.bk-when{font-size:11.5px;color:var(--ink-2)}
+.bk-detail{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line-strong);font-size:12px;color:var(--ink-2)}
+.urgent-btn{border:0;background:var(--ink);color:#fff;border-radius:999px;padding:6px 12px;font-size:11.5px;font-weight:700;cursor:pointer}
+[data-style="5"] .urgent-btn{border-radius:0}
+
+.prep-seg{display:flex;gap:6px;margin-bottom:10px}
+.prep-seg button{flex:1;border:var(--border-w) solid var(--line);background:var(--surface);border-radius:999px;padding:7px;font-size:12.5px;font-weight:700;cursor:pointer}
+[data-style="5"] .prep-seg button{border-radius:0}
+.prep-seg button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.ck-row{background:var(--surface);border-radius:15px;padding:10px 12px;margin-bottom:7px;border:var(--border-w) solid var(--line);display:flex;align-items:flex-start;gap:10px;cursor:pointer}
+.ck-box{width:20px;height:20px;border-radius:6px;border:1.8px solid #C8C3BA;background:#fff;display:grid;place-items:center;flex-shrink:0;margin-top:1px}
+.ck-row.done .ck-box{background:var(--ink);border-color:var(--ink);color:#fff;font-size:12px}
+.ck-row.done .ck-txt{text-decoration:line-through;color:var(--ink-3)}
+.ck-txt{font-size:13.5px;font-weight:650}
+.ck-sub{font-size:11.5px;color:var(--ink-2);margin-top:2px}
+
+/* FULL-PAGE EDGE-TO-EDGE PURE-WHITE PLUSH 360° 3D MAP PRESENTATION (1:1 Homepage Style!) */
+#v-map{position:fixed;inset:0;max-width:430px;margin:0 auto;padding:0;z-index:20;background:#FFFFFF}
+.map-wrap{position:relative;width:100%;height:100dvh;border-radius:0;overflow:hidden;border:0;background:#FFFFFF;box-shadow:none;touch-action:none}
+.map-sky-cloud{position:absolute;pointer-events:none;z-index:2;opacity:.88;user-select:none}
+.map-sky-cloud.c1{top:88px;left:-26px;width:118px;animation:mapCloudDrift1 14s ease-in-out infinite}
+.map-sky-cloud.c2{top:104px;right:-24px;width:128px;animation:mapCloudDrift2 16s ease-in-out infinite}
+@keyframes mapCloudDrift1{0%,100%{transform:translate(0,0)}50%{transform:translate(10px,-6px)}}
+@keyframes mapCloudDrift2{0%,100%{transform:translate(0,0)}50%{transform:translate(-10px,5px)}}
+.map-3d-canvas{position:absolute;inset:0;width:100%;height:100%;cursor:grab;z-index:1}
+.map-3d-canvas:active{cursor:grabbing}
+.map-3d-canvas canvas{display:block;width:100%!important;height:100%!important}
+.map-3d-pins{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:3}
+/* Ultra-light borderless floating map labels (Apple Maps 3D whisper style — ZERO chunky white bricks, ZERO duplicate dots!) */
+.p3d-day{position:absolute;left:0;top:0;display:inline-flex;align-items:center;gap:3px;background:transparent;border:0;border-radius:999px;padding:2px 5px;box-shadow:none;cursor:pointer;white-space:nowrap;will-change:transform;transition:transform .14s}
+.p3d-txt{font-size:11px;font-weight:750;color:#1F1D1A;letter-spacing:-.01em;text-shadow:0 0 4px #fff,0 0 5px #fff,0 1px 2px rgba(255,255,255,.98),1px 0 3px #fff,-1px 0 3px #fff,0 -1px 3px #fff}
+.p3d-day:hover .p3d-txt{color:#000}
+.p3d-stop{position:absolute;left:0;top:0;display:inline-flex;align-items:center;gap:4px;background:transparent;border:0;border-radius:999px;padding:2px 6px 2px 2px;box-shadow:none;cursor:pointer;white-space:nowrap;will-change:transform;transition:background .16s,box-shadow .16s}
+.p3d-stop.is-active-step{background:rgba(31,29,26,.90);padding:3px 9px 3px 3px;box-shadow:0 6px 18px rgba(31,29,26,.22)}
+.p3d-stop.is-active-step .p3d-lbl{color:#FFFFFF;text-shadow:none}
+.p3d-num{width:17px;height:17px;border-radius:50%;background:var(--pc,#FF385C);color:#fff;font-size:10px;font-weight:850;display:grid;place-items:center;flex-shrink:0;border:1.5px solid #fff;box-shadow:0 2px 6px rgba(31,29,26,.22)}
+.p3d-lbl{font-size:11px;font-weight:750;color:#1F1D1A;text-shadow:0 0 4px #fff,0 0 5px #fff,0 1px 2px rgba(255,255,255,.98),1px 0 3px #fff,-1px 0 3px #fff,0 -1px 3px #fff}
+.step-play-bar{display:flex;align-items:center;gap:6px;padding:2px 0 9px;overflow-x:auto;scrollbar-width:none}
+.step-play-btn{display:inline-flex;align-items:center;gap:5px;border:0;background:var(--ink);color:#fff;border-radius:999px;padding:6px 12px;font-size:11.5px;font-weight:750;cursor:pointer;flex-shrink:0;box-shadow:0 4px 12px rgba(31,29,26,.16)}
+.step-play-btn.playing{background:#FF385C}
+.step-chip{border:1px solid var(--line-strong);background:#fff;color:var(--ink);border-radius:999px;padding:5px 10px;font-size:11px;font-weight:750;cursor:pointer;flex-shrink:0;transition:all .15s}
+.step-chip[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.ck-row.is-step-active{border-color:var(--ink);background:#FAF8F3;box-shadow:0 4px 14px rgba(31,29,26,.08)}
+.map-zbtn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.map-float-top{position:absolute;top:max(14px,env(safe-area-inset-top,14px));left:14px;right:14px;display:flex;justify-content:space-between;align-items:center;gap:8px;z-index:6;pointer-events:none}
+.map-float-top > *{pointer-events:auto}
+.map-float-sub{position:absolute;top:calc(max(14px,env(safe-area-inset-top,14px)) + 44px);left:14px;right:14px;display:flex;justify-content:space-between;align-items:center;gap:8px;z-index:6;pointer-events:none}
+.map-float-sub > *{pointer-events:auto}
+.map-pill{pointer-events:auto;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(31,29,26,.08);border-radius:999px;padding:6px 12px;font-size:11.5px;font-weight:700;color:var(--ink);cursor:pointer;box-shadow:0 4px 14px rgba(31,29,26,.07)}
+.map-zoom-bar{position:absolute;right:14px;bottom:136px;z-index:6;display:flex;flex-direction:column;gap:6px}
+.map-zbtn{width:36px;height:36px;border-radius:50%;border:1px solid rgba(31,29,26,.08);background:rgba(255,255,255,.94);backdrop-filter:blur(14px);color:var(--ink);font-size:16px;font-weight:800;display:grid;place-items:center;cursor:pointer;box-shadow:0 4px 14px rgba(31,29,26,.08);transition:transform .14s}
+.map-zbtn:active{transform:scale(.9)}
+.map-zbtn.sm{font-size:10.5px;font-weight:800}
+.map-seg{pointer-events:auto;display:inline-flex;background:rgba(255,255,255,.94);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(31,29,26,.09);border-radius:999px;padding:3px;flex-shrink:0;box-shadow:0 4px 14px rgba(31,29,26,.07)}
+.map-seg button{border:0;background:transparent;border-radius:999px;padding:5px 13px;font-size:12px;font-weight:750;cursor:pointer;white-space:nowrap;color:var(--ink-2)}
+.map-seg button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.map-sheet{position:absolute;left:12px;right:12px;bottom:76px;background:rgba(255,255,255,.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(31,29,26,.09);border-radius:22px;box-shadow:0 10px 30px rgba(31,29,26,.10);z-index:6;transition:transform .34s var(--ease);max-height:52%;display:flex;flex-direction:column}
+.map-grab{padding:9px 0 8px;display:flex;flex-direction:column;align-items:center;gap:5px;cursor:pointer;border-bottom:1px solid rgba(31,29,26,.06)}
+.map-grab span.bar{width:34px;height:4px;border-radius:99px;background:#D6D2C9}
+.map-grab b{font-size:12px;color:var(--ink)}
+.map-sheet-body{overflow-y:auto;padding:8px 11px 12px;scrollbar-width:none}
+.map-sheet-body::-webkit-scrollbar{display:none}
+
+/* Floating Dock */
+.dock-wrap{position:fixed;left:0;right:0;bottom:max(12px,env(safe-area-inset-bottom,12px));z-index:70;display:flex;justify-content:center;pointer-events:none}
+.dock{pointer-events:auto;background:var(--ink);color:#fff;border-radius:999px;padding:6px 9px;display:flex;align-items:center;gap:4px;box-shadow:var(--shadow-lg);max-width:386px;width:calc(100% - 26px);justify-content:space-between}
+[data-style="5"] .dock{border-radius:0;border:1.5px solid #0A0A0A;box-shadow:4px 4px 0 #0047FF}
+.dock-btn{border:0;background:transparent;color:rgba(255,255,255,.72);border-radius:999px;padding:8px 12px;font-size:12px;font-weight:700;cursor:pointer;transition:background .22s var(--ease),color .22s,transform .18s var(--ease)}
+.dock-btn:active{transform:scale(.93)}
+[data-style="5"] .dock-btn{border-radius:0}
+.dock-btn[aria-selected="true"]{background:#fff;color:var(--ink)}
+.dock-ai{width:42px;height:42px;border-radius:50%;border:0;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;cursor:pointer;flex-shrink:0;transition:transform .32s cubic-bezier(.34,1.56,.64,1),box-shadow .24s}
+.dock-ai:hover{transform:scale(1.08) rotate(22deg);box-shadow:0 4px 16px rgba(255,56,92,.38)}
+.dock-ai:active{transform:scale(.92)}
+[data-style="5"] .dock-ai{border-radius:0}
+
+/* Gemini Sheet */
+.ai-scrim{position:fixed;inset:0;background:rgba(15,23,42,.38);backdrop-filter:blur(4px);z-index:90;opacity:0;pointer-events:none;transition:opacity .24s}
+.ai-scrim.open{opacity:1;pointer-events:auto}
+.ai-sheet{position:fixed;left:0;right:0;bottom:0;margin:0 auto;max-width:430px;height:84dvh;background:var(--surface);border-radius:24px 24px 0 0;z-index:91;display:flex;flex-direction:column;transform:translateY(105%);transition:transform .38s var(--ease);box-shadow:0 -12px 40px rgba(0,0,0,.22)}
+.ai-sheet.open{transform:none}
+.ai-head{padding:12px 15px 10px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
+.ai-badge{display:inline-flex;align-items:center;gap:7px;font-weight:800;font-size:15px}
+.ai-star{width:26px;height:26px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center}
+.ai-keybar{padding:7px 13px;background:var(--surface-2);border-bottom:1px solid var(--line);display:flex;gap:6px;align-items:center;font-size:11.5px}
+.ai-keybar input{flex:1;border:1px solid var(--line-strong);border-radius:999px;padding:4px 10px;font-size:11.5px;background:#fff}
+.ai-log{flex:1;overflow-y:auto;padding:12px 14px;display:flex;flex-direction:column;gap:8px}
+.msg{max-width:86%;padding:9px 12px;border-radius:16px;font-size:13px;line-height:1.45}
+.msg.me{align-self:flex-end;background:var(--ink);color:#fff;border-bottom-right-radius:4px}
+.msg.ai{align-self:flex-start;background:var(--surface-2);color:var(--ink);border-bottom-left-radius:4px}
+.ai-chips{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:6px 13px}
+.ai-chips::-webkit-scrollbar{display:none}
+.ai-chip{flex:0 0 auto;background:#fff;border:1px solid var(--line-strong);border-radius:999px;padding:5px 10px;font-size:11.5px;font-weight:600;cursor:pointer}
+.ai-form{padding:8px 12px max(12px,env(safe-area-inset-bottom,12px));border-top:1px solid var(--line);display:flex;gap:7px}
+.ai-form input{flex:1;border:1px solid var(--line-strong);border-radius:999px;padding:9px 13px;background:var(--surface-2);font-size:13.5px}
+.ai-send{width:38px;height:38px;border-radius:50%;border:0;background:var(--ink);color:#fff;display:grid;place-items:center;cursor:pointer}
+
+[data-style="5"] .ai-sheet,[data-style="5"] .ai-keybar input,[data-style="5"] .ai-chip,[data-style="5"] .ai-form input,[data-style="5"] .ai-send,[data-style="5"] .ai-star{border-radius:0}
+.toast{position:fixed;left:50%;bottom:82px;transform:translateX(-50%) translateY(14px);background:var(--ink);color:#fff;padding:7px 14px;border-radius:999px;font-size:12.5px;font-weight:700;opacity:0;pointer-events:none;transition:all .24s var(--ease);z-index:100}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+svg.i{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.pin-scrim{position:fixed;inset:0;background:rgba(15,23,42,.38);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);z-index:110;opacity:0;pointer-events:none;transition:opacity .22s}
+.pin-scrim.open{opacity:1;pointer-events:auto}
+.pin-sheet{position:fixed;left:0;right:0;bottom:0;margin:0 auto;max-width:430px;background:#FFFFFF;border-radius:26px 26px 0 0;padding:18px 20px max(22px,env(safe-area-inset-bottom,22px));z-index:111;transform:translateY(105%);transition:transform .32s var(--ease);box-shadow:0 -14px 40px rgba(0,0,0,.18)}
+.pin-sheet.open{transform:none}
+.pin-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:14px}
+.pin-head h3{margin:2px 0 0;font-size:19px;font-weight:800;letter-spacing:-.02em}
+.pin-sub{font-size:12.5px;color:var(--ink-2);margin-top:3px;line-height:1.4}
+.pin-dots{display:flex;justify-content:center;gap:14px;margin:10px 0 6px}
+.pin-dots.shake{animation:pinShake .34s ease}
+@keyframes pinShake{0%,100%{transform:none}20%{transform:translateX(-8px)}40%{transform:translateX(8px)}60%{transform:translateX(-5px)}80%{transform:translateX(5px)}}
+.pin-dot{width:14px;height:14px;border-radius:50%;border:2px solid var(--line-strong);background:#FFFFFF;transition:all .14s var(--ease)}
+.pin-dot.filled{background:#1F1D1A;border-color:#1F1D1A;transform:scale(1.1)}
+.pin-dot.err{background:#FF385C;border-color:#FF385C}
+.pin-err{min-height:18px;text-align:center;font-size:12px;font-weight:700;color:#FF385C;margin-bottom:10px}
+.pin-pad{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:292px;margin:0 auto}
+.pin-key{height:52px;border-radius:16px;border:1px solid var(--line);background:#F7F5F0;color:#1F1D1A;font-size:21px;font-weight:700;cursor:pointer;display:grid;place-items:center;transition:transform .1s var(--ease),background .12s}
+.pin-key:active{transform:scale(.93);background:#EAE5DC}
+.pin-key.ghost{background:#FFFFFF;border-color:transparent;font-size:13.5px;color:var(--ink-2)}
+.vault-lock-btn{height:38px;padding:0 12px;border-radius:999px;border:1px solid var(--line);background:#FFFFFF;box-shadow:0 4px 14px rgba(0,0,0,.06);display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;cursor:pointer;white-space:nowrap;transition:transform .18s var(--ease),border-color .18s}
+.vault-lock-btn:active{transform:scale(.94)}
+.vault-lock-btn.unlocked{border-color:rgba(21,128,61,.25);background:#F4FDF7;color:#15803D}
+.bk-lock-banner{background:#FFFFFF;border:1px solid var(--line-strong);border-radius:20px;padding:13px 14px;margin-bottom:12px;display:flex;align-items:center;justify-content:space-between;gap:10px;box-shadow:var(--shadow)}
+.bk-lock-btn{border:0;background:#1F1D1A;color:#FFFFFF;border-radius:999px;padding:8px 14px;font-size:12px;font-weight:750;cursor:pointer;white-space:nowrap;flex-shrink:0}
+</style>
+</head>
+<body>
+
+<div class="app">
+  <section class="view" id="v-trips">
+    <div class="top-row">
+      <div>
+        <div class="eyebrow">HAWAIʻI · 11.26 – 12.04</div>
+        <h1 class="h1-main">大岛 + Oahu</h1>
+      </div>
+      <div class="persona-wrap">
+        <button type="button" class="s1-quiet-btn" id="s1QuietBtn"><span class="s1-quiet-dot ok" id="s1QuietDot"></span><span id="s1QuietTxt">火山</span></button>
+        <button type="button" class="vault-lock-btn" id="s1VaultBtn"><span id="s1VaultTxt">🔒 解锁</span></button>
+      </div>
+    </div>
+
+    <!-- Compact 3-pill strip: NEVER overflows 390px -->
+    <div class="pill-row">
+      <button type="button" class="st-pill warn" id="pillPending"><span class="dot"></span><span id="pendingTxt">海胆饭待订</span></button>
+      <button type="button" class="st-pill" id="pillVault"><span class="dot" style="background:#FF385C"></span><span id="vaultPillTxt">🔒 凭证已锁</span></button>
+      <button type="button" class="st-pill ok" id="pillVolcano"><span class="dot"></span><span id="volcanoTxt">火山 监测中</span></button>
+    </div>
+
+    <!-- Role focus strip -->
+    <div class="role-note" id="roleNote"></div>
+
+    <!-- Volcano Status Drawer (opens on tap — never surprises with fake eruption) -->
+    <div class="drawer-box" id="volcanoDrawer" hidden>
+      <div class="pd-top">
+        <span id="vdTitle">USGS Kīlauea 实时监测</span>
+        <button type="button" class="urgent-btn" id="closeVolcanoBtn" style="padding:3px 9px;font-size:11px">收起</button>
+      </div>
+      <div id="vdDesc" style="font-size:12px;color:var(--ink-2);line-height:1.45"></div>
+    </div>
+
+    <!-- Automatic USGS Eruption Alert (appears ONLY on live active eruption or explicit preview) -->
+    <div class="volcano-alert" id="volcanoAlert" hidden>
+      <img src="art/icons3d/volcano.png" alt="">
+      <div style="flex:1;min-width:0">
+        <span class="va-badge" id="vaBadge">USGS 实时检测到喷发</span>
+        <h4 id="vaTitle">Kīlauea 正在喷发！</h4>
+        <p id="vaDesc">每轮主喷发仅持续 6–9h，点右侧可一键切到追火山行程（可随时撤销还原）。</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:5px;flex-shrink:0">
+        <button type="button" class="va-go" id="vaSwitchBtn" style="background:#FF385C">切追火山</button>
+        <a class="va-go" href="https://www.youtube.com/@USGSVolcanoes/streams" target="_blank" style="text-align:center;background:#1F1D1A">看直播 ↗</a>
+      </div>
+    </div>
+
+    <div class="offline-banner">已进入离线模式 · 全部行程、确认号与 3D 地图照常秒开</div>
+    <div id="homeBody"></div>
+  </section>
+
+  <section class="view" id="v-day" hidden></section>
+
+  <section class="view" id="v-map" hidden>
+    <div class="map-wrap" id="mapWrap">
+      <div class="map-float-top">
+        <div class="map-seg">
+          <button type="button" id="mapIsleBig" aria-pressed="true">大岛</button>
+          <button type="button" id="mapIsleOahu" aria-pressed="false">Oahu</button>
+        </div>
+        <div style="display:flex;gap:6px;align-items:center">
+          <button type="button" class="map-pill" id="mapResetBtn">全部视角</button>
+          <button type="button" class="map-pill" id="mapGmapsBtn">Maps ↗</button>
+        </div>
+      </div>
+      <div class="map-float-sub" style="display:flex;justify-content:space-between;align-items:center;gap:8px;width:calc(100% - 28px)">
+        <div class="map-pill" id="mapDayLbl" style="font-size:11px;padding:4px 10px;opacity:.92">大岛 · 左右拖 360° 旋转</div>
+        <div class="map-seg" style="padding:2px;pointer-events:auto" aria-label="3D 模式切换">
+          <button type="button" id="mapModeTT" aria-pressed="true" style="padding:4px 9px;font-size:11px">转盘 3D</button>
+          <button type="button" id="mapModeFree" aria-pressed="false" style="padding:4px 9px;font-size:11px">自由 3D</button>
+        </div>
+      </div>
+      <div class="map-zoom-bar" aria-label="3D 视角控制">
+        <button type="button" class="map-zbtn" id="mapSpinBtn" title="360° 自动旋转" aria-label="360度自动旋转">⟳</button>
+        <button type="button" class="map-zbtn" id="mapZoomIn" aria-label="放大地图">+</button>
+        <button type="button" class="map-zbtn" id="mapZoomOut" aria-label="缩小地图">−</button>
+        <button type="button" class="map-zbtn sm" id="mapZoomReset" aria-label="重置视角">1:1</button>
+      </div>
+      <div class="map-3d-canvas" id="map3dCanvas"></div>
+      <div class="map-3d-pins" id="map3dPins"></div>
+      <div class="map-sheet" id="mapSheet">
+        <div class="map-grab" id="mapGrab"><span class="bar"></span><b id="mapSheetTitle">单指 360° 旋转 · 点 D3 骑马等徽章看路线</b></div>
+        <div class="map-sheet-body" id="mapSheetBody"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="view" id="v-bookings" hidden></section>
+  <section class="view" id="v-prep" hidden></section>
+</div>
+
+<div class="dock-wrap">
+  <nav class="dock" aria-label="主导航">
+    <button type="button" class="dock-btn" data-tab="trips" aria-selected="true">行程</button>
+    <button type="button" class="dock-btn" data-tab="map" aria-selected="false">地图</button>
+    <button type="button" class="dock-ai" id="openGeminiBtn" aria-label="Gemini 助手">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C12.8 7.5 16.5 11.2 22 12C16.5 12.8 12.8 16.5 12 22C11.2 16.5 7.5 12.8 2 12C7.5 11.2 11.2 7.5 12 2Z"/></svg>
+    </button>
+    <button type="button" class="dock-btn" data-tab="bookings" aria-selected="false">预订</button>
+    <button type="button" class="dock-btn" data-tab="prep" aria-selected="false">准备</button>
+  </nav>
+</div>
+
+<div class="ai-scrim" id="aiScrim"></div>
+<section class="ai-sheet" id="aiSheet">
+  <div class="ai-head">
+    <div class="ai-badge"><span class="ai-star"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C12.8 7.5 16.5 11.2 22 12C16.5 12.8 12.8 16.5 12 22C11.2 16.5 7.5 12.8 2 12C7.5 11.2 11.2 7.5 12 2Z"/></svg></span><span>Gemini 行程助手</span></div>
+    <button type="button" class="back-btn" id="closeGeminiBtn" style="padding:4px 10px">收起</button>
+  </div>
+  <div class="ai-keybar">
+    <span style="font-weight:700;color:var(--ink-2)">API</span>
+    <input type="password" id="geminiKeyInput" placeholder="填 Gemini Key 开启自由对话（留空也能离线秒查）">
+    <button type="button" class="urgent-btn" id="saveKeyBtn" style="padding:4px 9px">保存</button>
+  </div>
+  <div class="ai-log" id="aiLog"></div>
+  <div class="ai-chips">
+    <button type="button" class="ai-chip">去程行李能免费带啥？</button>
+    <button type="button" class="ai-chip">11/27 周五 Hilo+火山怎么走？</button>
+    <button type="button" class="ai-chip">11/30 魔鬼鱼去哪集合？</button>
+    <button type="button" class="ai-chip">12/01 观星上车点在哪？</button>
+  </div>
+  <form class="ai-form" id="aiForm">
+    <input type="text" id="aiInput" placeholder="问 Gemini 任何行程问题…">
+    <button type="submit" class="ai-send"><svg class="i" viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button>
+  </form>
+</section>
+
+<div class="l3-scrim" id="stopScrim"></div>
+<section class="l3-sheet" id="stopSheet" aria-label="单站详情"></section>
+
+<div class="l3-scrim" id="infoScrim"></div>
+<section class="l3-sheet" id="infoSheet" aria-label="当日提醒与备选"></section>
+
+<div class="move-scrim" id="moveScrim"></div>
+<section class="move-sheet" id="moveSheet" aria-label="移动行程到其他天">
+  <div class="mv-head">
+    <div>
+      <div class="eyebrow">调整行程日期</div>
+      <h3 id="mvTitle">移动行程</h3>
+    </div>
+    <button type="button" class="back-btn" id="closeMoveBtn" style="padding:4px 10px">关闭</button>
+  </div>
+  <div class="mv-quick" id="mvQuick"></div>
+  <div class="mv-grid" id="mvGrid"></div>
+  <div class="mv-order" id="mvOrder"></div>
+</section>
+
+<div class="pin-scrim" id="pinScrim"></div>
+<section class="pin-sheet" id="pinSheet" aria-label="输入密码解锁凭证">
+  <div class="l3-grab"></div>
+  <div class="pin-head">
+    <div>
+      <div class="eyebrow">PRIVATE BOOKINGS LOCK</div>
+      <h3>输入 4 位密码解锁凭证</h3>
+      <div class="pin-sub">解锁全部确认号、取票 PIN、信用卡尾号与持卡人信息；解锁后会记在当前手机本地，离线也能直接看。</div>
+    </div>
+    <button type="button" class="l3-close" id="closePinBtn" aria-label="关闭">✕</button>
+  </div>
+  <div class="pin-dots" id="pinDots">
+    <span class="pin-dot"></span><span class="pin-dot"></span><span class="pin-dot"></span><span class="pin-dot"></span>
+  </div>
+  <div class="pin-err" id="pinErr"></div>
+  <div class="pin-pad" id="pinPad">
+    <button type="button" class="pin-key" data-k="1">1</button>
+    <button type="button" class="pin-key" data-k="2">2</button>
+    <button type="button" class="pin-key" data-k="3">3</button>
+    <button type="button" class="pin-key" data-k="4">4</button>
+    <button type="button" class="pin-key" data-k="5">5</button>
+    <button type="button" class="pin-key" data-k="6">6</button>
+    <button type="button" class="pin-key" data-k="7">7</button>
+    <button type="button" class="pin-key" data-k="8">8</button>
+    <button type="button" class="pin-key" data-k="9">9</button>
+    <button type="button" class="pin-key ghost" id="pinClearBtn">清空</button>
+    <button type="button" class="pin-key" data-k="0">0</button>
+    <button type="button" class="pin-key ghost" id="pinDelBtn">⌫</button>
+  </div>
+</section>
+
+<div class="toast" id="toast"></div>
+
+<script src="lib/three.min.js?v=r36"></script>
+<script src="lib/island3d.js?v=r36"></script>
+<script>
+(function(){
+"use strict";
+const ls={get(k){try{return localStorage.getItem("hwp2_"+k)}catch(e){return null}},set(k,v){try{localStorage.setItem("hwp2_"+k,v)}catch(e){}},del(k){try{localStorage.removeItem("hwp2_"+k)}catch(e){}}};
+
+/* Encrypted private booking vault (decrypted purely on-device from user passcode; zero secrets shipped in HTML) */
+const VAULT_ENC = {"v": 1, "rounds": 5000, "salt": "4803efacf4d67925fa41548bc2b95695", "hmac": "3273357bcf4ef53a49cf7ceffe0cace7dcb13054472a8a0929bda2302cfb5f61", "ct": "6UGJ6qJ292ORCjwLE01NjCcuj7aA2Hq6q/HIbV3SvFQ1ToS1dCT4040zpPeLRlHWV9IhJvUolkOI+lTXcAylQUIwXDqxyaMXkfqb2kQ1DMQTKBvZv0ipFW8fX/epUFGIwzwonwrxk3hVPgTEvc/UBAouLTdlgtpHKMGpq1ExhizNUgcuHzSsEVzGyEJ87VmCTzBk/rx4SZuSbPmS0wG6huPn/Q7w/GQc0LrBrGJXGYssgJFqnKPXL13ilGJq6qBsU4dBvWIsmxkQCv+kG6yQJ6TuZgBkJcorM2jx/xmxwYFiwRWqWaNw1LIM1ZKTlVEG9rWu+OnElQTEmS9cPQ/ipRGMNRFhqXsuq9QBVXoFDFf3YIZiDn1ScrEwCVb9+zt4uTQQJS9JpR0IGy2o9FjsIU48EcxWTLQYV6oFwSjwthaaurijupzDXsc95q+9dzdi2wUGhTX0lKLXZ/qymzbUNbBfGmuudCguzT50T0kNCtrCjPlM6urnWJcXOlKkHtlYVy0atfoSPRUc14fD46DNh01Ckk4Ta4QbVxtUxY+MNZijxdLYWhyQyqfjqAHl7X4RbrJKUtSOhxqOirdHTKq3FgyHod2OjOlmnVa8By1w+Ftr9acmUJ4ru7bvdNwfbo3X9mcWdJl1rSK41am5UsGi6gB26qtXqIXGsmcJlqECMqdB9iosCUfPanSz1zxI4tfNowY5k9nyWbZxLdnfqVnuo+feMEjE45I0HXV2v93k40UcXFhRx86kDhKD3Ua+1DgXVwae3JLPTFYX1IQCHpborV/UsNdzeuYYsF2BYEf7ZD2aX2ZTvBBjeDRV8U/ZLsWDCrXDkhOj4hH5s2ZtsspqpqLpNN0jUCgy7dUUdGynRRkFbXp3h8ot1r0WNCdWc5plGWWVq0F03yiKaMmamQn2LVmwV3IH2P7LOpzDhp+Ws9g2rtSRkCQ/DgXjN8wA0rmi7GbwO3dKJNklbWsdEWvr2AGDMg9v8VjRdGrg8fmRt4qZU4iAn1EZjT9RDtrsBDhPilE1uova7Z/MlXe+ios70gxc/5AOA+BGyUuGUUB1i17zwy24KMDVEL6xlibG2lCjifZPZz8Og0uC4fuw5l3JoTudCYeHMWpEEawXXFh6POZOAviGUV3rG86KBrGK4V1T10DGTDlVZ5UdZxQBl4aOO8dO7//SVTZ1ruH+pDL0vD6a/GCx75tPPqCwgeG1NvYfG4wT+QmysSlGXFk2l4zMu1nknPNwGs7AIo0r5ZNhQNaIs7Kzfp+oq19C2puCLqWlq/vhy9DR8GWxoNgrUZOqRSt+hllFUU6aiBK2cJ1QTkjQlWsb1f4uowlwI6GQlbaURkEFBKbzeZAWZQ=="};
+const _te = new TextEncoder(), _td = new TextDecoder();
+function _hexToBytes(hex){ const a=new Uint8Array(hex.length>>1); for(let i=0;i<a.length;i++) a[i]=parseInt(hex.substr(i*2,2),16); return a; }
+function _bytesToHex(b){ let s=""; for(let i=0;i<b.length;i++) s+=(b[i]<16?"0":"")+b[i].toString(16); return s; }
+function _b64ToBytes(s){ const bin=atob(s), a=new Uint8Array(bin.length); for(let i=0;i<bin.length;i++) a[i]=bin.charCodeAt(i); return a; }
+function _cat(a,b){ const r=new Uint8Array(a.length+b.length); r.set(a,0); r.set(b,a.length); return r; }
+const _K256 = new Uint32Array([0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2]);
+const _W256 = new Uint32Array(64);
+function _sha256(msg){
+  const ml = msg.length, padLen = ((ml + 9 + 63) >> 6) << 6;
+  const buf = new Uint8Array(padLen);
+  buf.set(msg); buf[ml] = 0x80;
+  const bitHi = (ml >>> 29) >>> 0, bitLo = (ml << 3) >>> 0;
+  buf[padLen-8]=(bitHi>>>24)&255; buf[padLen-7]=(bitHi>>>16)&255; buf[padLen-6]=(bitHi>>>8)&255; buf[padLen-5]=bitHi&255;
+  buf[padLen-4]=(bitLo>>>24)&255; buf[padLen-3]=(bitLo>>>16)&255; buf[padLen-2]=(bitLo>>>8)&255; buf[padLen-1]=bitLo&255;
+  let h0=0x6a09e667,h1=0xbb67ae85,h2=0x3c6ef372,h3=0xa54ff53a,h4=0x510e527f,h5=0x9b05688c,h6=0x1f83d9ab,h7=0x5be0cd19;
+  for(let off=0; off<padLen; off+=64){
+    for(let i=0;i<16;i++) _W256[i]=((buf[off+i*4]<<24)|(buf[off+i*4+1]<<16)|(buf[off+i*4+2]<<8)|buf[off+i*4+3])>>>0;
+    for(let i=16;i<64;i++){
+      const s0=((_W256[i-15]>>>7)|(_W256[i-15]<<25))^((_W256[i-15]>>>18)|(_W256[i-15]<<14))^(_W256[i-15]>>>3);
+      const s1=((_W256[i-2]>>>17)|(_W256[i-2]<<15))^((_W256[i-2]>>>19)|(_W256[i-2]<<13))^(_W256[i-2]>>>10);
+      _W256[i]=(_W256[i-16]+s0+_W256[i-7]+s1)>>>0;
+    }
+    let a=h0,b=h1,c=h2,d=h3,e=h4,f=h5,g=h6,h=h7;
+    for(let i=0;i<64;i++){
+      const S1=((e>>>6)|(e<<26))^((e>>>11)|(e<<21))^((e>>>25)|(e<<7));
+      const ch=(e&f)^((~e)&g), t1=(h+S1+ch+_K256[i]+_W256[i])>>>0;
+      const S0=((a>>>2)|(a<<30))^((a>>>13)|(a<<19))^((a>>>22)|(a<<10));
+      const maj=(a&b)^(a&c)^(b&c), t2=(S0+maj)>>>0;
+      h=g; g=f; f=e; e=(d+t1)>>>0; d=c; c=b; b=a; a=(t1+t2)>>>0;
+    }
+    h0=(h0+a)>>>0; h1=(h1+b)>>>0; h2=(h2+c)>>>0; h3=(h3+d)>>>0; h4=(h4+e)>>>0; h5=(h5+f)>>>0; h6=(h6+g)>>>0; h7=(h7+h)>>>0;
+  }
+  const out=new Uint8Array(32), hs=[h0,h1,h2,h3,h4,h5,h6,h7];
+  for(let i=0;i<8;i++){ out[i*4]=(hs[i]>>>24)&255; out[i*4+1]=(hs[i]>>>16)&255; out[i*4+2]=(hs[i]>>>8)&255; out[i*4+3]=hs[i]&255; }
+  return out;
+}
+function _hmacSha256(key, data){
+  const k0=key.length>64?_sha256(key):key;
+  const ipad=new Uint8Array(64).fill(0x36), opad=new Uint8Array(64).fill(0x5c);
+  for(let i=0;i<k0.length;i++){ ipad[i]^=k0[i]; opad[i]^=k0[i]; }
+  return _sha256(_cat(opad, _sha256(_cat(ipad, data))));
+}
+function tryDecryptVault(pin){
+  try{
+    const salt=_hexToBytes(VAULT_ENC.salt), rounds=VAULT_ENC.rounds||5000;
+    let k=_sha256(_cat(salt, _te.encode(pin)));
+    for(let i=0;i<rounds;i++) k=_sha256(_cat(k, salt));
+    const encKey=_sha256(_cat(k, _te.encode("ENC")));
+    const macKey=_sha256(_cat(k, _te.encode("MAC")));
+    const ct=_b64ToBytes(VAULT_ENC.ct);
+    const gotMac=_bytesToHex(_hmacSha256(macKey, _cat(salt, ct)));
+    let diff=gotMac.length^VAULT_ENC.hmac.length;
+    for(let i=0;i<gotMac.length;i++) diff|=gotMac.charCodeAt(i)^VAULT_ENC.hmac.charCodeAt(i);
+    if(diff!==0) return null;
+    const pt=new Uint8Array(ct.length);
+    for(let blk=0; blk*32<ct.length; blk++){
+      const ctr=new Uint8Array(4); ctr[0]=(blk>>>24)&255; ctr[1]=(blk>>>16)&255; ctr[2]=(blk>>>8)&255; ctr[3]=blk&255;
+      const pad=_sha256(_cat(_cat(encKey, salt), ctr));
+      for(let j=0; j<32 && blk*32+j<ct.length; j++) pt[blk*32+j]=ct[blk*32+j]^pad[j];
+    }
+    return JSON.parse(_td.decode(pt));
+  }catch(e){ return null; }
+}
+let vaultData = null;
+try{
+  const savedV = ls.get("vaultUnlocked");
+  if(savedV){ const parsed = JSON.parse(savedV); if(parsed && parsed._v===VAULT_ENC.salt) vaultData = parsed; }
+}catch(e){}
+function isUnlocked(){ return !!vaultData; }
+function vk(key, lockedTxt){ return vaultData && vaultData[key] ? vaultData[key] : (lockedTxt || "🔒 点输密码解锁"); }
+function reRenderAll(){
+  renderStatusBar();
+  if(state.dayId) openDay(state.dayId);
+  else if(state.tab==="bookings") renderBookings();
+  else if(state.tab==="prep") renderPrep();
+  else if(state.tab==="trips") renderHome();
+}
+function lockVault(){
+  vaultData = null; ls.del("vaultUnlocked");
+  reRenderAll();
+  toast("已重新锁定私密确认号 🔒");
+}
+let _pinBuf = "";
+function drawPinDots(isErr){
+  const dots = [...document.querySelectorAll("#pinDots .pin-dot")];
+  dots.forEach((el,i)=>{
+    el.classList.toggle("filled", i < _pinBuf.length);
+    el.classList.toggle("err", !!isErr);
+  });
+}
+function closePinSheet(){
+  $("#pinScrim").classList.remove("open");
+  $("#pinSheet").classList.remove("open");
+  if(!$("#moveSheet").classList.contains("open") && !$("#stopSheet").classList.contains("open") && !$("#infoSheet").classList.contains("open") && !$("#aiSheet").classList.contains("open")){
+    document.body.classList.remove("sheet-open");
+  }
+}
+function openPinSheet(){
+  if(isUnlocked()){
+    if(state.tab==="bookings"){ lockVault(); return; }
+    switchTab("bookings"); toast("凭证已解锁 · 可点底部或右上角锁定"); return;
+  }
+  _pinBuf = ""; $("#pinErr").textContent = ""; drawPinDots(false);
+  $("#pinScrim").classList.add("open");
+  $("#pinSheet").classList.add("open");
+  document.body.classList.add("sheet-open");
+}
+function pressPinKey(ch){
+  if(_pinBuf.length >= 4) return;
+  _pinBuf += ch; $("#pinErr").textContent = ""; drawPinDots(false);
+  if(_pinBuf.length === 4){
+    setTimeout(()=>{
+      const res = tryDecryptVault(_pinBuf);
+      if(res){
+        res._v = VAULT_ENC.salt;
+        vaultData = res;
+        ls.set("vaultUnlocked", JSON.stringify(res));
+        closePinSheet();
+        reRenderAll();
+        toast("已解锁全部确认号与凭证 ✓");
+      } else {
+        drawPinDots(true);
+        const box=$("#pinDots"); box.classList.remove("shake"); void box.offsetWidth; box.classList.add("shake");
+        $("#pinErr").textContent = "密码不对，请重试";
+        setTimeout(()=>{ _pinBuf=""; drawPinDots(false); }, 420);
+      }
+    }, 60);
+  }
+}
+
+const PINS = {
+  koa:{n:"KOA 机场",ll:[-156.045,19.739],q:"Kona International Airport"},
+  hotel:{n:"Waikoloa 酒店",ll:[-155.887,19.918],q:"Waikoloa Beach Marriott Resort & Spa"},
+  kuabay:{n:"Kua Bay 白沙滩",ll:[-156.0086,19.8098],q:"Maniniowali Beach Kua Bay, Kailua-Kona"},
+  maunalani:{n:"Mauna Lani 皇家鱼塘",ll:[-155.8626,19.9447],q:"Kalahuipuaa Historic Park Mauna Lani"},
+  beach69:{n:"Beach 69 树荫滩",ll:[-155.8290,19.9830],q:"Waialea Beach 69, Puako"},
+  waimea:{n:"Waimea 周六早市",ll:[-155.668,20.023],q:"Waimea Town Market Parker School"},
+  horse:{n:"Paniolo 日落骑马",ll:[-155.772,20.118],q:"Paniolo Adventures Ponoholo Ranch Kohala Mountain Road"},
+  kona:{n:"Kona 海滨镇",ll:[-155.995,19.640],q:"Kailua-Kona, HI"},
+  doutor:{n:"Mauka Meadows 咖啡花果园",ll:[-155.932,19.556],q:"Doutor Coffee Farm Mauka Meadows, Kailua-Kona"},
+  greenwell:{n:"Greenwell 试喝",ll:[-155.913,19.506],q:"Greenwell Farms Kona Coffee"},
+  kahaluu:{n:"Kahaluʻu 海龟浅湾",ll:[-155.966,19.580],q:"Kahaluu Beach Park, Kailua-Kona"},
+  manta:{n:"魔鬼鱼夜潜",ll:[-155.962,19.561],q:"Keauhou Bay, Kailua-Kona"},
+  twostep:{n:"Two Step 玻璃海",ll:[-155.911,19.422],q:"Two Step Snorkeling Honaunau Bay"},
+  paintedchurch:{n:"Painted Church 彩绘教堂",ll:[-155.893,19.434],q:"St Benedict Catholic Church The Painted Church Captain Cook"},
+  carlsmith:{n:"Carlsmith 海龟滩",ll:[-155.027,19.733],q:"Carlsmith Beach Park, Hilo"},
+  hilo:{n:"Hilo 日式公园 & 烘焙店",ll:[-155.071,19.724],q:"Liliuokalani Gardens, Hilo"},
+  punaluu:{n:"Punaluʻu 黑沙滩",ll:[-155.505,19.136],q:"Punaluu Black Sand Beach"},
+  kilaueaiki:{n:"Kīlauea Iki 熔岩湖",ll:[-155.250,19.415],q:"Kilauea Iki Overlook, Hawaii Volcanoes National Park"},
+  uekahuna:{n:"Uēkahuna 火山口红光",ll:[-155.288,19.421],q:"Uekahuna Overlook, Hawaii Volcanoes National Park"},
+  vis:{n:"Mauna Kea 游客中心",ll:[-155.456,19.760],q:"Mauna Kea Visitor Information Station"},
+  summit:{n:"Mauna Kea 山顶",ll:[-155.468,19.821],q:"Mauna Kea Summit"},
+  outrigger:{n:"Outrigger 海滩酒店",ll:[-157.8256,21.2768],q:"OUTRIGGER Waikiki Beachcomber Hotel 2300 Kalakaua Ave Honolulu HI 96815"}
+};
+
+function getBaseDays(){
+  const L = "🔒 点解锁";
+  return [
+    {id:"d0",num:1,date:"11/26",wk:"周四",island:"BIG ISLAND",tag:"感恩节",title:"落地 Kona",icon:"art/icons3d/plane.png",sleep:"Waikoloa",depart:"20:32 落地",drive:"25m",sun:"17:46",dark:"18:10",wx:"21°C 干爽",
+      catNote:"UA1723 仅含 1 个座位下小包（不含大登机箱）· SFO 买好晚饭+干粮",
+      pigNote:`UA1723 ${vk("ua_pnr",L)} · 仅座位下小包 · 取 SUV 绕拍视频 · 入住万豪`,
+      chips:["20:32 落地","20:50 取 SUV","21:30 入住酒店"],
+      status:[{cls:"ok",txt:"✓ 航班·酒店"},{cls:"neutral",txt:"只含座位下小包"}],
+      stops:[
+        {sid:"s0_0",t:"20:32",n:"落地 Kona 机场 (UA1723)",emo:"✈️",tone:"air",badge:vk("ua_pnr",L),brief:"UA1723 Basic Economy · 只含 1 个座位下小包",sub:"只含 1 件座位下小包（9×10×17 寸），不含头顶大登机箱；安检前托 $45–$50、登机口 $65",tip:"KOA 是露天茅草亭小机场。UA 经济舱 N 舱（Basic Economy）只免费带 1 个塞得进前排座位下的小包；感恩节晚全岛大超市关门，SFO 候机买好热晚饭与明早中式面包带下飞机最省心。",pin:"koa",book:{确认号:vk("ua_pnr"),乘客与卡:vk("ua_holders"),电子票:vk("ua_tix"),免费行李:"仅 1 件座位下小包 (9×10×17 in)",超时托运:"安检前 $45–$50 · 登机口 $65",感恩节:"SFO 提前买晚饭 + 自备中式面包"}},
+        {sid:"s0_1",t:"20:50",n:"取普通 SUV",emo:"🚙",tone:"car",leg:"步行 3 分钟到租车区",brief:"开闪光灯绕车拍视频留底 · 确认号待补邮件",sub:"机场对面租车区，检查大灯、雨刷与轮胎再上 19 号夜路",tip:"拿车前用手机闪光灯慢速绕车拍一圈轮毂和前挡风玻璃留底，检查大灯与雨刷正常再驶出。（当前邮箱暂未搜到租车单，出发前可补存确认号。）",pin:null,book:{状态:"待补租车确认号",时间:"11/26 20:50 KOA 取 → 12/2 13:30 还"}},
+        {sid:"s0_2",t:"21:30",n:"入住 Waikoloa Beach Marriott",emo:"🏨",tone:"hotel",badge:vk("bi_hotel_pnr",L),leg:"开 25 分钟 · 19 号夜路无灯",brief:"连住 6 晚 · 标准退房 11:00（可问延迟）",sub:"直达早睡（11/26–12/2 连住 6 晚）",tip:"沿 19 号海滨公路向北几乎无路灯，稳速直达休息；酒店门口 A-Bay 草坪常有亲人的户外大猫猫晒太阳。（邮箱暂未搜到万豪确认邮件，请用酒店 App 或预订方再次核对确认号。）",pin:"hotel",book:{确认号:vk("bi_hotel_pnr"),连住:"11/26–12/2 (6晚)",退房:"标准 11:00 (可问延至 12:00)",提示:"转发邮件未含酒店单，请出行前核对一次"}}
+      ],
+      cautions:[{tag:"去程行李红线",txt:"UA1723 是 Basic Economy (N)：只能免费带 1 件放座位下的小包！带常规登机箱安检前托运 $45–$50，被登机口拦下罚 $65。"},{tag:"感恩节闭店",txt:"11/26 晚 Costco / Target 全天关门，KTA 16:00 关门；务必在 SFO 买好晚饭和明早干粮。"}],
+      eat:"SFO 机场买好带上飞机 + 自带中式面包当早餐。",
+      planB:"感恩节晚超市已关，若饿了靠自带干粮；明天 11/27 Hilo / 周日 Kona 再补超市物资。"
+    },
+    {id:"d1",num:2,date:"11/27",wk:"周五",island:"BIG ISLAND",tag:"天气优选",title:"Hilo 海龟 & 火山红光",icon:"art/icons3d/volcano.png",sleep:"Waikoloa",depart:"09:30 出发",drive:"3.8–5.2h",sun:"17:43",dark:"18:10",wx:"26→10°C",
+      catNote:"已把最稳晴窗换到周五！09:30 出发上午抢 Carlsmith 海龟 · 带防蚊液 + 厚抓绒",
+      pigNote:"全天零已订项目！午饭后看体力开关（跳过黑沙滩省 1.5h）· 18:30 走 200 号稳开回",
+      chips:["10:50 Carlsmith 海龟","11:35 日式公园+买豆","16:10 火山精华+红光"],
+      status:[{cls:"ok",txt:"✓ 周五晴窗最佳"},{cls:"neutral",txt:"周六可睡饱"}],
+      stops:[
+        {sid:"s1_0",t:"10:50",n:"Carlsmith 果冻蓝海龟湾",emo:"🐢",tone:"sea",leg:"09:30 走 200 号公路 · 开 1h 20m",brief:"上午东岸最易放晴 · 近看野生绿海龟",sub:"趁周五上午大晴天看清澈果冻蓝浅湾（车内不留可见包袋）",tip:"天气混排后把 Hilo+火山放到周五最稳：上午 Hilo 最容易放晴！Carlsmith 岸边草坪干爽好走，浅湾常见野生绿海龟；停车切记车内不留任何包袋。",pin:"carlsmith"},
+        {sid:"s1_1",t:"11:35",n:"日式公园撸猫 & 烘焙店买豆",emo:"🐱",tone:"cat",leg:"开 5 分钟 · 同片区",brief:"Liliʻuokalani 撸猫 → Big Island Coffee Roasters",sub:"先喷防蚊液逛日式拱桥撸猫 → 周五照常营业的烘焙旗舰店喝咖啡买豆",tip:"免费好停的 Liliʻuokalani 日式拱桥公园草坪常有亲人的户外大猫猫（先喷防蚊液）；开 5 分钟到 Big Island Coffee Roasters（06:30–19:00 营业），顺手买花果香 Kona Bloom 豆子！",pin:"hilo"},
+        {sid:"s1_2",t:"12:30",n:"Hilo 热午饭（体力开关）",emo:"🍜",tone:"food",leg:"开 5 分钟",brief:"热汤面吃完二选一：南下黑沙滩 或 45m 直上火山",sub:"精力够+天晴 → 去黑沙滩；累了/有雨 → 直奔火山省 1.5 小时",tip:"顺路在 Hilo 吃热汤面 / 热饭：午饭后按天气与体力现场开关——跳过黑沙滩直接开 45 分钟上火山，总车程立刻从 5.2h 砍回 3.8h，一点不赶！",pin:"hilo"},
+        {sid:"s1_3",t:"14:50",n:"Punaluʻu 黑沙滩",emo:"🖤",tone:"sea",leg:"开 1h 15m",legWarn:"⚡ 累了可跳过省 1.5h",brief:"停 40m 看纯黑火山沙 + 晒太阳绿海龟",sub:"玄武岩纯黑粗沙看海龟晒太阳（法定保持 3 米勿触碰）",tip:"黑沙反光配大海很震撼，大绿海龟常趴在沙滩右侧晒太阳（保持 3 米距离勿触碰）。已彻底删掉停业的 Bake Shop 与倒塌的 Hōlei 海拱门。",pin:"punaluu"},
+        {sid:"s1_4",t:"16:10",n:"火山公园精华 2h",emo:"🌋",tone:"vol",badge:"18:10 红光",leg:"开 40 分钟上山",brief:"外星熔岩湖 + 18:10 天黑红光 · 门票 $30/车",sub:"只看最震撼 2 处：Kīlauea Iki 熔岩湖 → Kīlauea Overlook 看红光",tip:"先去 Kīlauea Iki 观景台俯瞰外星般漆黑熔岩湖；17:30 到 Kīlauea Overlook 等 18:10 天黑透，用手机 3–5 倍夜景长曝最容易拍出火山口橘红余晖！山上只有 10°C 必穿抓绒+防风外套；18:30 走 200 号公路 2h 回酒店。",pin:"uekahuna",book:{门票:"$30/车 (7天有效)",最佳机位:"Kīlauea Overlook · 18:10 夜景长曝",夜路提醒:"18:30 走 200 号公路 2h 回，无灯开稳点"}}
+      ],
+      cautions:[{tag:"周五天气最优+带防寒",txt:"经本周天气窗口比对，周五 Hilo+火山组合优于周日；山上 10°C 一定带齐飞机上那套抓绒/防风衣与防蚊液。"},{tag:"次日只需 09:15 出门",txt:"18:30 下山走 200 号公路约 2h 回 Waikoloa，加满油开稳点；周六上午 09:15 才出门吃早市，完全睡得饱！"}],
+      eat:"Hilo 热午饭优先热汤面 / 热菜，Big Island Coffee Roasters 买手冲豆；回 Waikoloa 后吃热夜宵。",
+      planB:"若午饭后多云或偏累，果断跳过黑沙滩省 1.5h，轻松玩火山 18:10 看完红光早点回酒店。"
+    },
+    {id:"d2",num:3,date:"11/28",wk:"周六",island:"BIG ISLAND",title:"早市 · 皇家鱼塘 · 骑马",icon:"art/icons3d/horse.png",sleep:"Waikoloa",depart:"09:15 出发",drive:"1h 45m",sun:"17:47",dark:"18:11",wx:"28→19°C",
+      catNote:"09:15 出门 · 骑马强制长裤 + 包头鞋 + 薄外套 · 周六限定早市别买过季芒果",
+      pigNote:`Paniolo ${vk("horse_pnr",L)} · 16:00 报到（15:10 酒店出发）· 必带 ${vk("ua_card",L)} 与双方 ID`,
+      chips:["09:45 Waimea 早市","12:00 皇家鱼塘沙滩","16:00 报到日落骑马"],
+      status:[{cls:"accent",txt:"✓ 骑马已订"},{cls:"ok",txt:"✓ 周六独占好期"}],
+      stops:[
+        {sid:"s2_0",t:"09:45",n:"Waimea 周六农夫市集",emo:"🥑",tone:"ranch",leg:"09:15 酒店出发 · 开 30 分钟",brief:"绿草地弹唱 + 牛油果木瓜 · 带外套现金",sub:"Parker School 绿草地社区早市（周六限定，开到 13:00）",tip:"全大岛氛围最舒服的周六早市：草地现场弹唱、买当季大牛油果和草莓木瓜、现烤面包（11 月底芒果过季不买）。高原早风偏凉带外套，小摊多收现金。",pin:"waimea"},
+        {sid:"s2_1",t:"12:00",n:"Mauna Lani 皇家鱼塘 & 秘境白沙滩",emo:"🌴",tone:"beach",leg:"开 25 分钟下海边",brief:"免费停车 · 椰林古池塘直通隐秘白沙滩",sub:"Kalāhuipuaʻa Historic Park 免费停 · 顺路吃热午饭与散步",tip:"上午早市买完、中午去 Mauna Lani 吃顿热午饭，把车免费停在古鱼塘公园车位，穿过椰林石筑皇家池塘走 10 分钟到隐秘白沙滩拍照吹风，下午准时往高地牧场开。",pin:"maunalani"},
+        {sid:"s2_2",t:"16:00",n:"Paniolo 日落骑马",emo:"🐎",tone:"ranch",badge:vk("horse_pnr",L),leg:"15:10 出发 · 开 45 分钟上牧场",legWarn:"⚡ 16:00 集合报到 · 必带卡+ID",brief:"16:00 报到起骑 1.5h · 付款实体卡 + 双方 ID + 长裤包头鞋",sub:"Ponoholo 11,000 英亩私家牧场（Hwy 250 Mile 13.2）· 11/27 16:00 前 24h 免退",tip:"邮件确认 4:00 PM（16:00）即为集合报到时间，骑行 1.5 小时至 18:00 看日落！实名核对必带支付那张实体卡及双方照片 ID（无例外），必穿长裤+包头鞋+薄外套，牧场免费提供头盔、雨衣外套与靴子。因 11/29 休且 11/27、11/30、12/1 均售罄，周六不可取代！",pin:"horse",book:{订单号:vk("horse_pnr"),集合时间:"16:00 报到 (15:10 从酒店出发 · 骑 1.5h)",核验卡证:vk("horse_holder"),着装要求:"强制长裤 + 包头鞋 + 薄外套 (牧场备头盔靴子)",退改线:"11/27 16:00 前免费退 (其余日期已满)"}},
+        {sid:"s2_3",t:"18:30",n:"暖胃热晚饭回 Waikoloa",emo:"🍲",tone:"food",leg:"开 35 分钟回酒店",brief:"骑完下山喝热汤吃热饭早休息",sub:"Waimea / Waikoloa 吃热晚餐 + 记得今晚留意火山观星扣款",tip:"骑完马吹了高地海风吃碗热饭最舒服；顺带提醒：GetYourGuide 观星团今天（11/28）会自动扣款，周日 15:00 前是 Oahu 酒店免费退改线。",pin:"hotel"}
+      ],
+      cautions:[{tag:"骑马查卡查证红线",txt:"Paniolo 邮件强调：16:00 准时到场，必带本人照片 ID 与支付预订的实体信用卡（缺卡/缺 ID 现场拒骑！）；仅周六有位，11/27 16:00 前 24h 可退。"},{tag:"穿衣铁律",txt:"强制长裤和包头鞋，傍晚高地风凉多备一件防风外套。"}],
+      eat:"Waimea 早市现烤面包与鲜果、Mauna Lani 热午饭、晚上 Waimea 或酒店附近吃热食。",
+      planB:"中午若早市逛得快，顺路停 Hapuna 白沙滩看海，或回 Mauna Lani Foodland 顺手买零食水。"
+    },
+    {id:"d3",num:4,date:"11/29",wk:"周日",island:"BIG ISLAND",title:"Kua Bay & Kona 逛吃",icon:"art/icons3d/beach.png",sleep:"Waikoloa",depart:"09:30 出发",drive:"1h 30m",sun:"17:47",dark:"18:11",wx:"28°C 晴",
+      catNote:"Kua Bay 奶白果冻海 · 午后 Sunoa DIY 2h + Costco 买车用毛毯 · 顺手踩点观星上车点",
+      pigNote:"15:00 前为 Oahu 酒店 72h 免费退线！今天 Costco 备齐明晚夜潜毛毯+晕船药",
+      chips:["09:30 Kua Bay 白沙滩","12:00 Kona+Sunoa+Costco","16:30 酒店撸猫+踩点"],
+      status:[{cls:"ok",txt:"✓ 节奏松弛补血"},{cls:"neutral",txt:"今日全天周日照常开"}],
+      stops:[
+        {sid:"s3_0",t:"09:30",n:"Kua Bay 库阿湾白沙滩",emo:"🏖️",tone:"beach",leg:"开 15 分钟全铺装路",brief:"奶白细沙果冻蓝海 · 零树荫带帽墨镜",sub:"趁周日上午浪缓光好抢车位放空 2 小时",tip:"大岛颜值天花板白沙滩！奶白细沙配黑熔岩礁与果冻蓝海水。因为周五先把东边火山搞定了，今天不用赶去 Hilo 也不晒晕，舒舒服服玩到快中午再南下吃热饭。注意海滩无遮荫必戴帽子墨镜。",pin:"kuabay"},
+        {sid:"s3_1",t:"12:00",n:"Kona 热午饭 · Sunoa DIY · Costco",emo:"🛍️",tone:"shop",leg:"开 25 分钟进 Kona",brief:"周日全开！热汤面 → Sunoa 2h → Costco 囤毛毯",sub:"Sunoa 11:00–19:00、Costco 至 18:00 均开；顺囤车用毛毯+晕船药",tip:"先在 Kona 吃热汤面 / 热海鲜（TK Noodle / Umekes）；午后带足 2 小时去 Sunoa 挑刺绣布贴现场烫包（今天周日照常开！）；再去 Costco / Walmart 买车用绒毛毯（明晚夜潜出水超需要）、牛脆脆、防蚊液与晕船药。",pin:"kona"},
+        {sid:"s3_2",t:"16:30",n:"回酒店看日落撸猫 & 踩点接送处",emo:"🐱",tone:"cat",leg:"开 35 分钟回 Waikoloa",brief:"A-Bay 草坪撸大猫 + 认一下 Queens' 背面观星点",sub:"17:47 看椰林日落 · 顺便认路周二 13:25 观星上车点",tip:"傍晚回酒店草坪看日落、先闻手背再撸亲人的户外大猫猫！顺手走去对面 Queens' Marketplace 看一下商场背面（69-201 Waikoloa Beach Dr Back side），周二 13:25 观星团就在这儿接人。",pin:"hotel"}
+      ],
+      cautions:[{tag:"今日 15:00 退改节点",txt:"Oahu OUTRIGGER 酒店 72h 免费取消线是今天 11/29 15:00；如果确定行程照走就不用管，若计划大改一定在 15:00 前操作。"},{tag:"仅周中/周二-日店别跑空",txt:"Mauka 咖啡花果园（周六日休）和 BerryBird 均已安排到 12/01 周二上午，周二全开绝不跑空！"}],
+      eat:"Kona 热汤面 / Umekes 午餐；晚上在酒店旁 Queens' / Kings' 广场吃热晚餐。",
+      planB:"如果 Kua Bay 停车位满了或风较大：车行 10 分钟改去有大树荫的 Beach 69 或 Mauna Lani 古鱼塘隐秘白沙滩。"
+    },
+    {id:"d4",num:5,date:"11/30",wk:"周一",island:"BIG ISLAND",title:"玻璃海浮潜 & 魔鬼鱼",icon:"art/icons3d/manta.png",sleep:"Waikoloa",depart:"09:30 出发",drive:"2h 00m",sun:"17:47",dark:"18:11",wx:"28°C 晴",
+      catNote:"白天自由看浪选 Two Step 或 Kahaluʻu！备好干抓绒+大毛巾+毛毯 · 大包放车里",
+      pigNote:`13:25 前观星免费退线 · Dolphin ${vk("manta_pnr",L)} 18:00 先去商店再开车到码头（勿早到）`,
+      chips:["09:30 看浪选浮潜+教堂","13:25 核对明天观星天气","18:00 商店报到→夜潜"],
+      status:[{cls:"accent",txt:"✓ 夜潜已订 18:00"},{cls:"ok",txt:"✓ 协议已签 2/2"}],
+      stops:[
+        {sid:"s4_0",t:"09:30",n:"看浪浮潜：Two Step / Kahaluʻu",emo:"🤿",tone:"sea",leg:"09:30 从容出发",brief:"浪平 Two Step 玻璃海 · 浪大 Kahaluʻu 浅湾",sub:"白天没订早团！浪平去 Two Step，想省力去 Kahaluʻu（穿涉水鞋）",tip:"方案 A（浪平首选）：开 1h10m 到 Two Step，顺天然熔岩台阶直接滑进玻璃蓝海看珊瑚鱼群，上坡 5 分钟看彩绘教堂；方案 B（浪大/想少折腾）：直接去离夜潜仅 4 分钟的 Kahaluʻu 防波堤浅湾看海龟（穿涉水鞋）。",pin:"twostep"},
+        {sid:"s4_1",t:"12:00",n:"Painted Church 彩绘教堂",emo:"⛪",tone:"art",leg:"Two Step 上坡 5 分钟",brief:"免费手绘棕榈星空壁画 · 不下水可改盐场",sub:"Two Step 隔壁 5 分钟 · 若白天不想碰水可改 Kona Sea Salt 盐场",tip:"白色小木教堂推门进去满墙手绘棕榈与星空。若白天只想岸上逛逛把体力留给晚上：去机场旁 Kona Sea Salt 深海海盐农场（09:00–16:00 免预约试吃松露百香果盐+冰镇海盐泡脚）。",pin:"paintedchurch"},
+        {sid:"s4_2",t:"13:00",n:"Kona 热午饭 & 查明晚观星预报",emo:"🍜",tone:"food",leg:"开 25 分钟回 Kona",legWarn:"⚡ 13:25 前为观星 24h 退线",brief:"留 Kona 吃热饭回血 · 13:25 前盯一眼观星云图",sub:"吃碗热饭喝咖啡 · 今天 13:25 前可全额免退明天的火山观星团",tip:"就在 Kona 吃热汤面/海鲜吹空调休息，不折腾开回酒店！顺便 13:25 前最后刷一次 Mauna Kea 明晚云海晴天预报（24h 免费取消截止 11/30 13:25）。注意 BerryBird 周一公休，明天周二上午喝！",pin:"kona"},
+        {sid:"s4_3",t:"18:00",n:"Dolphin 魔鬼鱼夜潜",emo:"🌊",tone:"sea",badge:vk("manta_pnr",L),leg:"开 15 分钟 · 18:00 准时勿早到",legWarn:"⚡ 商店报到后自驾码头 · 大包放车里",brief:"① 18:00 去 Keauhou 商店 → ② 自驾到码头结束不回店",sub:"双方协议已签 (2 signed) · 含背心/湿衣上衣 · 18:00–20:00",tip:"两步集合极重要：① 18:00 准时（勿早到！）先去 Keauhou Shopping Center（78-6831 Alii Dr Suite F-146，Tropics 后侧）找门店报到——大背包大毛巾留车里别带进去！② 报到完再自驾去 Keauhou Bay（78-100 Kaleiopapa St 免费街停+公厕）下水，看完 3 米翼展魔鬼鱼直接在码头解散不回商店！车上留干抓绒+大毛巾+毛毯最暖。",pin:"manta",book:{订单号:vk("manta_pnr"),门店报到:"18:00 勿早到 · 78-6831 Alii Dr #F-146 (Tropics后)",自驾码头:"报到后自驾 78-100 Kaleiopapa St (免费停·码头结束)",电子协议与详情:vk("manta_extra"),退改线:"48h 前 (11/28 18:00) · 含看不见重看保障"}}
+      ],
+      cautions:[{tag:"夜潜两步地址别跑错",txt:"18:00 先去商店（78-6831 Alii Dr Suite F-146），大包大毛巾锁车里别拎进店；随后再自己开车到码头下水。上水偏冷提前备好干抓绒、毛巾与毛毯。"},{tag:"今日 13:25 观星截止线",txt:"明天周二观星团的 24 小时全额免费退改线就在今天 11/30 13:25。"}],
+      eat:"早餐自带干粮；午饭留 Kona 吃热汤面 / Foodland 鸡汤粉丝；夜潜结束后顺路吃点热宵夜回酒店。",
+      planB:"若白天不想下海：改逛 Kona Sea Salt 深海海盐农场免费试吃+泡脚，或预约隔壁 Ocean Rider 活海马农场（周一–五开）。"
+    },
+    {id:"d5",num:6,date:"12/1",wk:"周二",island:"BIG ISLAND",title:"咖啡花果园 & 云海观星",icon:"art/icons3d/observatory.png",sleep:"Waikoloa",depart:"09:15 出发",drive:"2.5h + 团车",sun:"17:48",dark:"18:12",wx:"28→0°C",
+      catNote:"周二全店照常开！上午 Mauka + BerryBird · 12:30 必回穿秋裤厚裤去 Queens' 背面坐车！",
+      pigNote:`15:40 抢明日 WN2269 值机 · HFT 13:25 Queens' 背面集合 (${vk("mk_pnr",L)})`,
+      chips:["09:50 Mauka 花果园","11:30 BerryBird 手冲","13:25 Queens' 背面观星"],
+      status:[{cls:"accent",txt:"✓ 观星团已订"},{cls:"neutral",txt:"0°C 必穿秋裤厚裤"}],
+      stops:[
+        {sid:"s5_0",t:"09:50",n:"Mauka Meadows 咖啡花果园",emo:"🌺",tone:"ranch",leg:"09:15 酒店出发 · 开 35 分钟",brief:"周一–五限定开放！$5 无边海景水池",sub:"穿运动鞋+防蚊液 · 山脚免费尝 100% Kona 后坐免费车回山顶",tip:"特意把咖啡线换到周二就是因为 Mauka Meadows 仅周一–五开且不跟观星抢海滩！白色凉亭与无边水池绝美，务必穿运动鞋（正好下午观星也穿它！）+ 进园喷防蚊液。",pin:"doutor"},
+        {sid:"s5_1",t:"11:00",n:"Greenwell 试喝 & BerryBird 手冲",emo:"☕",tone:"coffee",leg:"开 15 分钟",legWarn:"⚡ 12:30 准时往北回酒店",brief:"15m 尝圆豆 → BerryBird 喝真花果香手冲 + 热午饭",sub:"周二三者全开不跑空！吃完热饭 12:30 务必回程留足 1h 上车",tip:"先到 Greenwell 15 分钟直接免费试喝丝滑 Peaberry 圆豆；开 15 分钟回 Kona 吃热午饭并在 Aliʻi Gardens 集市找上海夫妻主理的 BerryBird（周二–日开、14:30 关）喝花果香浅烘手冲！12:30 必出发回 Waikoloa。",pin:"greenwell"},
+        {sid:"s5_2",t:"13:05",n:"回程换保暖裤装 · Queens' 背面集合",emo:"🧥",tone:"hotel",leg:"开 35 分钟回 Waikoloa",legWarn:"⚡ 不是酒店大堂！在 Queens' 背面",brief:"穿秋裤+防风长裤+卫衣+包头鞋+带水壶",sub:"13:25 在 Queens' Marketplace 购物中心背面 (69-201 Waikoloa Beach Dr Back)",tip:"回房间立刻套上秋裤+厚防风长裤+厚袜+保暖卫衣（头天头发已洗吹干！），拎上可重复灌装水壶、帽子墨镜。注意接送点不是 Marriott 大堂，而是 Queens' Marketplace 背面车道！",pin:"hotel"},
+        {sid:"s5_3",t:"13:25",n:"Mauna Kea 云海日落观星团",emo:"🌌",tone:"star",badge:vk("mk_pnr",L),leg:"Queens' 背面团车接送 · 不用开车",brief:"4,207m 云海日落 + 专业望远镜银河（含热炖菜晚餐）",sub:"团发男子尺码大羽绒衣与手套 · 含西南鸡肉/素食热炖菜 + 热可可饼干",tip:"Hawaii Forest & Trail 专业向导带你上 4,207m 看金色云海日落与银河（约 21:00 回）。团发男子尺码防寒羽绒服与手套（但不发裤子！），含热炖菜野餐与热可可；2,800m 游客中心慢走多喝水防高反。",pin:"summit",book:{确认号:vk("mk_pnr"),取票PIN:vk("mk_pin"),集合点:"13:25 Queens' Marketplace 背面 (69-201 Waikoloa Beach Dr)",团方与电话:`Hawaii Forest & Trail · ${vk("mk_phone")}`,团发装备与晚餐:"男子码大羽绒服+手套 · 西南鸡肉炖菜/素食辣豆+热可可饼干",详情与退改:vk("mk_detail")}}
+      ],
+      cautions:[{tag:"接送地点不是酒店大堂！",txt:"邮件写明上车点在 Queens' Marketplace 购物中心背面（on the back side, 69-201 Waikoloa Beach Dr），13:25 准时候车；上午 Kona 回程 12:30 一定要走！"},{tag:"零度保暖+15:40 抢值机",txt:"团发大羽绒衣+手套但不护腿，必自穿秋裤厚裤厚袜；15:40 在大巴有信号时顺手把明天的 Southwest WN2269 线上值机！"}],
+      eat:"Kona 吃热午饭；下午观星团含西南风味热炖菜（或素食辣豆）野餐、甜点与热饮，备水壶。",
+      planB:"若 Kua Bay 周日没去够且不想早去咖啡，或下雨天：上午可直接留在酒店或室内 Sunoa 逛够，13:15 到 Queens' 背面集合即可。"
+    },
+    {id:"d6",num:7,date:"12/2",wk:"周三",island:"TO OAHU",title:"弹性上午 → 飞住 Outrigger",icon:"art/icons3d/beach.png",sleep:"Oahu · Outrigger",depart:"睡到自然醒",drive:"45m",sun:"17:48",dark:"18:12",wx:"28°C 晴",
+      catNote:"前晚看星晚，今天睡到自然醒撸猫！飞到 Oahu 入住海景大床房 + 含咖啡啤酒餐费抵扣",
+      pigNote:`11:00 万豪退房 · 13:30 还车 · WN2269 ${vk("wn_pnr",L)}（含登机箱）→ Outrigger ${vk("oahu_hotel_pnr",L)}`,
+      chips:["睡到自然醒撸猫","11:00 退房·Kona 热饭","15:40 飞→Outrigger"],
+      status:[{cls:"ok",txt:"✓ 岛内飞 · 海景大床房"},{cls:"neutral",txt:"含 1 件标准登机箱"}],
+      stops:[
+        {sid:"s6_0",t:"自然醒",n:"酒店 A-Bay 撸猫 / 弹性补漏",emo:"🐱",tone:"cat",brief:"前几天落下的伴手礼今天补齐 · 11:00 退房",sub:"慢悠悠打包行李；想在 Beach 69 再游一场可提前问延迟 12:00 退房",tip:"前晚 21:00 看完星回来，今早刻意留空！就在 A-Bay 草坪晒太阳撸户外大猫猫，或补逛 Kona Sea Salt / 买最后伴手礼。",pin:"hotel"},
+        {sid:"s6_1",t:"11:30",n:"退房 → Kona 吃热午饭 & 加油",emo:"🍜",tone:"food",leg:"11:00 退房 · 往机场方向开 30m",brief:"吃饱加满油还车 · 13:30 顺路进机场",sub:"离 KOA 仅 15 分钟，吃完未尽的散装生水果再还车",tip:"吃饱再进机场不饿肚子，记得在机场旁加满油还车。",pin:"kona"},
+        {sid:"s6_2",t:"13:30",n:"KOA 还车 → WN2269 飞 Oahu",emo:"✈️",tone:"air",badge:vk("wn_pnr",L),leg:"开 15 分钟 · 提前 24h App 值机",brief:"15:40–16:30 · 含 1 件标准登机箱 + 1 小包",sub:"Southwest WN2269 · 比去程宽松可带标准拉杆箱上机",tip:"Southwest Basic 免费含 1 件头顶标准登机箱 + 1 件随身小包；起飞前 24h（周二 15:40）已在 App 值机的话登机号更靠前。飞 50 分钟看钻石头山！",pin:"koa",book:{确认号:vk("wn_pnr"),电子票与卡:vk("wn_tix"),起飞:"15:40 KOA → 16:30 HNL",免费行李:"含 1 件标准登机箱 + 1 件随身小包"}},
+        {sid:"s6_3",t:"17:15",n:"入住 OUTRIGGER Waikiki Beachcomber",emo:"🏨",tone:"hotel",badge:vk("oahu_hotel_pnr",L),leg:"HNL 打车 25 分钟",brief:"海景 1 大床房 · 含 Aroma Caffe / 精酿啤酒餐费抵扣",sub:"2300 Kalakaua Ave · 15:00 后入住（11/29 15:00 后不可免退）",tip:"位置就在 Waikiki 正中心街口！房型是 Ocean View - 1 King Bed，含 Experience Waikiki 每日餐饮抵扣券（可在楼下 Hawaiian Aroma Caffe 喝咖啡吃早点，或 Maui Brewing Co. 吃晚餐抵扣），晚上逛街下楼超方便。",pin:"outrigger",book:{确认号:vk("oahu_hotel_pnr"),入住退房:"12/2 15:00 入 → 12/4 11:00 退",房型与礼遇:"Ocean View 1 King · 每日 Aroma Caffe / Maui Brewing 餐费抵扣",酒店地址与详情:vk("oahu_hotel_detail")}}
+      ],
+      cautions:[{tag:"万豪 11:00 退房 + Southwest 值机",txt:"周二下午 15:40 记得提前值机 WN2269；若周三上午想去海里游，入住万豪时提前要 12:00 延迟退房。"}],
+      eat:"Kona 热午饭；晚饭直接用 Outrigger 房费抵扣去 Maui Brewing Co. 或 Waikiki 吃热饭。",
+      planB:"周三上午全弹性，缺什么补买什么都来得及！"
+    },
+    {id:"d7",num:8,date:"12/3",wk:"周四",island:"OAHU",title:"Oahu 自由 & 鱼三海胆饭",icon:"art/icons3d/uni.png",sleep:"Oahu · Outrigger",depart:"全天自由",drive:"步行/打车",sun:"17:49",dark:"18:13",wx:"28°C 晴",
+      catNote:"早起下楼用 Aroma Caffe 餐费抵扣！白天自由（12/1–5 水母期看警示旗）· 买检疫鸡蛋花",
+      pigNote:"Izakaya Uosan 松露海胆饭仅电话订位 (808) 200-5077（周二三休·周四 17–22 点开）",
+      chips:["白天完全自由","买检疫鸡蛋花","18:30 鱼三松露海胆饭"],
+      status:[{cls:"warn",txt:"⚠ 鱼三海胆饭待订",id:"uosanStatusPill"},{cls:"neutral",txt:"12/1–5 水母期"}],
+      stops:[
+        {sid:"s7_0",t:"白天",n:"Oahu 完全自由 & 酒店餐费抵扣",emo:"🌴",tone:"beach",brief:"楼下 Aroma Caffe 早点 · 下海看 12/1–5 水母旗",sub:"连住 Outrigger · 12/1–5 正值箱形水母高发窗",tip:"Oahu 你很熟，白天完全留白！早上记得用 Experience Waikiki 每日餐费抵扣在酒店旁 Hawaiian Aroma Caffe 吃个现做早餐或咖啡；若下海游泳先看救生员亭水母旗。",pin:"outrigger"},
+        {sid:"s7_1",t:"下午",n:"买带 HDOA 检疫章的鸡蛋花枝条",emo:"🌼",tone:"ranch",leg:"Waikiki 顺路步行",brief:"ABC / Longs 买密封绿标 · 回湾区过完 X 光前绝不拆袋",sub:"Waikiki ABC Store / Longs Drugs（$8–$15，临飞加州前买最新鲜）",tip:"挑枝条硬实饱满、袋内无水汽发霉、印有官方 HDOA 绿色检疫章的密封袋；回湾区过完明天 HNL 农业安检前不要拆封！",pin:null},
+        {sid:"s7_2",t:"18:30",n:"Izakaya Uosan 鱼三松露海胆饭",emo:"🍣",tone:"food",badge:"待电话订位",leg:"打车 10 分钟",legWarn:"⚡ 仅电话订 (808) 200-5077",brief:"松露海胆黄油蛋黄饭 · 周二三休周四开",sub:"1221 Kapiolani Blvd #108 · 仅电话订位 (808) 200-5077",tip:"必吃松露海胆黄油蛋黄饭！出发前提前拨 (808) 200-5077 订周四 18:30 位子（周二三不营业）。备选：Kaimuki Shokudo、Arancino 海胆意面、Paia Fish Market。",pin:null,book:{状态:"待预订",电话:"(808) 200-5077",地址:"1221 Kapiolani Blvd #108",招牌:"松露海胆黄油蛋黄饭"}}
+      ],
+      cautions:[{tag:"箱形水母撞期",txt:"2026年12月高发窗口正是 12/1–12/5！下海前一定先看海边警示旗。"},{tag:"仅电话订位",txt:"Izakaya Uosan 周二、周三休，周四 17:00–22:00 营业，务必电话 (808) 200-5077 预约。"}],
+      eat:"白天用酒店 Aroma Caffe / Maui Brewing 抵扣；晚餐 Izakaya Uosan 松露海胆饭，或丸龟乌冬、Paia Fish Market。",
+      planB:"若 Uosan 满座：OpenTable 可定 Kaimuki Shokudo 海胆盖饭或 Arancino 海胆意面。"
+    },
+    {id:"d8",num:9,date:"12/4",wk:"周五",island:"HOME",title:"回程 Honolulu → SJC",icon:"art/icons3d/house.png",sleep:"家",depart:"11:00 退房",drive:"25m",sun:"",dark:"",wx:"28°C 晴",
+      catNote:"11:00 Outrigger 退房 · 检疫鸡蛋花与烘焙豆可带 · 新鲜水果安检前吃完",
+      pigNote:`AS839 ${vk("ret_pnr",L)}（Saver 登机口分座）· 10:45 去 HNL 过 USDA 安检`,
+      chips:["11:00 前退房收行李","USDA 农业 X 光","13:36 AS839 回 SJC"],
+      status:[{cls:"ok",txt:"✓ AS839 已订"}],
+      stops:[
+        {sid:"s8_0",t:"10:00",n:"打包退房 · 查漏农业禁带品",emo:"🧳",tone:"hotel",brief:"Outrigger 11:00 前退房 · 密封咖啡豆与检疫鸡蛋花可带",sub:"带 HDOA 检疫绿标密封枝条回湾区后再拆袋干放过冬",tip:"退房前吃掉买完还剩下的散装新鲜水果；密封烘焙 100% Kona 豆、夏威夷果和完整 HDOA 绿色检疫密封袋的鸡蛋花枝条皆可带回加州。",pin:"outrigger"},
+        {sid:"s8_1",t:"11:00",n:"出发去 HNL 机场过 USDA 农业安检",emo:"🚕",tone:"air",leg:"打车 25 分钟",brief:"所有托运与随身包先过 USDA 农业 X 光机",sub:"保留 2.5 小时应对农业查验与托运",tip:"进入值机/安检区前必须先过 USDA 农业 X 光机贴绿色检疫贴纸，带检疫鸡蛋花主动亮出完好密封袋。",pin:null},
+        {sid:"s8_2",t:"13:36",n:"AS839 飞回 SJC",emo:"✈️",tone:"air",badge:vk("ret_pnr",L),leg:"飞行 5h 10m",brief:"13:36 起飞 → 20:46 落地圣何塞回家",sub:"Hawaiian / Alaska Saver 舱 (X) · 登机口由地勤分配座位",tip:"AS839 Saver 舱位现场由登机口分配座位；5h10m 回程可预先缓存剧集，20:46 落地 SJC 刚好回家！",pin:null,book:{确认号:vk("ret_pnr"),电子票与卡:vk("ret_tix"),起飞落地:"13:36 HNL → 20:46 SJC",舱位规则:"Saver (X 舱) · 登机口分配座位"}}
+      ],
+      cautions:[{tag:"农业安检红线",txt:"所有进加州行李须过 USDA 检查：烘焙咖啡豆与完整 HDOA 检疫章鸡蛋花可带，散装水果鲜花严禁入关。"}],
+      eat:"早上用完酒店最后一笔 Aroma Caffe 餐费抵扣，或 HNL 候机简餐。",
+      planB:"进机场前散装水果一律吃完；回湾区后拆开鸡蛋花密封袋通风干燥过冬，来年春天再扦插。"
+    }
+  ];
+}
+
+const q = new URLSearchParams(location.search);
+let state = {
+  style: ["1","2","3","4","5","6"].includes(q.get("style")) ? q.get("style") : (ls.get("style") || "1"),
+  sub: ["a","b","c"].includes(q.get("sub")) ? q.get("sub") : (ls.get("sub") || "a"),
+  vplan: ["normal","chase26","chase27"].includes(q.get("vplan")) ? q.get("vplan") : (ls.get("vplan") || "normal"),
+  volcanoOpen: false,
+  tab: ["trips","map","bookings","prep"].includes(q.get("tab")) ? q.get("tab") : "trips",
+  dayId: q.get("day") || null,
+  who: ls.get("who") || "🐱",
+  uosanBooked: ls.get("uosanBooked") === "1",
+  volcanoSim: q.get("vsim") === "1",
+  volcanoLive: {level:"WATCH",text:"火山 橙灯蓄力",erupting:false,updated:"实时监测"},
+  mapIsle: q.get("isle") === "oahu" ? "oahu" : "big",
+  packDone: JSON.parse(ls.get("packDone") || "{}"),
+  notes: JSON.parse(ls.get("notes") || "{}"),
+  stopPlan: JSON.parse(ls.get("stopPlan2") || "null"),
+  prepTab: "pack",
+  aiLog: JSON.parse(ls.get("aiLog") || "[]"),
+  geminiKey: ls.get("geminiKey") || ""
+};
+document.documentElement.setAttribute("data-style", state.style);
+
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+function toast(msg, undoFn){
+  const t = $("#toast");
+  if(undoFn){
+    t.innerHTML = `<span>${msg}</span> <button type="button" id="toastUndoBtn" style="margin-left:8px;border:0;background:rgba(255,255,255,.22);color:#fff;border-radius:999px;padding:2px 9px;font-size:11.5px;font-weight:800;cursor:pointer">撤销</button>`;
+    t.style.pointerEvents = "auto";
+    $("#toastUndoBtn").onclick = ()=>{ t.classList.remove("show"); undoFn(); };
+  } else {
+    t.textContent = msg;
+    t.style.pointerEvents = "none";
+  }
+  t.classList.add("show");
+  clearTimeout(toast._t);
+  toast._t = setTimeout(()=>{ t.classList.remove("show"); t.style.pointerEvents = "none"; }, undoFn ? 4200 : 2100);
+}
+function mapsUrl(qry){ return "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(qry); }
+function dayRouteUrl(d){
+  const qs = d.stops.filter(s=>s.pin && PINS[s.pin]).map(s=>PINS[s.pin].q);
+  if(!qs.length) return "";
+  return qs.length===1 ? mapsUrl(qs[0]) : `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(qs[0])}&destination=${encodeURIComponent(qs[qs.length-1])}${qs.length>2?"&waypoints="+encodeURIComponent(qs.slice(1,-1).join("|")):""}`;
+}
+
+function getStopIndex(){
+  const idx = {};
+  getBaseDays().forEach(d => d.stops.forEach(s => { idx[s.sid] = s; }));
+  return idx;
+}
+
+function ensureStopPlan(){
+  if(!state.stopPlan){
+    const plan = {};
+    getBaseDays().forEach(d => { plan[d.id] = d.stops.map(s => s.sid); });
+    state.stopPlan = plan;
+  }
+  return state.stopPlan;
+}
+
+function applyVolcanoPlan(arr){
+  if(state.vplan === "normal") return arr;
+  if(state.vplan === "chase26"){
+    return arr.map(d => {
+      if(d.id === "d0") return {
+        ...d, title:"落地直冲火山看喷发！", drive:"2h 15m",
+        chips:["20:32 落地取车","21:00 直冲火山","01:30 回酒店睡"],
+        catNote:"🔥 26号晚连夜追喷模式 · 抓绒外套+运动鞋随身带下飞机直接冲！",
+        stops:[
+          d.stops[0], d.stops[1],
+          {sid:"s0_v26",t:"21:00",n:"直冲火山公园看冲天岩浆",sub:"不先回酒店省 45m · 走 200 号鞍部公路 2h 直达（24h 开放）",tip:"取完满油 SUV 直接往东开！深夜看岩浆喷泉最震撼且不堵车，门口自助交 $30 门票，看完凌晨回 Waikoloa 酒店睡觉。",pin:"uekahuna",book:{门票:"$30/车 (7天有效)",随身必带:"抓绒+防风外套+运动鞋"}}
+        ]
+      };
+      if(d.id === "d1") return {
+        ...d, title:"睡到自然醒 · Hilo 日式公园轻逛", icon:"art/icons3d/turtle.png", drive:"2h 50m",
+        chips:["11:30 补觉出门","13:00 Carlsmith 海龟","14:30 日式公园+买豆"],
+        catNote:"昨晚追火山今天睡饱再逛 Hilo 海龟+撸猫+买咖啡豆，傍晚不再返火山！",
+        stops:[
+          {sid:"s1_sleep",t:"11:30",n:"睡到自然醒 · 补觉出发",sub:"不赶早场 · 舒舒服服睡满电后再去看海龟撸猫",tip:"昨晚连夜追喷发，上午彻底补觉后再走 200 号公路去看海龟与撸猫！",pin:"hotel"},
+          d.stops[0], d.stops[1]
+        ]
+      };
+      return d;
+    });
+  }
+  if(state.vplan === "chase27"){
+    return arr.map(d => {
+      if(d.id === "d1") return {
+        ...d, title:"🔥 周五优先直冲！主看火山喷发", icon:"art/icons3d/volcano.png", drive:"4h 20m",
+        chips:["09:30 出发顺路买毯","13:30 火山红光主场","20:00 200 号回酒店"],
+        catNote:"🔥 周五本就排东线！遇到主喷发窗口跳过绕路，直接优先看 6–9h 火山主喷！",
+        stops:[
+          {sid:"s1_v27a",t:"09:30",n:"顺路 Kona Walmart / 补齐毛毯",sub:"若缺车用毛毯和防蚊液先顺路买好，直接奔南线或 Saddle",tip:"火山夜里 10°C 且主喷发只持续数小时，越早到越能抢到最佳观景机位！",pin:"kona"},
+          d.stops[4]
+        ]
+      };
+      return d;
+    });
+  }
+  return arr;
+}
+
+function getDays(){
+  const plan = state.stopPlan;
+  const sidx = getStopIndex();
+  let arr = getBaseDays().map(x=>{
+    const stops = (plan && Array.isArray(plan[x.id]))
+      ? plan[x.id].map(sid => sidx[sid]).filter(Boolean)
+      : x.stops.slice();
+    const chips = plan
+      ? stops.slice(0,3).map(s => `${s.t} ${s.n.replace(/\s*\(.+?\)/g,"").slice(0,9)}`)
+      : x.chips;
+    return {...x, stops, chips: chips.length ? chips : ["自由安排"]};
+  });
+  return applyVolcanoPlan(arr);
+}
+
+function getBookings(){
+  const L = "🔒 输入密码解锁查看";
+  return [
+    {ico:"plane",t:"去程 SFO → Kona (UA1723)",w:"11/26 周四 16:55–20:32",ok:true,code:vk("ua_pnr",""),d:`确认号：${vk("ua_pnr",L)} · ${vk("ua_holders","乘客与付款卡已锁定")} · 只含 1 件座位下小包 (不含登机箱；安检前托 $45–$50 / 登机口 $65)`},
+    {ico:"house",t:"Waikoloa Beach Marriott（6 晚）",w:"11/26–12/2",ok:true,code:vk("bi_hotel_pnr",""),d:`确认号：${vk("bi_hotel_pnr",L)} · 标准退房 11:00（可问延迟至 12:00；当前邮箱未含此确认邮件）`},
+    {ico:"car",t:"大岛租车：普通 SUV",w:"11/26 20:50 KOA 取 · 12/2 13:30 还",ok:true,d:"取车开闪光灯绕拍视频留底，还车前加满油（当前邮箱暂未含租车确认单）"},
+    {ico:"horse",t:"Kohala 日落骑马 (Paniolo)",w:"11/28 周六 16:00 集合报到（建议 15:10 出发）",ok:true,code:vk("horse_pnr",""),d:`订单号：${vk("horse_pnr",L)} · ${vk("horse_holder","实名信用卡与持卡人已锁定")} · Hwy 250 MP13.2 · 必穿长裤包头鞋 · 11/27 16:00 前 24h 免退`},
+    {ico:"manta",t:"Dolphin Discoveries 魔鬼鱼夜潜",w:"11/30 周一 18:00–20:00（勿早到）",ok:true,code:vk("manta_pnr",""),d:`确认号：${vk("manta_pnr",L)} · ${vk("manta_extra","协议状态与电话已锁定")} · 先去 Keauhou 商店 (#F-146，大包放车) 再自驾码头 (#78-100) · 11/28 18:00 前 48h 免改`},
+    {ico:"observatory",t:"Mauna Kea 云海观星团 (HFT)",w:"12/1 周二 13:25 Queens' 背面集合",ok:true,code:vk("mk_pnr",""),d:`${vk("mk_detail","GetYourGuide 凭证与 PIN 已锁定")} · ${vk("mk_phone","")} · 上车点在 Queens' Marketplace 背面 (非酒店大堂) · 团发男子码羽绒衣/手套+热炖菜晚餐`},
+    {ico:"plane",t:"岛内飞 Oahu (WN2269)",w:"12/2 周三 15:40–16:30",ok:true,code:vk("wn_pnr",""),d:`确认号：${vk("wn_pnr",L)} · ${vk("wn_tix","电子票与卡尾号已锁定")} · Southwest Basic 含 1 件标准登机箱 + 1 小包 · 周二 15:40 抢值机`},
+    {ico:"house",t:"OUTRIGGER Waikiki Beachcomber（2 晚）",w:"12/2 15:00 – 12/4 11:00",ok:true,code:vk("oahu_hotel_pnr",""),d:`${vk("oahu_hotel_detail","确认号与每日餐饮抵扣礼遇已锁定")}`},
+    {ico:"uni",id:"bk_uosan",t:"Izakaya Uosan（鱼三）松露海胆饭",w:"12/3 周四 18:30",ok:false,d:"1221 Kapiolani Blvd #108 · 仅电话订位 (808) 200-5077 · 周二三休，周四 17–22 点开"},
+    {ico:"plane",t:"回程 Honolulu → SJC (AS839)",w:"12/4 周五 13:36–20:46",ok:true,code:vk("ret_pnr",""),d:`确认号：${vk("ret_pnr",L)} · ${vk("ret_tix","电子票与卡尾号已锁定")} · Saver (X 舱) 登机口分座`}
+  ];
+}
+
+function recommendedChasePlan(){
+  const now = new Date();
+  const is27 = now.getMonth() === 10 && now.getDate() >= 27;
+  return is27 ? "chase27" : "chase26";
+}
+
+function renderStatusBar(){
+  const pendingCount = state.uosanBooked ? 0 : 1;
+  const pp = $("#pillPending");
+  pp.className = "st-pill " + (pendingCount ? "warn" : "ok");
+  $("#pendingTxt").textContent = pendingCount ? "海胆饭待订" : "全部已订 ✓";
+
+  const pvPill = $("#pillVault"), vt = $("#vaultPillTxt");
+  if(pvPill && vt){
+    pvPill.className = "st-pill " + (isUnlocked() ? "ok" : "");
+    pvPill.querySelector(".dot").style.background = isUnlocked() ? "#15803D" : "#FF385C";
+    vt.textContent = isUnlocked() ? "🔓 凭证已解锁" : "🔒 解锁确认号";
+  }
+  const s1Vb = $("#s1VaultBtn"), s1Vt = $("#s1VaultTxt");
+  if(s1Vb && s1Vt){
+    s1Vb.classList.toggle("unlocked", isUnlocked());
+    s1Vt.textContent = isUnlocked() ? "🔓 已解锁" : "🔒 解锁";
+  }
+
+  const isErupt = state.volcanoSim || state.volcanoLive.erupting;
+  const pv = $("#pillVolcano");
+  pv.className = "st-pill " + (isErupt ? "erupt" : "ok");
+  $("#volcanoTxt").textContent = state.volcanoSim ? "火山 喷发中" : state.volcanoLive.text;
+  $("#volcanoAlert").hidden = !isErupt || state.tab!=="trips" || !!state.dayId;
+  const vaBtn = $("#vaSwitchBtn");
+  if(vaBtn){
+    if(state.vplan !== "normal"){
+      vaBtn.textContent = "恢复原行程";
+      vaBtn.style.background = "#1F1D1A";
+      $("#vaBadge").textContent = state.vplan === "chase26" ? "已切 · 26号晚直冲火山" : "已切 · 27号优先直冲";
+      $("#vaTitle").textContent = "行程已自动调整为追火山版";
+      $("#vaDesc").textContent = "可随时点右侧一键恢复原本周五统筹行程。";
+    } else {
+      vaBtn.textContent = "切追火山";
+      vaBtn.style.background = "#FF385C";
+      $("#vaBadge").textContent = state.volcanoSim ? "USGS 实时提醒预览" : "USGS 检测到活跃喷发";
+      $("#vaTitle").textContent = "Kīlauea 正在喷发！";
+      $("#vaDesc").textContent = "每轮主喷发仅持续 6–9h：点右侧一键切到追火山行程，不满意随时撤销。";
+    }
+  }
+  $("#volcanoDrawer").hidden = !state.volcanoOpen || state.tab!=="trips" || !!state.dayId;
+  $("#vdDesc").innerHTML = `USGS 当前官方级别：<b>${state.volcanoLive.level}</b>。只有在真正检测到活跃熔岩喷泉（WARNING / RED）时，首页才会自动弹提醒条并支持一键切追火山。`;
+  $("#roleNote").innerHTML = state.who==="🐱"
+    ? `<span><b>🐱 视角：</b>高亮温度穿搭、咖啡早市与拍照贴士</span><span style="color:var(--ink-3);white-space:nowrap">切 🐷</span>`
+    : `<span><b>🐷 视角：</b>高亮车程、确认号、证件与待订</span><span style="color:var(--ink-3);white-space:nowrap">切 🐱</span>`;
+  const qd = $("#s1QuietDot"), qt = $("#s1QuietTxt");
+  if(qd && qt){
+    const vpLbl = state.vplan==="chase26" ? "🔥26号追喷" : (state.vplan==="chase27" ? "🔥27号追喷" : null);
+    qd.className = "s1-quiet-dot" + (!vpLbl && !isErupt ? " ok" : "");
+    qt.textContent = vpLbl || (isErupt ? "火山喷发" : "火山");
+  }
+}
+
+async function checkVolcano(){
+  try{
+    const res = await fetch("https://volcanoes.usgs.gov/hans-public/api/volcano/getElevatedVolcanoes");
+    if(!res.ok) throw new Error();
+    const arr = await res.json();
+    const k = Array.isArray(arr) && arr.find(v => String(v.vnum)==="332010" || /kilauea/i.test(v.volcano_name||""));
+    if(k){
+      const lvl = k.alert_level || "ADVISORY";
+      const color = k.color_code || "";
+      // Only trigger full eruption banner on WARNING/RED active fountaining (not routine WATCH/ADVISORY precursory noise!)
+      const activeFountain = /WARNING|RED/i.test(lvl + " " + color);
+      const label = activeFountain ? "火山 正在喷发" : (/WATCH|ORANGE/i.test(lvl + " " + color) ? "火山 橙灯蓄力" : "火山 黄灯监测");
+      state.volcanoLive = {level:lvl, text:label, erupting:activeFountain};
+    } else {
+      state.volcanoLive = {level:"NORMAL", text:"火山 停歇中", erupting:false};
+    }
+  }catch(e){}
+  renderStatusBar();
+}
+
+function initTideCanvas(){
+  const cv = $("#tideCanvas"); if(!cv) return;
+  const ctx = cv.getContext("2d");
+  const w = cv.width = (cv.offsetWidth||360)*2, h = cv.height = (cv.offsetHeight||184)*2;
+  let t = 0, ripples = [];
+  cv.addEventListener("pointermove", e => {
+    const r = cv.getBoundingClientRect();
+    ripples.push({x:(e.clientX-r.left)*2, y:(e.clientY-r.top)*2, r:8, a:0.7});
+    if(ripples.length>10) ripples.shift();
+  });
+  function tick(){
+    if(!document.body.contains(cv)) return;
+    t += 0.025;
+    ctx.clearRect(0,0,w,h);
+    // Ambient golden tide shimmer waves across the bottom half of horizon
+    for(let i=0;i<3;i++){
+      ctx.beginPath();
+      const baseY = h*0.60 + i*22;
+      for(let x=0;x<=w;x+=24){
+        const y = baseY + Math.sin(x*0.012 + t + i*1.4)*5;
+        if(x===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+      }
+      ctx.strokeStyle = `rgba(255,255,255,${0.26 - i*0.06})`;
+      ctx.lineWidth = 2.5; ctx.stroke();
+    }
+    ripples.forEach(rp=>{
+      rp.r += 2.8; rp.a *= 0.955;
+      ctx.beginPath(); ctx.arc(rp.x,rp.y,rp.r,0,Math.PI*2);
+      ctx.strokeStyle=`rgba(255,255,255,${rp.a.toFixed(2)})`; ctx.lineWidth=3; ctx.stroke();
+    });
+    ripples = ripples.filter(rp=>rp.a>0.04);
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+/* ================= 6 GENUINELY DIFFERENT HOME ARCHITECTURES ================= */
+function renderHome(){
+  const days = getDays();
+  const roleLine = d => state.who==="🐱" ? d.catNote : d.pigNote;
+  const uosanBanner = !state.uosanBooked
+    ? `<div style="background:var(--surface);border:var(--border-w) solid var(--line);border-radius:var(--radius-sm);padding:8px 11px;margin-bottom:11px;display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12px">
+        <span><b>待订：</b>12/3 鱼三松露海胆饭 (808-200-5077)</span>
+        <button type="button" class="urgent-btn" id="inlineUosanBtn">标记已订</button>
+       </div>` : "";
+
+  if(state.style === "1"){
+    // STYLE 1: Confirmed Pure-White Borderless Balanced Plush Island Hero + Vertical Timeline Cards
+    const tipsClean = {
+      d0:"仅含座位下小包 · SFO 买好晚饭+干粮 · 晚间超市全关",
+      d1:"09:30 出发 · 上午 Carlsmith 海龟撸猫 + 16:10 火山红光",
+      d2:"09:15 出发 · 早市 + 皇家鱼塘 · 16:00 骑马报到(15:10出发)",
+      d3:"09:30 Kua Bay 白沙滩 · Sunoa+Costco 囤毛毯 · 踩点 Queens' 背面",
+      d4:"看浪选 Two Step / Kahaluʻu · 18:00 魔鬼鱼先去门店再去码头",
+      d5:"周二全开！Mauka + BerryBird · 13:25 Queens' 背面穿秋裤坐车观星",
+      d6:"弹性上午 · 11:00 退房 · WN2269 飞→Outrigger 含每日餐费抵扣",
+      d7:"楼下 Aroma Caffe 早点 · 买 HDOA 检疫鸡蛋花 · 18:30 鱼三海胆饭",
+      d8:"11:00 Outrigger 退房 · 过 USDA 安检 · AS839 Saver 飞 SJC 回家"
+    };
+    $("#homeBody").innerHTML = `
+      <div class="s1-open-art" id="s1ArtTap">
+        <div class="s1-art-stage" id="s1ArtStage">
+          <video class="s1-loop-vid" id="finalLongVid" src="art/long/balanced_island.mp4?v=r33" poster="art/long/balanced_island_poster.jpg?v=r33" autoplay loop muted playsinline preload="auto" aria-label="夏威夷自然均衡绒毛长卷自动循环动图"></video>
+        </div>
+      </div>
+      <div class="s1-spine" id="s1Spine">${days.map((d,i)=>{
+        return `<button type="button" class="s1-row ${i===0?'is-focus':''}" data-day="${d.id}" style="animation:cardPop .42s var(--ease) both;animation-delay:${i*45}ms;--dly:${i*45+80}ms">
+          <div class="s1-top">
+            <div class="s1-ico"><img src="${d.icon}" alt=""></div>
+            <div style="flex:1;min-width:0">
+              <div class="eyebrow">DAY ${d.num} · ${d.date} ${d.wk} · 住 ${d.sleep}</div>
+              <div style="font-size:16.5px;font-weight:800;line-height:1.25">${d.title}</div>
+            </div>
+            <span style="font-size:11.5px;color:var(--ink-3);font-weight:600;white-space:nowrap">${d.drive}</span>
+          </div>
+          <div class="s1-clean-line">${d.chips.join(" · ")}</div>
+          <div class="s1-whisper">
+            <span>${state.vplan!=="normal" ? d.catNote : (tipsClean[d.id] || roleLine(d))}</span>
+          </div>
+        </button>`;
+      }).join("")}</div>`;
+    initDioramaInteractive();
+    bindSpineScrollFocus();
+  } else if(state.style === "2"){
+    // STYLE 2: Editorial Risograph Magazine Cover + Postcard Carousel + Index List
+    const featured = [days[1], days[2], days[4], days[5]];
+    $("#homeBody").innerHTML = `
+      <div class="s2-cover">
+        <img src="art/hero_editorial_mag.png" alt="黄金时刻玄武岩海岸">
+        <span class="s2-stamp">ISSUE 01 · 2026</span>
+        <div class="s2-cover-meta">
+          <div><h2>Nine Days in Hawaiʻi</h2><div style="font-size:12px;color:var(--ink-2)">11.26 – 12.04 · 两人私藏手账</div></div>
+          <span class="f-pill accent">${state.uosanBooked?"已订齐":"海胆饭待订"}</span>
+        </div>
+      </div>
+      ${uosanBanner}
+      <div class="sec-label"><span>重点日明信片</span><span>左右滑动</span></div>
+      <div class="s2-postcards">${featured.map(d=>`
+        <button type="button" class="s2-pc" data-day="${d.id}">
+          <div class="eyebrow">DAY 0${d.num} · ${d.date}</div>
+          <div style="font-family:var(--display);font-size:21px;margin:2px 0 4px">${d.title}</div>
+          <div style="font-size:12px;color:var(--ink-2)">${d.chips.join(" · ")}</div>
+        </button>`).join("")}
+      </div>
+      <div class="sec-label"><span>完整目录索引</span><span>9 DAYS</span></div>
+      <div class="s2-index">${days.map(d=>`<button type="button" class="s2-idx-row" data-day="${d.id}">
+          <span class="s2-num">0${d.num}</span>
+          <div>
+            <div style="font-size:15.5px;font-weight:700">${d.title}</div>
+            <div style="font-size:12px;color:var(--ink-2)">${d.date} ${d.wk} · 住 ${d.sleep} · ${d.drive}</div>
+          </div>
+          <span style="font-size:12px;color:var(--ink-3)">${d.date} ›</span>
+        </button>`).join("")}</div>`;
+  } else if(state.style === "3"){
+    // STYLE 3: Not Boring 3D Tactile Bento Grid
+    $("#homeBody").innerHTML = `
+      <div class="s3-widgets">
+        <button type="button" class="s3-w" id="s3Countdown">
+          <div class="eyebrow">DEPARTURE</div>
+          <div class="big">8 天后</div>
+          <div style="font-size:11.5px;color:var(--ink-2)">11/26 UA1723 飞 KOA</div>
+        </button>
+        <button type="button" class="s3-w" id="s3QuickUosan">
+          <div class="eyebrow">BOOKING STATUS</div>
+          <div class="big" style="color:${state.uosanBooked?'#15803D':'#EA580C'}">${state.uosanBooked?'9/9':'8/9'}</div>
+          <div style="font-size:11.5px;color:var(--ink-2)">${state.uosanBooked?'已全部订齐 ✓':'点此标记海胆饭已订'}</div>
+        </button>
+      </div>
+      <div class="s3-hero"><img src="art/hero_clay_tropical.png" alt="3D 黏土旅行物件"></div>
+      <div class="sec-label"><span>9 天立体积木卡 · 按下有回弹</span></div>
+      <div class="s3-grid">${days.map(d=>`<button type="button" class="s3-tile" data-day="${d.id}">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <img src="${d.icon}" alt="">
+            <span class="f-pill neutral">${d.date}</span>
+          </div>
+          <div class="t-title">D${d.num} · ${d.title}</div>
+          <div class="t-sub">${d.chips[0]}<br>开车 ${d.drive}</div>
+        </button>`).join("")}</div>`;
+    const qu = $("#s3QuickUosan");
+    if(qu) qu.onclick = ()=>{ if(!state.uosanBooked){ state.uosanBooked=true; ls.set("uosanBooked","1"); renderStatusBar(); renderHome(); toast("已标记鱼三海胆饭已订 ✓"); } };
+  } else if(state.style === "4"){
+    // STYLE 4: Liquid Solar Glass + Animated Wave Canvas + Lumy Arc + Bento
+    $("#homeBody").innerHTML = `
+      <div class="s4-solar">
+        <img src="art/hero_lumy_glow.png" alt="夏威夷海平面日落">
+        <canvas id="tideCanvas"></canvas>
+        <div class="s4-arc-bar">
+          <div><b>Lumy 黄金时刻</b><div style="color:var(--ink-2);font-size:11px">日落 17:46 · 天黑亮灯 18:10</div></div>
+          <svg width="68" height="24" viewBox="0 0 68 24"><path d="M4 21 Q34 -4 64 21" stroke="#CBD5E1" stroke-width="2" fill="none" stroke-dasharray="3 3"/><path d="M4 21 Q34 -4 52 12" stroke="#F59E0B" stroke-width="2.5" fill="none"/><circle cx="52" cy="12" r="4.5" fill="#F59E0B"/></svg>
+        </div>
+      </div>
+      <div class="s4-bento">
+        <button type="button" class="s4-bcard glass" id="s4Vault">
+          <div class="eyebrow">PRIVATE VAULT</div>
+          <b style="font-size:14.5px;color:${isUnlocked()?'#15803D':'#1F1D1A'}">${isUnlocked()?'🔓 已解锁确认号':'🔒 点解锁凭证 ›'}</b>
+        </button>
+        <button type="button" class="s4-bcard glass" id="s4Uosan">
+          <div class="eyebrow">鱼三松露海胆饭</div>
+          <b style="font-size:14.5px;color:${state.uosanBooked?'#15803D':'#C2410C'}">${state.uosanBooked?'已预订 ✓':'电联订 12/3 ›'}</b>
+        </button>
+      </div>
+      ${days.map(d=>`<button type="button" class="s4-card glass" data-day="${d.id}">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+            <span class="eyebrow">DAY ${d.num} · ${d.date} ${d.wk}</span>
+            <span class="f-pill neutral">${d.drive}</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px">
+            <img src="${d.icon}" alt="" style="width:40px;height:40px;object-fit:contain">
+            <div style="flex:1"><div style="font-size:16.5px;font-weight:750">${d.title}</div><div style="font-size:12px;color:var(--ink-2)">${d.chips.join(" · ")}</div></div>
+          </div>
+        </button>`).join("")}`;
+    initTideCanvas();
+    $("#s4Vault").onclick = openPinSheet;
+    $("#s4Uosan").onclick = ()=>openDay("d7");
+  } else if(state.style === "5"){
+    // STYLE 5: Neo-Brutalist Agency Poster (ZERO rounded pills, 1.5px architectural table + Marquee)
+    $("#homeBody").innerHTML = `
+      <div class="s5-marquee"><div class="s5-track">${state.uosanBooked?'ALL BOOKINGS CONFIRMED':'IZAKAYA UOSAN PHONE BOOKING'} · KĪLAUEA LIVE MONITOR · WAIKIKI JELLYFISH 12/1–5 · &nbsp;&nbsp; ${state.uosanBooked?'ALL BOOKINGS CONFIRMED':'IZAKAYA UOSAN PHONE BOOKING'} · KĪLAUEA LIVE MONITOR · WAIKIKI JELLYFISH 12/1–5 ·</div></div>
+      <div class="s5-hero">
+        <img src="art/hero_agency_graphic.png" alt="几何火山版画">
+        <div class="s5-hero-bar"><span>BIG ISLAND + OAHU // 2026</span><span>${state.who} MODE</span></div>
+      </div>
+      ${uosanBanner}
+      <div class="s5-table">${days.map(d=>{
+        const isUrg = d.id==="d7" && !state.uosanBooked;
+        return `<button type="button" class="s5-row ${isUrg?'urgent':''}" data-day="${d.id}">
+          <div class="s5-num">0${d.num}</div>
+          <div class="s5-cell">
+            <div style="display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:var(--ink-3)"><span>${d.date} ${d.wk} · ${d.sleep}</span><span>${d.drive}</span></div>
+            <div style="font-size:16px;font-weight:800;margin:2px 0 4px">${d.title}</div>
+            <div style="font-size:12px;color:var(--ink-2)">${d.chips.join(" / ")}</div>
+          </div>
+        </button>`;
+      }).join("")}</div>`;
+  } else {
+    // STYLE 6: Soft Botanical & Twin Guardian (Gentler Streak + Headspace)
+    const pct = state.uosanBooked ? 100 : 89;
+    $("#homeBody").innerHTML = `
+      <div class="s6-twin">
+        <div class="s6-ring">
+          <svg width="54" height="54" viewBox="0 0 54 54"><circle cx="27" cy="27" r="22" fill="none" stroke="#EBF1E8" stroke-width="6"/><circle cx="27" cy="27" r="22" fill="none" stroke="#2E7D5B" stroke-width="6" stroke-dasharray="138" stroke-dashoffset="${138 - Math.round(138*pct/100)}" stroke-linecap="round" transform="rotate(-90 27 27)"/></svg>
+          <span style="position:absolute">${pct}%</span>
+        </div>
+        <div style="flex:1">
+          <b style="font-size:14.5px">🐱 & 🐷 准备度 ${state.uosanBooked?"满格":"8/9"}</b>
+          <div style="font-size:12px;color:var(--ink-2);margin-top:2px">${state.uosanBooked?"所有核心活动已订齐，安心出发":"只差 12/3 鱼三海胆饭电话订座，其余全就绪"}</div>
+        </div>
+      </div>
+      <div class="s6-hero"><img src="art/hero_headspace_botanical.png" alt="夏威夷植物夕阳插画"></div>
+      ${days.map(d=>`<button type="button" class="s6-card" data-day="${d.id}">
+          <div style="display:flex;align-items:center;gap:11px">
+            <img src="${d.icon}" alt="" style="width:44px;height:44px;object-fit:contain">
+            <div style="flex:1">
+              <div style="font-size:11.5px;color:var(--ink-3);font-weight:700">${d.date} ${d.wk} · 住 ${d.sleep}</div>
+              <div style="font-size:16.5px;font-weight:800">${d.title}</div>
+            </div>
+            <span class="f-pill neutral">${d.drive}</span>
+          </div>
+          <div style="margin-top:8px;padding:7px 10px;border-radius:12px;background:var(--surface-2);font-size:12px;color:var(--ink-2)">
+            <b>${state.who} 贴士：</b>${roleLine(d)}
+          </div>
+        </button>`).join("")}`;
+  }
+
+  const imb = $("#inlineUosanBtn");
+  if(imb) imb.onclick = ()=>{ state.uosanBooked=true; ls.set("uosanBooked","1"); renderStatusBar(); renderHome(); toast("已标记鱼三海胆饭已订 ✓"); };
+  $("#homeBody").querySelectorAll("[data-day]").forEach(b=>b.onclick=()=>openDay(b.dataset.day, b.querySelector(".s1-ico img, img")));
+}
+
+function initDioramaInteractive(){
+  const vid = $("#finalLongVid");
+  if(!vid) return;
+  const p = vid.play();
+  if(p && p.catch) p.catch(()=>{});
+}
+function bindSpineScrollFocus(){
+  if(window._s1ScrollFn) window.removeEventListener("scroll", window._s1ScrollFn);
+  window._s1ScrollFn = ()=>{
+    const rows = $$("#s1Spine .s1-row");
+    if(!rows.length) return;
+    let best=rows[0], bestDist=1e9, targetY=window.innerHeight*0.36;
+    rows.forEach(r=>{
+      const rect = r.getBoundingClientRect();
+      const d = Math.abs(rect.top + rect.height*0.35 - targetY);
+      if(d < bestDist){ bestDist=d; best=r; }
+    });
+    rows.forEach(r=>r.classList.toggle("is-focus", r===best));
+  };
+  window.addEventListener("scroll", window._s1ScrollFn, {passive:true});
+}
+
+/* ================= WANDERLOG-STYLE MOVE STOP SHEET ================= */
+let moveCtx = null;
+function closeMoveSheet(){
+  $("#moveScrim").classList.remove("open");
+  $("#moveSheet").classList.remove("open");
+  document.body.classList.remove("sheet-open");
+  moveCtx = null;
+}
+$("#moveScrim").onclick = closeMoveSheet;
+$("#closeMoveBtn").onclick = closeMoveSheet;
+
+function moveStopToDay(fromDayId, sid, toDayId){
+  if(fromDayId === toDayId){ closeMoveSheet(); return; }
+  const plan = ensureStopPlan();
+  const prevSnapshot = JSON.parse(JSON.stringify(plan));
+  const fromList = plan[fromDayId] || [];
+  const idx = fromList.indexOf(sid);
+  if(idx < 0) return;
+  fromList.splice(idx, 1);
+  if(!plan[toDayId]) plan[toDayId] = [];
+  plan[toDayId].push(sid);
+  ls.set("stopPlan2", JSON.stringify(plan));
+  const days = getDays();
+  const targetDay = days.find(x => x.id === toDayId);
+  const stopName = (getStopIndex()[sid]?.n || "行程").slice(0, 12);
+  closeMoveSheet();
+  openDay(fromDayId);
+  toast(`已把「${stopName}」移到 Day ${targetDay.num} (${targetDay.date})`, ()=>{
+    state.stopPlan = prevSnapshot;
+    ls.set("stopPlan2", JSON.stringify(prevSnapshot));
+    openDay(fromDayId);
+    toast("已撤销移动 ✓");
+  });
+}
+
+function reorderStop(dayId, sid, delta){
+  const plan = ensureStopPlan();
+  const list = plan[dayId] || [];
+  const idx = list.indexOf(sid);
+  const next = idx + delta;
+  if(idx < 0 || next < 0 || next >= list.length) return;
+  [list[idx], list[next]] = [list[next], list[idx]];
+  ls.set("stopPlan2", JSON.stringify(plan));
+  closeMoveSheet();
+  openDay(dayId);
+  toast(delta < 0 ? "已上移顺序 ✓" : "已下移顺序 ✓");
+}
+
+function openMoveSheet(dayId, sid){
+  const days = getDays();
+  const curIdx = days.findIndex(x => x.id === dayId);
+  const curDay = days[curIdx];
+  const stop = getStopIndex()[sid];
+  if(!curDay || !stop) return;
+  moveCtx = {dayId, sid};
+  $("#mvTitle").textContent = `移动「${stop.n}」`;
+
+  const prevDay = curIdx > 0 ? days[curIdx - 1] : null;
+  const nextDay = curIdx < days.length - 1 ? days[curIdx + 1] : null;
+  $("#mvQuick").innerHTML = `
+    <button type="button" class="mv-qbtn" id="mvPrevBtn" ${prevDay?"":"disabled"}>← 移到上一天${prevDay?` (${prevDay.date})`:""}</button>
+    <button type="button" class="mv-qbtn primary" id="mvNextBtn" ${nextDay?"":"disabled"}>移到下一天${nextDay?` (${nextDay.date})`:""} →</button>
+  `;
+  if(prevDay) $("#mvPrevBtn").onclick = ()=>moveStopToDay(dayId, sid, prevDay.id);
+  if(nextDay) $("#mvNextBtn").onclick = ()=>moveStopToDay(dayId, sid, nextDay.id);
+
+  $("#mvGrid").innerHTML = days.map(x => `
+    <button type="button" class="mv-day" data-mv-to="${x.id}" aria-current="${x.id===dayId}">
+      <b>D${x.num} · ${x.date}</b>
+      <span>${x.title}</span>
+    </button>`).join("");
+  $("#mvGrid").querySelectorAll("[data-mv-to]").forEach(b=>{
+    b.onclick = ()=>moveStopToDay(dayId, sid, b.dataset.mvTo);
+  });
+
+  const sIdx = curDay.stops.findIndex(s => s.sid === sid);
+  $("#mvOrder").innerHTML = `
+    <button type="button" id="mvUpBtn" ${sIdx>0?"":"disabled"}>↑ 当天前移</button>
+    <button type="button" id="mvDnBtn" ${sIdx>=0 && sIdx<curDay.stops.length-1?"":"disabled"}>↓ 当天后移</button>
+  `;
+  $("#mvUpBtn").onclick = ()=>reorderStop(dayId, sid, -1);
+  $("#mvDnBtn").onclick = ()=>reorderStop(dayId, sid, 1);
+
+  $("#moveScrim").classList.add("open");
+  $("#moveSheet").classList.add("open");
+  document.body.classList.add("sheet-open");
+}
+
+function renderPassCard(book){
+  if(!book) return "";
+  const entries = Object.entries(book).map(([k,v])=>{
+    if(k==="状态" && v==="待预订" && state.uosanBooked) return [k, "已预订 ✓"];
+    return [k, v];
+  });
+  const isWarn = entries.some(([k,v]) => v === "待预订");
+  const codeEntry = entries.find(([k,v]) => /订单号|确认号/.test(k) || /^[#A-Z0-9-]{5,}$/i.test(v));
+  const codeLocked = !!(codeEntry && String(codeEntry[1]).includes("🔒"));
+  const rest = entries.filter(e => e !== codeEntry && !(e[0]==="状态" && (e[1]==="已预订 ✓" || e[1]==="待预订")));
+  const badgeText = isWarn ? "待预订提醒" : (codeLocked ? "凭证已加密锁定" : (codeEntry ? "已确认凭证" : "出行凭证"));
+
+  const codeBtn = codeEntry
+    ? (codeLocked
+        ? `<button type="button" class="pass-code-btn" data-unlock-pin="1"><span class="pass-code-val">🔒 输入密码解锁</span><span class="pass-code-cp">解锁</span></button>`
+        : `<button type="button" class="pass-code-btn" data-copy="${codeEntry[1]}"><span class="pass-code-val">${codeEntry[1]}</span><span class="pass-code-cp">复制</span></button>`)
+    : (isWarn ? `<button type="button" class="pass-code-btn" id="passMarkUosan"><span class="pass-code-cp">标记已订</span></button>` : `<span style="font-size:11px;font-weight:700;color:var(--ok)">✓ 已确认</span>`);
+
+  const cells = rest.map(([k,v])=>{
+    const sv = String(v);
+    const lockedCell = sv.includes("🔒");
+    const wide = /必带|提示|注意|建议|地址|详情|集合|装备|卡证|退改|行李|托运|礼遇|规则/.test(k) || sv.length > 12;
+    return `<div class="pass-cell ${wide?"wide":""}" ${lockedCell?'data-unlock-pin="1" style="cursor:pointer"':''}><span class="pass-k">${k}</span><span class="pass-v">${sv}</span></div>`;
+  }).join("");
+
+  return `<div class="pass-card ${isWarn?"is-warn":""}">
+    <div class="pass-head"><span class="pass-badge">${isWarn?"●":(codeLocked?"🔒":"✓")} ${badgeText}</span>${codeBtn}</div>
+    ${cells ? `<div class="pass-grid">${cells}</div>` : ""}
+  </div>`;
+}
+
+/* ================= L3 STOP DETAIL & DAY INFO BOTTOM SHEETS ================= */
+function closeStopSheet(){
+  $("#stopScrim").classList.remove("open");
+  $("#stopSheet").classList.remove("open");
+  if(!$("#moveSheet").classList.contains("open") && !$("#infoSheet").classList.contains("open") && !$("#aiSheet").classList.contains("open")){
+    document.body.classList.remove("sheet-open");
+  }
+}
+function closeInfoSheet(){
+  $("#infoScrim").classList.remove("open");
+  $("#infoSheet").classList.remove("open");
+  if(!$("#moveSheet").classList.contains("open") && !$("#stopSheet").classList.contains("open") && !$("#aiSheet").classList.contains("open")){
+    document.body.classList.remove("sheet-open");
+  }
+}
+$("#stopScrim").onclick = closeStopSheet;
+$("#infoScrim").onclick = closeInfoSheet;
+
+function svgIco(kind, sz){
+  const s = sz || 13;
+  const P = {
+    plane: `<path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>`,
+    car: `<path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9L18 10l-2-4H8L6 10l-2.5 1.1C2.7 11.3 2 12.1 2 13v3c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/>`,
+    walk: `<circle cx="13" cy="4" r="2"/><path d="m10 22 2-7 3 2v5M7 13l3-4 4 1 3 3"/>`,
+    bed: `<path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8"/><path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><path d="M2 16h20"/>`,
+    coffee: `<path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/>`,
+    leaf: `<path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>`,
+    food: `<path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/>`,
+    bag: `<path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/>`,
+    waves: `<path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>`,
+    flame: `<path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>`,
+    sun: `<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2m-7.07-17.07 1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>`,
+    star: `<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>`,
+    landmark: `<line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/>`,
+    compass: `<circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>`,
+    luggage: `<path d="M6 20h0a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h0"/><path d="M8 18V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v14"/>`,
+    heart: `<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>`,
+    map: `<polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/>`,
+    info: `<circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>`,
+    pin: `<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>`
+  };
+  return `<svg class="i" style="width:${s}px;height:${s}px;stroke-width:1.8" viewBox="0 0 24 24">${P[kind]||P.pin}</svg>`;
+}
+
+function inferStopIconKind(s){
+  const match = (t) => {
+    if(/取普通|SUV|还车|去 HNL/.test(t)) return "car";
+    if(/火山|岩浆|红光/.test(t)) return "flame";
+    if(/浮潜|夜潜|魔鬼鱼|海龟|黑沙滩/.test(t)) return "waves";
+    if(/观星|星空|云海/.test(t)) return "star";
+    if(/花果园|鸡蛋花|早市|农夫市集/.test(t)) return "leaf";
+    if(/骑马/.test(t)) return "compass";
+    if(/教堂/.test(t)) return "landmark";
+    if(/Sunoa|采购|Costco/.test(t)) return "bag";
+    if(/热午饭|海胆|晚餐|热晚饭|午饭/.test(t)) return "food";
+    if(/咖啡|手冲|试喝|Greenwell|BerryBird/.test(t)) return "coffee";
+    if(/猫|逗猫/.test(t)) return "heart";
+    if(/海滩|白沙滩|鱼塘|放空|日落/.test(t)) return "sun";
+    if(/行李/.test(t)) return "luggage";
+    if(/落地|机场|飞 |AS839|WN2269/.test(t)) return "plane";
+    if(/入住|酒店|洗吹|退房/.test(t)) return "bed";
+    return null;
+  };
+  return match(s.n || "") || match(s.sub || "") || "pin";
+}
+
+function transitIconKind(leg){
+  if(/步行/.test(leg)) return "walk";
+  if(/飞行/.test(leg)) return "plane";
+  return "car";
+}
+
+function extractInlinePass(s){
+  if(!s.book) return null;
+  const entries = Object.entries(s.book);
+  const isPending = entries.some(([k,v]) => k==="状态" && v==="待预订") && !state.uosanBooked;
+  const codeEntry = entries.find(([k,v]) => /订单号|确认号/.test(k) || /^[#A-Z0-9-]{5,}$/i.test(v));
+  if(codeEntry){
+    const v = String(codeEntry[1]);
+    if(v.includes("🔒")) return {label:codeEntry[0], code:"密码锁定", copyable:false, locked:true, warn:false};
+    return {label:codeEntry[0], code:v, copyable:true, locked:false, warn:false};
+  }
+  if(isPending){
+    const phone = s.book.电话 || "";
+    return {label:"待电话订位", code:phone, copyable:!!phone, locked:false, warn:true};
+  }
+  const key = s.book.门票 ? ["门票", s.book.门票] : (s.book.状态 ? ["提示", s.book.状态] : null);
+  if(key) return {label:key[0], code:key[1], copyable:false, locked:false, warn:false};
+  return null;
+}
+
+function triggerArtEgg(btn, iconPath){
+  btn.classList.remove("pop-glide", "pop-hop");
+  void btn.offsetWidth;
+  const isPlane = /plane/.test(iconPath);
+  btn.classList.add(isPlane ? "pop-glide" : "pop-hop");
+  // Spawn subtle contextual particles (steam/smoke/sparkles)
+  const isSmoke = /volcano|coffee/.test(iconPath);
+  const count = isSmoke ? 3 : 4;
+  for(let i = 0; i < count; i++){
+    const p = document.createElement("span");
+    p.className = "art-puff";
+    const px = (i - (count-1)/2) * 18 + (Math.random()*8 - 4);
+    const py = -(24 + i * 10);
+    p.style.setProperty("--px", px.toFixed(0) + "px");
+    p.style.setProperty("--py", py.toFixed(0) + "px");
+    p.style.left = (38 + (Math.random()*12 - 6)) + "px";
+    p.style.top = (isSmoke ? 16 : 24) + "px";
+    p.style.width = p.style.height = (isSmoke ? (9 + i*3) : 6) + "px";
+    p.style.background = /volcano/.test(iconPath) ? "rgba(255,140,80,.55)" : (/coffee/.test(iconPath) ? "rgba(180,150,120,.38)" : "rgba(255,190,64,.75)");
+    p.style.animationDelay = (i * 80) + "ms";
+    btn.appendChild(p);
+    setTimeout(()=>p.remove(), 1100);
+  }
+  setTimeout(()=>btn.classList.remove("pop-glide", "pop-hop"), 850);
+}
+
+function openStopSheet(dayId, sid){
+  const days = getDays(), d = days.find(x=>x.id===dayId);
+  if(!d) return;
+  const s = d.stops.find(x=>x.sid===sid);
+  if(!s) return;
+  const sh = $("#stopSheet");
+  const navQuery = (s.pin && PINS[s.pin]) ? PINS[s.pin].q : (s.book && s.book.地址 ? `${s.n} ${s.book.地址}` : null);
+  const canMove = !!getStopIndex()[sid];
+  const passHTML = renderPassCard(s.book);
+
+  sh.innerHTML = `
+    <div class="l3-grab"></div>
+    <div class="l3-head">
+      <div style="flex:1;min-width:0">
+        <div class="l3-kicker">DAY ${d.num} · ${d.date} ${d.wk} · ${s.t}</div>
+        <h3>${s.n}</h3>
+      </div>
+      <button type="button" class="l3-close" id="closeStopBtn" aria-label="关闭">✕</button>
+    </div>
+    <div class="l3-cta ${navQuery && canMove ? "" : "single"}">
+      ${navQuery ? `<a class="l3-btn-pri" href="${mapsUrl(navQuery)}" target="_blank">${svgIco("pin", 15)}<span>Google Maps 导航</span></a>` : ""}
+      ${canMove ? `<button type="button" class="l3-btn-sec" id="l3MoveBtn">⇄ 移到其他天</button>` : ""}
+    </div>
+    ${passHTML}
+    <div class="l3-sec-lbl">这一站怎么玩 &amp; 避坑</div>
+    ${s.sub ? `<div class="l3-tip-card"><b>核心要点：</b>${s.sub}</div>` : ""}
+    ${s.tip ? `<div class="l3-tip-card">${s.tip}</div>` : ""}
+    ${s.legWarn ? `<div class="l3-tip-card warn"><b>时间/体力提醒：</b>${s.legWarn.replace(/^⚡\s*/,"")}</div>` : ""}
+  `;
+
+  $("#closeStopBtn").onclick = closeStopSheet;
+  const mv = $("#l3MoveBtn");
+  if(mv) mv.onclick = ()=>{ closeStopSheet(); setTimeout(()=>openMoveSheet(dayId, sid), 80); };
+  sh.querySelectorAll("[data-copy]").forEach(b=>b.onclick=()=>{
+    navigator.clipboard?.writeText(b.dataset.copy);
+    b.classList.add("copied");
+    const cp = b.querySelector(".pass-code-cp");
+    if(cp) cp.textContent = "✓ 已复制";
+    clearTimeout(b._t);
+    b._t = setTimeout(()=>{ b.classList.remove("copied"); if(cp) cp.textContent = "复制"; }, 1800);
+  });
+  sh.querySelectorAll("[data-unlock-pin]").forEach(b=>b.onclick=()=>{ closeStopSheet(); setTimeout(openPinSheet, 60); });
+  const pm = sh.querySelector("#passMarkUosan");
+  if(pm) pm.onclick=()=>{ state.uosanBooked=true; ls.set("uosanBooked","1"); renderStatusBar(); openDay(dayId); openStopSheet(dayId, sid); toast("已标记鱼三海胆饭已订 ✓"); };
+
+  $("#stopScrim").classList.add("open");
+  sh.classList.add("open");
+  document.body.classList.add("sheet-open");
+}
+
+function openDayInfoSheet(dayId, activeTab){
+  const days = getDays(), d = days.find(x=>x.id===dayId);
+  if(!d) return;
+  const sh = $("#infoSheet");
+  let tab = activeTab || "cautions";
+  function draw(){
+    const body = tab === "cautions"
+      ? (d.cautions && d.cautions.length ? d.cautions.map(c=>`<div class="l3-tip-card warn"><b>${c.tag}：</b>${c.txt}</div>`).join("") : `<div class="l3-tip-card">当天无特别红线，轻松出发！</div>`)
+      : tab === "food"
+        ? `${d.eat ? `<div class="l3-tip-card"><b>吃什么推荐：</b>${d.eat}</div>` : ""}${d.planB ? `<div class="l3-tip-card"><b>计划有变 · 附近备选：</b>${d.planB}</div>` : ""}`
+        : `<textarea class="info-ta" id="dayNoteTa" placeholder="记下今天的临时想法、停车位或想买的东西…">${state.notes[dayId]||""}</textarea><button type="button" class="l3-btn-pri" id="saveDayNote" style="width:100%">保存今日备注</button>`;
+
+    sh.innerHTML = `
+      <div class="l3-grab"></div>
+      <div class="l3-head">
+        <div>
+          <div class="l3-kicker">DAY ${d.num} · ${d.date} ${d.wk}</div>
+          <h3>${d.title} · 攻略备忘</h3>
+        </div>
+        <button type="button" class="l3-close" id="closeInfoBtn" aria-label="关闭">✕</button>
+      </div>
+      <div class="prep-seg">
+        <button type="button" data-it="cautions" aria-pressed="${tab==='cautions'}">必看 (${(d.cautions||[]).length})</button>
+        <button type="button" data-it="food" aria-pressed="${tab==='food'}">吃什么 &amp; 备选</button>
+        <button type="button" data-it="note" aria-pressed="${tab==='note'}">随手记</button>
+      </div>
+      ${body}
+    `;
+    $("#closeInfoBtn").onclick = closeInfoSheet;
+    sh.querySelectorAll("[data-it]").forEach(b=>b.onclick=()=>{ tab=b.dataset.it; draw(); });
+    const sn = $("#saveDayNote");
+    if(sn) sn.onclick=()=>{ state.notes[dayId]=$("#dayNoteTa").value; ls.set("notes",JSON.stringify(state.notes)); toast("备注已保存 ✓"); };
+  }
+  draw();
+  $("#infoScrim").classList.add("open");
+  sh.classList.add("open");
+  document.body.classList.add("sheet-open");
+}
+
+/* ================= A2 SWISS RAIL DAY DETAIL (GESTALT 4-TIER SPACING + EMBEDDED MOTION) ================= */
+function openDay(id, originImg){
+  const originRect = originImg && originImg.getBoundingClientRect ? originImg.getBoundingClientRect() : null;
+  state.dayId = id;
+  const days = getDays(), d = days.find(x=>x.id===id); if(!d) return;
+  $("#v-trips").hidden = true;
+  const dv = $("#v-day"); dv.hidden = false;
+  renderStatusBar();
+
+  const strip = days.map(x=>`<button type="button" class="dv-dp" data-sw="${x.id}" aria-pressed="${x.id===id}">${x.date}</button>`).join("");
+  const hasMap = d.id === "d7" || d.stops.some(s => s.pin && PINS[s.pin]);
+
+  const showSunset = !!(d.sun && d.id !== "d0");
+  const metaParts = [
+    `<span>${d.wx}</span>`,
+    `<span>车程 ${d.drive}</span>`,
+    showSunset ? `<span>日落 ${d.sun}</span>` : `<span>住 ${d.sleep}</span>`
+  ].filter(Boolean).join(`<span class="sep">·</span>`);
+  const wbHTML = "";
+
+  // Build strict single-axis Swiss rail with symmetric transit bridges between stops
+  const railParts = [];
+  d.stops.forEach((s, si)=>{
+    const isLast = si === d.stops.length - 1;
+    const nextStop = !isLast ? d.stops[si + 1] : null;
+    const hasBridgeBelow = !!(nextStop && (nextStop.leg || nextStop.legWarn));
+    const iconKind = inferStopIconKind(s);
+    const pass = extractInlinePass(s);
+    const nodeCls = pass ? (pass.warn ? "dv-node warn" : "dv-node solid") : "dv-node";
+    const briefTxt = s.brief || s.sub || "";
+
+    // Optional opening departure leg ONLY for Stop 0, with subtle Swiss origin ring connected to Stop 0 axis
+    if(si === 0 && (s.leg || s.legWarn)){
+      railParts.push(`<div class="dv-bridge is-origin" style="--sdly:30ms">
+        <div class="dv-bridge-axis"><div class="dv-bridge-dot"></div><div class="dv-bridge-line" style="margin-top:4px"></div></div>
+        <div class="dv-bridge-body">
+          <span class="dv-bridge-l">${svgIco(transitIconKind(s.leg||""), 12.5)}<span>${s.leg||""}</span></span>
+          ${s.legWarn ? `<span class="dv-bridge-warn">${s.legWarn.replace(/^⚡\s*/,"")}</span>` : ""}
+        </div>
+      </div>`);
+    }
+
+    const passHTML = pass
+      ? `<div class="dv-pass-mini ${pass.warn?"is-warn":""}" data-open-sid="${s.sid}">
+          <div class="dv-pm-l"><span class="dv-pm-dot"></span><span>${pass.label}</span><span class="${pass.copyable?"dv-pm-code":"dv-pm-txt"}">${pass.code}</span></div>
+          ${pass.locked ? `<button type="button" class="dv-pm-copy" data-unlock-pin="1">🔒 解锁</button>` : (pass.copyable ? `<button type="button" class="dv-pm-copy" data-inline-copy="${pass.code}">复制</button>` : `<span style="font-size:11.5px;color:#9C968E;font-weight:700">详情 ›</span>`)}
+        </div>`
+      : "";
+
+    railParts.push(`<div class="dv-step ${isLast?"is-last":""} ${hasBridgeBelow?"has-bridge":""}" style="--sdly:${si*60+50}ms;--ldly:${si*60+90}ms">
+      <div class="dv-axis">
+        <div class="${nodeCls}">${svgIco(iconKind, 13)}</div>
+        ${!isLast ? `<div class="dv-line"></div>` : ""}
+      </div>
+      <div class="dv-scontent">
+        <button type="button" class="dv-stop-hit" data-open-sid="${s.sid}">
+          <div class="dv-r1"><span class="dv-sname">${s.n}</span><span class="dv-stime">${s.t}</span></div>
+          <div class="dv-sbrief">${briefTxt}</div>
+        </button>
+        ${passHTML}
+      </div>
+    </div>`);
+
+    // Symmetric transit bridge strictly centered between Stop N and Stop N+1 (12px top / 12px bottom!)
+    if(hasBridgeBelow){
+      railParts.push(`<div class="dv-bridge" style="--sdly:${si*60+80}ms">
+        <div class="dv-bridge-axis"><div class="dv-bridge-line"></div></div>
+        <div class="dv-bridge-body">
+          <span class="dv-bridge-l">${svgIco(transitIconKind(nextStop.leg||""), 12.5)}<span>${nextStop.leg||""}</span></span>
+          ${nextStop.legWarn ? `<span class="dv-bridge-warn">${nextStop.legWarn.replace(/^⚡\s*/,"")}</span>` : ""}
+        </div>
+      </div>`);
+    }
+  });
+
+  const timelineHTML = railParts.length ? railParts.join("") : `<div class="l3-tip-card" style="text-align:center">这一天的行程已全部移走 · 可随时从其他天移回</div>`;
+  const foodPreview = (d.eat || "查看推荐").split(/[；。，、/]/)[0].slice(0, 12);
+
+  dv.innerHTML = `
+    <div class="dv-nav">
+      <button type="button" class="back-btn" id="dvBack"><svg class="i" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>9 天</button>
+      ${hasMap ? `<button type="button" class="dv-map-link" id="dvOnMap">${svgIco("map", 13)}<span>3D 路线</span></button>` : `<span class="eyebrow">DAY ${d.num}</span>`}
+    </div>
+    <div class="dv-strip" id="dvStrip">${strip}<span class="dv-strip-ind" id="dvStripInd"></span></div>
+    <div class="dv-hero-a2">
+      <div class="dv-hero-left">
+        <div class="dv-hero-k">DAY ${d.num} · ${d.wk}${d.tag?" · "+d.tag:""}</div>
+        <h2>${d.title}</h2>
+        <div class="dv-hero-meta">${metaParts}</div>
+        ${wbHTML}
+      </div>
+      <button type="button" class="dv-art-btn" id="dvArtBtn" aria-label="轻点触发小动效">
+        <img src="${d.icon}" alt="">
+        <span class="dv-art-shadow"></span>
+      </button>
+    </div>
+    <div class="dv-rail">${timelineHTML}</div>
+    <div class="dv-foot">
+      <button type="button" class="dv-frow" id="openCautionsBtn">
+        <span class="dv-frow-l">${svgIco("info", 15)}<span>出发前必看</span></span>
+        <span class="dv-frow-r">${(d.cautions||[]).length} 条提醒 ›</span>
+      </button>
+      <button type="button" class="dv-frow" id="openFoodBtn">
+        <span class="dv-frow-l">${svgIco("food", 15)}<span>吃什么 &amp; 备选</span></span>
+        <span class="dv-frow-r">${foodPreview} ›</span>
+      </button>
+    </div>
+  `;
+  window.scrollTo({top:0});
+
+  // Sliding underline indicator on date strip
+  requestAnimationFrame(()=>{
+    const stripEl = $("#dvStrip"), activeBtn = stripEl?.querySelector('[aria-pressed="true"]'), ind = $("#dvStripInd");
+    if(stripEl && activeBtn && ind){
+      ind.style.width = activeBtn.offsetWidth + "px";
+      ind.style.transform = `translateX(${activeBtn.offsetLeft}px)`;
+      activeBtn.scrollIntoView({inline:"center", block:"nearest", behavior:"auto"});
+    }
+  });
+
+  if(originRect){
+    const dest = dv.querySelector("#dvArtBtn img");
+    if(dest){
+      const dr = dest.getBoundingClientRect();
+      const dx = originRect.left - dr.left + (originRect.width - dr.width)/2;
+      const dy = originRect.top - dr.top + (originRect.height - dr.height)/2;
+      const sc = Math.max(0.45, originRect.width / (dr.width||82));
+      dest.animate([
+        {transform:`translate(${dx.toFixed(1)}px,${dy.toFixed(1)}px) scale(${sc.toFixed(2)})`},
+        {transform:"translate(0,-4px) scale(1.06)", offset:.72},
+        {transform:"none"}
+      ],{duration:420,easing:"cubic-bezier(.22,1,.36,1)"});
+    }
+  }
+
+  $("#dvBack").onclick = closeDay;
+  $("#dvArtBtn").onclick = ()=>triggerArtEgg($("#dvArtBtn"), d.icon);
+  dv.querySelectorAll("[data-sw]").forEach(b=>b.onclick=()=>openDay(b.dataset.sw));
+  const om=$("#dvOnMap");
+  if(om) om.onclick=()=>{
+    state.dayId=null;
+    state.mapIsle = d.id === "d7" ? "oahu" : "big";
+    switchTab("map");
+    renderMap(d.id === "d7" ? null : d.id);
+  };
+  dv.querySelectorAll("[data-open-sid]").forEach(b=>b.onclick=()=>openStopSheet(d.id, b.dataset.openSid));
+  dv.querySelectorAll("[data-unlock-pin]").forEach(b=>b.onclick=(e)=>{ e.stopPropagation(); openPinSheet(); });
+  dv.querySelectorAll("[data-inline-copy]").forEach(b=>b.onclick=(e)=>{
+    e.stopPropagation();
+    const val = b.dataset.inlineCopy;
+    navigator.clipboard?.writeText(val);
+    b.classList.add("copied");
+    b.textContent = "✓ 已复制";
+    clearTimeout(b._t);
+    b._t = setTimeout(()=>{ b.classList.remove("copied"); b.textContent = "复制"; }, 1800);
+  });
+  $("#openCautionsBtn").onclick = ()=>openDayInfoSheet(d.id, "cautions");
+  $("#openFoodBtn").onclick = ()=>openDayInfoSheet(d.id, "food");
+
+  if(q.get("stop") && !window._stopDemoDone){
+    window._stopDemoDone = true;
+    setTimeout(()=>openStopSheet(d.id, q.get("stop")), 160);
+  }
+  if(q.get("moveDemo") === "1" && !window._moveDemoDone && d.stops.length){
+    window._moveDemoDone = true;
+    setTimeout(()=>openMoveSheet(d.id, d.stops[Math.min(2, d.stops.length-1)].sid), 180);
+  }
+}
+function closeDay(){ closeStopSheet(); closeInfoSheet(); state.dayId=null; $("#v-day").hidden=true; $("#v-trips").hidden=false; renderStatusBar(); renderHome(); }
+
+/* ================= REAL 360° INTERACTIVE 3D WEBGL ISLAND MODEL (BIG ISLAND + OAHU) ================= */
+const DCOLS=["#52525B","#0284C7","#15803D","#EA580C","#7C3AED","#1F1D1A","#0D9488"];
+const DAY_SHORT={d0:"落地",d1:"火山",d2:"骑马",d3:"白沙滩",d4:"夜潜",d5:"观星",d6:"弹性"};
+let sheetSnap="peek";
+function setSnap(s){
+  sheetSnap=s;
+  const sh=$("#mapSheet"), body=$("#mapSheetBody");
+  if(s==="peek"){ body.style.display="none"; sh.style.transform="none"; }
+  else { body.style.display="block"; sh.style.transform="none"; sh.style.maxHeight = s==="half" ? "36%" : "64%"; }
+}
+$("#mapGrab").onclick=()=>setSnap(sheetSnap==="peek"?"half":sheetSnap==="half"?"full":"peek");
+
+let island3D = null;
+let map3dMode = q.get("mode3d") === "free3d" ? "free3d" : "turntable";
+function setMap3dMode(m){
+  map3dMode = m === "free3d" ? "free3d" : "turntable";
+  $("#mapModeTT").setAttribute("aria-pressed", map3dMode === "turntable");
+  $("#mapModeFree").setAttribute("aria-pressed", map3dMode === "free3d");
+  if(island3D && island3D.setMode) island3D.setMode(map3dMode);
+}
+$("#mapModeTT").onclick = ()=>setMap3dMode("turntable");
+$("#mapModeFree").onclick = ()=>setMap3dMode("free3d");
+
+function syncStepUI(stepIdx, stepObj, total){
+  const body = $("#mapSheetBody");
+  if(body){
+    body.querySelectorAll("[data-step-idx]").forEach(el=>{
+      const on = parseInt(el.dataset.stepIdx, 10) === stepIdx;
+      if(el.classList.contains("step-chip")) el.setAttribute("aria-pressed", on);
+      if(el.classList.contains("ck-row")) el.classList.toggle("is-step-active", on);
+    });
+  }
+  if(stepObj && stepIdx >= 0){
+    $("#mapDayLbl").textContent = `第 ${stepIdx+1}/${total} 步 · 前往 ${stepObj.label} →`;
+  }
+}
+function syncPlayBtnUI(playing){
+  const btn = $("#mapPlayStepsBtn");
+  if(!btn) return;
+  btn.classList.toggle("playing", !!playing);
+  btn.textContent = playing ? "⏸ 暂停轨迹" : "▶ 播放今日轨迹";
+}
+
+function ensureIsland3D(){
+  if(island3D || !window.HawaiiIsland3D) return island3D;
+  island3D = window.HawaiiIsland3D.create($("#map3dCanvas"), $("#map3dPins"), {
+    mode3d: map3dMode,
+    onSelectDay(dayId){ renderMap(dayId); },
+    onSelectStop(sp){
+      if(sp.q) window.open(mapsUrl(sp.q), "_blank");
+      else if(sp.pin && PINS[sp.pin]) window.open(mapsUrl(PINS[sp.pin].q), "_blank");
+    },
+    onSpinChange(on){ $("#mapSpinBtn").classList.toggle("on", !!on); },
+    onStepChange(idx, st, total){ syncStepUI(idx, st, total); },
+    onPlayChange(playing){ syncPlayBtnUI(playing); }
+  });
+  setMap3dMode(map3dMode);
+  return island3D;
+}
+
+$("#mapZoomIn").onclick = ()=>{ if(island3D) island3D.zoom(0.80); };
+$("#mapZoomOut").onclick = ()=>{ if(island3D) island3D.zoom(1.25); };
+$("#mapZoomReset").onclick = ()=>{ if(island3D){ island3D.reset(); $("#mapSpinBtn").classList.remove("on"); } };
+$("#mapSpinBtn").onclick = ()=>{
+  if(island3D){
+    const on = island3D.toggleSpin();
+    $("#mapSpinBtn").classList.toggle("on", on);
+    toast(on ? "已开启 360° 自动慢转" : "已停止自动旋转");
+  }
+};
+
+function renderMap(focusDay){
+  $("#mapIsleBig").setAttribute("aria-pressed", state.mapIsle==="big");
+  $("#mapIsleOahu").setAttribute("aria-pressed", state.mapIsle==="oahu");
+  const ctrl = ensureIsland3D();
+  const biDays = getDays().slice(0,7);
+  const active = (state.mapIsle === "big" && focusDay && biDays.some(d=>d.id===focusDay)) ? focusDay : null;
+  const activeDayObj = active ? biDays.find(d=>d.id===active) : null;
+
+  const snapNow = !!(q.get("yaw") || q.get("pitch") || q.get("dist") || q.get("focus") || q.get("step"));
+  if(ctrl){
+    ctrl.resize();
+    ctrl.setView(state.mapIsle, active, biDays, DCOLS, snapNow);
+    if(q.get("yaw") || q.get("pitch") || q.get("dist")){
+      const y = q.get("yaw") ? parseFloat(q.get("yaw")) : undefined;
+      const p = q.get("pitch") ? parseFloat(q.get("pitch")) : undefined;
+      const d = q.get("dist") ? parseFloat(q.get("dist")) : undefined;
+      ctrl.setAngle(y, p, d);
+    }
+  }
+
+  if(state.mapIsle === "oahu"){
+    const oahuStops = [
+      {n:"HNL 机场",sub:"12/2 16:30 落地 · 12/4 10:30 过 USDA 农业安检飞 SJC",q:"Daniel K. Inouye International Airport"},
+      {n:"ABC / Longs 买检疫鸡蛋花",sub:"挑带官方 HDOA 绿标密封枝条，过完安检前绝不拆袋",q:"Longs Drugs Waikiki Honolulu"},
+      {n:"OUTRIGGER 海滩酒店",sub:"2300 Kalakaua Ave · 每日含 Aroma Caffe/Maui Brewing 抵扣 · 12/1–5 水母期看警示旗",q:"OUTRIGGER Waikiki Beachcomber Hotel 2300 Kalakaua Ave Honolulu HI 96815"},
+      {n:"Izakaya Uosan 松露海胆饭",sub:"1221 Kapiolani Blvd #108 · 仅电话订位 (808) 200-5077",q:"Izakaya Uosan 1221 Kapiolani Blvd Honolulu HI 96814"}
+    ];
+    $("#mapDayLbl").textContent = "Oahu 3D 沙盘 · 拖动 360° 旋转";
+    $("#mapSheetTitle").textContent = "Oahu 路线动效 · 点任意站看轨迹动画";
+    $("#mapGmapsBtn").onclick = ()=>window.open(mapsUrl("Waikiki Beach, Honolulu, HI"), "_blank");
+    $("#mapResetBtn").onclick = ()=>{ if(ctrl) ctrl.reset(); renderMap(null); };
+    $("#mapSheetBody").innerHTML = `<div class="step-play-bar"><button type="button" class="step-play-btn" id="mapPlayStepsBtn">▶ 播放今日轨迹</button>${oahuStops.map((x,i)=>`<button type="button" class="step-chip" data-step-idx="${i}" aria-pressed="false">第${i+1}站</button>`).join("")}</div>`
+      + oahuStops.map((x,i)=>`<div class="ck-row" data-step-idx="${i}" style="padding:9px 11px"><span class="p3d-num" style="background:${["#1F1D1A","#15803D","#0284C7","#EA580C"][i]};margin-top:2px">${i+1}</span><div style="flex:1"><div class="ck-txt">${x.n}</div><div class="ck-sub">${x.sub}</div></div><a class="urgent-btn" href="${mapsUrl(x.q)}" target="_blank" onclick="event.stopPropagation()">导航</a></div>`).join("");
+    $("#mapPlayStepsBtn").onclick = ()=>{ if(ctrl) ctrl.togglePlayJourney(); };
+    $("#mapSheetBody").querySelectorAll("[data-step-idx]").forEach(el=>el.onclick=()=>{ if(ctrl) ctrl.focusStep(parseInt(el.dataset.stepIdx,10), false); });
+    setSnap(q.get("step") ? "half" : "peek");
+    if(q.get("step") && ctrl){ ctrl.focusStep(parseInt(q.get("step"), 10), false); }
+    return;
+  }
+
+  $("#mapDayLbl").textContent = activeDayObj ? `DAY ${activeDayObj.num} · ${activeDayObj.title}` : "大岛 3D 沙盘 · 拖动 360° 旋转";
+  $("#mapSheetTitle").textContent = activeDayObj ? `D${activeDayObj.num} ${DAY_SHORT[activeDayObj.id]||""} · 点任意站看分步轨迹` : "单指 360° 旋转 · 点 D2 火山 / D3 骑马等看路线";
+
+  $("#mapResetBtn").onclick = ()=>{ if(ctrl) ctrl.reset(); renderMap(null); };
+  $("#mapGmapsBtn").onclick = ()=>window.open(dayRouteUrl(activeDayObj||biDays[1])||mapsUrl("Big Island, Hawaii"),"_blank");
+  const dayPins = activeDayObj ? activeDayObj.stops.filter(s=>s.pin) : [];
+  const activeCol = activeDayObj ? (DCOLS[biDays.findIndex(d=>d.id===activeDayObj.id)] || "#FF385C") : "#FF385C";
+  $("#mapSheetBody").innerHTML = `<div style="display:flex;gap:5px;overflow-x:auto;padding-bottom:8px;scrollbar-width:none"><button type="button" class="dv-dp" data-mf="" aria-pressed="${!active}">全部</button>${biDays.map((d,di)=>`<button type="button" class="dv-dp" data-mf="${d.id}" aria-pressed="${active===d.id}" style="${active===d.id?'':'border-left:4px solid '+DCOLS[di]}">D${d.num} ${DAY_SHORT[d.id]||""}</button>`).join("")}</div>`
+    +(activeDayObj
+      ? `<div class="step-play-bar"><button type="button" class="step-play-btn" id="mapPlayStepsBtn">▶ 播放今日轨迹</button>${dayPins.map((s,i)=>`<button type="button" class="step-chip" data-step-idx="${i}" aria-pressed="false">第${i+1}站</button>`).join("")}</div>`
+        + dayPins.map((s,i)=>`<div class="ck-row" data-step-idx="${i}" style="padding:9px 11px"><span class="p3d-num" style="background:${activeCol};margin-top:2px">${i+1}</span><div style="flex:1"><div class="ck-txt">${s.t} · ${s.n}</div><div class="ck-sub">${s.sub}</div></div><a class="urgent-btn" href="${mapsUrl(PINS[s.pin].q)}" target="_blank" onclick="event.stopPropagation()">导航</a></div>`).join("")
+      : biDays.map((d,di)=>`<button type="button" class="ck-row" style="width:100%;text-align:left" data-mf="${d.id}"><span style="width:8px;height:32px;border-radius:4px;background:${DCOLS[di]};flex-shrink:0"></span><div style="flex:1"><div class="ck-txt">DAY ${d.num} · ${d.title}</div><div class="ck-sub">${d.date} · 开车 ${d.drive}</div></div><span class="f-pill neutral">看 3D 路线 ›</span></button>`).join(""));
+  $("#mapSheetBody").querySelectorAll("[data-mf]").forEach(b=>b.onclick=()=>renderMap(b.dataset.mf||null));
+  const pb = $("#mapPlayStepsBtn");
+  if(pb) pb.onclick = ()=>{ if(ctrl) ctrl.togglePlayJourney(); };
+  $("#mapSheetBody").querySelectorAll("[data-step-idx]").forEach(el=>el.onclick=()=>{ if(ctrl) ctrl.focusStep(parseInt(el.dataset.stepIdx,10), false); });
+  setSnap(active?"half":"peek");
+  if(q.get("step") && active && ctrl){
+    ctrl.focusStep(parseInt(q.get("step"), 10), false);
+  }
+}
+$("#mapIsleBig").onclick=()=>{ state.mapIsle="big"; renderMap(null); };
+$("#mapIsleOahu").onclick=()=>{ state.mapIsle="oahu"; renderMap(null); };
+
+function renderBookings(){
+  const list = getBookings();
+  const unlk = isUnlocked();
+  const carSvg = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M6 12l2-5h8l2 5M3 12h18v4a1 1 0 0 1-1 1h-1v1a1 1 0 0 1-2 0v-1H7v1a1 1 0 0 1-2 0v-1H4a1 1 0 0 1-1-1v-4Z"/><circle cx="7" cy="14" r="1"/><circle cx="17" cy="14" r="1"/></svg>`;
+  const lockBanner = unlk
+    ? `<div class="bk-lock-banner" style="border-color:rgba(21,128,61,.25);background:#F4FDF7"><div><b style="font-size:13.5px;color:#15803D">🔓 已解锁全部订单凭证</b><div style="font-size:11.5px;color:var(--ink-2);margin-top:2px">点击各订单右上角或详情可直接复制确认号</div></div><button type="button" class="urgent-btn" id="bkRelockBtn" style="border-color:rgba(21,128,61,.3);color:#15803D">重新锁定</button></div>`
+    : `<div class="bk-lock-banner"><div><b style="font-size:13.5px">🔒 确认号 · PIN · 尾号已加密锁定</b><div style="font-size:11.5px;color:var(--ink-2);margin-top:2px">点右侧输入 4 位密码，解锁后存当前手机本地</div></div><button type="button" class="bk-lock-btn" id="bkUnlockBtn">解锁凭证</button></div>`;
+  $("#v-bookings").innerHTML=`<div class="top-row"><div><div class="eyebrow">BOOKINGS WALLET</div><h1 class="h1-main" style="font-size:22px">全部预订</h1></div></div>`
+    +lockBanner
+    +list.map(b=>{
+      const ok=b.id==="bk_uosan"?state.uosanBooked:b.ok;
+      const icoHtml=b.ico==="car"?carSvg:`<img src="art/icons3d/${b.ico}.png" alt="">`;
+      let rightAct = `<span class="f-pill ok">✓ 已订</span>`;
+      if(b.id==="bk_uosan"&&!ok) rightAct = `<button type="button" class="urgent-btn" style="white-space:nowrap" id="bkMarkUosan">标记已订</button>`;
+      else if(b.hasOwnProperty("code") && !unlk) rightAct = `<button type="button" class="urgent-btn" data-unlock-pin="1" style="white-space:nowrap">🔒 解锁</button>`;
+      else if(b.code && unlk) rightAct = `<button type="button" class="urgent-btn" data-bk-copy="${b.code}" style="white-space:nowrap;border-color:rgba(21,128,61,.28);color:#15803D">${b.code} · 复制</button>`;
+      return `<div class="bk-card"><div class="bk-head"><div class="bk-left"><div class="bk-ico">${icoHtml}</div><div><div class="bk-title">${b.t}</div><div class="bk-when">${b.w}</div></div></div>${rightAct}</div><div class="bk-detail">${b.d}</div></div>`;
+    }).join("");
+  const bm=$("#bkMarkUosan"); if(bm) bm.onclick=()=>{ state.uosanBooked=true; ls.set("uosanBooked","1"); renderBookings(); renderStatusBar(); toast("已标记鱼三海胆饭已订 ✓"); };
+  const ub=$("#bkUnlockBtn"); if(ub) ub.onclick=openPinSheet;
+  const rb=$("#bkRelockBtn"); if(rb) rb.onclick=lockVault;
+  $("#v-bookings").querySelectorAll("[data-unlock-pin]").forEach(el=>el.onclick=openPinSheet);
+  $("#v-bookings").querySelectorAll("[data-bk-copy]").forEach(el=>el.onclick=()=>{
+    navigator.clipboard?.writeText(el.dataset.bkCopy);
+    toast("已复制 " + el.dataset.bkCopy + " ✓");
+  });
+}
+
+function renderPrep(){
+  const PACK=[
+    {id:"pk1",t:"防晒衣 + 泳衣 + 涉水速干衣裤",sub:"Two Step / Kua Bay / Beach 69 海边必备",done:true},
+    {id:"pk2",t:"浮潜面镜 + 呼吸管 + 涉水鞋 ×2",sub:"Two Step 玻璃海与 Kahaluʻu 踩礁石必备",done:true},
+    {id:"pk3",t:"去程 UA1723 随身行李检查：只背 1 个座位下小包",sub:"Basic Economy 不含头顶大登机箱（9×10×17 寸）；安检前托 $45–$50"},
+    {id:"pk4",t:"自带中式面包 / 干粮 & 可重复灌装水壶",sub:"感恩节晚超市全关兜底 + Mauna Kea 观星团要求自备水壶"},
+    {id:"pk5",t:"防蚊喷雾 (Picaridin/DEET) + 免洗洗手液",sub:"Hilo 日式公园 / Mauka 花果园防蚊；撸完户外猫洗手"},
+    {id:"pk6",t:"保暖秋裤 + 防风长裤 + 厚袜 + 抓绒外套 + 运动鞋",sub:"10°C 火山红光、0°C 观星(团发男子码羽绒衣不护腿)与骑马长裤包头鞋必穿"},
+    {id:"pk7",t:"周日 Kona Costco / Walmart 囤车用绒毛毯",sub:"$5–$28 放后备箱：夜潜出水与夜间山风保暖救星"},
+    {id:"pk8",t:`实体付款信用卡 + 驾照 + 双方照片 ID`,sub:`${vk("horse_holder","11/28 骑马报到核卡证已加密锁定")} · 缺卡/缺 ID 现场拒骑`},
+    {id:"pk9",t:"Google Maps 离线大岛地图 + 帽子墨镜 + 晕船药",sub:"200 号公路信号弱；11/30 魔鬼鱼夜潜上船前吃晕船药"},
+    {id:"pk10",t:"矿物防晒 + 常备药（布洛芬/创可贴）+ $150 小额现金",sub:"Waimea 周六社区早市小摊多收现金"}
+  ];
+  const doneCount=PACK.filter(x=>x.done||state.packDone[x.id]).length;
+  const isStandalone = window.matchMedia && window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone;
+  const swReady = !!window._swReady;
+  const offlineDone = ls.get("offlineFullV37") === "1";
+  const pwaHTML = `
+    <div class="pwa-card">
+      <div class="pwa-head">
+        <div class="pwa-ico"><img src="art/pwa/apple-touch-icon.png" alt="App 图标"></div>
+        <div style="flex:1;min-width:0">
+          <div style="font-size:15px;font-weight:800">iPhone 离线 App 模式</div>
+          <div style="font-size:12px;color:var(--ink-2);margin-top:2px">${isStandalone?"✓ 已从主屏幕全屏运行":(offlineDone?"✓ 已完成全量离线缓存":"出发前连 Wi-Fi 点一次下方按钮，火山没网也能秒开")}</div>
+        </div>
+        <span class="f-pill ${offlineDone||swReady?'ok':'neutral'}">${offlineDone?"100% 离线就绪":(swReady?"核心已缓存":"需 HTTPS")}</span>
+      </div>
+      <button type="button" class="btn-black" id="cacheAllOfflineBtn" style="width:100%">${offlineDone?"✓ 已离线缓存全部行程与 3D 地图（点击更新）":"一键缓存全部行程 + 确认号 + 3D 地图供离线"}</button>
+      <div class="pwa-prog" id="pwaProgWrap" hidden><i id="pwaProgBar"></i></div>
+      <div id="pwaProgTxt" style="font-size:11.5px;color:var(--ink-2);margin-top:4px"></div>
+      <div class="pwa-steps">
+        <b>装到 iPhone 桌面像原生 App 一样用（3 步）：</b><br>
+        1. 用 iPhone 自带 <b>Safari</b> 打开 HTTPS 链接<br>
+        2. 点底部中间的 <b>分享图标 ⬆️</b> → 下滑点 <b>「添加到主屏幕」</b><br>
+        3. 从桌面点小岛图标打开，就是全屏无地址栏 App；出发前连 Wi-Fi 点一下上方缓存按钮，没信号照常秒开！
+      </div>
+    </div>`;
+  const vpLabelMap = {normal:"周五晴窗基准版（11/27 去）", chase26:"🔥 26号晚落地直冲版", chase27:"🔥 27号周五优先直冲版"};
+  const volcanoHTML = `
+    <div class="bk-card">
+      <div class="bk-title">USGS Kīlauea 自动监测 & 实时直播</div>
+      <div class="bk-detail" style="border:0;padding-top:6px">
+        当前官方级别：<b>${state.volcanoLive.level}</b> · 当前行程：<b>${vpLabelMap[state.vplan]||vpLabelMap.normal}</b><br><br>
+        App 每次联网会自动查询 USGS 实时状态。<b>平时首页保持干干净净</b>；只有真正检测到活跃熔岩喷泉（WARNING / RED）时，首页才会自动弹提醒条并支持一键切追火山（可随时撤销）。<br><br>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <a class="urgent-btn" href="https://www.youtube.com/@USGSVolcanoes/streams" target="_blank" style="padding:8px 13px;font-size:12px">打开 USGS 火山实时直播 ↗</a>
+          <button type="button" class="btn-white" id="toggleSimBtn" style="padding:7px 12px;font-size:12px">${state.volcanoSim?"关闭提醒预览":"预览自动提醒条"}</button>
+        </div>
+        <details style="margin-top:14px;padding-top:10px;border-top:1px dashed var(--line-strong)">
+          <summary style="font-size:11.5px;color:var(--ink-3);cursor:pointer;list-style:none">手动切换火山预案（平时无需操作） ▾</summary>
+          <div class="pd-opts" id="prepVplanOpts" style="margin-top:8px">
+            <button type="button" class="pd-btn" data-vp="normal" aria-pressed="${state.vplan==='normal'}">基准版·27号</button>
+            <button type="button" class="pd-btn" data-vp="chase26" aria-pressed="${state.vplan==='chase26'}">26号晚直冲</button>
+            <button type="button" class="pd-btn" data-vp="chase27" aria-pressed="${state.vplan==='chase27'}">27号优先冲</button>
+          </div>
+          <div style="font-size:11px;color:var(--ink-3);line-height:1.45">现在 11/27 周五本就跑 Hilo+火山；遇到主喷发窗口会自动精简绕路直冲，随时可撤销。</div>
+        </details>
+      </div>
+    </div>`;
+  $("#v-prep").innerHTML=`<div class="top-row"><div><div class="eyebrow">PREP · OFFLINE APP</div><h1 class="h1-main" style="font-size:22px">准备与离线 App</h1></div></div>
+    <div class="prep-seg">
+      <button type="button" data-pt="pack" aria-pressed="${state.prepTab==='pack'}">打包 (${doneCount}/${PACK.length})</button>
+      <button type="button" data-pt="pwa" aria-pressed="${state.prepTab==='pwa'}">离线 App</button>
+      <button type="button" data-pt="volcano" aria-pressed="${state.prepTab==='volcano'}">火山监测</button>
+    </div>
+    ${state.prepTab==="pack"?PACK.map(x=>{const d=x.done||!!state.packDone[x.id];return `<div class="ck-row ${d?'done':''}" data-pk="${x.id}"><button type="button" class="ck-box">${d?'✓':''}</button><div><div class="ck-txt">${x.t}</div><div class="ck-sub">${x.sub}</div></div></div>`;}).join("")
+    :(state.prepTab==="pwa"?pwaHTML:volcanoHTML)}`;
+  $("#v-prep").querySelectorAll("[data-pt]").forEach(b=>b.onclick=()=>{ state.prepTab=b.dataset.pt; renderPrep(); });
+  $("#v-prep").querySelectorAll("[data-pk]").forEach(r=>r.onclick=()=>{ const id=r.dataset.pk; state.packDone[id]=!state.packDone[id]; ls.set("packDone",JSON.stringify(state.packDone)); renderPrep(); });
+  const ts=$("#toggleSimBtn"); if(ts) ts.onclick=()=>{ state.volcanoSim=!state.volcanoSim; renderStatusBar(); renderPrep(); toast(state.volcanoSim?"已开启自动提醒条预览（回行程页查看）":"已关闭提醒预览"); };
+  $("#v-prep").querySelectorAll("#prepVplanOpts [data-vp]").forEach(b=>b.onclick=()=>{ state.vplan=b.dataset.vp; ls.set("vplan",state.vplan); renderStatusBar(); renderPrep(); toast("已切换："+vpLabelMap[state.vplan]); });
+  const cb=$("#cacheAllOfflineBtn");
+  if(cb) cb.onclick=async ()=>{
+    if(!("serviceWorker" in navigator) || !navigator.serviceWorker.controller){
+      toast("需在 HTTPS 正式链接下才能启用离线缓存");
+      return;
+    }
+    const wrap=$("#pwaProgWrap"), bar=$("#pwaProgBar"), txt=$("#pwaProgTxt");
+    wrap.hidden=false; cb.disabled=true; cb.textContent="正在缓存全部行程与 3D 地图…";
+    txt.textContent="下载中，请保持页面打开约 5–10 秒…";
+    navigator.serviceWorker.controller.postMessage({type:"CACHE_ALL_OFFLINE"});
+  };
+}
+
+function switchTab(t){
+  state.tab=t; state.dayId=null;
+  ["trips","day","map","bookings","prep"].forEach(k=>$("#v-"+k).hidden=(k!==t));
+  $$(".dock-btn").forEach(b=>b.setAttribute("aria-selected",b.dataset.tab===t));
+  renderStatusBar();
+  if(t==="trips") renderHome();
+  if(t==="map") renderMap(null);
+  if(t==="bookings") renderBookings();
+  if(t==="prep") renderPrep();
+}
+$$(".dock-btn").forEach(b=>b.onclick=()=>switchTab(b.dataset.tab));
+
+if($("#btnCat")) $("#btnCat").onclick=()=>{ state.who="🐱"; ls.set("who","🐱"); renderStatusBar(); if(state.dayId) openDay(state.dayId); else renderHome(); };
+if($("#btnPig")) $("#btnPig").onclick=()=>{ state.who="🐷"; ls.set("who","🐷"); renderStatusBar(); if(state.dayId) openDay(state.dayId); else renderHome(); };
+$("#pillPending").onclick=()=>state.uosanBooked?switchTab("bookings"):openDay("d7");
+$("#pillVault").onclick=openPinSheet;
+if($("#s1VaultBtn")) $("#s1VaultBtn").onclick=openPinSheet;
+if($("#s1QuietBtn")) $("#s1QuietBtn").onclick=()=>{ state.volcanoOpen=!state.volcanoOpen; renderStatusBar(); };
+$("#pillVolcano").onclick=()=>{ state.volcanoOpen=!state.volcanoOpen; renderStatusBar(); };
+$("#closeVolcanoBtn").onclick=()=>{ state.volcanoOpen=false; renderStatusBar(); };
+$("#closePinBtn").onclick=closePinSheet;
+$("#pinScrim").onclick=closePinSheet;
+$$("#pinPad [data-k]").forEach(b=>b.onclick=()=>pressPinKey(b.dataset.k));
+$("#pinClearBtn").onclick=()=>{ _pinBuf=""; $("#pinErr").textContent=""; drawPinDots(false); };
+$("#pinDelBtn").onclick=()=>{ _pinBuf=_pinBuf.slice(0,-1); $("#pinErr").textContent=""; drawPinDots(false); };
+$("#vaSwitchBtn").onclick=()=>{
+  const prev = state.vplan;
+  state.vplan = state.vplan === "normal" ? recommendedChasePlan() : "normal";
+  ls.set("vplan", state.vplan);
+  renderStatusBar();
+  renderHome();
+  toast(state.vplan === "normal" ? "已恢复无火山基准版 ✓" : "已切到追火山预案 ✓", ()=>{
+    state.vplan = prev; ls.set("vplan", prev); renderStatusBar(); renderHome(); toast("已撤销切换 ✓");
+  });
+};
+
+/* Gemini */
+$("#openGeminiBtn").onclick=()=>{ $("#aiScrim").classList.add("open"); $("#aiSheet").classList.add("open"); document.body.classList.add("sheet-open"); $("#geminiKeyInput").value=state.geminiKey; renderAiLog(); };
+$("#closeGeminiBtn").onclick=()=>{ $("#aiScrim").classList.remove("open"); $("#aiSheet").classList.remove("open"); document.body.classList.remove("sheet-open"); };
+$("#aiScrim").onclick=()=>{ $("#aiScrim").classList.remove("open"); $("#aiSheet").classList.remove("open"); document.body.classList.remove("sheet-open"); };
+$("#saveKeyBtn").onclick=()=>{ state.geminiKey=$("#geminiKeyInput").value.trim(); ls.set("geminiKey",state.geminiKey); toast("Gemini Key 已保存"); };
+function fmtAi(s){
+  return String(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/\*\*(.+?)\*\*/g,"<b>$1</b>").replace(/\n/g,"<br>");
+}
+function buildTripContext(){
+  const days = getDays().map(d=>`D${d.num}(${d.date} ${d.wk}) ${d.title}: ${d.chips.join(" / ")}`).join("; ");
+  const bks = getBookings().map(b=>`${b.t}(${b.w}, ${b.id==="bk_uosan"?(state.uosanBooked?"已订":"待订"):"已订"})`).join("; ");
+  return `鱼三海胆饭:${state.uosanBooked?"已订":"待订"} | 火山USGS状态:${state.volcanoLive.level}\n行程:${days}\n预订:${bks}\n核心事实: 全程 9:15 后出门; 11/26 UA1723 Basic Economy 只含 1 个座位下小包; 11/27(周五晴窗最优) Hilo 铁三角(Carlsmith 海龟 + 日式公园撸猫 + 烘焙买豆) + 黑沙滩可选 + 16:10 火山精华与红光; 11/28(周六) Waimea 早市 + 皇家鱼塘 + Paniolo 16:00 集合报到(必带付款实体卡+双方ID+长裤包头鞋); 11/29(周日) Kua Bay 白沙滩 + Sunoa DIY + Costco 囤毛毯晕船药 + 15:00 前 Oahu Outrigger 免费退线; 11/30(周一) 白天看浪浮潜/盐场, 13:25 前观星 24h 免退线, 18:00 魔鬼鱼先去 Keauhou Shopping Center #F-146 报到(大包留车)再自驾码头 #78-100 Kaleiopapa St 结束不回店; 12/1(周二全开) Mauka Meadows + Greenwell + BerryBird(14:30关), 12:30 必北返, 13:25 在 Queens Marketplace 购物中心背面(69-201 Waikoloa Beach Dr)上观星车; 12/2 飞 WN2269(含1登机箱+1小包) 入住 OUTRIGGER Waikiki Beachcomber(含 Aroma Caffe / Maui Brewing 每日抵扣); 12/3 Oahu 买检疫鸡蛋花 + 18:30 鱼三海胆饭; 12/4 AS839 Saver 飞回 SJC。用简短大白话直接答。`;
+}
+function renderAiLog(){
+  const log=$("#aiLog");
+  if(!state.aiLog.length){ log.innerHTML=`<div class="msg ai">嗨！我是 Gemini 行程助手。已同步天气最优混排版 9 天行程与全部 8 封邮件核验细节（全程 9:15 后出门、周五 Hilo+火山、周六骑马、周日 Kua Bay、周一浮潜+魔鬼鱼两步报到、周二咖啡+Queens' 背面观星、Oahu Outrigger + 鱼三海胆饭）。</div>`; return; }
+  log.innerHTML=state.aiLog.map(m=>`<div class="msg ${m.role}">${fmtAi(m.text)}</div>`).join("");
+  log.scrollTop=log.scrollHeight;
+}
+function offlineReply(txt){
+  if(/行李|UA1723|登机箱|带啥/.test(txt)) return "去程 11/26 UA1723 是 Basic Economy (N)：只能免费带 1 个塞进座位下的小包（9×10×17 寸），不含标准登机箱；安检前托运 $45–$50，登机口被拦罚 $65！返岛飞 Oahu WN2269 含 1 件标准登机箱 + 1 小包。";
+  if(/海胆|鱼三|Uosan|订/.test(txt)) return "Oahu 12/3（周四）晚的 Izakaya Uosan（鱼三）招牌是松露海胆黄油蛋黄饭，地址 1221 Kapiolani Blvd #108，周二三休息，周四 17:00–22:00 营业，只能提前打电话 (808) 200-5077 订位！";
+  if(/11\/27|周五|Hilo|火山/.test(txt)) return "11/27（周五）已按晴窗最优安排东线：09:30 出发走 200 号 → 10:50 Carlsmith 海龟湾 → 11:35 日式公园撸猫 + 烘焙店买豆 → Hilo 热午饭（累或阴天跳过黑沙滩省 1.5h）→ 16:10 火山精华 2h 看 18:10 红光，当晚走 200 号回酒店。";
+  if(/11\/30|夜潜|魔鬼鱼|集合|浮潜/.test(txt)) return `11/30（周一）白天看浪自由选 Two Step / Kahaluʻu / 盐场；晚上魔鬼鱼 (${vk("manta_pnr","已加密锁定")}) 两步集合勿早到：① 18:00 先去 Keauhou 商店 (78-6831 Alii Dr #F-146，大背包大毛巾留车里!) ② 再自驾到 Keauhou Bay 码头 (78-100 Kaleiopapa St)，结束后码头散不回店！`;
+  if(/12\/01|12\/1|观星|上车|接送/.test(txt)) return `12/01（周二）Mauka Meadows、Greenwell 与 BerryBird 全开！12:30 务必北返换穿秋裤+防风长裤+厚袜（团只发男子码羽绒衣手套，不发裤子）。13:25 准时在 Queens' Marketplace 购物中心背面 (69-201 Waikoloa Beach Dr Back side) 上车，非酒店大堂！`;
+  if(/骑马/.test(txt)) return `11/28（周六）09:15 先逛 Waimea 早市 + 皇家鱼塘，15:10 从酒店出发，16:00 准时在 Paniolo 牧场 (Hwy 250 MP13.2) 报到，必带 ${vk("horse_holder","实体付款卡与双方照片 ID")} + 长裤包头鞋。`;
+  return `收到「${txt}」。填上 Gemini Key 可自由问答；离线状态下我也随时秒答天气最优行程、行李规则和精确集合点。`;
+}
+async function askGemini(txt){
+  const t=txt.trim(); if(!t) return;
+  state.aiLog.push({role:"me",text:t}); renderAiLog();
+  if(!state.geminiKey){ setTimeout(()=>{ state.aiLog.push({role:"ai",text:offlineReply(t)}); ls.set("aiLog",JSON.stringify(state.aiLog.slice(-20))); renderAiLog(); },160); return; }
+  state.aiLog.push({role:"ai",text:"Gemini 思考中…"}); renderAiLog();
+  try{
+    const r=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${encodeURIComponent(state.geminiKey)}`,{
+      method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({system_instruction:{parts:[{text:`你是夏威夷行程助手。\n${buildTripContext()}`}]},contents:[{role:"user",parts:[{text:t}]}]})
+    });
+    const d=await r.json();
+    state.aiLog[state.aiLog.length-1].text = d?.candidates?.[0]?.content?.parts?.[0]?.text || offlineReply(t);
+  }catch(e){ state.aiLog[state.aiLog.length-1].text = offlineReply(t); }
+  ls.set("aiLog",JSON.stringify(state.aiLog.slice(-20))); renderAiLog();
+}
+$("#aiForm").onsubmit=e=>{ e.preventDefault(); const i=$("#aiInput"), v=i.value; i.value=""; askGemini(v); };
+$$(".ai-chip").forEach(c=>c.onclick=()=>askGemini(c.textContent));
+
+window.addEventListener("message", ev=>{
+  const d = ev.data || {};
+  if(d.who){ state.who=d.who; ls.set("who",d.who); if(!d.tab&&!d.day&&!d.style){ renderStatusBar(); if(state.dayId) openDay(state.dayId); else if(state.tab==="trips") renderHome(); } }
+  if(d.style){ state.style=String(d.style); document.documentElement.setAttribute("data-style",state.style); if(state.dayId) openDay(state.dayId); else renderHome(); }
+  if(d.sub){ state.sub=String(d.sub); ls.set("sub",state.sub); if(state.style==="1"&&!state.dayId) renderHome(); }
+
+  if(d.isle){ state.mapIsle=d.isle; }
+  if(d.prepTab){ state.prepTab=d.prepTab; }
+  if(d.tab){ switchTab(d.tab); }
+  if(d.day){ openDay(d.day); }
+  if(d.openGemini){ $("#aiScrim").classList.add("open"); $("#aiSheet").classList.add("open"); $("#geminiKeyInput").value=state.geminiKey; renderAiLog(); }
+});
+
+if(["pack","pwa","volcano"].includes(q.get("pt"))) state.prepTab = q.get("pt");
+
+/* iOS / Chrome PWA Service Worker & Offline Detector */
+function syncOnlineState(){ document.body.classList.toggle("is-offline", navigator.onLine === false); }
+window.addEventListener("online", ()=>{ syncOnlineState(); toast("网络已恢复 · 正在同步火山状态"); checkVolcano(); });
+window.addEventListener("offline", ()=>{ syncOnlineState(); toast("已切换离线模式 · 行程与确认号照常可用"); });
+syncOnlineState();
+
+if("serviceWorker" in navigator){
+  navigator.serviceWorker.register("./sw.js?v=r37", {scope: "./"}).then(reg => {
+    window._swReady = true;
+    if(state.tab === "prep" && state.prepTab === "pwa") renderPrep();
+  }).catch(()=>{});
+  navigator.serviceWorker.addEventListener("message", ev => {
+    const d = ev.data || {};
+    if(d.type === "OFFLINE_PROGRESS"){
+      const pct = Math.round((d.done / Math.max(1, d.total)) * 100);
+      const bar = $("#pwaProgBar"), txt = $("#pwaProgTxt");
+      if(bar) bar.style.width = pct + "%";
+      if(txt) txt.textContent = `已缓存 ${d.done} / ${d.total} 项 (${pct}%)…`;
+    } else if(d.type === "OFFLINE_DONE"){
+      ls.set("offlineFullV37", "1");
+      if(state.tab === "prep" && state.prepTab === "pwa") renderPrep();
+      toast("100% 离线缓存完成 ✓ 没信号也能秒开");
+    }
+  });
+}
+
+renderStatusBar();
+if(state.dayId) openDay(state.dayId); else if(state.tab!=="trips"){ switchTab(state.tab); if(state.tab==="map" && q.get("focus")) renderMap(q.get("focus")); } else renderHome();
+if(q.get("gemini")==="1") $("#openGeminiBtn").click();
+checkVolcano();
+})();
+</script>
+</body>
+</html>
