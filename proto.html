@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="夏威夷行程">
 <meta name="theme-color" content="#FFFFFF">
-<link rel="manifest" href="manifest.webmanifest?v=r39">
+<link rel="manifest" href="manifest.webmanifest?v=r40">
 <link rel="apple-touch-icon" sizes="180x180" href="art/pwa/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="art/pwa/icon-192.png">
 <title>大岛 + Oahu · 行程伴侣</title>
@@ -711,15 +711,15 @@ svg.i{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke
 
 <div class="toast" id="toast"></div>
 
-<script src="lib/three.min.js?v=r39"></script>
-<script src="lib/island3d.js?v=r39"></script>
+<script src="lib/three.min.js?v=r40"></script>
+<script src="lib/island3d.js?v=r40"></script>
 <script>
 (function(){
 "use strict";
 const ls={get(k){try{return localStorage.getItem("hwp2_"+k)}catch(e){return null}},set(k,v){try{localStorage.setItem("hwp2_"+k,v)}catch(e){}},del(k){try{localStorage.removeItem("hwp2_"+k)}catch(e){}}};
 
 /* Encrypted private booking vault (decrypted purely on-device from user passcode; zero secrets shipped in HTML) */
-const VAULT_ENC = {"v": 1, "rounds": 5000, "salt": "4c0fb4ee6700c67abd048f380fbfef24", "hmac": "94442bf70a84d6c7a53547222085eceb75ac6a3bc566a08220d8fa8e83867ffa", "ct": "8eW2uITXQlg7RIlnqlGLcErQ+x7qQDngJq1MgtWqvlv6GmgvaqolbGBtNEkYMTFODkPYPJ3WWExrN2nqtyxG/aXyBe35bNxICtZMMLJFGXsvOQub8R0bXwYkB5zOMF85CEHCDy3kuzPTBI5JizTZ+q/4fgOZMrt7rN402m6tDKUkXz7YVEyL3HHtqxVfRTiZDaMH6zR1a4UK26XuBwwYA4bsW7UsvJx1Fb+DUssnK9HTwQUairrAu2HYaMwV5z2Spl78eRZnWfIxVMg/raVthV/oUBHAmf2/QfvxeQ7iI81Dd0YNpB3eXGevzVNPJbJM7aIylNlDCgiHS4gN/2yJUv9s884CYro2z/tqz28H5S7dzu4M5n+9YWMDddndv2L+a9HiX6vNNqI5L7pKewvbIMlU26rwj8JhR82OH3ykrLAjwhOM3JuDmwtRn8l9a94wgYPWG3lUZieY/d/Fdl6trc1ti6XxqrqWI3agW5FXGJACFf6r3oNIrekvygrXwU5F619xUWhHWpNOH/0gX3xhJVZ4uZrnFGO0/rpNM2LUS6TCvnAkcq1zRUdLWfTuXhjQDYWZ6rgdxldCi4YSnlSOTkhq9nIAxeDqG8Q4SOID42qiRgTwkrh1eZdBfWe1yZmgtSi840oMbnDab9e6ZUOpHuBguCSLvsORJ8NkG5v3hv8H9/2CC3LU2OGa9K5RGdlngGaEjkDz9YMZeh1HJxD5ZotptqLzS/HS/lA+POMYjDkiJxaX/PeT5Ai2WUiHIQHLt1bfuN0NZA9hfY4KuezSzSbhAoiabmmPnLwamHWq79iO6ey1fUasxg7OT9ZNPPHzrUnx70ZvLj8AnTlpbPMiQnaCPsYi7g3MbHI8TcX8rZnu6z4aoKS2nICzZko43vzlyDqvJHGA32kpgN8atO6hZgKpObs34i0gKwOMyciifTsoMejzjVviNKQaEVACUDicZayAYZAO5IEqrvpccAK0AvZOmqkBDMFSF/89mAYMLx8bEcuwMyo+ghcCI8bdxMBeTAweK6PvNKxrHpbo2aJZT3rl95yV4/3/2/klyBr+fX25b4PA6LkiE7Yg+p++QoI3NxKqsDrFypsoE7nkcEjzq1v3fnJVTT0zBSvJIYBakp/sqel+R3a7EZBLyTLdCwhyOJ2Ghd9hrIwIfNZLAXcmMO+zaETjfmMfRH6GFq/Mkd8+vZbytw8lkwURJKXO2FPa8JCDF/RqDGmyfhgNSqKQpmdA/G6GYUFn46dQ8bkoNU2aAZO7liND7m4VmM7T6WmPBjcSagjyWnpHMOUT1iO28fNssjBrndApMl7+GsukMhSZbm1eOX7GfDJyzrxGXpTvZmizXJrm3R89hA=="};
+const VAULT_ENC = {"v": 1, "rounds": 5000, "salt": "b6c5ae40beddc005af4e89f911339729", "hmac": "0828fb009bff70190dab288773dd3d91b061b982c3cf0327314d78acd4709cec", "ct": "uUQBz8+4dkl7lri+l9XF33AJKK7piPZBh79DLmSOsyF/oFMVqjZFHiRfS+fgDVv766Jh4Fvh6kZrOj7YswAmIq6R+pqnLOUlsnuk0hF3Qrf1rP8hNIQ8Vl5Coss9MVnJ36J0cNokIUi7aoUvFt4+QTrYLOH1g1M0av9yZMx6MF5HlLLlFHOGCAkgmkWtPv0jC0M0uaKgunuTJ3ngww8psj4/5zifkB1d9i+EDoLp82rzk1InB/yQsZT1xyUYTkOl6HECslrOeSxYqn/DargndPFH9dhdYFf/XShUc8jH8yrPdwnCglSjEp7bQ4Sj7QCWGqXFj7iSP6S9G5ipQIYbrP7pdlX6mGF35rBF00C5lVUnDi8fK0Qi8nsizf3C/66c7gSUP7iV2jz+NdVf19LCpo6KJ4M2t+UwU1UBV78F53az7YhS5wvbjV4Vxe0wYC71DWkuGC2ueit0lCMVYGCNSnaRDI4qApzclMuSzUV9bn0vdUaD6RUAHaqsX1VvTxpjJjtpJnFVya03OYlxshOUVLky0F64TnA7vvIvFenjy1JPlwu4UagjsmcWhcXSaZRut0KKXrIibD5oqpp4VOikDoepsDTK6VemaaAXFQQqW1BXex06xsrxtg/FFB9PxHx+9oNv4wCQJasxG7/ECO0SDQf554CfmF+dCeBDTD8VtkUpEnkOiRK1IliXpNSeOE2u0tTzkw/XlPypoU6vJ/R7PHRBFyCoX/9HncKO4WHkPeqNitvkF1LMF1Iu45dye+e90YDgqBVVKZt3i5jL/uUsqC6SezD/e02sJZMNv1JtLo76u88hA8Q9Sgv0LhsFYafgM2PK3kPZF/akGPp7/wV+qGQIkJ5y020ZNblt6iTwK0r1Yheln6mvRDINBR+j+DXPaNAs266otKHGFvU3uYbIvByfz5NeKbGJ8uy8/1kjp9UiypspW5F/cEiCyNDTERs1Kzu1Aa+kFVeKTnffaH7xElT5IEmutlowRn4xxHBHJtg26BDJU8y/ib+PQ+1BjRqK5th5cvhtSdESNYMb7fUI70EpUf9bd82UCEgQpfdNomHLbfdJF9sJFs07tnRpJzi33CXKaIS6rQ2yjD/ThUN//o5cF6USXrXBt65vVCgcnopCRtTtvnZzMH+JmuxK0v0IbMAIxlKa7DPCDI4hblV3WDM+jD85ec9td7eapUd0CqLj53rqpWEC+JDLQIV5C0Iv0KTq+9AIQDeHeQPpFLKHCAxPwJ8/APGcc+3DX9JQeHPMtXKKextpsOhPS0cg7TeJPblyjQajl90QFjylGhY3c9WKQUG2qdWj2iBBwDpQFyx3Y075fV6ZZYQ15abYMhYpNokHXoiKO/rxEw=="};
 const _te = new TextEncoder(), _td = new TextDecoder();
 function _hexToBytes(hex){ const a=new Uint8Array(hex.length>>1); for(let i=0;i<a.length;i++) a[i]=parseInt(hex.substr(i*2,2),16); return a; }
 function _bytesToHex(b){ let s=""; for(let i=0;i<b.length;i++) s+=(b[i]<16?"0":"")+b[i].toString(16); return s; }
@@ -2158,18 +2158,21 @@ function renderPrep(){
   const doneCount=PACK.filter(x=>x.done||state.packDone[x.id]).length;
   const isStandalone = window.matchMedia && window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone;
   const swReady = !!window._swReady;
-  const offlineDone = ls.get("offlineFullV39") === "1";
+  const offlineDone = ls.get("offlineFullV40") === "1";
   const pwaHTML = `
     <div class="pwa-card">
       <div class="pwa-head">
         <div class="pwa-ico"><img src="art/pwa/apple-touch-icon.png" alt="App 图标"></div>
         <div style="flex:1;min-width:0">
-          <div style="font-size:15px;font-weight:800">iPhone 离线 App 模式</div>
-          <div style="font-size:12px;color:var(--ink-2);margin-top:2px">${isStandalone?"✓ 已从主屏幕全屏运行":(offlineDone?"✓ 已完成全量离线缓存":"出发前连 Wi-Fi 点一次下方按钮，火山没网也能秒开")}</div>
+          <div style="font-size:15px;font-weight:800">iPhone 离线 App 模式 <span style="font-size:11px;font-weight:700;color:var(--ink-3)">v40</span></div>
+          <div style="font-size:12px;color:var(--ink-2);margin-top:2px">${isStandalone?"✓ 已从主屏幕全屏运行 · 联网自动更新":(offlineDone?"✓ 已完成全量离线缓存":"出发前连 Wi-Fi 点一次下方按钮，火山没网也能秒开")}</div>
         </div>
         <span class="f-pill ${offlineDone||swReady?'ok':'neutral'}">${offlineDone?"100% 离线就绪":(swReady?"核心已缓存":"需 HTTPS")}</span>
       </div>
-      <button type="button" class="btn-black" id="cacheAllOfflineBtn" style="width:100%">${offlineDone?"✓ 已离线缓存全部行程与 3D 地图（点击更新）":"一键缓存全部行程 + 确认号 + 3D 地图供离线"}</button>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button type="button" class="btn-black" id="cacheAllOfflineBtn" style="flex:1;min-width:190px">${offlineDone?"✓ 已离线缓存（点此重缓）":"一键缓存全部行程 + 3D 地图"}</button>
+        <button type="button" class="btn-white" id="forceUpdateAppBtn" style="padding:10px 13px;font-size:12.5px">检查更新</button>
+      </div>
       <div class="pwa-prog" id="pwaProgWrap" hidden><i id="pwaProgBar"></i></div>
       <div id="pwaProgTxt" style="font-size:11.5px;color:var(--ink-2);margin-top:4px"></div>
       <div class="pwa-steps">
@@ -2213,6 +2216,15 @@ function renderPrep(){
   $("#v-prep").querySelectorAll("[data-pk]").forEach(r=>r.onclick=()=>{ const id=r.dataset.pk; state.packDone[id]=!state.packDone[id]; ls.set("packDone",JSON.stringify(state.packDone)); renderPrep(); });
   const ts=$("#toggleSimBtn"); if(ts) ts.onclick=()=>{ state.volcanoSim=!state.volcanoSim; renderStatusBar(); renderPrep(); toast(state.volcanoSim?"已开启自动提醒条预览（回行程页查看）":"已关闭提醒预览"); };
   $("#v-prep").querySelectorAll("#prepVplanOpts [data-vp]").forEach(b=>b.onclick=()=>{ state.vplan=b.dataset.vp; ls.set("vplan",state.vplan); renderStatusBar(); renderPrep(); toast("已切换："+vpLabelMap[state.vplan]); });
+  const fu=$("#forceUpdateAppBtn");
+  if(fu) fu.onclick=async ()=>{
+    toast("正在检查并拉取最新版…");
+    try{
+      if("caches" in window){ const ks=await caches.keys(); await Promise.all(ks.map(k=>caches.delete(k))); }
+      if("serviceWorker" in navigator){ const regs=await navigator.serviceWorker.getRegistrations(); await Promise.all(regs.map(r=>r.update().catch(()=>{}))); }
+    }catch(e){}
+    location.replace(location.pathname + "?u=" + Date.now());
+  };
   const cb=$("#cacheAllOfflineBtn");
   if(cb) cb.onclick=async ()=>{
     if(!("serviceWorker" in navigator) || !navigator.serviceWorker.controller){
@@ -2331,11 +2343,45 @@ window.addEventListener("online", ()=>{ syncOnlineState(); toast("网络已恢�
 window.addEventListener("offline", ()=>{ syncOnlineState(); toast("已切换离线模式 · 行程与确认号照常可用"); });
 syncOnlineState();
 
+const APP_VER = "r40";
+let _swReg = null, _reloadingForUpdate = false, _lastVerChk = 0;
+
+async function checkAppUpdate(force){
+  if(navigator.onLine === false) return;
+  const now = Date.now();
+  if(!force && now - _lastVerChk < 25000) return;
+  _lastVerChk = now;
+  try{
+    if(_swReg) _swReg.update().catch(()=>{});
+    const r = await fetch("./version.json?t=" + now, {cache: "no-store"});
+    if(!r.ok) return;
+    const j = await r.json();
+    if(j && j.ver && j.ver !== APP_VER && !_reloadingForUpdate){
+      _reloadingForUpdate = true;
+      toast("发现新版，正在自动更新…");
+      if("caches" in window){
+        const ks = await caches.keys();
+        await Promise.all(ks.map(k => caches.delete(k)));
+      }
+      setTimeout(()=>location.replace(location.pathname + "?v=" + encodeURIComponent(j.ver)), 350);
+    }
+  }catch(e){}
+}
+
 if("serviceWorker" in navigator){
-  navigator.serviceWorker.register("./sw.js?v=r39", {scope: "./"}).then(reg => {
+  navigator.serviceWorker.register("./sw.js", {scope: "./", updateViaCache: "none"}).then(reg => {
+    _swReg = reg;
     window._swReady = true;
+    reg.update().catch(()=>{});
     if(state.tab === "prep" && state.prepTab === "pwa") renderPrep();
   }).catch(()=>{});
+  navigator.serviceWorker.addEventListener("controllerchange", () => {
+    if(_reloadingForUpdate) return;
+    if(sessionStorage.getItem("swReloaded") === APP_VER) return;
+    sessionStorage.setItem("swReloaded", APP_VER);
+    _reloadingForUpdate = true;
+    location.reload();
+  });
   navigator.serviceWorker.addEventListener("message", ev => {
     const d = ev.data || {};
     if(d.type === "OFFLINE_PROGRESS"){
@@ -2344,12 +2390,16 @@ if("serviceWorker" in navigator){
       if(bar) bar.style.width = pct + "%";
       if(txt) txt.textContent = `已缓存 ${d.done} / ${d.total} 项 (${pct}%)…`;
     } else if(d.type === "OFFLINE_DONE"){
-      ls.set("offlineFullV39", "1");
+      ls.set("offlineFullV40", "1");
       if(state.tab === "prep" && state.prepTab === "pwa") renderPrep();
       toast("100% 离线缓存完成 ✓ 没信号也能秒开");
     }
   });
 }
+document.addEventListener("visibilitychange", ()=>{ if(document.visibilityState === "visible") checkAppUpdate(false); });
+window.addEventListener("pageshow", ()=>{ checkAppUpdate(false); });
+window.addEventListener("online", ()=>{ checkAppUpdate(true); });
+setTimeout(()=>checkAppUpdate(false), 1200);
 
 renderStatusBar();
 if(state.dayId) openDay(state.dayId); else if(state.tab!=="trips"){ switchTab(state.tab); if(state.tab==="map" && q.get("focus")) renderMap(q.get("focus")); } else renderHome();

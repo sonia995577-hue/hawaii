@@ -1,13 +1,13 @@
-/* Hawaii Trip Companion — iOS Safari & Chrome Full-Offline Service Worker (v39) */
-const CACHE_NAME = "hawaii-trip-pwa-v39";
+/* Hawaii Trip Companion — iOS Safari & Chrome Full-Offline Service Worker (v40) */
+const CACHE_NAME = "hawaii-trip-pwa-v40";
 
 const CORE_ASSETS = [
   "./",
   "./index.html",
   "./proto.html",
-  "./manifest.webmanifest?v=r39",
-  "./lib/three.min.js?v=r39",
-  "./lib/island3d.js?v=r39",
+  "./manifest.webmanifest?v=r40",
+  "./lib/three.min.js?v=r40",
+  "./lib/island3d.js?v=r40",
   "./data/terrain/bi_dem.png",
   "./data/terrain/oahu_dem.png",
   "./art/pwa/apple-touch-icon.png",
@@ -81,13 +81,14 @@ self.addEventListener("fetch", event => {
   if(req.method !== "GET") return;
   const url = new URL(req.url);
 
-  // Never cache live third-party APIs (USGS volcano, Gemini API, Google Maps)
+  // Never cache live third-party APIs or version.json probe
   if(url.origin !== self.location.origin) return;
+  if(url.pathname.endsWith("/version.json")) return;
 
-  // Navigation requests (index.html or proto.html with any query params): network-first, offline fallback
+  // Navigation requests (index.html / proto.html / root): network-first with no-cache, offline fallback
   if(req.mode === "navigate" || url.pathname.endsWith("/proto.html") || url.pathname.endsWith("/index.html") || url.pathname.endsWith("/")){
     event.respondWith(
-      fetch(req).then(res => {
+      fetch(new Request(req.url, {cache: "no-cache"})).then(res => {
         if(res && res.ok){
           const c1 = res.clone();
           const c2 = res.clone();
@@ -98,6 +99,20 @@ self.addEventListener("fetch", event => {
         }
         return res;
       }).catch(() => caches.match("./index.html", {ignoreSearch: true}).then(h => h || caches.match("./proto.html", {ignoreSearch: true})))
+    );
+    return;
+  }
+
+  // App logic JS (island3d.js): network-first so 3D routes/labels always stay in sync with HTML
+  if(url.pathname.endsWith("/lib/island3d.js")){
+    event.respondWith(
+      fetch(new Request(req.url, {cache: "no-cache"})).then(res => {
+        if(res && res.ok && res.status === 200){
+          const copy = res.clone();
+          caches.open(CACHE_NAME).then(c => c.put(req, copy));
+        }
+        return res;
+      }).catch(() => caches.match(req, {ignoreSearch: true}))
     );
     return;
   }
