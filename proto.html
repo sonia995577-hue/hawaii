@@ -719,7 +719,7 @@ svg.i{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke
 const ls={get(k){try{return localStorage.getItem("hwp2_"+k)}catch(e){return null}},set(k,v){try{localStorage.setItem("hwp2_"+k,v)}catch(e){}},del(k){try{localStorage.removeItem("hwp2_"+k)}catch(e){}}};
 
 /* Encrypted private booking vault (decrypted purely on-device from user passcode; zero secrets shipped in HTML) */
-const VAULT_ENC = {"v": 1, "rounds": 5000, "salt": "b6c5ae40beddc005af4e89f911339729", "hmac": "0828fb009bff70190dab288773dd3d91b061b982c3cf0327314d78acd4709cec", "ct": "uUQBz8+4dkl7lri+l9XF33AJKK7piPZBh79DLmSOsyF/oFMVqjZFHiRfS+fgDVv766Jh4Fvh6kZrOj7YswAmIq6R+pqnLOUlsnuk0hF3Qrf1rP8hNIQ8Vl5Coss9MVnJ36J0cNokIUi7aoUvFt4+QTrYLOH1g1M0av9yZMx6MF5HlLLlFHOGCAkgmkWtPv0jC0M0uaKgunuTJ3ngww8psj4/5zifkB1d9i+EDoLp82rzk1InB/yQsZT1xyUYTkOl6HECslrOeSxYqn/DargndPFH9dhdYFf/XShUc8jH8yrPdwnCglSjEp7bQ4Sj7QCWGqXFj7iSP6S9G5ipQIYbrP7pdlX6mGF35rBF00C5lVUnDi8fK0Qi8nsizf3C/66c7gSUP7iV2jz+NdVf19LCpo6KJ4M2t+UwU1UBV78F53az7YhS5wvbjV4Vxe0wYC71DWkuGC2ueit0lCMVYGCNSnaRDI4qApzclMuSzUV9bn0vdUaD6RUAHaqsX1VvTxpjJjtpJnFVya03OYlxshOUVLky0F64TnA7vvIvFenjy1JPlwu4UagjsmcWhcXSaZRut0KKXrIibD5oqpp4VOikDoepsDTK6VemaaAXFQQqW1BXex06xsrxtg/FFB9PxHx+9oNv4wCQJasxG7/ECO0SDQf554CfmF+dCeBDTD8VtkUpEnkOiRK1IliXpNSeOE2u0tTzkw/XlPypoU6vJ/R7PHRBFyCoX/9HncKO4WHkPeqNitvkF1LMF1Iu45dye+e90YDgqBVVKZt3i5jL/uUsqC6SezD/e02sJZMNv1JtLo76u88hA8Q9Sgv0LhsFYafgM2PK3kPZF/akGPp7/wV+qGQIkJ5y020ZNblt6iTwK0r1Yheln6mvRDINBR+j+DXPaNAs266otKHGFvU3uYbIvByfz5NeKbGJ8uy8/1kjp9UiypspW5F/cEiCyNDTERs1Kzu1Aa+kFVeKTnffaH7xElT5IEmutlowRn4xxHBHJtg26BDJU8y/ib+PQ+1BjRqK5th5cvhtSdESNYMb7fUI70EpUf9bd82UCEgQpfdNomHLbfdJF9sJFs07tnRpJzi33CXKaIS6rQ2yjD/ThUN//o5cF6USXrXBt65vVCgcnopCRtTtvnZzMH+JmuxK0v0IbMAIxlKa7DPCDI4hblV3WDM+jD85ec9td7eapUd0CqLj53rqpWEC+JDLQIV5C0Iv0KTq+9AIQDeHeQPpFLKHCAxPwJ8/APGcc+3DX9JQeHPMtXKKextpsOhPS0cg7TeJPblyjQajl90QFjylGhY3c9WKQUG2qdWj2iBBwDpQFyx3Y075fV6ZZYQ15abYMhYpNokHXoiKO/rxEw=="};
+const VAULT_ENC = {"v": 1, "rounds": 5000, "salt": "a0178b13935284214c950dde18c70924", "hmac": "3a29c36f424fcac3115b1e7225d70d226f329712eef67eb3b4bd70a65e9e875d", "ct": "I/n0WC24hpLCaivlHZY6Vsz4hGGt6OyYb1HkEtUMGsHtUzGIAy4Aw3+TElsb69HAFiw01QvYsMfghk4M/eeUvxNYpRvZO9gwuNodPGGCqhak3kzTzq+kzkQ1JLf792f1C3x3TOnHATXqfxIWa5Y3TAuxxh+qRV7ot0o4bteiXoAnkoHlHQFbEY5tE6Tj9c20bZzL1NSq2MCL3iI3zEf8I3kDdXqw90krfU/37q1Xb50TdaqZskvkmUJbRJ7hvwVMKwsZcUoFuAK4W/MaSZQy7D3u13sSgOUgDWU74bP4WZLxFzYw83/yJhudy9htlw5JcmHwCqQOPME9pL+YDJZZHBQjQj1kCUWe2yuq1aFFOvy8mz0zMDFqZpFOyBVD0FRv8XkE4GmHgUi9mNlStjD06UO1tm+cZaG4sz7Ess0cc293ZSx8CMfc9NOsVPUrZOxv2Ozl07yu7JJli1HU0z8CQ4FBVNAPKgYSPBjJ0edeXl4WfqqO0mnpOlTdPO6vjUvcs4EZapr+cY/cAQlFNLx9QuW2rwVXpaj9An920CGROC6Y4hiBOlfcEbDXy9hv2OegBFn1mTA17rr27nyph8YBe1uBvm47fJ7hhAzjcgdmNCwMacmODrYXrAOiA2ctIAUzKqQHi3xX0LWR45MCqK6C3BDgTsTMoveMAk/teDWeLJijUBronWikcEA4Ct2xB4ppnGKSJ9xyHW7pYgEUQKNNIO7blBD17JHpRYmEzBGX+DiNsN8IcmHcxpuWAJtLL6/cqYtN9OJLd6SWPDnBHnwlp8hngE7pX8uQ6K6BkMdvUGnk/JKu6zBopWodmGQN3wZ0KVV62Kp0OZReCZH/rQbCtwsHPjhyRg8HY0mAqBeJXJS9b3X2/iIet9VWKXckO23xO4oMiKdJpYbA03WdgfUYCQvD4rDJ2Wzi0rRSD9WC5JvZ9/E8EsD/DZOKHA0YedMiujOLWFP/2qb+c8Kxqca5gvi0wP7eFAjsEre833nWYGCjF/JdzhQLkZb9DIuuDZoqeeQ2pd/8CkmqmK6+Yqf7PmB3mMwRCVIK5W/G1iL+dIrtPw5V2fACle32GKR8LVbxjYronsth5yhRZqMJP3ORQmvLvfYGlH2Gt3BehraQqHLCo2cb9xIttJcy+5kQtKe3DYgsVgMlYdMwwQGC6+5VNOW7/grIIAwRWdak2oO+W2ZrBnDTxJJGjv1UWAj66oh5CubjljKw08ak1MGvByUoX4HAf25BjI+JMOPy9pEgxVB9fDnm3i6w3p3DaRyIfvKQIUJ3fWNtUZkK7x2hI8o5P+gA7CLRZWz9uZbnnZr44tZ8l5Q9fMZMsrOT6hcCj15hfx/ED75VqqcdnQ=="};
 const _te = new TextEncoder(), _td = new TextDecoder();
 function _hexToBytes(hex){ const a=new Uint8Array(hex.length>>1); for(let i=0;i<a.length;i++) a[i]=parseInt(hex.substr(i*2,2),16); return a; }
 function _bytesToHex(b){ let s=""; for(let i=0;i<b.length;i++) s+=(b[i]<16?"0":"")+b[i].toString(16); return s; }
@@ -2369,6 +2369,7 @@ async function checkAppUpdate(force){
 }
 
 if("serviceWorker" in navigator){
+  const _hadController = !!navigator.serviceWorker.controller;
   navigator.serviceWorker.register("./sw.js", {scope: "./", updateViaCache: "none"}).then(reg => {
     _swReg = reg;
     window._swReady = true;
@@ -2376,7 +2377,7 @@ if("serviceWorker" in navigator){
     if(state.tab === "prep" && state.prepTab === "pwa") renderPrep();
   }).catch(()=>{});
   navigator.serviceWorker.addEventListener("controllerchange", () => {
-    if(_reloadingForUpdate) return;
+    if(!_hadController || _reloadingForUpdate) return;
     if(sessionStorage.getItem("swReloaded") === APP_VER) return;
     sessionStorage.setItem("swReloaded", APP_VER);
     _reloadingForUpdate = true;
