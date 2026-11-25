@@ -1,13 +1,13 @@
-/* Hawaii Trip Companion — iOS Safari & Chrome Full-Offline Service Worker (v37) */
-const CACHE_NAME = "hawaii-trip-pwa-v37";
+/* Hawaii Trip Companion — iOS Safari & Chrome Full-Offline Service Worker (v38) */
+const CACHE_NAME = "hawaii-trip-pwa-v38";
 
 const CORE_ASSETS = [
   "./",
   "./index.html",
   "./proto.html",
-  "./manifest.webmanifest?v=r36",
-  "./lib/three.min.js?v=r36",
-  "./lib/island3d.js?v=r36",
+  "./manifest.webmanifest?v=r38",
+  "./lib/three.min.js?v=r38",
+  "./lib/island3d.js?v=r38",
   "./data/terrain/bi_dem.png",
   "./data/terrain/oahu_dem.png",
   "./art/pwa/apple-touch-icon.png",
