@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="夏威夷行程">
 <meta name="theme-color" content="#FFFFFF">
-<link rel="manifest" href="manifest.webmanifest?v=r41">
+<link rel="manifest" href="manifest.webmanifest?v=r42">
 <link rel="apple-touch-icon" sizes="180x180" href="art/pwa/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="art/pwa/icon-192.png">
 <title>大岛 + Oahu · 行程伴侣</title>
@@ -726,15 +726,15 @@ svg.i{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke
 
 <div class="toast" id="toast"></div>
 
-<script src="lib/three.min.js?v=r41"></script>
-<script src="lib/island3d.js?v=r41"></script>
+<script src="lib/three.min.js?v=r42"></script>
+<script src="lib/island3d.js?v=r42"></script>
 <script>
 (function(){
 "use strict";
 const ls={get(k){try{return localStorage.getItem("hwp2_"+k)}catch(e){return null}},set(k,v){try{localStorage.setItem("hwp2_"+k,v)}catch(e){}},del(k){try{localStorage.removeItem("hwp2_"+k)}catch(e){}}};
 
 /* Encrypted private booking vault (decrypted purely on-device from user passcode; zero secrets shipped in HTML) */
-const VAULT_ENC = {"v": 1, "rounds": 5000, "salt": "9fa7185c0ab05831eba3446638dda4a2", "hmac": "f2bee034a3951557a726b27a920943e91ac907936004798e6687cc43cb454678", "ct": "uSkXZIgNqomu8oFljTT89Dj9u2SLaCMeUznRfPpO61mLno4uBqdVZ1S6YikiW+ZZXMtrfW18Yhdh8o1sqvDU6g7tubLFNzE1+OeldkkTOA3KteYewPB0d2kPU9Lao7XO6xZFtxgEwtbRXvpsARJoaRufZLBMXmTPG0MehcReOOBglEEw8yYDSmOIgpXmw59sk5rcBMJAEtF90ehwXxI21sXnOnyuBJlAMEv10OTFz9xD69FARCKhiNUdYagSesiP5zM9yXzSjNcNce1dShteCQNbWB5RaUZD1gS7mxjZ02YbFzcE/7orgfoHKc4n8JtDiJT2XKmzIBuGF4pGf+p6LhJMTFEw6o7sWOSHvS9MqrTPrSzA9JbHLZsOgut5w839sMnnNwE+Emo6aEAJq6Cg8VBgyA6lhNLsq3lUYvKRVbTOd44cMidhfT6TNjWbgH4KxR+l2lkOTp3CrKdTI3dRUkP6lBBuKaMOn0ylB5xOj1JhOXEKlEyzkp0GRnJGAZFhxr88Y8udFzsFgCWqIoNy5XwCDSJ6fjemPsBqSGx9ZDMb8zjrU6tm4frWPTKa438S+/NyQmL+Xj5kU2xqmMi/GtZGR8MB+sgLJ4PFa89+hfHdF6VsrHx+WWLfD0rRZvX4ZxReKmAsN5G7omQy1WOSlKymxVT/w4eOqBTfFb1SkfulxGqLSQzeawYp4oIr4Br1pCC7xxb1UeLSIohgACtolYA+R2hzQDex4we9FNMChN8F9AFoI1QftrXheIPRdrunrdCm+8x76BdHjUEAo8pL3hKb1Ub5ggmQ5RWYMukQVa9JjP8N5lu2jQWwPAaIbdRiCYQsXsXJmUKObdimkl6Z7iz2FK4l0mGONjvK+K9ukeXO1CrLdFN90Bjma9Brb13YMQxNgW+u047GuuM28nH86TvJKoaMegejrlX8xwZvficnBHMweE+II8QEkc5GDL4kPNCNh037GDuqgM74XjVWXsuKXrVRlreeO+lAoOjvazFgK+U36kTRmnbpd0MpQqUzv/iwOWzzVa8Xy5+OZKeM69nSjU3rAyYzWLzzl1Yen2tEAQyTzrdLyPAifML3SKMlrw12+mmoR675fsbKvbQcd+WQI0cda21R64fnqAUHsvGV874/VuRtdzXQISx4FvsBlse5wJyQduwnItdSCrNvpZMlvmEGCFtqnT3B7sOi8upgYQcmENuu87s2CIN1UmCLFCnQWlZoKYqTopDbruEfKXCMgmpH3qhnH1n4eK+hGl4nLj26+GpBHPbmgyoCRoSveaQ1W+U8oM5J3Yvju2L2B5jNGQlB8BIa5y+d/XUJoLIbziiwt3NXXQ8cJdcrPADfZAownA5KdvcJAA=="};
+const VAULT_ENC = {"v": 1, "rounds": 5000, "salt": "508285560c4c05dd10449bb9cc0f4c81", "hmac": "b6aeb4a6e1ca161d9316818dd5d5b8e423a83badf481ec8b1357148d35f11ea8", "ct": "dSJyNpUt+ZxWC7rD7h8ykN+hb3pCbhymE+yAoIiRP/kTN/h8gvdCQLpnWE8e8FunXfQ2WCEQ/G1cnagY5dnOOKGOObNi0o0wj52CgDlw0+vFYWBWGF0bC9CmFXgDRFKXeOHARCE6HU6i/wdtMf/y9TWTRK3SsqJXd1ZBL8Wy+LbFyHt/8GRa/diAUDmy1a1CzR2cJ3HXEEjhJa9tEPru77+S8iLGgjBS2y14gvBhYOvA4QZ4Td/7ixz65imt1GJaF72kqzJHddpgRq8wFiOCakJCR1PK8dIz1uvPQQNgcp1Lznqd4J26ImNjVDRRwYJFtMIhwhTeDy0WUntfTEfayeCJLButkpHPGIXwR9GJqn/BuRczDPfS5kIRxCqwxJugUtvkhSrU2/ls2zcp3nvE37S7GRpA1ihcQWCbS6Q8hIpZPokRevHV/nq+x4++eKj39P5lncwQTo5+p/BwSp+6rZ2eukmQiH5GN3kuRFIIEEf1N3CWwvmVFh0xMWCmu5jxIjhsB8vwP8q7NI4oySCVFF41+l2VWPwoDAWjQMKluF3/p07SjuNhdHaA4rlFPvdAyu4l4XcENSxan5/zRaeTZNr9s2/PXJqVcAmkiGNI+v/l1qXQOanoQYW25/azfbehvYtd81Tk3el9+X+Cs8RtXEv0lWbDjei/lc3+jKYEr+O18DdbxR5KFGOusVxiKF6SqupsPpLTcSOFQctEuhg3k/ZotKw07HPz++/8tw6JY5X7eZ1a3ajFybRfCkRfGSTbhrOqLprNTwYcOSJARu6YcANQasxeg1/ttjNwGVi702GDvxNKsh7YK9s+wNuzJG8Dbp05OQNeJEDQsClRTEsCSBt0PkbCBEUgW3yQYx7lekkwreXBTytT/821tkscUx15y7ejbnF9BoZsaXg5uf3jJtwKxnpRcWqFyYUMh6jJhiEV3qLySr354xS0OATquxi9REz7cPBAvsmQ1D7Mk9oFHRANBtrfSGEnr0l7AO15Q8W143zC6nVMwX9MO2cV/u6O3oIqqvQWPssO7bQZR89vjeLKsFKgg8vg7RYwfqeOVun9QaC2E5cnXWooPi/WEPpm39ddhWgUoE3d5EmtgzYi76asicG4OTPI4ahcAmnT67fbQpMsAdPlr/3HY+i5nQYc3Y3l/AzS9iyCX2rZypuAjV1SvR63wfaw6OvEsOoPwoEhI6ZgfX4gcJcLTmpdpUWijkv71f9zQpBZhh4sMhPmMWG+UpABYS5x5TddyOG2kFQtwdx8l28CPOk7BZQn0UyaxB9mMvU9WBvZo5XiLBMNEGiapRFQj4GE+BapKzFBgAzldusgAIax+FgYMsD9U0WtzVBsGiYdSaEvVg=="};
 const _te = new TextEncoder(), _td = new TextDecoder();
 function _hexToBytes(hex){ const a=new Uint8Array(hex.length>>1); for(let i=0;i<a.length;i++) a[i]=parseInt(hex.substr(i*2,2),16); return a; }
 function _bytesToHex(b){ let s=""; for(let i=0;i<b.length;i++) s+=(b[i]<16?"0":"")+b[i].toString(16); return s; }
@@ -893,7 +893,7 @@ const PINS = {
 function getBaseDays(){
   const L = "🔒 点解锁";
   return [
-    {id:"d0",num:1,date:"11/26",wk:"周四",island:"BIG ISLAND",tag:"感恩节",title:"落地 Kona",icon:"art/icons3d/plane.png",sleep:"Waikoloa",depart:"20:32 落地",drive:"25m",sun:"17:46",dark:"18:10",wx:"21°C 干爽",
+    {id:"d0",num:1,date:"11/26",wk:"周四",island:"BIG ISLAND",tag:"感恩节",title:"落地 Kona",icon:"art/icons3d/plane.png",sleep:"Waikoloa",depart:"20:32 落地",drive:"25m",sun:"17:42",dark:"18:10",wx:"21°C 干爽",
       catNote:"UA1723 仅含 1 个座位下小包（不含大登机箱）· SFO 买好晚饭+干粮",
       pigNote:`UA1723 ${vk("ua_pnr",L)} · 仅座位下小包 · 取 SUV 绕拍视频 · 入住万豪`,
       chips:["20:32 落地","20:50 取 SUV","21:30 入住酒店"],
@@ -907,96 +907,96 @@ function getBaseDays(){
       eat:"SFO 机场买好带上飞机 + 自带中式面包当早餐。",
       planB:"感恩节晚超市已关，若饿了靠自带干粮；明天 11/27 周五逛完咖啡园回酒店路上顺手去 Kona Costco 补齐毛毯和水。"
     },
-    {id:"d1",num:2,date:"11/27",wk:"周五",island:"BIG ISLAND",tag:"避浪陆地日",title:"咖啡花果园 & 海边日落",icon:"art/icons3d/coffee.png",sleep:"Waikoloa",depart:"09:15 出发",drive:"1h 40m",sun:"17:43",dark:"18:10",wx:"26°C 多云无雨",
+    {id:"d1",num:2,date:"11/27",wk:"周五",island:"BIG ISLAND",tag:"避浪陆地日",title:"咖啡花果园 & 海边日落",icon:"art/icons3d/coffee.png",sleep:"Waikoloa",depart:"09:00 出发",drive:"约 2.5h",sun:"17:42",dark:"18:10",wx:"21–25°C 多云无雨",
       catNote:"避开全岛 6–9ft 巨浪！上午逛 Mauka+Greenwell+BerryBird（周五全开），下午早点回酒店歇，17:42 在 A-Bay 看日落",
-      pigNote:"落地次日不赶路！傍晚顺手进 Costco 买毛毯和水（开到 20:30），后面全留给大晴天户外",
-      chips:["09:45 Mauka 咖啡园","11:30 试喝+手冲","17:42 酒店海边日落"],
-      status:[{cls:"ok",txt:"✓ 避浪+周五全开"},{cls:"neutral",txt:"0 浪费晴天"}],
+      pigNote:"落地次日不赶路 · 14:15 顺路 Costco 拿毛毯和水 · 15:15 回酒店歇",
+      chips:["09:50 Mauka 咖啡园","11:30 试喝+手冲午饭","17:42 酒店海边日落"],
+      status:[{cls:"ok",txt:"✓ 避浪+周五全开"},{cls:"neutral",txt:"下午回酒店歇"}],
       stops:[
-        {sid:"s1_0",t:"09:45",n:"Mauka Meadows 咖啡花果园",emo:"🌺",tone:"ranch",leg:"09:15 酒店出发 · 开 35 分钟",brief:"周一–五限定开放！$5 无边海景水池 · 0 雨避巨浪",sub:"周四巨浪余涌全岛不宜下水，周五陆地 0 雨逛花果园最舒服（穿运动鞋+防蚊液）",tip:"3,988 种组合实测第 1 名排法：周五全岛海浪高达 6–9ft 不宜下水，而 Mauka Meadows 仅周一–五开（14:00 截入园），放在周五上午既避开大浪又彻底省掉周二观星前赶车！山脚免费尝 100% Kona 后坐免费车回山顶。",pin:"doutor"},
-        {sid:"s1_1",t:"11:30",n:"Greenwell 试喝 & BerryBird 手冲",emo:"☕",tone:"coffee",leg:"开 15 分钟 · 同片区",brief:"周五全开！15m 尝圆豆 → BerryBird 浅烘手冲 + 热午饭",sub:"顺路吃 Kona 热汤面 / Umekes 午饭（BerryBird 14:30 关）",tip:"先在 Greenwell 免费试喝丝滑 Peaberry 圆豆；再开 15 分钟回 Kona 吃热午饭，去 Aliʻi Gardens 集市找上海夫妻主理的 BerryBird（周五照常 08:30–14:30 营业）喝真正花果香浅烘手冲！",pin:"greenwell"},
-        {sid:"s1_2",t:"14:15",n:"顺路 Costco 拿毛毯和水",emo:"🛒",tone:"shop",leg:"回酒店路上 · 开 25 分钟",brief:"只拿车用绒毛毯 + 水 + 零食 · 20 分钟快进快出",sub:"毛毯是周一夜潜上岸保暖用的；伴手礼留到周三去机场前再买",tip:"黑五白天人多，目标明确拿了就走：车用绒毛毯、矿泉水、路上零食、防蚊液。大件伴手礼（夏威夷果、巧克力、咖啡豆）留到周三退房去机场前买，最新鲜也不占地方。",pin:"kona"},
-        {sid:"s1_3",t:"17:20",n:"回酒店 A-Bay 看日落",emo:"🌅",tone:"beach",leg:"15:30 回到酒店先歇一会",brief:"17:42 日落 · 冷锋刚过空气最通透的一晚",sub:"走到酒店前面的 A-Bay 草坪和沙滩 · 顺便撸户外大猫",tip:"周五下午海边是晴的，所以不把时间关在室内；手工挪到周一下午。落地第二天早点回酒店歇，17:20 走到 A-Bay 等 17:42 日落，这是整趟日落条件最好的一晚。顺路认一下对面 Queens 购物中心背面，那是周二观星的上车点。",pin:"hotel"}
+        {sid:"s1_0",t:"09:50",n:"Mauka Meadows 咖啡花果园",emo:"🌺",tone:"ranch",leg:"09:00 酒店出发 · 开约 50 分钟",brief:"只在周一到周五开 · $5 无边海景水池 · 逛约 1 小时 15 分",sub:"周四巨浪余涌全岛不宜下水，周五陆地 0 雨逛花果园最舒服（穿运动鞋+防蚊液）",tip:"周五全岛海浪 6–9ft 不适合下水，而 Mauka Meadows 只在周一到周五开（14:00 截止入园），所以放在周五上午。山脚免费尝 100% Kona 咖啡后坐免费车回山顶。",pin:"doutor"},
+        {sid:"s1_1",t:"11:30",n:"Greenwell 试喝 & BerryBird 手冲",emo:"☕",tone:"coffee",leg:"开约 25 分钟到 Greenwell",brief:"11:30 Greenwell 试喝 → 12:40 BerryBird 手冲 + 午饭",sub:"BerryBird 14:30 关门，13:45 前吃完出发",tip:"先在 Greenwell 免费试喝 Peaberry 圆豆（约 45 分钟）；再开约 25 分钟回 Kona，去 Aliʻi Gardens 集市找上海夫妻主理的 BerryBird（周五 08:30–14:30 营业）喝浅烘手冲，顺便吃午饭。",pin:"greenwell"},
+        {sid:"s1_2",t:"14:15",n:"顺路 Costco 拿毛毯和水",emo:"🛒",tone:"shop",leg:"开约 20 分钟 · 回酒店顺路",brief:"只拿车用绒毛毯 + 水 + 零食 · 20 分钟快进快出",sub:"毛毯是周一夜潜上岸保暖用的；伴手礼留到周三去机场前再买",tip:"黑五白天人多，目标明确拿了就走：车用绒毛毯、矿泉水、路上零食、防蚊液。大件伴手礼（夏威夷果、巧克力、咖啡豆）留到周三退房去机场前买，最新鲜也不占地方。",pin:"kona"},
+        {sid:"s1_3",t:"17:20",n:"回酒店 A-Bay 看日落",emo:"🌅",tone:"beach",leg:"Costco 开约 35 分钟 · 15:15 回到酒店先歇",brief:"17:42 日落 · 冷锋刚过空气最通透的一晚",sub:"走到酒店前面的 A-Bay 草坪和沙滩 · 顺便撸户外大猫",tip:"周五下午海边是晴的，所以不把时间关在室内；手工挪到周一下午。落地第二天早点回酒店歇，17:20 走到 A-Bay 等 17:42 日落，这是整趟日落条件最好的一晚。顺路认一下对面 Queens 购物中心背面，那是周二观星的上车点。",pin:"hotel"}
       ],
       cautions:[{tag:"今天穿什么",txt:"吊带 + 宽松薄衬衣或薄开衫 + 运动鞋。咖啡园 21°C 但偏潮，走路热就脱开衫，进车和 Costco 冷气再披上。"},{tag:"周五避浪最优解",txt:"周四冷锋与西北巨浪刚过，周五东岸浪仍达 9.3ft、白沙滩 6.7ft、浮潜 6.0ft；今天只走陆地避开大浪，周日再去 Hilo+火山。"},{tag:"穿衣防蚊",txt:"进咖啡花果园穿运动鞋并喷防蚊液；下午早点回酒店歇，明早 09:00 出发逛 Waimea 周六早市。"}],
       eat:"Kona 吃热汤面 / Umekes 午餐 + BerryBird 手冲；晚上回酒店旁 Queens' / Kings' 吃热晚餐。",
-      planB:"若下午手工做得快，傍晚顺路回 A-Bay 草坪撸户外大猫猫看日落，顺便认一下 Queens' Marketplace 背面（周二观星上车点）。"
+      planB:"回酒店后还有精神：走去对面认一下 Queens' Marketplace 背面（周二观星上车点），再到 A-Bay 等日落。"
     },
-    {id:"d2",num:3,date:"11/28",wk:"周六",island:"BIG ISLAND",title:"早市 · 皇家鱼塘 · 骑马",icon:"art/icons3d/horse.png",sleep:"Waikoloa",depart:"09:00 出发",drive:"1h 45m",sun:"17:47",dark:"18:11",wx:"28→16°C 晴",
-      catNote:"09:15 出门 · 上午西岸海边确定晴！骑马强制长裤 + 包头鞋 + 薄外套 · 别买过季芒果",
+    {id:"d2",num:3,date:"11/28",wk:"周六",island:"BIG ISLAND",title:"早市 · 皇家鱼塘 · 骑马",icon:"art/icons3d/horse.png",sleep:"Waikoloa",depart:"09:00 出发",drive:"约 3h",sun:"17:42",dark:"18:11",wx:"27→15°C 晴",
+      catNote:"09:00 出门 · 上午西岸海边三家模型都报晴 · 骑马必须长裤 + 包头鞋 + 外套 · 别买过季芒果",
       pigNote:`Paniolo ${vk("horse_pnr",L)} · 16:00 报到（15:10 酒店出发）· 必带 ${vk("ua_card",L)} 与双方 ID`,
       chips:["09:30 Waimea 早市","11:15 皇家鱼塘晴沙滩","16:00 报到日落骑马"],
-      status:[{cls:"accent",txt:"✓ 骑马已订"},{cls:"ok",txt:"✓ 周六上午确定晴"}],
+      status:[{cls:"accent",txt:"✓ 骑马已订"},{cls:"ok",txt:"✓ 周六上午晴"}],
       stops:[
         {sid:"s2_0",t:"09:30",n:"Waimea 周六农夫市集",emo:"🥑",tone:"ranch",leg:"09:00 酒店出发 · 开 30 分钟",brief:"绿草地弹唱 + 牛油果木瓜 · 带外套现金",sub:"Parker School 绿草地社区早市（周六限定，开到 13:00）",tip:"全大岛氛围最舒服的周六早市：草地现场弹唱、买当季大牛油果和草莓木瓜、现烤面包（11 月底芒果过季不买）。高原早风偏凉带外套，小摊多收现金。",pin:"waimea"},
-        {sid:"s2_1",t:"11:15",n:"Mauna Lani 皇家鱼塘 & 秘境白沙滩",emo:"🌴",tone:"beach",leg:"开 25 分钟下海边",brief:"11:15–13:15 太阳最高海水最蓝 · 三家模型都报大晴",sub:"Kalāhuipuaʻa Historic Park 免费停 · 顺路吃热午饭与散步",tip:"三大模型全员一致看好周六上午西岸大晴天！早市买完中午下海边吃热午饭，把车免费停在古鱼塘公园车位，穿过椰林石筑皇家池塘走 10 分钟到隐秘白沙滩拍照吹风，下午准时往高地牧场开。",pin:"maunalani"},
+        {sid:"s2_1",t:"11:15",n:"Mauna Lani 皇家鱼塘 & 秘境白沙滩",emo:"🌴",tone:"beach",leg:"10:45 离开早市 · 开约 30 分钟下海边",brief:"11:15–13:15 太阳最高海水最蓝 · 三家模型都报大晴",sub:"Kalāhuipuaʻa Historic Park 免费停车 · 13:15 吃午饭 · 14:15 回酒店换长裤",tip:"三家模型都报周六上午西岸大晴。早市买完中午下海边吃热午饭，把车免费停在古鱼塘公园车位，穿过椰林石筑皇家池塘走 10 分钟到隐秘白沙滩拍照吹风，下午准时往高地牧场开。",pin:"maunalani"},
         {sid:"s2_2",t:"16:00",n:"Paniolo 日落骑马",emo:"🐎",tone:"ranch",badge:vk("horse_pnr",L),leg:"15:10 出发 · 开 45 分钟上牧场",legWarn:"⚡ 16:00 集合报到 · 必带卡+ID",brief:"16:00 报到起骑 1.5h · 付款实体卡 + 双方 ID + 长裤包头鞋",sub:"Ponoholo 11,000 英亩私家牧场（Hwy 250 Mile 13.2）· 11/27 16:00 前 24h 免退",tip:"邮件确认 4:00 PM（16:00）即为集合报到时间，骑行 1.5 小时至 18:00 看日落！实名核对必带支付那张实体卡及双方照片 ID（无例外），必穿长裤+包头鞋+薄外套，牧场免费提供头盔、雨衣外套与靴子。因 11/29 休且 11/27、11/30、12/1 均售罄，周六不可取代！",pin:"horse",book:{订单号:vk("horse_pnr"),集合时间:"16:00 报到 (15:10 从酒店出发 · 骑 1.5h)",核验卡证:vk("horse_holder"),着装要求:"强制长裤 + 包头鞋 + 薄外套 (牧场备头盔靴子)",退改线:"11/27 16:00 前免费退 (其余日期已满)"}},
-        {sid:"s2_3",t:"18:30",n:"暖胃热晚饭回 Waikoloa",emo:"🍲",tone:"food",leg:"开 35 分钟回酒店",brief:"骑完下山喝热汤吃热饭早休息",sub:"Waimea / Waikoloa 吃热晚餐 + 记得今晚留意观星团自动扣款",tip:"骑完马吹了高地海风吃碗热饭最舒服；顺带提醒：GetYourGuide 观星团今天（11/28）会自动扣款，明早 15:00 前是 Oahu 酒店免费退改线。",pin:"hotel"}
+        {sid:"s2_3",t:"18:30",n:"暖胃热晚饭回 Waikoloa",emo:"🍲",tone:"food",leg:"开 35 分钟回酒店",brief:"骑完下山喝热汤吃热饭早休息",sub:"Waimea / Waikoloa 吃热晚餐 + 记得今晚留意观星团自动扣款",tip:"骑完马吹了高地海风吃碗热饭最舒服；顺带提醒：GetYourGuide 观星团今天（11/28）会自动扣款，明天 15:00 前是 Oahu 酒店免费退改线。",pin:"hotel"}
       ],
       cautions:[{tag:"今天穿什么",txt:"上午早市 17°C：吊带 + 薄开衫；中午海边 27°C 很干爽，脱剩吊带。14:00 回房换长裤 + 包头运动鞋 + 薄长袖 + 防风外套去牧场（16°C 偏潮冷）。"},{tag:"骑马查卡查证红线",txt:"Paniolo 邮件强调：16:00 准时到场，必带本人照片 ID 与支付预订的实体信用卡（缺卡/缺 ID 现场拒骑！）；仅周六有位，11/27 16:00 前 24h 可退。"},{tag:"穿衣铁律",txt:"强制长裤和包头鞋，傍晚高地风凉（约 16°C）多备一件防风外套。"}],
       eat:"Waimea 早市现烤面包与鲜果、Mauna Lani 热午饭、晚上 Waimea 或酒店附近吃热食。",
       planB:"中午若早市逛得快，顺路停 Hapuna 白沙滩看海，或回 Mauna Lani Foodland 顺手买零食水。"
     },
-    {id:"d3",num:4,date:"11/29",wk:"周日",island:"BIG ISLAND",tag:"东岸最晴",title:"Hilo 海龟 & 火山红光",icon:"art/icons3d/volcano.png",sleep:"Waikoloa",depart:"09:30 出发",drive:"3.8–5.2h",sun:"17:43",dark:"18:10",wx:"25→10°C 晴",
-      catNote:"全趟唯一 Hilo 一致大晴窗（正午云量仅 25%）！先撸猫买豆，12:15 大太阳看 Carlsmith 果冻海龟湾",
-      pigNote:"15:00 前为 Oahu Outrigger 免费退改线 · 午饭后按体力选黑沙滩或直上火山 · 带 10°C 防寒外套",
-      chips:["10:50 日式公园+买豆","12:15 Carlsmith 晴海龟","16:10 火山精华+红光"],
-      status:[{cls:"ok",txt:"✓ 东岸唯一确定晴窗"},{cls:"neutral",txt:"15:00 Oahu退改线"}],
+    {id:"d3",num:4,date:"11/29",wk:"周日",island:"BIG ISLAND",tag:"东岸最好的一天",title:"Hilo 海龟 & 火山红光",icon:"art/icons3d/volcano.png",sleep:"Waikoloa",depart:"09:30 出发",drive:"3.8–5.2h",sun:"17:42",dark:"18:10",wx:"Hilo 25°C 偏晴 → 火山 14°C 阴",
+      catNote:"东岸这几天里最好的一天：两家模型报晴、一家报阴。先撸猫买豆，12:15 太阳最高时看 Carlsmith 海龟湾",
+      pigNote:"15:00 前为 Oahu Outrigger 免费退改线 · 午饭后按体力选黑沙滩或直上火山 · 火山 14°C 潮冷带外套",
+      chips:["10:50 日式公园+买豆","12:15 Carlsmith 海龟湾","18:10 火山口红光"],
+      status:[{cls:"ok",txt:"✓ 东岸最好的一天"},{cls:"neutral",txt:"15:00 Oahu退改线"}],
       stops:[
-        {sid:"s3_0",t:"10:50",n:"日式公园撸猫 & 烘焙店买豆",emo:"🐱",tone:"cat",leg:"09:30 走 200 号公路 · 开 1h 20m",brief:"Liliʻuokalani 撸猫 → Big Island Coffee Roasters（周日照常开）",sub:"先喷防蚊液逛日式拱桥撸猫 → 旗舰店喝手冲买花果香豆子",tip:"三模型对比后周日 Hilo 从上午到正午越放越晴！先逛免费好停的 Liliʻuokalani 日式拱桥公园撸户外大猫猫（先喷防蚊液），再开 5 分钟到周日照常 06:30–17:00 营业的 Big Island Coffee Roasters 买 Kona Bloom 豆子！",pin:"hilo"},
-        {sid:"s3_1",t:"12:15",n:"Carlsmith 果冻蓝海龟湾",emo:"🐢",tone:"sea",leg:"开 5 分钟 · 同片区",brief:"全趟唯一三模型一致晴窗(云 25%) · 浪已退平水最蓝！",sub:"正午阳光直晒浅湾最果冻蓝，近看野生绿海龟（车内不留可见包袋）",tip:"专门把 Carlsmith 放到周日 12:15：东岸巨浪已从周五 9.3ft 明显回落，且 12–15 点是全周唯一三模型一致认定的 Hilo 大晴天，浅湾海水最透亮！停车切记车内不留任何包袋。",pin:"carlsmith"},
-        {sid:"s3_2",t:"13:15",n:"Hilo 热午饭（体力开关）",emo:"🍜",tone:"food",leg:"开 5 分钟",brief:"热汤面吃完二选一：南下黑沙滩 或 45m 直上火山",sub:"精力够 → 去黑沙滩；累了 → 直奔火山省 1.5 小时",tip:"顺路在 Hilo 吃热汤面 / 热饭：午饭后按体力现场开关——跳过黑沙滩直接开 45 分钟上火山，总车程立刻从 5.2h 砍回 3.8h，一点不赶！",pin:"hilo"},
-        {sid:"s3_3",t:"14:50",n:"Punaluʻu 黑沙滩",emo:"🖤",tone:"sea",leg:"开 1h 15m",legWarn:"⚡ 累了可跳过省 1.5h",brief:"停 40m 看纯黑火山沙 + 晒太阳绿海龟",sub:"玄武岩纯黑粗沙看海龟晒太阳（法定保持 3 米勿触碰）",tip:"黑沙反光配大海很震撼，大绿海龟常趴在沙滩右侧晒太阳（保持 3 米距离勿触碰）。已彻底删掉停业的 Bake Shop 与倒塌的 Hōlei 海拱门。",pin:"punaluu"},
-        {sid:"s3_4",t:"16:10",n:"火山公园精华 2h",emo:"🌋",tone:"vol",badge:"18:10 红光",leg:"开 40 分钟上山",brief:"0.00mm 无雨！外星熔岩湖 + 18:10 天黑红光 · 门票 $30/车",sub:"只看最震撼 2 处：Kīlauea Iki 熔岩湖 → Kīlauea Overlook 看红光",tip:"周日傍晚火山公园 0.00mm 不下雨！先去 Kīlauea Iki 观景台俯瞰外星般漆黑熔岩湖；17:30 到 Kīlauea Overlook 等 18:10 天黑透，用手机 3–5 倍夜景长曝拍火山口橘红余晖！山上只有 10°C 必穿抓绒+防风外套；18:30 走 200 号公路 2h 回酒店。",pin:"uekahuna",book:{门票:"$30/车 (7天有效)",最佳机位:"Kīlauea Overlook · 18:10 夜景长曝",夜路提醒:"18:30 走 200 号公路 2h 回，无灯开稳点"}}
+        {sid:"s3_0",t:"10:50",n:"日式公园撸猫 & 烘焙店买豆",emo:"🐱",tone:"cat",leg:"09:30 走 200 号公路 · 开 1h 20m",brief:"Liliʻuokalani 撸猫 → Big Island Coffee Roasters（周日照常开）",sub:"先喷防蚊液逛日式拱桥撸猫 → 旗舰店喝手冲买花果香豆子",tip:"先逛免费好停的 Liliʻuokalani 日式拱桥公园撸户外大猫猫（先喷防蚊液），再开 5 分钟到周日照常 06:30–17:00 营业的 Big Island Coffee Roasters 买 Kona Bloom 豆子！",pin:"hilo"},
+        {sid:"s3_1",t:"12:15",n:"Carlsmith 果冻蓝海龟湾",emo:"🐢",tone:"sea",leg:"开 5 分钟 · 同片区",brief:"太阳最高时礁湖最蓝 · 两家模型报晴、一家报阴",sub:"正午阳光直晒浅湾最果冻蓝，近看野生绿海龟（车内不留可见包袋）",tip:"把 Carlsmith 放在 12:15：太阳最高时浅湾最蓝，东岸浪也从周五的 9 英尺多退下来了。周日是东岸这几天里最好的一天，但三家模型没有完全一致；如果到了是阴天，海水会偏灰，海龟照样能看。停车切记车内不留任何包袋。",pin:"carlsmith"},
+        {sid:"s3_2",t:"13:20",n:"Hilo 热午饭（体力开关）",emo:"🍜",tone:"food",leg:"开约 10 分钟回 Hilo 镇上",brief:"14:10 吃完二选一：去黑沙滩，或直接上火山",sub:"去黑沙滩 → 16:40 到火山；跳过 → 14:55 到火山，白天多 1.5 小时",tip:"在 Hilo 吃热汤面或热饭，14:10 吃完按体力现场决定：去黑沙滩的话 16:40 才到火山，天黑前只剩 1 小时；跳过直接开 45 分钟上火山，14:55 就到，全天车程从约 5.2 小时减到 3.8 小时。",pin:"hilo"},
+        {sid:"s3_3",t:"15:25",n:"Punaluʻu 黑沙滩",emo:"🖤",tone:"sea",leg:"开约 1 小时 15 分",legWarn:"⚡ 累了可跳过省 1.5h",brief:"停 35 分钟看纯黑火山沙 + 晒太阳的绿海龟",sub:"玄武岩纯黑粗沙看海龟晒太阳（法定保持 3 米勿触碰）",tip:"黑沙反光配大海很震撼，大绿海龟常趴在沙滩右侧晒太阳（保持 3 米距离勿触碰）。已彻底删掉停业的 Bake Shop 与倒塌的 Hōlei 海拱门。",pin:"punaluu"},
+        {sid:"s3_4",t:"16:40",n:"火山公园 + 18:10 红光",emo:"🌋",tone:"vol",badge:"18:10 红光",leg:"开 40 分钟上山 · 跳过黑沙滩则 14:55 到",brief:"阴天薄雾、基本不下雨 · 熔岩湖 + 18:10 天黑红光 · 门票 $30/车",sub:"只看最震撼 2 处：Kīlauea Iki 熔岩湖 → Kīlauea Overlook 看红光",tip:"周日傍晚火山公园三家模型都报阴天有薄雾，基本不下雨。先去 Kīlauea Iki 观景台俯瞰漆黑熔岩湖；17:30 到 Kīlauea Overlook 等 18:10 天黑透，用手机夜景模式拍火山口橘红余晖；云压得太低时红光会被挡掉一部分。山上约 14°C 又潮，必穿抓绒 + 防风外套。18:30 走 200 号公路回酒店，约 2 小时 15 分，20:45 左右到。",pin:"uekahuna",book:{门票:"$30/车 (7天有效)",最佳机位:"Kīlauea Overlook · 18:10 夜景长曝",夜路提醒:"18:30 走 200 号公路 2h 回，无灯开稳点"}}
       ],
-      cautions:[{tag:"今天穿什么",txt:"白天 Hilo 26°C：吊带 + 薄罩衫 + 防蚊液。后备箱放薄长袖 + 厚抓绒 + 防风外套 + 长裤运动鞋，进火山公园前全套换上（14°C 潮冷）。"},{tag:"今日 15:00 Oahu 退改线",txt:"Oahu OUTRIGGER 酒店 72h 免费取消线是今天 11/29 15:00；如果确定行程照走就不用管，若计划大改一定在 15:00 前操作。"},{tag:"周日东岸最晴+带防寒",txt:"3,988 种组合实测周日 Hilo 最晴且浪更稳；但火山口天黑后仅 10°C，必带抓绒/防风外套与防蚊液。"}],
+      cautions:[{tag:"今天穿什么",txt:"白天 Hilo 25°C：吊带 + 薄罩衫 + 防蚊液。后备箱放薄长袖 + 厚抓绒 + 防风外套 + 长裤运动鞋，进火山公园前全套换上（14°C 潮冷）。"},{tag:"今日 15:00 Oahu 退改线",txt:"Oahu OUTRIGGER 酒店 72h 免费取消线是今天 11/29 15:00；如果确定行程照走就不用管，若计划大改一定在 15:00 前操作。"},{tag:"带防寒和防蚊",txt:"火山口天黑后约 14°C 又潮，必带抓绒和防风外套；Hilo 公园蚊子多，下车前先喷防蚊液。"}],
       eat:"Hilo 热午饭优先热汤面 / 热菜，Big Island Coffee Roasters 买手冲豆；回 Waikoloa 后吃热夜宵。",
       planB:"若午饭后偏累，果断跳过黑沙滩省 1.5h，轻松玩火山 18:10 看完红光早点回酒店休息。"
     },
-    {id:"d4",num:5,date:"11/30",wk:"周一",island:"BIG ISLAND",tag:"最平镜面海",title:"玻璃海浮潜 & 魔鬼鱼",icon:"art/icons3d/manta.png",sleep:"Waikoloa",depart:"09:00 出发",drive:"2h 00m",sun:"17:47",dark:"18:11",wx:"25°C 微风",
+    {id:"d4",num:5,date:"11/30",wk:"周一",island:"BIG ISLAND",tag:"最平镜面海",title:"玻璃海浮潜 & 魔鬼鱼",icon:"art/icons3d/manta.png",sleep:"Waikoloa",depart:"09:00 出发",drive:"约 3h",sun:"17:42",dark:"18:11",wx:"25°C 微风",
       catNote:"全趟海浪最平(2.0–2.2ft)！穿长袖水母衣防冷；若早上偏阴觉得凉，果断改逛彩绘教堂+海盐农场，保暖留给晚上夜潜",
       pigNote:`13:25 前观星免费退线 · Dolphin ${vk("manta_pnr",L)} 18:00 先去商店再开车到码头（勿早到）`,
       chips:["10:25 浮潜/防冷备选","14:40 Sunoa 手工暖身","18:00 商店报到→夜潜"],
       status:[{cls:"accent",txt:"✓ 夜潜已订 18:00"},{cls:"ok",txt:"✓ 2ft 全趟最平浪"}],
       stops:[
         {sid:"s4_0",t:"10:25",n:"看天选浮潜：Two Step / 怕冷备选",emo:"🤿",tone:"sea",leg:"09:00 酒店出发 · 开约 1 小时 25 分",brief:"浪仅 2.2ft 镜面！欧德两模型报晴；若偏阴怕冷改陆地",sub:"穿长袖防晒水母衣+车备干大毛巾抓绒；偏阴不硬下水，省体温给晚上魔鬼鱼",tip:"今天南 Kona 海浪仅 2.2ft 是整趟最平镜面水，气温 23–25°C 微风且欧/德两模型报晴（云 6–36%）。下水必穿长袖防晒水母衣并把干大毛巾+抓绒放车里，上水秒擦干不着凉！如果早起抬头碰巧偏阴怕冷：完全不硬下水，直接改逛 Painted Church + Kona Sea Salt 盐场（免费试吃+泡脚），把温暖留给晚上团发保暖湿衣看魔鬼鱼！",pin:"twostep"},
-        {sid:"s4_1",t:"12:45",n:"Painted Church 彩绘教堂 / 盐场",emo:"⛪",tone:"art",leg:"Two Step 上坡 5 分钟",brief:"免费手绘棕榈星空壁画 · 怕冷上午直接玩盐场",sub:"Two Step 隔壁 5 分钟 · 备选 Kona Sea Salt 深海盐农场免预约",tip:"白色小木教堂推门进去满墙手绘棕榈与星空。如果早上没下水想悠闲暖和地逛：去机场旁 Kona Sea Salt 深海海盐农场（09:00–16:00 免预约试吃松露百香果盐+海盐泡脚）。",pin:"paintedchurch"},
-        {sid:"s4_2",t:"13:30",n:"Kona 热午饭 & 定明晚观星去留",emo:"🍜",tone:"food",leg:"开 25 分钟回 Kona",legWarn:"⚡ 13:25 前为观星 24h 退线",brief:"吃热汤面回血暖身 · 到饭店前先定明晚观星去留",sub:"就在 Kona 吃热饭喝热饮休息，不折腾回酒店",tip:"就在 Kona 吃热汤面/海鲜暖身吹空调休息！明晚观星团 13:25 前可以免费取消：周二云海机会最大，但头顶有没有薄云三家模型还没谈拢，按今天早上的最新结论决定留还是退。",pin:"kona"},
+        {sid:"s4_1",t:"12:35",n:"Painted Church 彩绘教堂 / 盐场",emo:"⛪",tone:"art",leg:"Two Step 上坡 5 分钟",brief:"免费手绘棕榈星空壁画 · 怕冷上午直接玩盐场",sub:"Two Step 隔壁 5 分钟 · 备选 Kona Sea Salt 深海盐农场免预约",tip:"白色小木教堂推门进去满墙手绘棕榈与星空。如果早上没下水想悠闲暖和地逛：去机场旁 Kona Sea Salt 深海海盐农场（09:00–16:00 免预约试吃松露百香果盐+海盐泡脚）。",pin:"paintedchurch"},
+        {sid:"s4_2",t:"13:40",n:"Kona 热午饭 & 定明晚观星去留",emo:"🍜",tone:"food",leg:"开约 40 分钟回 Kona",legWarn:"⚡ 观星 13:25 前可免费取消 · 出门前先定",brief:"吃热汤面暖身 · 观星去留要在 13:25 前、也就是到饭店之前定好",sub:"就在 Kona 吃热饭喝热饮休息，不折腾回酒店",tip:"就在 Kona 吃热汤面/海鲜暖身吹空调休息！明晚观星团 13:25 前可以免费取消：周二云海机会最大，但头顶有没有薄云三家模型还没谈拢，按今天早上的最新结论决定留还是退。",pin:"kona"},
         {sid:"s4_5",t:"14:40",n:"Sunoa 室内 DIY 手工",emo:"🛍️",tone:"shop",leg:"饭后走几步 · Kona 镇上",brief:"两次下水之间进空调房坐 2 小时 · 身体保持干暖",sub:"Kona Inn Shopping Village · 每天 11:00–19:00 · 离魔鬼鱼码头 12 分钟",tip:"原来午饭后到魔鬼鱼之间要干等 4 小时。改成进 Sunoa 慢慢挑夏威夷刺绣布贴、现场烫帆布包或帽子：上午浮潜完身体在室内是干的暖的，晚上再下水不容易冷。16:40 结束后开 12 分钟到 Keauhou 海湾，17:42 看完日落正好 18:00 去商店报到。",pin:"kona"},
-        {sid:"s4_3",t:"18:00",n:"Dolphin 魔鬼鱼夜潜",emo:"🌊",tone:"sea",badge:vk("manta_pnr",L),leg:"开 15 分钟 · 18:00 准时勿早到",legWarn:"⚡ 商店报到后自驾码头 · 大包放车里",brief:"浪仅 2.0ft 镜面！① 去 Keauhou 商店 → ② 自驾码头结束不回店",sub:"双方协议已签 (2 signed) · 团发保暖湿衣上衣 · 18:00–20:00",tip:"两步集合极重要：① 18:00 准时（勿早到！）先去 Keauhou Shopping Center（78-6831 Alii Dr Suite F-146，Tropics 后侧）找门店报到——大背包大毛巾留车里别带进去！② 报到完再自驾去 Keauhou Bay（78-100 Kaleiopapa St 免费街停+公厕）下水，团里会发保暖湿衣上衣，今晚浪仅 2.0ft 像镜面！看完直接在码头解散不回商店，车上留干抓绒+大毛巾+周五买的毛毯最暖。",pin:"manta",book:{订单号:vk("manta_pnr"),门店报到:"18:00 勿早到 · 78-6831 Alii Dr #F-146 (Tropics后)",自驾码头:"报到后自驾 78-100 Kaleiopapa St (免费停·码头结束)",电子协议与详情:vk("manta_extra"),退改线:"48h 前 (11/28 18:00) · 含看不见重看保障"}}
+        {sid:"s4_3",t:"18:00",n:"Dolphin 魔鬼鱼夜潜",emo:"🌊",tone:"sea",badge:vk("manta_pnr",L),leg:"16:40 离开 Sunoa · 开 15 分钟 · 17:42 在海湾看日落",legWarn:"⚡ 商店报到后自驾码头 · 大包放车里",brief:"浪仅 2.0ft 镜面！① 去 Keauhou 商店 → ② 自驾码头结束不回店",sub:"双方协议已签 (2 signed) · 团发保暖湿衣上衣 · 18:00–20:00",tip:"两步集合极重要：① 18:00 准时（勿早到！）先去 Keauhou Shopping Center（78-6831 Alii Dr Suite F-146，Tropics 后侧）找门店报到——大背包大毛巾留车里别带进去！② 报到完再自驾去 Keauhou Bay（78-100 Kaleiopapa St 免费街停+公厕）下水，团里会发保暖湿衣上衣，今晚浪仅 2.0ft 像镜面！看完直接在码头解散不回商店，车上留干抓绒+大毛巾+周五买的毛毯最暖。",pin:"manta",book:{订单号:vk("manta_pnr"),门店报到:"18:00 勿早到 · 78-6831 Alii Dr #F-146 (Tropics后)",自驾码头:"报到后自驾 78-100 Kaleiopapa St (免费停·码头结束)",电子协议与详情:vk("manta_extra"),退改线:"48h 前 (11/28 18:00) · 含看不见重看保障"}}
       ],
       cautions:[{tag:"今天穿什么",txt:"下水：长袖防晒水母衣 + 涉水鞋，外面套宽大罩衫。车里备干大毛巾 + 干抓绒 + 绒毛毯，晚上魔鬼鱼上岸立刻擦干裹上。"},{tag:"防阴天怕冷双保险",txt:"白天浮潜穿长袖水母衣+车备干毛巾抓绒；如果早起阴天觉得凉，上午果断改逛彩绘教堂+海盐农场，把体温留给晚上穿保暖湿衣看魔鬼鱼！"},{tag:"夜潜两步地址 + 13:25 观星退线",txt:"18:00 先去商店 #F-146（大包锁车），再自驾码头下水。明天观星 24h 免退线在今天 13:25。"}],
       eat:"早餐自带干粮；午饭留 Kona 吃热汤面 / Foodland 鸡汤粉丝暖身；夜潜后吃热宵夜回酒店。",
-      planB:"怕冷或偏阴：上午直接跳海，改逛彩绘教堂 + Kona Sea Salt 盐场 + 喝热咖啡吃热汤面，傍晚舒舒服服看魔鬼鱼。"
+      planB:"怕冷或偏阴：上午不下水，改逛彩绘教堂 + Kona Sea Salt 盐场 + 喝热咖啡吃热汤面，下午照常做手工，晚上看魔鬼鱼。"
     },
-    {id:"d5",num:6,date:"12/1",wk:"周二",island:"BIG ISLAND",tag:"云海观星日",title:"白沙滩 & 云海观星",icon:"art/icons3d/observatory.png",sleep:"Waikoloa",depart:"09:00 出发",drive:"30m + 团车",sun:"17:48",dark:"18:12",wx:"28→0°C 晴",
-      catNote:"酒店周边确定晴(云 0–8%)！上午 15m 去平浪 Kua Bay 零赶车，回房洗完澡换厚裤，13:25 冲全场最佳云海观星！",
+    {id:"d5",num:6,date:"12/1",wk:"周二",island:"BIG ISLAND",tag:"云海观星日",title:"白沙滩 & 云海观星",icon:"art/icons3d/observatory.png",sleep:"Waikoloa",depart:"09:00 出发",drive:"50m + 团车",sun:"17:42",dark:"18:12",wx:"26→0°C",
+      catNote:"09:00 出门，约 25 分钟到 Kua Bay；11:20 收摊回房洗澡换厚裤，13:25 上观星车。观星去留看周一早上的结论",
       pigNote:`15:40 抢明日 WN2269 值机 · HFT 13:25 Queens' 背面集合 (${vk("mk_pnr",L)})`,
       chips:["09:25 Kua Bay 白沙滩","11:45 回房洗换厚裤","13:25 Queens' 背面观星"],
-      status:[{cls:"accent",txt:"✓ 观星全场最佳窗"},{cls:"ok",txt:"✓ 上午近郊零赶车"}],
+      status:[{cls:"accent",txt:"✓ 观星已订"},{cls:"ok",txt:"✓ 上午近郊不赶"}],
       stops:[
-        {sid:"s5_0",t:"09:25",n:"Kua Bay 库阿湾白沙滩",emo:"🏖️",tone:"beach",leg:"09:00 酒店出发 · 开约 25 分钟",brief:"浪 3.7ft 很平 · 零树荫带帽墨镜 · 11:20 收摊回酒店",sub:"最新预报周二上午可能有高空薄云，海水没那么蓝但照样能玩；周三清早更晴可二刷",tip:"大岛颜值天花板奶白细沙滩！把白沙滩放到周二上午两大好处：① 浪高已从周五 6.7ft 降到 3.6ft 超平；② 离酒店仅 15 分钟全铺装路，彻底不用像原方案那样飙车 1.5h 赶回观星！若早起抬头 Kua Bay 偶有云，可北开 10m 去万里无云的 Waikoloa/Hapuna，或先逛室内 Costco 把白沙滩挪到明早 09:00 二刷。",pin:"kuabay"},
+        {sid:"s5_0",t:"09:25",n:"Kua Bay 库阿湾白沙滩",emo:"🏖️",tone:"beach",leg:"09:00 酒店出发 · 开约 25 分钟",brief:"浪 3.7ft 很平 · 零树荫带帽墨镜 · 11:20 收摊回酒店",sub:"最新预报周二上午可能有高空薄云，海水没那么蓝但照样能玩；周三清早更晴可二刷",tip:"大岛最好看的奶白细沙滩。放在周二上午：浪已从周五的 6.7ft 降到 3.7ft，离酒店约 25 分钟，玩到 11:20 收摊，回酒店洗澡吃饭再上观星车都来得及。最新预报周二上午可能有一层高空薄云，太阳会发白一点；如果早起云很厚，可以往北开 10 分钟去 Hapuna，或把 Kua Bay 挪到周三清早。",pin:"kuabay"},
         {sid:"s5_1",t:"11:45",n:"回酒店换厚裤 (Queens' 背面集合)",emo:"🧥",tone:"hotel",leg:"开约 25 分钟回 Waikoloa",legWarn:"⚡ 不是酒店大堂！在 Queens' 背面",brief:"洗完澡吃热午饭，穿秋裤+防风长裤+厚袜+包头鞋+带水壶",sub:"13:25 在 Queens' Marketplace 购物中心背面 (69-201 Waikoloa Beach Dr Back)",tip:"就在酒店片区从容冲干净海水、吹干头发、吃碗热午饭！套上秋裤+厚防风长裤+厚袜+保暖卫衣，拎上可重复灌装水壶、帽子墨镜。注意接送点不是 Marriott 大堂，而是对面 Queens' Marketplace 背面车道！",pin:"hotel"},
         {sid:"s5_2",t:"13:25",n:"Mauna Kea 云海日落观星团",emo:"🌌",tone:"star",badge:vk("mk_pnr",L),leg:"Queens' 背面团车接送 · 不用开车",brief:"云海机会最大的一晚 · 风小 · 头顶可能有薄云，周一早上定去留",sub:"团发男子尺码大羽绒衣与手套 · 含西南鸡肉/素食热炖菜 + 热可可饼干",tip:"能去的日子里今晚云海机会最大、风也最小（约 0°C）；头顶有没有薄云三家模型还有分歧，周一 13:25 前可免费取消，按周一早上的最新结论定。Hawaii Forest & Trail 专业向导带你上 4,207m 看金色云海日落与银河（约 21:00 回）。团发男子尺码防寒羽绒服与手套（但不发裤子！），含热炖菜野餐与热可可；2,800m 游客中心慢走多喝水防高反。",pin:"summit",book:{确认号:vk("mk_pnr"),取票PIN:vk("mk_pin"),集合点:"13:25 Queens' Marketplace 背面 (69-201 Waikoloa Beach Dr)",团方与电话:`Hawaii Forest & Trail · ${vk("mk_phone")}`,团发装备与晚餐:"男子码大羽绒服+手套 · 西南鸡肉炖菜/素食辣豆+热可可饼干",详情与退改:vk("mk_detail")}}
       ],
-      cautions:[{tag:"今天穿什么",txt:"上午海边：泳衣或吊带 + 薄罩衫 + 帽子墨镜。11:45 回房换山顶全套：薄长袖 + 厚抓绒 + 秋裤 + 防风长裤 + 厚袜 + 运动鞋 + 暖宝宝（团发羽绒服和手套，不发裤子）。"},{tag:"接送地点不是酒店大堂！",txt:"邮件写明上车点在 Queens' Marketplace 购物中心背面（on the back side, 69-201 Waikoloa Beach Dr），13:25 准时候车；11:30 从 Kua Bay 回酒店时间超级充裕！"},{tag:"零度保暖+15:40 抢值机",txt:"团发大羽绒衣+手套但不护腿，必自穿秋裤厚裤厚袜；15:40 在大巴有信号时顺手把明天的 Southwest WN2269 线上值机！"}],
+      cautions:[{tag:"今天穿什么",txt:"上午海边：泳衣或吊带 + 薄罩衫 + 帽子墨镜。11:45 回房换山顶全套：薄长袖 + 厚抓绒 + 秋裤 + 防风长裤 + 厚袜 + 运动鞋 + 暖宝宝（团发羽绒服和手套，不发裤子）。"},{tag:"接送地点不是酒店大堂！",txt:"邮件写明上车点在 Queens' Marketplace 购物中心背面（on the back side, 69-201 Waikoloa Beach Dr），13:25 准时候车；11:20 从 Kua Bay 收摊，11:45 回到酒店，时间够用。"},{tag:"零度保暖+15:40 抢值机",txt:"团发大羽绒衣+手套但不护腿，必自穿秋裤厚裤厚袜；15:40 在大巴有信号时顺手把明天的 Southwest WN2269 线上值机！"}],
       eat:"Waikoloa 吃热午饭；下午观星团含西南风味热炖菜（或素食辣豆）野餐、甜点与热饮，备水壶。",
-      planB:"现场无缝弹性：若周二早起海边偶遇厚云，直接改成上午去 Kona Costco 室内扫货，把 Kua Bay 白沙滩挪到周三上午 09:00（云 27%/浪 3.7ft）二刷！"
+      planB:"若周二早起海边云很厚：上午改去 Kona Costco，把 Kua Bay 挪到周三清早（最新预报周三更晴，但要 8 点前出门赶 11:00 退房）。"
     },
-    {id:"d6",num:7,date:"12/2",wk:"周三",island:"TO OAHU",title:"撸猫补漏 · Costco → 飞 Oahu",icon:"art/icons3d/beach.png",sleep:"Oahu · Outrigger",depart:"自然醒 / 09:00",drive:"45m",sun:"17:48",dark:"18:12",wx:"28°C 晴",
-      catNote:"前晚看星晚，睡饱 A-Bay 撸猫（或 15m 二刷晴天 Kua Bay）！退房后顺路机场旁 5 分钟 Costco 扫货伴手礼直接装箱",
+    {id:"d6",num:7,date:"12/2",wk:"周三",island:"TO OAHU",title:"撸猫补漏 · Costco → 飞 Oahu",icon:"art/icons3d/beach.png",sleep:"Oahu · Outrigger",depart:"自然醒 / 09:00",drive:"45m",sun:"17:49",dark:"18:12",wx:"28°C 晴",
+      catNote:"前晚看星回来晚，睡饱在 A-Bay 撸猫；11:00 退房后去机场旁 Costco 买伴手礼直接装箱。想二刷 Kua Bay 要 8 点前出门",
       pigNote:`11:00 万豪退房 · 13:30 还车 · WN2269 ${vk("wn_pnr",L)}（含登机箱）→ Outrigger ${vk("oahu_hotel_pnr",L)}`,
-      chips:["撸猫/白沙滩二刷","11:15 机场旁Costco+加油","15:40 飞→Outrigger"],
+      chips:["睡饱撸猫 · 11:00 退房","11:35 机场旁Costco+加油","15:40 飞→Outrigger"],
       status:[{cls:"ok",txt:"✓ 岛内飞 · 海景大床房"},{cls:"neutral",txt:"含 1 件标准登机箱"}],
       stops:[
-        {sid:"s6_0",t:"09:00",n:"A-Bay 撸猫 / Kua Bay 晴天二刷",emo:"🐱",tone:"cat",brief:"睡饱撸猫或 15 分钟二刷平浪白沙滩 · 11:00 退房",sub:"慢悠悠打包行李；周三上午 Kua Bay 仍 3.7ft 平浪晴天，随时兜底",tip:"前晚 21:00 看完星回来，今早留出最舒适的弹性！就在酒店 A-Bay 草坪晒太阳撸户外大猫猫，或者如果周二上午白沙滩没晒够，09:00 开 15 分钟就能再冲一趟晴天 Kua Bay（可提前问万豪延迟到 12:00 退房）。",pin:"hotel"},
-        {sid:"s6_1",t:"11:15",n:"退房 → 机场旁 Costco 扫货 & 加油",emo:"🛒",tone:"shop",leg:"11:00 退房 · 开 25 分钟到机场旁",brief:"距 KOA 机场仅 5 分钟！买夏威夷果巧克力直接装登机箱",sub:"零晴天浪费给超市 · 顺路吃热午饭、给 SUV 加满油还车",tip:"Costco 离 KOA 机场只有 5 分钟！退房后顺路买新鲜夏威夷果、咖啡豆、巧克力直接装进 WN2269 免费登机箱，吃完散装生水果、在机场旁加满油，13:30 丝滑还车！",pin:"kona"},
-        {sid:"s6_2",t:"13:30",n:"KOA 还车 → WN2269 飞 Oahu",emo:"✈️",tone:"air",badge:vk("wn_pnr",L),leg:"开 5 分钟 · 提前 24h App 值机",brief:"15:40–16:30 · 含 1 件标准登机箱 + 1 小包",sub:"Southwest WN2269 · 比去程宽松可带标准拉杆箱上机",tip:"Southwest Basic 免费含 1 件头顶标准登机箱 + 1 件随身小包；起飞前 24h（周二 15:40）已在 App 值机的话登机号更靠前。飞 50 分钟看钻石头山！",pin:"koa",book:{确认号:vk("wn_pnr"),电子票与卡:vk("wn_tix"),起飞:"15:40 KOA → 16:30 HNL",免费行李:"含 1 件标准登机箱 + 1 件随身小包"}},
+        {sid:"s6_0",t:"09:00",n:"A-Bay 撸猫 · 收行李",emo:"🐱",tone:"cat",brief:"睡到自然醒 · 11:00 退房 · 想二刷 Kua Bay 要 8 点前出门",sub:"周三上午 Kua Bay 预报比周二更晴，浪 3.5ft",tip:"前晚 21:00 看完星回来，今早留足睡眠：在酒店 A-Bay 草坪晒太阳撸户外大猫，慢慢收行李。如果想再去一次 Kua Bay：单程约 25 分钟，要 8 点前出门、10:10 前回到酒店冲澡，才赶得上 11:00 退房（也可以入住时问万豪能否延到 12:00）。",pin:"hotel"},
+        {sid:"s6_1",t:"11:35",n:"机场旁 Costco 买伴手礼 & 加油",emo:"🛒",tone:"shop",leg:"11:00 退房 · 开约 35 分钟",brief:"离 KOA 机场约 10 分钟 · 买夏威夷果巧克力直接装登机箱",sub:"顺路吃午饭、给 SUV 加满油 · 13:10 出发去还车",tip:"Costco 离 KOA 机场约 10 分钟。退房后顺路买新鲜夏威夷果、咖啡豆、巧克力直接装进 WN2269 免费登机箱，吃完散装生水果、在机场旁加满油，13:30 丝滑还车！",pin:"kona"},
+        {sid:"s6_2",t:"13:30",n:"KOA 还车 → WN2269 飞 Oahu",emo:"✈️",tone:"air",badge:vk("wn_pnr",L),leg:"开约 10 分钟 · 提前 24h App 值机",brief:"15:40–16:30 · 含 1 件标准登机箱 + 1 小包",sub:"Southwest WN2269 · 比去程宽松可带标准拉杆箱上机",tip:"Southwest Basic 免费含 1 件头顶标准登机箱 + 1 件随身小包；起飞前 24h（周二 15:40）已在 App 值机的话登机号更靠前。飞 50 分钟看钻石头山！",pin:"koa",book:{确认号:vk("wn_pnr"),电子票与卡:vk("wn_tix"),起飞:"15:40 KOA → 16:30 HNL",免费行李:"含 1 件标准登机箱 + 1 件随身小包"}},
         {sid:"s6_3",t:"17:15",n:"入住 OUTRIGGER Waikiki Beachcomber",emo:"🏨",tone:"hotel",badge:vk("oahu_hotel_pnr",L),leg:"HNL 打车 25 分钟",brief:"海景 1 大床房 · 含 Aroma Caffe / 精酿啤酒餐费抵扣",sub:"2300 Kalakaua Ave · 15:00 后入住（11/29 15:00 后不可免退）",tip:"位置就在 Waikiki 正中心街口！房型是 Ocean View - 1 King Bed，含 Experience Waikiki 每日餐饮抵扣券（可在楼下 Hawaiian Aroma Caffe 喝咖啡吃早点，或 Maui Brewing Co. 吃晚餐抵扣），晚上逛街下楼超方便。",pin:"outrigger",book:{确认号:vk("oahu_hotel_pnr"),入住退房:"12/2 15:00 入 → 12/4 11:00 退",房型与礼遇:"Ocean View 1 King · 每日 Aroma Caffe / Maui Brewing 餐费抵扣",酒店地址与详情:vk("oahu_hotel_detail")}}
       ],
       cautions:[{tag:"今天穿什么",txt:"吊带 + 轻薄开衫 + 宽松长裤或长裙。大岛上午热就脱，进 Costco 和飞机冷气就披上。"},{tag:"万豪 11:00 退房 + Southwest 值机",txt:"周二下午 15:40 记得提前值机 WN2269；若周三上午想二刷白沙滩，入住万豪时提前要 12:00 延迟退房。"}],
       eat:"Kona / Costco 附近吃热午饭；晚饭直接用 Outrigger 房费抵扣去 Maui Brewing Co. 或 Waikiki 吃热饭。",
-      planB:"周三上午全弹性，缺什么伴手礼机场旁 Costco 5 分钟全搞定！"
+      planB:"周三上午很宽松，缺什么伴手礼在机场旁 Costco 一站买齐。"
     },
     {id:"d7",num:8,date:"12/3",wk:"周四",island:"OAHU",title:"Oahu 自由 & 鱼三海胆饭",icon:"art/icons3d/uni.png",sleep:"Oahu · Outrigger",depart:"全天自由",drive:"步行/打车",sun:"17:49",dark:"18:13",wx:"28°C 晴",
       catNote:"早起下楼用 Aroma Caffe 餐费抵扣！白天自由（12/1–5 水母期看警示旗）· 买检疫鸡蛋花",
@@ -1012,14 +1012,14 @@ function getBaseDays(){
       eat:"白天用酒店 Aroma Caffe / Maui Brewing 抵扣；晚餐 Izakaya Uosan 松露海胆饭，或丸龟乌冬、Paia Fish Market。",
       planB:"若 Uosan 满座：OpenTable 可定 Kaimuki Shokudo 海胆盖饭或 Arancino 海胆意面。"
     },
-    {id:"d8",num:9,date:"12/4",wk:"周五",island:"HOME",title:"回程 Honolulu → SJC",icon:"art/icons3d/house.png",sleep:"家",depart:"11:00 退房",drive:"25m",sun:"",dark:"",wx:"28°C 晴",
-      catNote:"11:00 Outrigger 退房 · 检疫鸡蛋花与烘焙豆可带 · 新鲜水果安检前吃完",
+    {id:"d8",num:9,date:"12/4",wk:"周五",island:"HOME",title:"回程 Honolulu → SJC",icon:"art/icons3d/house.png",sleep:"家",depart:"10:45 退房",drive:"25m",sun:"",dark:"",wx:"28°C 晴",
+      catNote:"10:45 Outrigger 退房 · 检疫鸡蛋花与烘焙豆可带 · 新鲜水果安检前吃完",
       pigNote:`AS839 ${vk("ret_pnr",L)}（Saver 登机口分座）· 10:45 去 HNL 过 USDA 安检`,
-      chips:["11:00 前退房收行李","USDA 农业 X 光","13:36 AS839 回 SJC"],
+      chips:["10:45 退房去机场","USDA 农业 X 光","13:36 AS839 回 SJC"],
       status:[{cls:"ok",txt:"✓ AS839 已订"}],
       stops:[
-        {sid:"s8_0",t:"10:00",n:"打包退房 · 查漏农业禁带品",emo:"🧳",tone:"hotel",brief:"Outrigger 11:00 前退房 · 密封咖啡豆与检疫鸡蛋花可带",sub:"带 HDOA 检疫绿标密封枝条回湾区后再拆袋干放过冬",tip:"退房前吃掉买完还剩下的散装新鲜水果；密封烘焙 100% Kona 豆、夏威夷果和完整 HDOA 绿色检疫密封袋的鸡蛋花枝条皆可带回加州。",pin:"outrigger"},
-        {sid:"s8_1",t:"11:00",n:"出发去 HNL 机场过 USDA 农业安检",emo:"🚕",tone:"air",leg:"打车 25 分钟",brief:"所有托运与随身包先过 USDA 农业 X 光机",sub:"保留 2.5 小时应对农业查验与托运",tip:"进入值机/安检区前必须先过 USDA 农业 X 光机贴绿色检疫贴纸，带检疫鸡蛋花主动亮出完好密封袋。",pin:null},
+        {sid:"s8_0",t:"10:00",n:"打包退房 · 查漏农业禁带品",emo:"🧳",tone:"hotel",brief:"10:45 退房（最晚 11:00）· 密封咖啡豆与检疫鸡蛋花可带",sub:"带 HDOA 检疫绿标密封枝条回湾区后再拆袋干放过冬",tip:"退房前吃掉买完还剩下的散装新鲜水果；密封烘焙 100% Kona 豆、夏威夷果和完整 HDOA 绿色检疫密封袋的鸡蛋花枝条皆可带回加州。",pin:"outrigger"},
+        {sid:"s8_1",t:"10:45",n:"出发去 HNL 机场过 USDA 农业安检",emo:"🚕",tone:"air",leg:"打车 25 分钟",brief:"所有托运与随身包先过 USDA 农业 X 光机",sub:"11:10 到机场，离起飞约 2 小时 25 分，够过农业查验和托运",tip:"进入值机/安检区前必须先过 USDA 农业 X 光机贴绿色检疫贴纸，带检疫鸡蛋花主动亮出完好密封袋。",pin:null},
         {sid:"s8_2",t:"13:36",n:"AS839 飞回 SJC",emo:"✈️",tone:"air",badge:vk("ret_pnr",L),leg:"飞行 5h 10m",brief:"13:36 起飞 → 20:46 落地圣何塞回家",sub:"Hawaiian / Alaska Saver 舱 (X) · 登机口由地勤分配座位",tip:"AS839 Saver 舱位现场由登机口分配座位；5h10m 回程可预先缓存剧集，20:46 落地 SJC 刚好回家！",pin:null,book:{确认号:vk("ret_pnr"),电子票与卡:vk("ret_tix"),起飞落地:"13:36 HNL → 20:46 SJC",舱位规则:"Saver (X 舱) · 登机口分配座位"}}
       ],
       cautions:[{tag:"今天穿什么",txt:"把最厚的穿回去：薄长袖 + 抓绒或防风外套 + 长裤 + 运动鞋。飞机冷，晚上落地湾区更冷。"},{tag:"农业安检红线",txt:"所有进加州行李须过 USDA 检查：烘焙咖啡豆与完整 HDOA 检疫章鸡蛋花可带，散装水果鲜花严禁入关。"}],
@@ -1091,7 +1091,7 @@ function ensureStopPlan(){
 
 function applyVolcanoPlan(arr){
   if(state.vplan === "normal") return arr;
-  const volStop = (arr.find(x=>x.id==="d3")||{}).stops?.find(s=>s.pin==="uekahuna") || {sid:"s3_4",t:"16:10",n:"火山公园精华 2h",emo:"🌋",tone:"vol",badge:"18:10 红光",pin:"uekahuna"};
+  const volStop = (arr.find(x=>x.id==="d3")||{}).stops?.find(s=>s.pin==="uekahuna") || {sid:"s3_4",t:"16:40",n:"火山公园 + 18:10 红光",emo:"🌋",tone:"vol",badge:"18:10 红光",pin:"uekahuna"};
   if(state.vplan === "chase26"){
     return arr.map(d => {
       if(d.id === "d0") return {
@@ -1292,13 +1292,13 @@ function renderHome(){
     const tipsClean = {
       d0:"仅含座位下小包 · SFO 买好晚饭+干粮 · 晚间超市全关",
       d1:"避开全岛巨浪 · 周五全开 Mauka+手冲 · 顺路买毛毯 · 17:42 酒店海边日落",
-      d2:"09:15 出发 · 早市 + 确定晴皇家鱼塘 · 16:00 骑马报到(15:10出发)",
-      d3:"全趟唯一东岸晴窗(正午云25%) · 先撸猫再看海龟 + 16:10 火山红光",
-      d4:"全趟最平 2ft 镜面海 · 怕冷可改盐场 · 18:00 魔鬼鱼先去门店再去码头",
-      d5:"近郊平浪白沙滩(车程约 25 分钟) · 13:25 Queens' 背面穿秋裤冲满分云海",
-      d6:"A-Bay 撸猫/白沙滩二刷 · 机场旁 5m Costco 扫货 → WN2269 飞 Outrigger",
+      d2:"09:00 出发 · 早市 + 晴天皇家鱼塘 · 16:00 骑马报到(15:10出发)",
+      d3:"东岸最好的一天 · 先撸猫再看海龟 · 18:10 火山口红光",
+      d4:"全趟最平 2ft 镜面海 · 下午手工暖身 · 18:00 魔鬼鱼先去门店再去码头",
+      d5:"近郊平浪白沙滩(车程约 25 分钟) · 13:25 Queens' 背面穿秋裤上山看云海",
+      d6:"A-Bay 撸猫/白沙滩二刷 · 机场旁 Costco 买伴手礼 → WN2269 飞 Outrigger",
       d7:"楼下 Aroma Caffe 早点 · 买 HDOA 检疫鸡蛋花 · 18:30 鱼三海胆饭",
-      d8:"11:00 Outrigger 退房 · 过 USDA 安检 · AS839 Saver 飞 SJC 回家"
+      d8:"10:45 Outrigger 退房 · 过 USDA 安检 · AS839 Saver 飞 SJC 回家"
     };
     $("#homeBody").innerHTML = `
       <div class="s1-open-art" id="s1ArtTap">
@@ -1388,7 +1388,7 @@ function renderHome(){
         <img src="art/hero_lumy_glow.png" alt="夏威夷海平面日落">
         <canvas id="tideCanvas"></canvas>
         <div class="s4-arc-bar">
-          <div><b>Lumy 黄金时刻</b><div style="color:var(--ink-2);font-size:11px">日落 17:46 · 天黑亮灯 18:10</div></div>
+          <div><b>Lumy 黄金时刻</b><div style="color:var(--ink-2);font-size:11px">日落 17:42 · 天黑 18:10</div></div>
           <svg width="68" height="24" viewBox="0 0 68 24"><path d="M4 21 Q34 -4 64 21" stroke="#CBD5E1" stroke-width="2" fill="none" stroke-dasharray="3 3"/><path d="M4 21 Q34 -4 52 12" stroke="#F59E0B" stroke-width="2.5" fill="none"/><circle cx="52" cy="12" r="4.5" fill="#F59E0B"/></svg>
         </div>
       </div>
@@ -2080,7 +2080,7 @@ function renderMap(focusDay){
 
   if(state.mapIsle === "oahu"){
     const oahuStops = [
-      {n:"HNL 机场",sub:"12/2 16:30 落地 · 12/4 10:30 过 USDA 农业安检飞 SJC",q:"Daniel K. Inouye International Airport"},
+      {n:"HNL 机场",sub:"12/2 16:30 落地 · 12/4 11:10 到机场过 USDA 农业安检飞 SJC",q:"Daniel K. Inouye International Airport"},
       {n:"ABC / Longs 买检疫鸡蛋花",sub:"挑带官方 HDOA 绿标密封枝条，过完安检前绝不拆袋",q:"Longs Drugs Waikiki Honolulu"},
       {n:"OUTRIGGER 海滩酒店",sub:"2300 Kalakaua Ave · 每日含 Aroma Caffe/Maui Brewing 抵扣 · 12/1–5 水母期看警示旗",q:"OUTRIGGER Waikiki Beachcomber Hotel 2300 Kalakaua Ave Honolulu HI 96815"},
       {n:"Izakaya Uosan 松露海胆饭",sub:"1221 Kapiolani Blvd #108 · 仅电话订位 (808) 200-5077",q:"Izakaya Uosan 1221 Kapiolani Blvd Honolulu HI 96814"}
@@ -2232,13 +2232,13 @@ function renderPrep(){
   const doneCount=PITEMS.filter(x=>state.packDone[x.id]).length;
   const isStandalone = window.matchMedia && window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone;
   const swReady = !!window._swReady;
-  const offlineDone = ls.get("offlineFullV41") === "1";
+  const offlineDone = ls.get("offlineFullV42") === "1";
   const pwaHTML = `
     <div class="pwa-card">
       <div class="pwa-head">
         <div class="pwa-ico"><img src="art/pwa/apple-touch-icon.png" alt="App 图标"></div>
         <div style="flex:1;min-width:0">
-          <div style="font-size:15px;font-weight:800">iPhone 离线 App 模式 <span style="font-size:11px;font-weight:700;color:var(--ink-3)">v41</span></div>
+          <div style="font-size:15px;font-weight:800">iPhone 离线 App 模式 <span style="font-size:11px;font-weight:700;color:var(--ink-3)">v42</span></div>
           <div style="font-size:12px;color:var(--ink-2);margin-top:2px">${isStandalone?"✓ 已从主屏幕全屏运行 · 联网自动更新":(offlineDone?"✓ 已完成全量离线缓存":"出发前连 Wi-Fi 点一次下方按钮，火山没网也能秒开")}</div>
         </div>
         <span class="f-pill ${offlineDone||swReady?'ok':'neutral'}">${offlineDone?"100% 离线就绪":(swReady?"核心已缓存":"需 HTTPS")}</span>
@@ -2274,7 +2274,7 @@ function renderPrep(){
             <button type="button" class="pd-btn" data-vp="chase26" aria-pressed="${state.vplan==='chase26'}">26号晚直冲</button>
             <button type="button" class="pd-btn" data-vp="chase27" aria-pressed="${state.vplan==='chase27'}">27号优先冲</button>
           </div>
-          <div style="font-size:11px;color:var(--ink-3);line-height:1.45">现在 11/29 周日按东岸最晴窗跑 Hilo+火山；遇到主喷发窗口可一键提前直冲，随时撤销。</div>
+          <div style="font-size:11px;color:var(--ink-3);line-height:1.45">现在按 11/29 周日去 Hilo+火山；遇到主喷发窗口可一键提前直冲，随时撤销。</div>
         </details>
       </div>
     </div>`;
@@ -2359,23 +2359,23 @@ function fmtAi(s){
 function buildTripContext(){
   const days = getDays().map(d=>`D${d.num}(${d.date} ${d.wk}) ${d.title}: ${d.chips.join(" / ")}`).join("; ");
   const bks = getBookings().map(b=>`${b.t}(${b.w}, ${b.id==="bk_uosan"?(state.uosanBooked?"已订":"待订"):"已订"})`).join("; ");
-  return `鱼三海胆饭:${state.uosanBooked?"已订":"待订"} | 火山USGS状态:${state.volcanoLive.level}\n行程:${days}\n预订:${bks}\n核心事实: 3,988种多模型天气组合第1名方案！全程 9:15 后出门; 11/26 UA1723 Basic Economy 只含 1 个座位下小包; 11/27(周五避浪陆地日) Mauka Meadows + Greenwell + BerryBird(14:30关) + 14:15 顺路 Costco 拿毛毯和水 + 17:42 回酒店 A-Bay 看日落(手工改到周一 14:40); 11/28(周六上午西岸确定晴) Waimea 早市 + 皇家鱼塘 + Paniolo 16:00 集合报到(必带付款实体卡+双方ID+长裤包头鞋); 11/29(周日东岸唯一确定晴窗,正午云25%) 10:50 日式公园撸猫+烘焙买豆 → 12:15 Carlsmith 海龟湾 → 黑沙滩可选 → 16:10 火山红光(0雨), 15:00 前 Oahu Outrigger 免费退线; 11/30(周一全趟最平2ft镜面海) 白天 Two Step 浮潜(23-25°C微风,怕冷或偏阴可改彩绘教堂+海盐农场), 13:25 前观星 24h 免退线, 18:00 魔鬼鱼先去 Keauhou 商店 #F-146 报到(大包留车)再自驾码头 #78-100; 12/1(周二酒店周边云0-8%+山顶满分云海) 09:15 近郊15m Kua Bay 3.6ft 白沙滩(零赶车;若偏云可先逛Costco把白沙滩挪周三) → 11:45 回房洗换厚裤 → 13:25 Queens Marketplace 背面(69-201 Waikoloa Beach Dr)上观星车; 12/2 撸猫/Kua Bay 二刷 → 11:15 机场旁 5 分钟 Costco 扫货伴手礼+加油 → 飞 WN2269 入住 Outrigger; 12/3 Oahu 买检疫鸡蛋花 + 18:30 鱼三海胆饭; 12/4 AS839 回 SJC。用简短大白话直接答。`;
+  return `鱼三海胆饭:${state.uosanBooked?"已订":"待订"} | 火山USGS状态:${state.volcanoLive.level}\n行程:${days}\n预订:${bks}\n核心事实: 全程 9:00 后出门; 11/26 UA1723 Basic Economy 只含 1 个座位下小包; 11/27(周五避浪陆地日) Mauka Meadows + Greenwell + BerryBird(14:30关) + 14:15 顺路 Costco 拿毛毯和水 + 17:42 回酒店 A-Bay 看日落(手工改到周一 14:40); 11/28(周六上午西岸三家模型都报晴,09:00出发,11:15到鱼塘) Waimea 早市 + 皇家鱼塘 + Paniolo 16:00 集合报到(必带付款实体卡+双方ID+长裤包头鞋); 11/29(周日是东岸这几天最好的一天,两家模型报晴一家报阴) 09:30 出发 → 10:50 日式公园撸猫+烘焙买豆 → 12:15 Carlsmith 海龟湾 → 13:20 午饭 → 黑沙滩可选(去则16:40到火山,不去14:55到) → 18:10 火山口红光(阴天薄雾基本无雨,约14°C) → 20:45 回酒店, 15:00 前 Oahu Outrigger 免费退线; 11/30(周一全趟最平2ft镜面海) 白天 Two Step 浮潜(23-25°C微风,怕冷或偏阴可改彩绘教堂+海盐农场), 13:25 前观星 24h 免退线, 18:00 魔鬼鱼先去 Keauhou 商店 #F-146 报到(大包留车)再自驾码头 #78-100; 12/1(周二云海机会最大但头顶可能有薄云,观星团周一13:25前可免费取消,周一早上定去留) 09:00 出发约25分钟到 Kua Bay 白沙滩(可能有高空薄云,11:20 收摊) → 11:45 回房洗换厚裤 → 13:25 Queens Marketplace 背面(69-201 Waikoloa Beach Dr)上观星车; 12/2 睡饱撸猫 → 11:00 退房 → 11:35 机场旁 Costco 买伴手礼+加油 → 13:30 还车 → 飞 WN2269 入住 Outrigger; 12/3 Oahu 买检疫鸡蛋花 + 18:30 鱼三海胆饭; 12/4 AS839 回 SJC。用简短大白话直接答。`;
 }
 function renderAiLog(){
   const log=$("#aiLog");
-  if(!state.aiLog.length){ log.innerHTML=`<div class="msg ai">嗨！我是 Gemini 行程助手。已同步最新三模型天气第 1 名混排方案（周五咖啡园+海边日落、周六早市骑马、周日东岸最晴冲 Hilo+火山、周一 2ft 镜面海+下午 Sunoa 手工暖身+魔鬼鱼、周二白沙滩+云海观星(周一早上定去留)、周三机场旁 Costco 飞 Oahu）。</div>`; return; }
+  if(!state.aiLog.length){ log.innerHTML=`<div class="msg ai">嗨！我是 Gemini 行程助手。已同步最新行程（周五咖啡园+海边日落、周六早市骑马、周日去 Hilo+火山、周一 2ft 镜面海+下午 Sunoa 手工暖身+魔鬼鱼、周二白沙滩+云海观星(周一早上定去留)、周三机场旁 Costco 飞 Oahu）。</div>`; return; }
   log.innerHTML=state.aiLog.map(m=>`<div class="msg ${m.role}">${fmtAi(m.text)}</div>`).join("");
   log.scrollTop=log.scrollHeight;
 }
 function offlineReply(txt){
   if(/行李|UA1723|登机箱|带啥/.test(txt)) return "去程 11/26 UA1723 是 Basic Economy (N)：只能免费带 1 个塞进座位下的小包（9×10×17 寸），不含标准登机箱；安检前托运 $45–$50，登机口被拦罚 $65！返岛飞 Oahu WN2269 含 1 件标准登机箱 + 1 小包。";
   if(/海胆|鱼三|Uosan|订/.test(txt)) return "Oahu 12/3（周四）晚的 Izakaya Uosan（鱼三）招牌是松露海胆黄油蛋黄饭，地址 1221 Kapiolani Blvd #108，周二三休息，周四 17:00–22:00 营业，只能提前打电话 (808) 200-5077 订位！";
-  if(/11\/27|周五|咖啡|手工|Mauka|Sunoa/.test(txt)) return "11/27（周五）是全岛退巨浪日（东岸 9.3ft/白沙滩 6.7ft），完美改陆地+室内：09:15 出发逛 Mauka Meadows（周一–五限定开）→ Greenwell + BerryBird 手冲午饭 → 14:15 回酒店路上顺路 Costco 拿毛毯与水 → 15:30 回酒店歇 → 17:42 A-Bay 看日落。Sunoa 手工改到周一 14:40，填进魔鬼鱼前的空档。";
-  if(/11\/29|周日|Hilo|火山/.test(txt)) return "11/29（周日）是全趟唯一 Hilo 一致晴窗（正午云仅 25%，浪退至 7.1ft）且火山 0 雨！09:30 出发 → 10:50 日式公园撸猫+烘焙买豆（周日照常开）→ 12:15 太阳最蓝时看 Carlsmith 海龟湾 → 热午饭（累跳过黑沙滩省 1.5h）→ 16:10 火山精华看 18:10 红光。";
+  if(/11\/27|周五|咖啡|手工|Mauka|Sunoa/.test(txt)) return `11/27（周五）全岛浪还大（东岸 9.3ft、白沙滩 6.7ft），所以只走陆地：09:00 出发 → 09:50 Mauka Meadows（只在周一到周五开）→ 11:30 Greenwell 试喝 → 12:40 BerryBird 手冲午饭 → 14:15 顺路 Costco 拿毛毯和水 → 15:15 回酒店歇 → 17:42 A-Bay 看日落。Sunoa 手工在周一 14:40。`;
+  if(/11\/29|周日|Hilo|火山/.test(txt)) return `11/29（周日）是东岸这几天里最好的一天（两家模型报晴、一家报阴）。09:30 出发 → 10:50 日式公园撸猫 + 买豆 → 12:15 Carlsmith 海龟湾 → 13:20 Hilo 午饭 → 黑沙滩可选（去的话 16:40 到火山，不去 14:55 到）→ 18:10 火山口红光 → 20:45 回到酒店。火山傍晚阴天薄雾、基本不下雨，约 14°C，带抓绒和防风外套。`;
   if(/11\/30|夜潜|魔鬼鱼|集合|浮潜|冷/.test(txt)) return `11/30（周一）海浪 2.0–2.2ft 全趟最平、23–25°C 微风且欧德两模型报晴！穿长袖水母衣+车备干毛巾抓绒；若早起碰巧阴天怕冷，上午改逛彩绘教堂+海盐农场留体力给晚上穿团发湿衣看魔鬼鱼！魔鬼鱼 (${vk("manta_pnr","已加密锁定")}) 两步集合勿早到：① 18:00 先去 Keauhou 商店 (#F-146，大包留车) ② 再自驾到码头 (#78-100)，结束不回店。`;
-  if(/12\/01|12\/1|观星|上车|接送|白沙滩|Kua/.test(txt)) return `12/01（周二）上午 09:15 去距酒店仅 15 分钟的 Kua Bay 白沙滩（浪 3.6ft 超平，酒店周边云 0–8%，若偶遇云可改先逛 Costco 把白沙滩留周三上午）→ 11:45 回房洗换秋裤厚裤 → 13:25 准时在 Queens' Marketplace 背面 (69-201 Waikoloa Beach Dr) 上观星车，今晚低云海 52%+高云 4%+微风全场大奖！`;
-  if(/骑马/.test(txt)) return `11/28（周六）09:15 先逛 Waimea 早市 + 确定晴天的皇家鱼塘，15:10 从酒店出发，16:00 准时在 Paniolo 牧场 (Hwy 250 MP13.2) 报到，必带 ${vk("horse_holder","实体付款卡与双方照片 ID")} + 长裤包头鞋。`;
-  if(/Costco|伴手礼/.test(txt)) return "零晴天浪费给 Costco：周五下午 14:15 回酒店路上顺路拿夜潜毛毯和水（20 分钟快进快出）；大件夏威夷果/巧克力留到周三 12/02 退房去 KOA 机场前 5 分钟顺路扫货直接装登机箱！";
+  if(/12\/01|12\/1|观星|上车|接送|白沙滩|Kua/.test(txt)) return `12/01（周二）09:00 出发，约 25 分钟到 Kua Bay 白沙滩（浪 3.7ft，可能有高空薄云），11:20 收摊 → 11:45 回房洗澡换秋裤厚裤 → 13:25 在 Queens' Marketplace 背面 (69-201 Waikoloa Beach Dr) 上观星车。周二是云海机会最大的一晚，但头顶有没有薄云还说不准；周一 13:25 前可以免费取消，按周一早上的结论定。`;
+  if(/骑马/.test(txt)) return `11/28（周六）09:00 出发先逛 Waimea 早市，11:15 去皇家鱼塘白沙滩，15:10 从酒店出发，16:00 准时在 Paniolo 牧场 (Hwy 250 MP13.2) 报到，必带 ${vk("horse_holder","实体付款卡与双方照片 ID")} + 长裤包头鞋。`;
+  if(/Costco|伴手礼/.test(txt)) return "Costco 去两次：周五下午 14:15 回酒店路上顺路拿夜潜毛毯和水（20 分钟快进快出）；大件夏威夷果/巧克力留到周三 12/02 11:00 退房后去机场旁 Costco 买，直接装登机箱。";
   return `收到「${txt}」。填上 Gemini Key 可自由问答；离线状态下我也随时秒答最新冠军行程、防冷备选、行李规则和精确集合点。`;
 }
 async function askGemini(txt){
@@ -2417,7 +2417,7 @@ window.addEventListener("online", ()=>{ syncOnlineState(); toast("网络已恢�
 window.addEventListener("offline", ()=>{ syncOnlineState(); toast("已切换离线模式 · 行程与确认号照常可用"); });
 syncOnlineState();
 
-const APP_VER = "r41";
+const APP_VER = "r42";
 let _swReg = null, _reloadingForUpdate = false, _lastVerChk = 0;
 
 async function checkAppUpdate(force){
@@ -2465,7 +2465,7 @@ if("serviceWorker" in navigator){
       if(bar) bar.style.width = pct + "%";
       if(txt) txt.textContent = `已缓存 ${d.done} / ${d.total} 项 (${pct}%)…`;
     } else if(d.type === "OFFLINE_DONE"){
-      ls.set("offlineFullV41", "1");
+      ls.set("offlineFullV42", "1");
       if(state.tab === "prep" && state.prepTab === "pwa") renderPrep();
       toast("100% 离线缓存完成 ✓ 没信号也能秒开");
     }
