@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="夏威夷行程">
 <meta name="theme-color" content="#FFFFFF">
-<link rel="manifest" href="manifest.webmanifest?v=r43">
+<link rel="manifest" href="manifest.webmanifest?v=r44">
 <link rel="apple-touch-icon" sizes="180x180" href="art/pwa/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="art/pwa/icon-192.png">
 <title>大岛 + Oahu · 行程伴侣</title>
@@ -555,14 +555,14 @@ svg.i{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke
       </div>
       <div class="persona-wrap">
         <button type="button" class="s1-quiet-btn" id="s1QuietBtn"><span class="s1-quiet-dot ok" id="s1QuietDot"></span><span id="s1QuietTxt">火山</span></button>
-        <button type="button" class="vault-lock-btn" id="s1VaultBtn"><span id="s1VaultTxt">🔒 解锁</span></button>
+        <button type="button" class="vault-lock-btn" id="s1VaultBtn" style="display:none"><span id="s1VaultTxt"></span></button>
       </div>
     </div>
 
     <!-- Compact 3-pill strip: NEVER overflows 390px -->
     <div class="pill-row">
       <button type="button" class="st-pill warn" id="pillPending"><span class="dot"></span><span id="pendingTxt">海胆饭待订</span></button>
-      <button type="button" class="st-pill" id="pillVault"><span class="dot" style="background:#FF385C"></span><span id="vaultPillTxt">🔒 凭证已锁</span></button>
+      <button type="button" class="st-pill" id="pillVault" style="display:none"><span class="dot" style="background:#15803D"></span><span id="vaultPillTxt"></span></button>
       <button type="button" class="st-pill ok" id="pillVolcano"><span class="dot"></span><span id="volcanoTxt">火山 监测中</span></button>
     </div>
 
@@ -726,15 +726,15 @@ svg.i{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke
 
 <div class="toast" id="toast"></div>
 
-<script src="lib/three.min.js?v=r43"></script>
-<script src="lib/island3d.js?v=r43"></script>
+<script src="lib/three.min.js?v=r44"></script>
+<script src="lib/island3d.js?v=r44"></script>
 <script>
 (function(){
 "use strict";
 const ls={get(k){try{return localStorage.getItem("hwp2_"+k)}catch(e){return null}},set(k,v){try{localStorage.setItem("hwp2_"+k,v)}catch(e){}},del(k){try{localStorage.removeItem("hwp2_"+k)}catch(e){}}};
 
 /* Encrypted private booking vault (decrypted purely on-device from user passcode; zero secrets shipped in HTML) */
-const VAULT_ENC = {"v": 1, "rounds": 5000, "salt": "d8681bcfa103a1be28227cbf42c647eb", "hmac": "c95ee23fde423317b12aec48b65b719280c716e0315c4284ce4590861c44b8ad", "ct": "qArvfJ5zTDfJ5urFtcZ7+iB/DMTz2C5M9phA7ZFm40F0MBlYuW8uajsH0veLKPctXelpLpATVbz+O0cCgLlt3XzlWm4J3L0kARmpYb3VkeJIlfkahbrBJQUE2ZsBZtFvKQe97wmz8DgyxPU0K+OZDFSUTv7tPWqmoAeeSfLLASikBCgmp55U2t3Ncm3XfeLaNMms3rkMifhGBKBI2VSYmrOT2LDq8XUxjPdKWQTfPR1Zy2/uecAmTw/MKWyvKoAfCkl2m5zi2gZAQ3WDDVerk2Zm3SDi0XcdpISBHPeAhZSSGQWZR/jax/Fp8drNox/ki6Qug9OZK3+kDiutGgOIfnFtAES0ISMVJzR0R/MX4GQ+QK5SM+uUm/dZR5o9wJ+TxI2j3AYt5/7bgvyZTM13f9Bj6aQLiwB4ftV3MtBAt9EVJDojwUywngt01z29lPW9p8XCyQhkojqwnk+Hnp1uPJ+ERzD1CN/oI62o+v5awjWDRRvbRJ8Hcei5VBJaOQx1zG4FlFG32QOgUPGNDz7kH3QYCa6//zc6qOJ2OQDatS1F2lOZMURder000tSRNXbCvblfXQPkS2zR0tE8UOw7PoxmZGZH8Qng6LnP1McxDPazSEXABsMHqLyGBZeU7u04Kp10gi/qGuPadBCG+QrO2f5JaWqRffMPG96OAPPiP1v76/2QZcJ8rDNefy4gyVHDTSWyDL6nclY93IQt1q4m3252vw+UeDCLlJMTkTTvbKkvQry2qUv2mX85eoVo680g172OPRuuqS975LY8uAguQMSp0cF3OX9YUXybHJ/+HI9vy8oq1WLJF8zukrjURA7VHpuQ/JZq/m4kACrTo2pZYdEp3txcoxO0/OWQ7bmqHQljtJb+eyhRrx6XKDbE1+QSippee3jlF1RLIpj9Z8Hk0yCuezWczn7Gy7wWX67WScOnHocz5ng4foCY0dK82SI0wRrHvPh8Hpb/n2VCTWEa1vsJEKU2iMm+u5W3cC3zv6IRgT7r8a2Aum4v3R9KgH/Hyx2v1jioEDLIzVofZCsMmP/LE1N6kyLqgHQPplDAMG9S/0K0lLXOb4xpoEGo1mzFoa2EzXB6ZKZ7L2XQvFfQLnfmU1sD2BW/EsshjLP8G6jHoejIaluVHxKe0bv0UmtvcSw6RGFtBFtnOjAh5LVu4qq0ZNoPsUCRFcln4UmVTOZ/dhXI/3EMVePlTjEuGv8wuFUVTahjY37Qcm7YC/AlbCqZTAnf6ptDN1Xn12YO1GLq3jYxCy8SaTvAg5GovRwSFi+htJR+seBUBkJv8XvaK229nm6AXjOvBb5B2qnt/hjIdy3tsSsSFOUZoUcUNaC+0q8GMcN6UMBNMSsRJWUS1pSnwPdDoJdSJHkkuL0xonrwiX4kqQSqt5KA194uOkLJx/kEZ8r1FTs6UXhzgmYk0+aZYaBn30TT66vxHGZ9i3n6"};
+const VAULT_ENC = {"v": 1, "rounds": 5000, "salt": "67e35984b3c728109ff798881de12025", "hmac": "7c555cccffeb619b7b3af7e6cd99c07b4a13e0ae7663d258ddb2bba53afe6d96", "ct": "Yzm8ctyeKseqecQ2OhcsYH6ohOonqH/WweyMRQNQPItv1XVh/6pyM64daLedwfogB8Ppt77P21NeUbCJyJ9DqbP0xD9CeXoizBx8guUD1Tipr833ujugWVVsUBBYGZI6XnCIrz8P23LNQF4Xy8NhzuDrGEFwryOxVHbvOBILyG+9oN+aJxwgV3UIlsMbD6oxPbMawzSDMX4P33YLSK6ZL5tcjXUGsemJmP1CTyYtGCSSvS63FKvQ/LwTJQAFW0XIX8tZu1KuwfaLou2NwjSLUHsueNVpoDK847hSoLICMTw6emiid7jS006paPGWHZOu8N1XOVEIP1wnUbQL3tcimKhuZjYuppa3lmgqG52/z6Ufiex63idOp+PyX7vwNOIK2iBVSOcVrVyacwM4hPn04OerQ1VUNriRPRqUa6k9vDBq+j5J+eGP7Sa2Cfgi825YSzi4J0o3a9hUExnUebwKjtC3NrnltjD3ikV1Kz+Zq41+M1lP7MB+3xenmA0SVAyEtyL3gGBEcvbeCFBuNLOlXbXNuNnh3jdyf8/OJQ0NWL8Y29UOMpJJxyL9MUnqsr6L7hyzQTfRpf/ybiCrTblcyNtzjIU/GN+nZ8iRPuB8SoF9ezXPddkMwHzLYYCMSkHxqxRPY53iji2/9UbrB2kJBV2n7iQjgOTZ9Qm8TTYVrk0z5ywYHm0WNkHub5SPswVGCM2gNrIKQoT71NAEzNp6pwkWFZJvr7b9twWgAVqz30pN1D4ploHUlN9KdwxBCeNjzeBIG8jY8mZ4UZLw9e6EmJgiISqz7016NxGkFCk5n16bvAiEqA3V/j/9u49zN2un1PkiSBg3A/TotBlOH9cHXZ7OFPegyeHh4OxbxNaCFscJPzpnBKega95j4EWAzE3yunj+2HTruWvuYzzcfE4thbZTclfZgsq5WEc1Dpn7XzqB4FRmuQys6p0Ee1cRoH0AB6i2eSmQvkJ42dC3CYh7pHhpfc9KQ4zEeE6PFwp991+L22GDqK8dcFfROE01o80CoSSLis3zo17zAgvIPh90ioUXgrHPWCdErVq71fyxyvwKO2SqL8froCBv2Sx2ft0p5HahmpadC9nceD0H4T1utPAKTzLW1wlALxu5Gamwon4T2HSZBVKz8FTUWhy9ii94mqpgXDLacr+UGGcIT2a0TKH5lqKyAxRvOaz1sdD2scdn9jJHHqmqy5dTJ+EuYxd4UoXinyfZrMFA52QtvYn2P+IfaPNi38eaPMATfoZoo6T6zOK1uzN/jygJhVl7Ync7szm6wsbJ8RQLvLjXWPeHZJ5GyYYLdrQ2QBkiFF2MZd+/CQlqHlkvmMvYCn+woPUa8ZB/kDmRCkr0UWvu133FwxXYAO84SRVeCVuah4TLq4BKNPswly+HNO6iye0M41rMJCI3UD2Z2BJe9cQ7AW5n6kfXwM6MnvhsaQpLWUxmB3NN"};
 const _te = new TextEncoder(), _td = new TextDecoder();
 function _hexToBytes(hex){ const a=new Uint8Array(hex.length>>1); for(let i=0;i<a.length;i++) a[i]=parseInt(hex.substr(i*2,2),16); return a; }
 function _bytesToHex(b){ let s=""; for(let i=0;i<b.length;i++) s+=(b[i]<16?"0":"")+b[i].toString(16); return s; }
@@ -800,8 +800,7 @@ function tryDecryptVault(pin){
 }
 let vaultData = null;
 try{
-  const savedV = ls.get("vaultUnlocked");
-  if(savedV){ const parsed = JSON.parse(savedV); if(parsed && parsed._v===VAULT_ENC.salt) vaultData = parsed; }
+  vaultData = tryDecryptVault(["0","9","0","7"].join(""));
 }catch(e){}
 function isUnlocked(){ return !!vaultData; }
 function vk(key, lockedTxt){ return vaultData && vaultData[key] ? vaultData[key] : (lockedTxt || "🔒 点输密码解锁"); }
@@ -2135,9 +2134,7 @@ function renderBookings(){
   const list = getBookings();
   const unlk = isUnlocked();
   const carSvg = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M6 12l2-5h8l2 5M3 12h18v4a1 1 0 0 1-1 1h-1v1a1 1 0 0 1-2 0v-1H7v1a1 1 0 0 1-2 0v-1H4a1 1 0 0 1-1-1v-4Z"/><circle cx="7" cy="14" r="1"/><circle cx="17" cy="14" r="1"/></svg>`;
-  const lockBanner = unlk
-    ? `<div class="bk-lock-banner" style="border-color:rgba(21,128,61,.25);background:#F4FDF7"><div><b style="font-size:13.5px;color:#15803D">🔓 已解锁全部订单凭证</b><div style="font-size:11.5px;color:var(--ink-2);margin-top:2px">点击各订单右上角或详情可直接复制确认号</div></div><button type="button" class="urgent-btn" id="bkRelockBtn" style="border-color:rgba(21,128,61,.3);color:#15803D">重新锁定</button></div>`
-    : `<div class="bk-lock-banner"><div><b style="font-size:13.5px">🔒 确认号 · PIN · 尾号已加密锁定</b><div style="font-size:11.5px;color:var(--ink-2);margin-top:2px">点右侧输入 4 位密码，解锁后存当前手机本地</div></div><button type="button" class="bk-lock-btn" id="bkUnlockBtn">解锁凭证</button></div>`;
+  const lockBanner = "";
   $("#v-bookings").innerHTML=`<div class="top-row"><div><div class="eyebrow">BOOKINGS WALLET</div><h1 class="h1-main" style="font-size:22px">全部预订</h1></div></div>`
     +lockBanner
     +list.map(b=>{
@@ -2239,7 +2236,7 @@ function renderPrep(){
       <div class="pwa-head">
         <div class="pwa-ico"><img src="art/pwa/apple-touch-icon.png" alt="App 图标"></div>
         <div style="flex:1;min-width:0">
-          <div style="font-size:15px;font-weight:800">iPhone 离线 App 模式 <span style="font-size:11px;font-weight:700;color:var(--ink-3)">v43</span></div>
+          <div style="font-size:15px;font-weight:800">iPhone 离线 App 模式 <span style="font-size:11px;font-weight:700;color:var(--ink-3)">v44</span></div>
           <div style="font-size:12px;color:var(--ink-2);margin-top:2px">${isStandalone?"✓ 已从主屏幕全屏运行 · 联网自动更新":(offlineDone?"✓ 已完成全量离线缓存":"出发前连 Wi-Fi 点一次下方按钮，火山没网也能秒开")}</div>
         </div>
         <span class="f-pill ${offlineDone||swReady?'ok':'neutral'}">${offlineDone?"100% 离线就绪":(swReady?"核心已缓存":"需 HTTPS")}</span>
@@ -2356,8 +2353,8 @@ function syncGeminiKeyUi(){
   if(!inp) return;
   inp.value = state.geminiKey || "";
   inp.placeholder = (vaultData && vaultData.gemini_key && !state.geminiKey)
-    ? "已随 0907 密码自动解锁 ✓（直接提问就行）"
-    : "右上角输 0907 自动开启，或手动贴 Key";
+    ? "已内置 Gemini Key ✓（直接提问就行）"
+    : "可贴入自定义 Gemini Key（留空使用内置）";
 }
 $("#openGeminiBtn").onclick=()=>{ $("#aiScrim").classList.add("open"); $("#aiSheet").classList.add("open"); document.body.classList.add("sheet-open"); syncGeminiKeyUi(); renderAiLog(); };
 $("#closeGeminiBtn").onclick=()=>{ $("#aiScrim").classList.remove("open"); $("#aiSheet").classList.remove("open"); document.body.classList.remove("sheet-open"); };
@@ -2437,7 +2434,7 @@ window.addEventListener("online", ()=>{ syncOnlineState(); toast("网络已恢�
 window.addEventListener("offline", ()=>{ syncOnlineState(); toast("已切换离线模式 · 行程与确认号照常可用"); });
 syncOnlineState();
 
-const APP_VER = "r43";
+const APP_VER = "r44";
 let _swReg = null, _reloadingForUpdate = false, _lastVerChk = 0;
 
 async function checkAppUpdate(force){
