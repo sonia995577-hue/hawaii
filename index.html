@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="夏威夷行程">
 <meta name="theme-color" content="#FFFFFF">
-<link rel="manifest" href="manifest.webmanifest?v=r42">
+<link rel="manifest" href="manifest.webmanifest?v=r43">
 <link rel="apple-touch-icon" sizes="180x180" href="art/pwa/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="art/pwa/icon-192.png">
 <title>大岛 + Oahu · 行程伴侣</title>
@@ -726,15 +726,15 @@ svg.i{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke
 
 <div class="toast" id="toast"></div>
 
-<script src="lib/three.min.js?v=r42"></script>
-<script src="lib/island3d.js?v=r42"></script>
+<script src="lib/three.min.js?v=r43"></script>
+<script src="lib/island3d.js?v=r43"></script>
 <script>
 (function(){
 "use strict";
 const ls={get(k){try{return localStorage.getItem("hwp2_"+k)}catch(e){return null}},set(k,v){try{localStorage.setItem("hwp2_"+k,v)}catch(e){}},del(k){try{localStorage.removeItem("hwp2_"+k)}catch(e){}}};
 
 /* Encrypted private booking vault (decrypted purely on-device from user passcode; zero secrets shipped in HTML) */
-const VAULT_ENC = {"v": 1, "rounds": 5000, "salt": "508285560c4c05dd10449bb9cc0f4c81", "hmac": "b6aeb4a6e1ca161d9316818dd5d5b8e423a83badf481ec8b1357148d35f11ea8", "ct": "dSJyNpUt+ZxWC7rD7h8ykN+hb3pCbhymE+yAoIiRP/kTN/h8gvdCQLpnWE8e8FunXfQ2WCEQ/G1cnagY5dnOOKGOObNi0o0wj52CgDlw0+vFYWBWGF0bC9CmFXgDRFKXeOHARCE6HU6i/wdtMf/y9TWTRK3SsqJXd1ZBL8Wy+LbFyHt/8GRa/diAUDmy1a1CzR2cJ3HXEEjhJa9tEPru77+S8iLGgjBS2y14gvBhYOvA4QZ4Td/7ixz65imt1GJaF72kqzJHddpgRq8wFiOCakJCR1PK8dIz1uvPQQNgcp1Lznqd4J26ImNjVDRRwYJFtMIhwhTeDy0WUntfTEfayeCJLButkpHPGIXwR9GJqn/BuRczDPfS5kIRxCqwxJugUtvkhSrU2/ls2zcp3nvE37S7GRpA1ihcQWCbS6Q8hIpZPokRevHV/nq+x4++eKj39P5lncwQTo5+p/BwSp+6rZ2eukmQiH5GN3kuRFIIEEf1N3CWwvmVFh0xMWCmu5jxIjhsB8vwP8q7NI4oySCVFF41+l2VWPwoDAWjQMKluF3/p07SjuNhdHaA4rlFPvdAyu4l4XcENSxan5/zRaeTZNr9s2/PXJqVcAmkiGNI+v/l1qXQOanoQYW25/azfbehvYtd81Tk3el9+X+Cs8RtXEv0lWbDjei/lc3+jKYEr+O18DdbxR5KFGOusVxiKF6SqupsPpLTcSOFQctEuhg3k/ZotKw07HPz++/8tw6JY5X7eZ1a3ajFybRfCkRfGSTbhrOqLprNTwYcOSJARu6YcANQasxeg1/ttjNwGVi702GDvxNKsh7YK9s+wNuzJG8Dbp05OQNeJEDQsClRTEsCSBt0PkbCBEUgW3yQYx7lekkwreXBTytT/821tkscUx15y7ejbnF9BoZsaXg5uf3jJtwKxnpRcWqFyYUMh6jJhiEV3qLySr354xS0OATquxi9REz7cPBAvsmQ1D7Mk9oFHRANBtrfSGEnr0l7AO15Q8W143zC6nVMwX9MO2cV/u6O3oIqqvQWPssO7bQZR89vjeLKsFKgg8vg7RYwfqeOVun9QaC2E5cnXWooPi/WEPpm39ddhWgUoE3d5EmtgzYi76asicG4OTPI4ahcAmnT67fbQpMsAdPlr/3HY+i5nQYc3Y3l/AzS9iyCX2rZypuAjV1SvR63wfaw6OvEsOoPwoEhI6ZgfX4gcJcLTmpdpUWijkv71f9zQpBZhh4sMhPmMWG+UpABYS5x5TddyOG2kFQtwdx8l28CPOk7BZQn0UyaxB9mMvU9WBvZo5XiLBMNEGiapRFQj4GE+BapKzFBgAzldusgAIax+FgYMsD9U0WtzVBsGiYdSaEvVg=="};
+const VAULT_ENC = {"v": 1, "rounds": 5000, "salt": "d8681bcfa103a1be28227cbf42c647eb", "hmac": "c95ee23fde423317b12aec48b65b719280c716e0315c4284ce4590861c44b8ad", "ct": "qArvfJ5zTDfJ5urFtcZ7+iB/DMTz2C5M9phA7ZFm40F0MBlYuW8uajsH0veLKPctXelpLpATVbz+O0cCgLlt3XzlWm4J3L0kARmpYb3VkeJIlfkahbrBJQUE2ZsBZtFvKQe97wmz8DgyxPU0K+OZDFSUTv7tPWqmoAeeSfLLASikBCgmp55U2t3Ncm3XfeLaNMms3rkMifhGBKBI2VSYmrOT2LDq8XUxjPdKWQTfPR1Zy2/uecAmTw/MKWyvKoAfCkl2m5zi2gZAQ3WDDVerk2Zm3SDi0XcdpISBHPeAhZSSGQWZR/jax/Fp8drNox/ki6Qug9OZK3+kDiutGgOIfnFtAES0ISMVJzR0R/MX4GQ+QK5SM+uUm/dZR5o9wJ+TxI2j3AYt5/7bgvyZTM13f9Bj6aQLiwB4ftV3MtBAt9EVJDojwUywngt01z29lPW9p8XCyQhkojqwnk+Hnp1uPJ+ERzD1CN/oI62o+v5awjWDRRvbRJ8Hcei5VBJaOQx1zG4FlFG32QOgUPGNDz7kH3QYCa6//zc6qOJ2OQDatS1F2lOZMURder000tSRNXbCvblfXQPkS2zR0tE8UOw7PoxmZGZH8Qng6LnP1McxDPazSEXABsMHqLyGBZeU7u04Kp10gi/qGuPadBCG+QrO2f5JaWqRffMPG96OAPPiP1v76/2QZcJ8rDNefy4gyVHDTSWyDL6nclY93IQt1q4m3252vw+UeDCLlJMTkTTvbKkvQry2qUv2mX85eoVo680g172OPRuuqS975LY8uAguQMSp0cF3OX9YUXybHJ/+HI9vy8oq1WLJF8zukrjURA7VHpuQ/JZq/m4kACrTo2pZYdEp3txcoxO0/OWQ7bmqHQljtJb+eyhRrx6XKDbE1+QSippee3jlF1RLIpj9Z8Hk0yCuezWczn7Gy7wWX67WScOnHocz5ng4foCY0dK82SI0wRrHvPh8Hpb/n2VCTWEa1vsJEKU2iMm+u5W3cC3zv6IRgT7r8a2Aum4v3R9KgH/Hyx2v1jioEDLIzVofZCsMmP/LE1N6kyLqgHQPplDAMG9S/0K0lLXOb4xpoEGo1mzFoa2EzXB6ZKZ7L2XQvFfQLnfmU1sD2BW/EsshjLP8G6jHoejIaluVHxKe0bv0UmtvcSw6RGFtBFtnOjAh5LVu4qq0ZNoPsUCRFcln4UmVTOZ/dhXI/3EMVePlTjEuGv8wuFUVTahjY37Qcm7YC/AlbCqZTAnf6ptDN1Xn12YO1GLq3jYxCy8SaTvAg5GovRwSFi+htJR+seBUBkJv8XvaK229nm6AXjOvBb5B2qnt/hjIdy3tsSsSFOUZoUcUNaC+0q8GMcN6UMBNMSsRJWUS1pSnwPdDoJdSJHkkuL0xonrwiX4kqQSqt5KA194uOkLJx/kEZ8r1FTs6UXhzgmYk0+aZYaBn30TT66vxHGZ9i3n6"};
 const _te = new TextEncoder(), _td = new TextDecoder();
 function _hexToBytes(hex){ const a=new Uint8Array(hex.length>>1); for(let i=0;i<a.length;i++) a[i]=parseInt(hex.substr(i*2,2),16); return a; }
 function _bytesToHex(b){ let s=""; for(let i=0;i<b.length;i++) s+=(b[i]<16?"0":"")+b[i].toString(16); return s; }
@@ -807,6 +807,7 @@ function isUnlocked(){ return !!vaultData; }
 function vk(key, lockedTxt){ return vaultData && vaultData[key] ? vaultData[key] : (lockedTxt || "🔒 点输密码解锁"); }
 function reRenderAll(){
   renderStatusBar();
+  if(typeof syncGeminiKeyUi === "function") syncGeminiKeyUi();
   if(state.dayId) openDay(state.dayId);
   else if(state.tab==="bookings") renderBookings();
   else if(state.tab==="prep") renderPrep();
@@ -854,7 +855,7 @@ function pressPinKey(ch){
         ls.set("vaultUnlocked", JSON.stringify(res));
         closePinSheet();
         reRenderAll();
-        toast("已解锁全部确认号与凭证 ✓");
+        toast("已解锁全部确认号 + Gemini 助手 ✓");
       } else {
         drawPinDots(true);
         const box=$("#pinDots"); box.classList.remove("shake"); void box.offsetWidth; box.classList.add("shake");
@@ -2238,7 +2239,7 @@ function renderPrep(){
       <div class="pwa-head">
         <div class="pwa-ico"><img src="art/pwa/apple-touch-icon.png" alt="App 图标"></div>
         <div style="flex:1;min-width:0">
-          <div style="font-size:15px;font-weight:800">iPhone 离线 App 模式 <span style="font-size:11px;font-weight:700;color:var(--ink-3)">v42</span></div>
+          <div style="font-size:15px;font-weight:800">iPhone 离线 App 模式 <span style="font-size:11px;font-weight:700;color:var(--ink-3)">v43</span></div>
           <div style="font-size:12px;color:var(--ink-2);margin-top:2px">${isStandalone?"✓ 已从主屏幕全屏运行 · 联网自动更新":(offlineDone?"✓ 已完成全量离线缓存":"出发前连 Wi-Fi 点一次下方按钮，火山没网也能秒开")}</div>
         </div>
         <span class="f-pill ${offlineDone||swReady?'ok':'neutral'}">${offlineDone?"100% 离线就绪":(swReady?"核心已缓存":"需 HTTPS")}</span>
@@ -2349,10 +2350,19 @@ $("#vaSwitchBtn").onclick=()=>{
 };
 
 /* Gemini */
-$("#openGeminiBtn").onclick=()=>{ $("#aiScrim").classList.add("open"); $("#aiSheet").classList.add("open"); document.body.classList.add("sheet-open"); $("#geminiKeyInput").value=state.geminiKey; renderAiLog(); };
+function activeGeminiKey(){ return (state.geminiKey && state.geminiKey.trim()) || (vaultData && vaultData.gemini_key) || ""; }
+function syncGeminiKeyUi(){
+  const inp = $("#geminiKeyInput");
+  if(!inp) return;
+  inp.value = state.geminiKey || "";
+  inp.placeholder = (vaultData && vaultData.gemini_key && !state.geminiKey)
+    ? "已随 0907 密码自动解锁 ✓（直接提问就行）"
+    : "右上角输 0907 自动开启，或手动贴 Key";
+}
+$("#openGeminiBtn").onclick=()=>{ $("#aiScrim").classList.add("open"); $("#aiSheet").classList.add("open"); document.body.classList.add("sheet-open"); syncGeminiKeyUi(); renderAiLog(); };
 $("#closeGeminiBtn").onclick=()=>{ $("#aiScrim").classList.remove("open"); $("#aiSheet").classList.remove("open"); document.body.classList.remove("sheet-open"); };
 $("#aiScrim").onclick=()=>{ $("#aiScrim").classList.remove("open"); $("#aiSheet").classList.remove("open"); document.body.classList.remove("sheet-open"); };
-$("#saveKeyBtn").onclick=()=>{ state.geminiKey=$("#geminiKeyInput").value.trim(); ls.set("geminiKey",state.geminiKey); toast("Gemini Key 已保存"); };
+$("#saveKeyBtn").onclick=()=>{ state.geminiKey=$("#geminiKeyInput").value.trim(); ls.set("geminiKey",state.geminiKey); syncGeminiKeyUi(); toast(state.geminiKey ? "Gemini Key 已保存" : "已切回 0907 内置 Key"); };
 function fmtAi(s){
   return String(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/\*\*(.+?)\*\*/g,"<b>$1</b>").replace(/\n/g,"<br>");
 }
@@ -2376,21 +2386,31 @@ function offlineReply(txt){
   if(/12\/01|12\/1|观星|上车|接送|白沙滩|Kua/.test(txt)) return `12/01（周二）09:00 出发，约 25 分钟到 Kua Bay 白沙滩（浪 3.7ft，可能有高空薄云），11:20 收摊 → 11:45 回房洗澡换秋裤厚裤 → 13:25 在 Queens' Marketplace 背面 (69-201 Waikoloa Beach Dr) 上观星车。周二是云海机会最大的一晚，但头顶有没有薄云还说不准；周一 13:25 前可以免费取消，按周一早上的结论定。`;
   if(/骑马/.test(txt)) return `11/28（周六）09:00 出发先逛 Waimea 早市，11:15 去皇家鱼塘白沙滩，15:10 从酒店出发，16:00 准时在 Paniolo 牧场 (Hwy 250 MP13.2) 报到，必带 ${vk("horse_holder","实体付款卡与双方照片 ID")} + 长裤包头鞋。`;
   if(/Costco|伴手礼/.test(txt)) return "Costco 去两次：周五下午 14:15 回酒店路上顺路拿夜潜毛毯和水（20 分钟快进快出）；大件夏威夷果/巧克力留到周三 12/02 11:00 退房后去机场旁 Costco 买，直接装登机箱。";
-  return `收到「${txt}」。填上 Gemini Key 可自由问答；离线状态下我也随时秒答最新冠军行程、防冷备选、行李规则和精确集合点。`;
+  return `收到「${txt}」。点首页右上角 🔒 输 0907 解锁后自动开启 Gemini 自由问答；离线状态下我也随时秒答最新行程、防冷备选、行李规则和集合点。`;
 }
 async function askGemini(txt){
   const t=txt.trim(); if(!t) return;
   state.aiLog.push({role:"me",text:t}); renderAiLog();
-  if(!state.geminiKey){ setTimeout(()=>{ state.aiLog.push({role:"ai",text:offlineReply(t)}); ls.set("aiLog",JSON.stringify(state.aiLog.slice(-20))); renderAiLog(); },160); return; }
+  const key = activeGeminiKey();
+  if(!key){ setTimeout(()=>{ state.aiLog.push({role:"ai",text:offlineReply(t)}); ls.set("aiLog",JSON.stringify(state.aiLog.slice(-20))); renderAiLog(); },160); return; }
+  const hist = state.aiLog.slice(-7, -1).filter(m=>m.text && m.text!=="Gemini 思考中…").map(m=>({role:m.role==="me"?"user":"model",parts:[{text:m.text}]}));
+  hist.push({role:"user",parts:[{text:t}]});
   state.aiLog.push({role:"ai",text:"Gemini 思考中…"}); renderAiLog();
-  try{
-    const r=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${encodeURIComponent(state.geminiKey)}`,{
-      method:"POST",headers:{"Content-Type":"application/json"},
-      body:JSON.stringify({system_instruction:{parts:[{text:`你是夏威夷行程助手。\n${buildTripContext()}`}]},contents:[{role:"user",parts:[{text:t}]}]})
-    });
-    const d=await r.json();
-    state.aiLog[state.aiLog.length-1].text = d?.candidates?.[0]?.content?.parts?.[0]?.text || offlineReply(t);
-  }catch(e){ state.aiLog[state.aiLog.length-1].text = offlineReply(t); }
+  let answer = "";
+  const models = ["gemini-flash-lite-latest", "gemini-3.5-flash-lite", "gemini-3.1-flash-lite"];
+  for(const mdl of models){
+    try{
+      const r=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${mdl}:generateContent?key=${encodeURIComponent(key)}`,{
+        method:"POST",headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({system_instruction:{parts:[{text:`你是夏威夷行程助手。\n${buildTripContext()}`}]},contents:hist})
+      });
+      if(!r.ok) continue;
+      const d=await r.json();
+      const out = d?.candidates?.[0]?.content?.parts?.[0]?.text;
+      if(out){ answer = out; break; }
+    }catch(e){}
+  }
+  state.aiLog[state.aiLog.length-1].text = answer || offlineReply(t);
   ls.set("aiLog",JSON.stringify(state.aiLog.slice(-20))); renderAiLog();
 }
 $("#aiForm").onsubmit=e=>{ e.preventDefault(); const i=$("#aiInput"), v=i.value; i.value=""; askGemini(v); };
@@ -2417,7 +2437,7 @@ window.addEventListener("online", ()=>{ syncOnlineState(); toast("网络已恢�
 window.addEventListener("offline", ()=>{ syncOnlineState(); toast("已切换离线模式 · 行程与确认号照常可用"); });
 syncOnlineState();
 
-const APP_VER = "r42";
+const APP_VER = "r43";
 let _swReg = null, _reloadingForUpdate = false, _lastVerChk = 0;
 
 async function checkAppUpdate(force){
