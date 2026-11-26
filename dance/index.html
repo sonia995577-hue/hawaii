@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light only">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="恋舞清单">
+<title>恋舞拍摄清单</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#FFFFFF; --sand:#F7F5F0; --ink:#1F1D1A; --ink-2:#57534E; --ink-3:#8F8982; --line:rgba(31,29,26,.08);
+          --coral:#FF385C; --green:#15803D; --ease:cubic-bezier(.22,1,.36,1); }
+  * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  html, body { margin:0; background:#FFFFFF !important; color:var(--ink) !important; color-scheme:light only !important;
+    font-family:"Inter",-apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans SC",sans-serif; font-size:14px; line-height:1.45;
+    -webkit-font-smoothing:antialiased; }
+  button { font:inherit; color:inherit; cursor:pointer; }
+  .page { max-width:520px; margin:0 auto; padding:0 0 calc(136px + env(safe-area-inset-bottom)); }
+
+  /* top: title + flexible scene tabs, same pattern as Hawaii guide */
+  .top { position:sticky; top:0; z-index:10; background:#FFFFFF; padding-top:env(safe-area-inset-top); }
+  .top-row { display:flex; align-items:center; justify-content:space-between; padding:16px 20px 4px; }
+  .top-row h1 { margin:0; font-size:18px; font-weight:800; letter-spacing:-0.01em; }
+  .left { background:var(--sand); border-radius:999px; padding:8px 14px; font-size:14px; font-weight:700; font-variant-numeric:tabular-nums; }
+  .tabs { display:flex; gap:24px; overflow-x:auto; padding:10px 20px 0; scrollbar-width:none; border-bottom:1px solid var(--line); }
+  .tabs::-webkit-scrollbar { display:none; }
+  .tab { flex:0 0 auto; border:0; background:none; padding:6px 0 12px; font-size:16px; font-weight:600; color:var(--ink-3); position:relative; white-space:nowrap; }
+  .tab .cnt { font-size:12px; font-weight:600; margin-left:3px; opacity:.75; font-variant-numeric:tabular-nums; }
+  .tab.on { color:var(--ink); font-weight:800; }
+  .tab.on::after { content:""; position:absolute; left:0; right:0; bottom:0; height:3px; border-radius:3px; background:var(--ink); }
+  .tab.all { text-decoration:line-through; text-decoration-color:var(--ink-3); }
+
+  /* scene header */
+  .scene { padding:24px 20px 0; }
+  .eyebrow { font-size:12px; font-weight:700; letter-spacing:.06em; color:var(--ink-3); }
+  .scene h2 { margin:4px 0 6px; font-size:28px; line-height:1.18; font-weight:800; letter-spacing:-0.02em; }
+  .meta { font-size:14px; color:var(--ink-2); }
+
+  /* shots */
+  .shot { margin-top:26px; }
+  .row { display:flex; align-items:center; gap:14px; margin-bottom:12px; }
+  .node { flex:0 0 auto; width:44px; height:44px; border-radius:50%; border:0; background:var(--sand); display:grid; place-items:center;
+          transition:background .26s var(--ease), transform .26s var(--ease); }
+  .node svg { width:20px; height:20px; stroke:var(--ink-3); transition:stroke .26s var(--ease); }
+  .node:active { transform:scale(.92); }
+  .txt { flex:1; min-width:0; }
+  .txt .t { font-size:20px; font-weight:800; letter-spacing:-0.01em; font-variant-numeric:tabular-nums; }
+  .txt .d { font-size:14px; color:var(--ink-2); }
+  .txt .tag { color:var(--ink-3); }
+  .big { flex:0 0 auto; border:0; background:var(--sand); border-radius:999px; height:40px; padding:0 16px; font-size:14px; font-weight:700; transition:transform .2s var(--ease); }
+  .big:active { transform:scale(.95); }
+  video { width:100%; aspect-ratio:16/9; display:block; background:#000; border-radius:20px; object-fit:cover; transition:opacity .26s var(--ease); }
+  .shot.done .node { background:var(--ink); }
+  .shot.done .node svg { stroke:#FFFFFF; }
+  .shot.done .txt .t { color:var(--ink-3); text-decoration:line-through; text-decoration-color:var(--ink-3); }
+  .shot.done video { opacity:.38; }
+
+  .hint { margin:32px 20px 0; padding-top:16px; border-top:1px solid var(--line); font-size:12px; color:var(--ink-3); display:flex; justify-content:space-between; gap:12px; align-items:center; }
+  .hint button { border:0; background:none; color:var(--ink-3); text-decoration:underline; padding:8px 0; font-size:12px; white-space:nowrap; }
+
+  /* floating bottom bar */
+  .dock-fade { position:fixed; left:0; right:0; bottom:0; height:calc(96px + env(safe-area-inset-bottom));
+               background:linear-gradient(to top, #FFFFFF 52%, rgba(255,255,255,0)); pointer-events:none; z-index:15; }
+  .dock { position:fixed; left:50%; transform:translateX(-50%); bottom:calc(14px + env(safe-area-inset-bottom)); width:min(calc(100% - 32px), 488px);
+          background:var(--ink); border-radius:999px; padding:8px; display:flex; align-items:center; justify-content:space-between; z-index:20;
+          box-shadow:0 10px 30px rgba(31,29,26,.22); }
+  .dock button { border:0; background:none; color:#FFFFFF; font-size:14px; font-weight:700; height:48px; padding:0 18px; border-radius:999px; transition:opacity .2s var(--ease); }
+  .dock button:disabled { opacity:.3; }
+  .dock .mid { color:#FFFFFF; font-size:14px; font-weight:600; font-variant-numeric:tabular-nums; }
+  .dock .mid b { font-size:18px; font-weight:800; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="top">
+    <div class="top-row">
+      <h1>恋舞拍摄清单</h1>
+      <div class="left" id="left"></div>
+    </div>
+    <div class="tabs" id="tabs"></div>
+  </div>
+  <div id="scene"></div>
+  <div class="hint"><span>横着拍，放原曲跳，前后多留 1 秒。跳完点圆圈打勾。</span><button type="button" id="reset">全部重来</button></div>
+</div>
+<div class="dock-fade" aria-hidden="true"></div>
+<div class="dock">
+  <button type="button" id="prev">‹ 上一组</button>
+  <div class="mid">已跳 <b id="nDone">0</b> / <span id="nAll">13</span></div>
+  <button type="button" id="next">下一组 ›</button>
+</div>
+
+<script>
+const SHOTS = {
+  A: ["A","0:05 – 0:08","3.5 秒","主景"],
+  B: ["B","0:17 – 0:19","2.3 秒","单拍"],
+  C: ["C","0:19 – 0:24","4.7 秒","主景"],
+  D: ["D","0:24 – 0:29","5.4 秒","副景"],
+  E: ["E","0:29 – 0:34","5.3 秒","单拍"],
+  F: ["F","0:34 – 0:36","1.7 秒","副景"],
+  G: ["G","0:39 – 0:41","1.8 秒","主景"],
+  H: ["H","0:47 – 0:50","3.1 秒","主景"],
+  I: ["I","0:56 – 0:59","3.0 秒","单拍"],
+  K: ["K","1:08 – 1:11","3.0 秒","副景"],
+  L: ["L","1:11 – 1:14","3.2 秒","主景"],
+  M: ["M","1:14 – 1:20","5.9 秒","单拍"],
+  N: ["N","1:20 – 1:24","3.5 秒 · 结尾","主景"]
+};
+const ALL_IDS = Object.keys(SHOTS);
+const GROUPS = [
+  { tab:"主景", eyebrow:"同一场景 · 6 小段", name:"主场景一起拍",
+    desc:"原版里反复切回的同一场景，挑最喜欢的地方一起拍完（拆成两个景也行）。",
+    ids:["A","C","G","H","L","N"] },
+  { tab:"副景", eyebrow:"同一场景 · 3 小段", name:"开阔副景一起拍",
+    desc:"原版同一片草坪出现 3 次，换个顺眼的背景一次拍掉最省事。",
+    ids:["D","F","K"] },
+  { tab:"单拍", eyebrow:"各自独立 · 4 小段", name:"随手单拍",
+    desc:"4 段原本就各自独立，路上碰到好看的景随便挑一段拍。",
+    ids:["B","E","I","M"] },
+  { tab:"全部", eyebrow:"按歌曲顺序 · 13 小段", name:"全部待拍",
+    desc:"不限地点，随机应变，跳完哪段直接打勾。",
+    ids:ALL_IDS, showTag:true }
+];
+const KEY = "koiDone_v2", TABKEY = "koiTab_v2";
+const TICK = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+let done = {}, cur = 0;
+try {
+  const raw = JSON.parse(localStorage.getItem(KEY) || "{}");
+  ALL_IDS.forEach(id => { if (raw[id]) done[id] = 1; });
+  cur = Math.min(GROUPS.length - 1, Math.max(0, parseInt(localStorage.getItem(TABKEY) || "0", 10) || 0));
+} catch (e) {}
+const $ = id => document.getElementById(id);
+const countIds = ids => ids.filter(id => done[id]).length;
+
+function tally() {
+  const all = ALL_IDS.length, n = countIds(ALL_IDS);
+  $("nAll").textContent = all; $("nDone").textContent = n;
+  $("left").textContent = n === all ? "全部拍完" : "还差 " + (all - n) + " 小段";
+  $("tabs").innerHTML = GROUPS.map((g, i) => {
+    const c = countIds(g.ids), tot = g.ids.length;
+    return `<button type="button" class="tab ${i === cur ? "on" : ""} ${c === tot ? "all" : ""}" data-tab="${i}">${g.tab}<span class="cnt">${tot}</span></button>`;
+  }).join("");
+  $("prev").disabled = cur === 0; $("next").disabled = cur === GROUPS.length - 1;
+  const on = document.querySelector(".tab.on"); if (on && on.scrollIntoView) on.scrollIntoView({ inline:"center", block:"nearest" });
+}
+function show() {
+  const g = GROUPS[cur];
+  $("scene").innerHTML = `
+    <div class="scene">
+      <div class="eyebrow">${g.eyebrow}</div>
+      <h2>${g.name}</h2>
+      <div class="meta">${g.desc}</div>
+      ${g.ids.map(id => {
+        const s = SHOTS[id];
+        return `
+        <div class="shot ${done[id] ? "done" : ""}" id="s${id}">
+          <div class="row">
+            <button type="button" class="node" data-chk="${id}" aria-label="跳了" aria-pressed="${!!done[id]}">${TICK}</button>
+            <div class="txt"><div class="t">${s[1]}</div><div class="d">${s[2]}${g.showTag ? ` <span class="tag">· ${s[3]}</span>` : ""}</div></div>
+            <button type="button" class="big" data-big="${id}">放大</button>
+          </div>
+          <video id="v${id}" controls loop playsinline preload="metadata" poster="clips/${id}_1.jpg" src="clips/${id}.mp4"></video>
+        </div>`;
+      }).join("")}
+    </div>`;
+  localStorage.setItem(TABKEY, cur);
+  tally();
+}
+function go(i) { cur = Math.max(0, Math.min(GROUPS.length - 1, i)); show(); window.scrollTo(0, 0); }
+function big(id) {
+  const v = $("v" + id);
+  document.querySelectorAll("video").forEach(x => { if (x !== v) x.pause(); });
+  v.play().catch(() => {});
+  if (v.webkitEnterFullscreen) {
+    try { v.webkitEnterFullscreen(); }
+    catch (e) { v.addEventListener("loadedmetadata", () => { try { v.webkitEnterFullscreen(); } catch (_) {} }, { once: true }); }
+  } else if (v.requestFullscreen) v.requestFullscreen().then(() => {
+    if (screen.orientation && screen.orientation.lock) screen.orientation.lock("landscape").catch(() => {});
+  }).catch(() => {});
+}
+$("scene").addEventListener("click", e => {
+  const c = e.target.closest("[data-chk]"), b = e.target.closest("[data-big]");
+  if (c) {
+    const id = c.dataset.chk;
+    if (done[id]) delete done[id]; else done[id] = 1;
+    localStorage.setItem(KEY, JSON.stringify(done));
+    $("s" + id).classList.toggle("done", !!done[id]); c.setAttribute("aria-pressed", !!done[id]);
+    tally();
+  } else if (b) big(b.dataset.big);
+});
+$("scene").addEventListener("play", e => {
+  if (e.target.tagName === "VIDEO") document.querySelectorAll("video").forEach(x => { if (x !== e.target) x.pause(); });
+}, true);
+$("tabs").addEventListener("click", e => { const t = e.target.closest("[data-tab]"); if (t) go(+t.dataset.tab); });
+$("prev").addEventListener("click", () => go(cur - 1));
+$("next").addEventListener("click", () => go(cur + 1));
+$("reset").addEventListener("click", () => { if (confirm("把所有打勾清空？")) { done = {}; localStorage.setItem(KEY, "{}"); show(); } });
+show();
+</script>
+</body>
+</html>
