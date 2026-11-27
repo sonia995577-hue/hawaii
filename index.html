@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="夏威夷行程">
 <meta name="theme-color" content="#FFFFFF">
-<link rel="manifest" href="manifest.webmanifest?v=r45">
+<link rel="manifest" href="manifest.webmanifest?v=r46">
 <link rel="apple-touch-icon" sizes="180x180" href="art/pwa/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="art/pwa/icon-192.png">
 <title>大岛 + Oahu · 行程伴侣</title>
@@ -726,15 +726,15 @@ svg.i{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke
 
 <div class="toast" id="toast"></div>
 
-<script src="lib/three.min.js?v=r45"></script>
-<script src="lib/island3d.js?v=r45"></script>
+<script src="lib/three.min.js?v=r46"></script>
+<script src="lib/island3d.js?v=r46"></script>
 <script>
 (function(){
 "use strict";
 const ls={get(k){try{return localStorage.getItem("hwp2_"+k)}catch(e){return null}},set(k,v){try{localStorage.setItem("hwp2_"+k,v)}catch(e){}},del(k){try{localStorage.removeItem("hwp2_"+k)}catch(e){}}};
 
 /* Encrypted private booking vault (decrypted purely on-device from user passcode; zero secrets shipped in HTML) */
-const VAULT_ENC = {"v": 1, "rounds": 5000, "salt": "15f62cc23da237aa31da6b01d3ffe36f", "hmac": "9d3cbd5a082695c96bec3ee4edd2d445063e225fb619c5430f979c2a692d7247", "ct": "NBH/3frwTYubWrge92pMjHPnUCtQ0A2k9dKNwn3Et7z8O+TJRLKZGqVI3dR7kJoo3Lsk4fdeyQ4WLOT55dVqpCRxKLOR0T+uNOujytNQlxDF8iSQ6qA1D2fTsTjIvWpAmzInCvJ1zy7bHMoKnkCJcFAzUWJj+bFn6jJq0vRZxLYITZKWwUcvLunKCn9EhtgaX4jYp+kNe4KMxuo3QQHc53zAAurc/2MKtGfRmqdxwm+zUjp+0J6n+q93PEPIFJsqabAHKvIA8jCp5lJES1FXseiKx5Ih3Zy0VI9JeZ/jDRjjQymIZFerxAw1JdG5DzParU1Arm6Pmg/4HeqboM/HQ98608cpFvn1XSYi5S4yZcXdfPWyhAgDHumoV4wmEzb9mwEBRg7MexabDtekEo8GIc/aPTOdkv7shPPpFTtMxHbVAQtCV5PXgjPPejjU3ap0MywVeLOvDJYyK/jn5y56P9mPiN7ta0o1wLEdnDvDxI7vd7ykNtXTGxhwyKCx/2O4vASJdHHA8ga76z1qV0UtR6AnP/JXLpBEJzYqGzxLOpe62x6dFF5kSxB+C9mfWYvaLHT0vwRm7D9m/HHUTny2ubN7OjHWuf4tK4t3sKVWjwWZ/25Tedzkgel/BhvMp52mbCNfEI4rMY/KchXYC90bYes2Np56RnfHOAlwr2loMaGw5F7tBQ3dPRJ9hNP9acDL6ItH20W5/DQigd5k/CEUP7mHxoR2QQcFKgOYE/Dgn3miRNERglgfljouImNOCI7HoiYZqa9Q1SNtQSj9BKdEsWTX5N1m6gMPJUVIrjoxhK6RnjsXzAFlve0XHF+UK7jLmE8iNv9Hvhl8ArpNLPKzp48kkAI9jymFnwETwEKuI7EAzq+PW/fTgVYu3ei9TXXyGLU94n6IR2bNFa04VCQOWHBNyrq7eBmk2WBi39g9ep4G5lFCXIb0jgVaCMmsZZf3EX2BLzgNsnWYmhQWRM83tw6BJuJ6yxSF0hUbgoMMyMDSMOOvGByCwiL80ldvTwHjNTbgVGFkiVNpHyim5JXcMU54QhOhBvOnquLTBzOGQmdYzbicn44/bYI7XTVvZO+0cgKSYl1NE4SpAlj1RMl7G+aueHNP0JuH0/kaLwmIIn2gn/CC06CxHnDt6LBlDsdxAfRNEZkVNvLufE2eiwf65HqbVRU28+nl+g5+oHXxNrFgMnRZfHqso9gz3RBULHrNEHcjBilOxTSbLQaTpohabiVMMlR2mLvsP4l9ikd/eaoKth9g6xDK787lkr744NsI4n5NJIfgrMd3rX9fnc7H4yCZzsMHxR14EgmzniwX3lLxNpfNnpwrCb+ac0d6riUuhWaBaxZBcTl9RJd6pwa2SE5Lkd9yOTTJGHUotlA9xJrKobph/4u/l0S6KXZ3VPjQp80N/m0ZSmI82wdtMLpMEJr4CNnpKkaIEQcLd7I2Yuul"};
+const VAULT_ENC = {"v": 1, "rounds": 5000, "salt": "72a25b4d1efff86fdd47da33d2320010", "hmac": "2d12e96cbddf990e29d2279b74cba06d214ecd2aac6165183cfd5a075513b14e", "ct": "EAJ/5WZK5Ie3kPd/wVv6Jf4B6Xu07UpSONelt0U3JB2V6saFNzxdBZQ6O6bbFNtNDLsfIUKz2jvZIaFxzHy04B+0iT9Mm8b6mFFmMa9dI56NEzOshtyjctmBULtphhHaNnMWic+TdkvEI1aK60y9ocFc+uo2uN59Yk7CNMAVhGCg05M1PD1FU8NOTn/eMQAVq/bXgSErmSLbo78l7rPiUc/8h1ZAYFtZv4vmjfJT9v6011yXvEF+diyg5U3Ld0R2Q4QkqKfRCMgCM53z0JChva5zPHSXtdcK7V6VxBpQiwFHcKPq8usk6+P9a9NQmm6lzVsRwCGMhx3vbDVIduQJHOxxHon10mgNBpQ98vfdk83fRBgsXhitIC0an2HZoHlkHQfxX3jdSPKsQZsrCoW1MZFROPijDNNjMMyr5HmN4j6gOz7uhm68/IsxOqovY7+aBuejSccj0tXF6qe0+SjKIsKoUg81yqGnI/SDOiuoIQbkcqV5Sb8VUbEeqfrVYRnYeSXLE05wYC2qN9e2b+kOPewnddX4UT6UTZCUoyST7vKZaTacE7LgwExrhPrJevE0x7K0xQnvyValtx/xyamv7ON4CA9mvcyT0tKagcO9I2IsYMpOI0vlJCyWO7IIeZCvMfVS/TneLdC4NzOlF8g41+7lVGZ/VbFMUsWviyHMbJYVsdLb8UMcYpDHGrKhFNPDU/bDD8qmOZft2j3EbV3F7/WFPGD64BUWP05IQyo5FojnarhWJZaTIjA5Y2XK7Ws3eiTxBD800Sz7+bDVU/XeD85wAnexkeaapExKZoGYX2V1iZ7YzcGl79QxPhd8gwq+V7zPgf3o1KWCGceflNabW/h1vHVrCc0zHeK9lylDFl3zmsclZVLGz/SDq6pBXAkXotR7aOyFnm9aTmLnehwN4py1EAEEhXOrjzZvlDR4jNsQlLDM1Aj/2Bvt+0aTWQbhZuxnsR5f5KQATtw+HHbCZVN8ryQ1+ZDMrSK5Frc5+MEMGhhT6STjg7CL8n1rYKglyrXbsoxTMu+z0o4+cI4TtVcicnwCA3sTE3VdiwNHxI9iXCfG9ZgbqoJjwBVyZOTYJn6gS9bjKeGBzErBRhhZhWPNHyW12Pv1cwirjV8lSVdvJrU4OmGVK8Ipwl6XLr7xMvUiTQRwJ9mcIm6OjCcV31PT/i1TK1KENXrEMYjYo34bXgAqhBu4SgSk9heMGWapSt6AQ7U5NwRQVcjnDUz75Jdo/re763avU8VxZvLOrtcaEJJC2Re9eUg1ih8ieYlYSCYrtdm8XFJ0dKhswIfLQuqZibCHKoIXOqBFNffv3hYytITBu6pmAg+60EtCTJSy26bRuiUsHkJlQS7pdthDVVRC5ez+5/lBqh6TKPBppMkoOFCI6W7H/qrWoLgd7SEwaDy0ZTdaqpydnLRmTtCbadfoAkjHRBXcb4wrmOIT+LlQ"};
 const _te = new TextEncoder(), _td = new TextDecoder();
 function _hexToBytes(hex){ const a=new Uint8Array(hex.length>>1); for(let i=0;i<a.length;i++) a[i]=parseInt(hex.substr(i*2,2),16); return a; }
 function _bytesToHex(b){ let s=""; for(let i=0;i<b.length;i++) s+=(b[i]<16?"0":"")+b[i].toString(16); return s; }
@@ -937,21 +937,21 @@ function getBaseDays(){
       eat:"Waimea 早市现烤面包与鲜果、Mauna Lani 热午饭、晚上 Waimea 或酒店附近吃热食。",
       planB:"中午若早市逛得快，顺路停 Hapuna 白沙滩看海，或回 Mauna Lani Foodland 顺手买零食水。"
     },
-    {id:"d3",num:4,date:"11/29",wk:"周日",island:"BIG ISLAND",tag:"东岸最好的一天",title:"Hilo 海龟 & 火山红光",icon:"art/icons3d/volcano.png",sleep:"Waikoloa",depart:"09:30 出发",drive:"3.8–5.2h",sun:"17:42",dark:"18:10",wx:"Hilo 25°C 偏晴 → 火山 14°C 阴",
+    {id:"d3",num:4,date:"11/29",wk:"周日",island:"BIG ISLAND",tag:"东岸最好的一天",title:"Hilo 海龟 & 火山红光",icon:"art/icons3d/volcano.png",sleep:"Waikoloa",depart:"09:30 出发",drive:"约 3.8h",sun:"17:42",dark:"18:10",wx:"Hilo 25°C 偏晴 → 火山 14°C 阴",
       catNote:"东岸这几天里最好的一天：两家模型报晴、一家报阴。先撸猫买豆，12:15 太阳最高时看 Carlsmith 海龟湾",
-      pigNote:"15:00 前为 Oahu Outrigger 免费退改线 · 午饭后按体力选黑沙滩或直上火山 · 火山 14°C 潮冷带外套",
-      chips:["10:50 日式公园+买豆","12:15 Carlsmith 海龟湾","18:10 火山口红光"],
+      pigNote:"15:00 前为 Oahu Outrigger 免费退改线 · 午饭后直接上火山，14:55 到 · 火山 14°C 潮冷带外套",
+      chips:["10:50 日式公园+买豆","12:15 Carlsmith 海龟湾","14:55 火山公园+熔岩隧道"],
       status:[{cls:"ok",txt:"✓ 东岸最好的一天"},{cls:"neutral",txt:"15:00 Oahu退改线"}],
       stops:[
         {sid:"s3_0",t:"10:50",n:"日式公园撸猫 & 烘焙店买豆",emo:"🐱",tone:"cat",leg:"09:30 走 200 号公路 · 开 1h 20m",brief:"Liliʻuokalani 撸猫 → Big Island Coffee Roasters（周日照常开）",sub:"先喷防蚊液逛日式拱桥撸猫 → 旗舰店喝手冲买花果香豆子",tip:"先逛免费好停的 Liliʻuokalani 日式拱桥公园撸户外大猫猫（先喷防蚊液），再开 5 分钟到周日照常 06:30–17:00 营业的 Big Island Coffee Roasters 买 Kona Bloom 豆子！",pin:"hilo"},
         {sid:"s3_1",t:"12:15",n:"Carlsmith 果冻蓝海龟湾",emo:"🐢",tone:"sea",leg:"开 5 分钟 · 同片区",brief:"太阳最高时礁湖最蓝 · 两家模型报晴、一家报阴",sub:"正午阳光直晒浅湾最果冻蓝，近看野生绿海龟（车内不留可见包袋）",tip:"把 Carlsmith 放在 12:15：太阳最高时浅湾最蓝，东岸浪也从周五的 9 英尺多退下来了。周日是东岸这几天里最好的一天，但三家模型没有完全一致；如果到了是阴天，海水会偏灰，海龟照样能看。停车切记车内不留任何包袋。",pin:"carlsmith"},
-        {sid:"s3_2",t:"13:20",n:"Hilo 热午饭（体力开关）",emo:"🍜",tone:"food",leg:"开约 10 分钟回 Hilo 镇上",brief:"14:10 吃完二选一：去黑沙滩，或直接上火山",sub:"去黑沙滩 → 16:40 到火山；跳过 → 14:55 到火山，白天多 1.5 小时",tip:"在 Hilo 吃热汤面或热饭，14:10 吃完按体力现场决定：去黑沙滩的话 16:40 才到火山，天黑前只剩 1 小时；跳过直接开 45 分钟上火山，14:55 就到，全天车程从约 5.2 小时减到 3.8 小时。",pin:"hilo"},
-        {sid:"s3_3",t:"15:25",n:"Punaluʻu 黑沙滩",emo:"🖤",tone:"sea",leg:"开约 1 小时 15 分",legWarn:"⚡ 累了可跳过省 1.5h",brief:"停 35 分钟看纯黑火山沙 + 晒太阳的绿海龟",sub:"玄武岩纯黑粗沙看海龟晒太阳（法定保持 3 米勿触碰）",tip:"黑沙反光配大海很震撼，大绿海龟常趴在沙滩右侧晒太阳（保持 3 米距离勿触碰）。已彻底删掉停业的 Bake Shop 与倒塌的 Hōlei 海拱门。",pin:"punaluu"},
-        {sid:"s3_4",t:"16:40",n:"火山公园 + 18:10 红光",emo:"🌋",tone:"vol",badge:"18:10 红光",leg:"开 40 分钟上山 · 跳过黑沙滩则 14:55 到",brief:"阴天薄雾、基本不下雨 · 熔岩湖 + 18:10 天黑红光 · 门票 $30/车",sub:"只看最震撼 2 处：Kīlauea Iki 熔岩湖 → Kīlauea Overlook 看红光",tip:"周日傍晚火山公园三家模型都报阴天有薄雾，基本不下雨。先去 Kīlauea Iki 观景台俯瞰漆黑熔岩湖；17:30 到 Kīlauea Overlook 等 18:10 天黑透，用手机夜景模式拍火山口橘红余晖；云压得太低时红光会被挡掉一部分。山上约 14°C 又潮，必穿抓绒 + 防风外套。18:30 走 200 号公路回酒店，约 2 小时 15 分，20:45 左右到。",pin:"uekahuna",book:{门票:"$30/车 (7天有效)",最佳机位:"Kīlauea Overlook · 18:10 夜景长曝",夜路提醒:"18:30 走 200 号公路 2h 回，无灯开稳点"}}
+        {sid:"s3_2",t:"13:20",n:"Hilo 热午饭",emo:"🍜",tone:"food",leg:"开约 10 分钟回 Hilo 镇上",brief:"吃热汤面或热饭 · 14:10 出发上火山",sub:"14:10 吃完直接开 45 分钟上火山，14:55 到",tip:"在 Hilo 吃热汤面或热饭，14:10 吃完直接开 45 分钟上火山。黑沙滩默认不去：它在火山公园更南边，去了要走回头路，多开约 1.5 小时，到火山时天也快黑了。",pin:"hilo"},
+        {sid:"s3_3",t:"14:55",n:"熔岩湖观景台 & 熔岩隧道",emo:"🌋",tone:"vol",leg:"开约 45 分钟上山",brief:"Kīlauea Iki 观景台 20 分钟 → 熔岩隧道 45 分钟 → 车上歇 20 分钟",sub:"两站挨着 · 隧道不怕阴天 · 洞里湿凉穿运动鞋和抓绒",tip:"先到 Kīlauea Iki 观景台，从上面看凝固的熔岩湖，不用走下去，留 20 分钟。再去旁边的熔岩隧道 Nāhuku：下一段台阶、穿一小片雨林、走进熔岩洞，再从另一头的台阶上来，整圈大约半公里，慢慢走留 45 分钟。洞里有灯（开到晚上 8 点），地上有积水，湿凉。门口车位很少，满了就停回观景台走过来，单程多走十来分钟。出来在车上歇 20 分钟、吃点东西再去下一站。",pin:"kilaueaiki",book:{门票:"$30/车 (7天有效)"}},
+        {sid:"s3_4",t:"16:40",n:"蒸汽口 & 火山口观景台",emo:"🌋",tone:"vol",badge:"18:10 红光看天气",leg:"公园里开约 15 分钟",legWarn:"⚡ 17:45 起雾就不等红光",brief:"蒸汽口 15 分钟 → 火山口观景台 35 分钟 · 17:45 决定等不等红光",sub:"晴 → 等到 18:10 看红光，约 20:45 回酒店；起雾 → 直接走，约 20:00 回酒店",tip:"先在路边的蒸汽口停 15 分钟，再到火山口观景台（Kīlauea Overlook / Uēkahuna）看整个大火山口，留 35 分钟，大约 17:45 看完。这时候做一个决定：能看清火山口就留下，等 18:10 天黑透看红光，18:30 走，约 20:45 回到酒店；起雾或飘雨就直接走，约 20:00 回到酒店。现在喷发是暂停的，红光是火山口里的余光，云压得低就会被挡住；周日傍晚三家模型都报满天云，所以别硬等。山上约 14°C 又潮，穿抓绒和防风外套。回程走 200 号公路约 2 小时 15 分，路上没有路灯。",pin:"uekahuna",book:{红光机位:"Kīlauea Overlook · 18:10 天黑透",夜路提醒:"200 号公路约 2h15m，无路灯开稳点"}}
       ],
-      cautions:[{tag:"今天穿什么",txt:"白天 Hilo 25°C：吊带 + 薄罩衫 + 防蚊液。后备箱放薄长袖 + 厚抓绒 + 防风外套 + 长裤运动鞋，进火山公园前全套换上（14°C 潮冷）。"},{tag:"今日 15:00 Oahu 退改线",txt:"Oahu OUTRIGGER 酒店 72h 免费取消线是今天 11/29 15:00；如果确定行程照走就不用管，若计划大改一定在 15:00 前操作。"},{tag:"带防寒和防蚊",txt:"火山口天黑后约 14°C 又潮，必带抓绒和防风外套；Hilo 公园蚊子多，下车前先喷防蚊液。"}],
+      cautions:[{tag:"今天穿什么",txt:"白天 Hilo 25°C：吊带 + 薄罩衫 + 防蚊液。后备箱放薄长袖 + 厚抓绒 + 防风外套 + 长裤运动鞋，进火山公园前全套换上（14°C 潮冷，熔岩隧道里地上有积水）。"},{tag:"今日 15:00 Oahu 退改线",txt:"Oahu OUTRIGGER 酒店 72h 免费取消线是今天 11/29 15:00；如果确定行程照走就不用管，若计划大改一定在 15:00 前操作。"},{tag:"带防寒和防蚊",txt:"火山口天黑后约 14°C 又潮，必带抓绒和防风外套；Hilo 公园蚊子多，下车前先喷防蚊液。"}],
       eat:"Hilo 热午饭优先热汤面 / 热菜，Big Island Coffee Roasters 买手冲豆；回 Waikoloa 后吃热夜宵。",
-      planB:"若午饭后偏累，果断跳过黑沙滩省 1.5h，轻松玩火山 18:10 看完红光早点回酒店休息。"
+      planB:"17:45 如果起雾或飘雨，不等红光直接回，约 20:00 到酒店。实在累，熔岩隧道后的蒸汽口可以跳过。黑沙滩默认不去（在火山更南边，要多开约 1.5 小时）。"
     },
     {id:"d4",num:5,date:"11/30",wk:"周一",island:"BIG ISLAND",tag:"最平镜面海",title:"玻璃海浮潜 & 魔鬼鱼",icon:"art/icons3d/manta.png",sleep:"Waikoloa",depart:"09:00 出发",drive:"约 3h",sun:"17:42",dark:"18:11",wx:"25°C 微风",
       catNote:"全趟海浪最平(2.0–2.2ft)！穿长袖水母衣防冷；若早上偏阴觉得凉，果断改逛彩绘教堂+海盐农场，保暖留给晚上夜潜",
@@ -1308,7 +1308,7 @@ function renderHome(){
       d0:"仅含座位下小包 · SFO 买好晚饭+干粮 · 晚间超市全关",
       d1:"避开全岛巨浪 · 周五全开 Mauka+手冲 · 顺路买毛毯 · 17:42 酒店海边日落",
       d2:"09:00 出发 · 早市 + 晴天皇家鱼塘 · 16:00 骑马报到(15:10出发)",
-      d3:"东岸最好的一天 · 先撸猫再看海龟 · 18:10 火山口红光",
+      d3:"东岸最好的一天 · 先撸猫再看海龟 · 14:55 上火山走熔岩隧道",
       d4:"全趟最平 2ft 镜面海 · 下午手工暖身 · 18:00 魔鬼鱼先去门店再去码头",
       d5:"近郊平浪白沙滩(车程约 25 分钟) · 13:25 Queens' 背面穿秋裤上山看云海",
       d6:"A-Bay 撸猫/白沙滩二刷 · 机场旁 Costco 买伴手礼 → WN2269 飞 Outrigger",
@@ -2278,7 +2278,7 @@ function renderPrep(){
       <div class="pwa-head">
         <div class="pwa-ico"><img src="art/pwa/apple-touch-icon.png" alt="App 图标"></div>
         <div style="flex:1;min-width:0">
-          <div style="font-size:15px;font-weight:800">iPhone 离线 App 模式 <span style="font-size:11px;font-weight:700;color:var(--ink-3)">v45</span></div>
+          <div style="font-size:15px;font-weight:800">iPhone 离线 App 模式 <span style="font-size:11px;font-weight:700;color:var(--ink-3)">v46</span></div>
           <div style="font-size:12px;color:var(--ink-2);margin-top:2px">${isStandalone?"✓ 已从主屏幕全屏运行 · 联网自动更新":(offlineDone?"✓ 已完成全量离线缓存":"出发前连 Wi-Fi 点一次下方按钮，火山没网也能秒开")}</div>
         </div>
         <span class="f-pill ${offlineDone||swReady?'ok':'neutral'}">${offlineDone?"100% 离线就绪":(swReady?"核心已缓存":"需 HTTPS")}</span>
@@ -2408,7 +2408,7 @@ function fmtAi(s){
 function buildTripContext(){
   const days = getDays().map(d=>`D${d.num}(${d.date} ${d.wk}) ${d.title}: ${d.chips.join(" / ")}`).join("; ");
   const bks = getBookings().map(b=>`${b.t}(${b.w}, ${b.id==="bk_uosan"?(state.uosanBooked?"已订":"待订"):"已订"})`).join("; ");
-  return `鱼三海胆饭:${state.uosanBooked?"已订":"待订"} | 火山USGS状态:${state.volcanoLive.level}\n行程:${days}\n预订:${bks}\n核心事实: 全程 9:00 后出门; 11/26 UA1723 Basic Economy 只含 1 个座位下小包; 11/27(周五避浪陆地日) Mauka Meadows + Greenwell + BerryBird(14:30关) + 14:15 顺路 Costco 拿毛毯和水 + 17:42 回酒店 A-Bay 看日落(手工改到周一 14:40); 11/28(周六上午西岸三家模型都报晴,09:00出发,11:15到鱼塘) Waimea 早市 + 皇家鱼塘 + Paniolo 16:00 集合报到(必带付款实体卡+双方ID+长裤包头鞋); 11/29(周日是东岸这几天最好的一天,两家模型报晴一家报阴) 09:30 出发 → 10:50 日式公园撸猫+烘焙买豆 → 12:15 Carlsmith 海龟湾 → 13:20 午饭 → 黑沙滩可选(去则16:40到火山,不去14:55到) → 18:10 火山口红光(阴天薄雾基本无雨,约14°C) → 20:45 回酒店, 15:00 前 Oahu Outrigger 免费退线; 11/30(周一全趟最平2ft镜面海) 白天 Two Step 浮潜(23-25°C微风,怕冷或偏阴可改彩绘教堂+海盐农场), 13:25 前观星 24h 免退线, 18:00 魔鬼鱼先去 Keauhou 商店 #F-146 报到(大包留车)再自驾码头 #78-100; 12/1(周二云海机会最大但头顶可能有薄云,观星团周一13:25前可免费取消,周一早上定去留) 09:00 出发约25分钟到 Kua Bay 白沙滩(可能有高空薄云,11:20 收摊) → 11:45 回房洗换厚裤 → 13:25 Queens Marketplace 背面(69-201 Waikoloa Beach Dr)上观星车; 12/2 睡饱撸猫 → 11:00 退房 → 11:35 机场旁 Costco 买伴手礼+加油 → 13:30 还车 → 飞 WN2269 入住 Outrigger; 12/3 Oahu 买检疫鸡蛋花 + 18:30 鱼三海胆饭; 12/4 AS839 回 SJC。用简短大白话直接答。`;
+  return `鱼三海胆饭:${state.uosanBooked?"已订":"待订"} | 火山USGS状态:${state.volcanoLive.level}\n行程:${days}\n预订:${bks}\n核心事实: 全程 9:00 后出门; 11/26 UA1723 Basic Economy 只含 1 个座位下小包; 11/27(周五避浪陆地日) Mauka Meadows + Greenwell + BerryBird(14:30关) + 14:15 顺路 Costco 拿毛毯和水 + 17:42 回酒店 A-Bay 看日落(手工改到周一 14:40); 11/28(周六上午西岸三家模型都报晴,09:00出发,11:15到鱼塘) Waimea 早市 + 皇家鱼塘 + Paniolo 16:00 集合报到(必带付款实体卡+双方ID+长裤包头鞋); 11/29(周日是东岸这几天最好的一天,两家模型报晴一家报阴) 09:30 出发 → 10:50 日式公园撸猫+烘焙买豆 → 12:15 Carlsmith 海龟湾 → 13:20 午饭 → 14:55 火山公园(熔岩湖观景台+熔岩隧道) → 16:40 蒸汽口+火山口观景台,17:45 看完 → 晴则等 18:10 红光约20:45回酒店,起雾直接走约20:00回(预报满天云,约14°C,黑沙滩默认不去), 15:00 前 Oahu Outrigger 免费退线; 11/30(周一全趟最平2ft镜面海) 白天 Two Step 浮潜(23-25°C微风,怕冷或偏阴可改彩绘教堂+海盐农场), 13:25 前观星 24h 免退线, 18:00 魔鬼鱼先去 Keauhou 商店 #F-146 报到(大包留车)再自驾码头 #78-100; 12/1(周二云海机会最大但头顶可能有薄云,观星团周一13:25前可免费取消,周一早上定去留) 09:00 出发约25分钟到 Kua Bay 白沙滩(可能有高空薄云,11:20 收摊) → 11:45 回房洗换厚裤 → 13:25 Queens Marketplace 背面(69-201 Waikoloa Beach Dr)上观星车; 12/2 睡饱撸猫 → 11:00 退房 → 11:35 机场旁 Costco 买伴手礼+加油 → 13:30 还车 → 飞 WN2269 入住 Outrigger; 12/3 Oahu 买检疫鸡蛋花 + 18:30 鱼三海胆饭; 12/4 AS839 回 SJC。用简短大白话直接答。`;
 }
 function renderAiLog(){
   const log=$("#aiLog");
@@ -2420,7 +2420,7 @@ function offlineReply(txt){
   if(/行李|UA1723|登机箱|带啥/.test(txt)) return "去程 11/26 UA1723 是 Basic Economy (N)：只能免费带 1 个塞进座位下的小包（9×10×17 寸），不含标准登机箱；安检前托运 $45–$50，登机口被拦罚 $65！返岛飞 Oahu WN2269 含 1 件标准登机箱 + 1 小包。";
   if(/海胆|鱼三|Uosan|订/.test(txt)) return "Oahu 12/3（周四）晚的 Izakaya Uosan（鱼三）招牌是松露海胆黄油蛋黄饭，地址 1221 Kapiolani Blvd #108，周二三休息，周四 17:00–22:00 营业，只能提前打电话 (808) 200-5077 订位！";
   if(/11\/27|周五|咖啡|手工|Mauka|Sunoa/.test(txt)) return `11/27（周五）全岛浪还大（东岸 9.3ft、白沙滩 6.7ft），所以只走陆地：09:00 出发 → 09:50 Mauka Meadows（只在周一到周五开）→ 11:30 Greenwell 试喝 → 12:40 BerryBird 手冲午饭 → 14:15 顺路 Costco 拿毛毯和水 → 15:15 回酒店歇 → 17:42 A-Bay 看日落。Sunoa 手工在周一 14:40。`;
-  if(/11\/29|周日|Hilo|火山/.test(txt)) return `11/29（周日）是东岸这几天里最好的一天（两家模型报晴、一家报阴）。09:30 出发 → 10:50 日式公园撸猫 + 买豆 → 12:15 Carlsmith 海龟湾 → 13:20 Hilo 午饭 → 黑沙滩可选（去的话 16:40 到火山，不去 14:55 到）→ 18:10 火山口红光 → 20:45 回到酒店。火山傍晚阴天薄雾、基本不下雨，约 14°C，带抓绒和防风外套。`;
+  if(/11\/29|周日|Hilo|火山/.test(txt)) return `11/29（周日）是东岸这几天里最好的一天（两家模型报晴、一家报阴）。09:30 出发 → 10:50 日式公园撸猫 + 买豆 → 12:15 Carlsmith 海龟湾 → 13:20 Hilo 午饭 → 14:55 到火山公园：熔岩湖观景台 + 熔岩隧道 → 16:40 蒸汽口 + 火山口观景台，约 17:45 看完。能看清火山口就等 18:10 的红光，约 20:45 回酒店；起雾就直接走，约 20:00 回酒店。黑沙滩默认不去。火山傍晚预报满天云，约 14°C，带抓绒和防风外套。`;
   if(/11\/30|夜潜|魔鬼鱼|集合|浮潜|冷/.test(txt)) return `11/30（周一）海浪 2.0–2.2ft 全趟最平、23–25°C 微风且欧德两模型报晴！穿长袖水母衣+车备干毛巾抓绒；若早起碰巧阴天怕冷，上午改逛彩绘教堂+海盐农场留体力给晚上穿团发湿衣看魔鬼鱼！魔鬼鱼 (${vk("manta_pnr","已加密锁定")}) 两步集合勿早到：① 18:00 先去 Keauhou 商店 (#F-146，大包留车) ② 再自驾到码头 (#78-100)，结束不回店。`;
   if(/12\/01|12\/1|观星|上车|接送|白沙滩|Kua/.test(txt)) return `12/01（周二）09:00 出发，约 25 分钟到 Kua Bay 白沙滩（浪 3.7ft，可能有高空薄云），11:20 收摊 → 11:45 回房洗澡换秋裤厚裤 → 13:25 在 Queens' Marketplace 背面 (69-201 Waikoloa Beach Dr) 上观星车。周二是云海机会最大的一晚，但头顶有没有薄云还说不准；周一 13:25 前可以免费取消，按周一早上的结论定。`;
   if(/骑马/.test(txt)) return `11/28（周六）09:00 出发先逛 Waimea 早市，11:15 去皇家鱼塘白沙滩，15:10 从酒店出发，16:00 准时在 Paniolo 牧场 (Hwy 250 MP13.2) 报到，必带 ${vk("horse_holder","实体付款卡与双方照片 ID")} + 长裤包头鞋。`;
@@ -2764,7 +2764,7 @@ window.addEventListener("online", ()=>{ syncOnlineState(); toast("网络已恢�
 window.addEventListener("offline", ()=>{ syncOnlineState(); toast("已切换离线模式 · 行程与确认号照常可用"); });
 syncOnlineState();
 
-const APP_VER = "r45";
+const APP_VER = "r46";
 let _swReg = null, _reloadingForUpdate = false, _lastVerChk = 0;
 
 async function checkAppUpdate(force){
